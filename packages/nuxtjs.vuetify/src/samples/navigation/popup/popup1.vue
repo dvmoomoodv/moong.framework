@@ -48,31 +48,46 @@
 
                 <UFieldRow>
                   <UField label="기타필드1" :labelWidth="100">
-                    <VTextField v-model="inputFormData.etc1" :isRequired="false" />
+                    <VTextField
+                      v-model="inputFormData.etc1"
+                      :isRequired="false"
+                    />
                   </UField>
                 </UFieldRow>
 
                 <UFieldRow>
                   <UField label="기타필드2" :labelWidth="100">
-                    <VTextField v-model="inputFormData.etc2" :isRequired="false" />
+                    <VTextField
+                      v-model="inputFormData.etc2"
+                      :isRequired="false"
+                    />
                   </UField>
                 </UFieldRow>
 
                 <UFieldRow>
                   <UField label="기타필드3" :labelWidth="100">
-                    <VTextField v-model="inputFormData.etc3" :isRequired="false" />
+                    <VTextField
+                      v-model="inputFormData.etc3"
+                      :isRequired="false"
+                    />
                   </UField>
                 </UFieldRow>
 
                 <UFieldRow>
                   <UField label="기타필드4" :labelWidth="100">
-                    <VTextField v-model="inputFormData.etc4" :isRequired="false" />
+                    <VTextField
+                      v-model="inputFormData.etc4"
+                      :isRequired="false"
+                    />
                   </UField>
                 </UFieldRow>
 
                 <UFieldRow>
                   <UField label="기타필드5" :labelWidth="100">
-                    <VTextField v-model="inputFormData.etc5" :isRequired="false" />
+                    <VTextField
+                      v-model="inputFormData.etc5"
+                      :isRequired="false"
+                    />
                   </UField>
                 </UFieldRow>
               </UFieldSet>
@@ -90,27 +105,27 @@
   </v-card>
 </template>
 <script lang="ts" setup>
-import { ref, reactive } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
+import { ref, reactive } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
 
 // @ts-ignore
-import popup1 from './md/popup1.md'
+import popup1 from "./md/popup1.md";
 // @ts-ignore
-import popup2 from './md/popup2.md'
+import popup2 from "./md/popup2.md";
 
 // for form
 const inputFormData = reactive({
   dtlCd: null,
   cdNm: null,
   srtNo: 0,
-  useYn: 'Y',
+  useYn: "Y",
   cdDesc: null,
   etc1: null,
   etc2: null,
   etc3: null,
   etc4: null,
   etc5: null,
-})
+});
 
-const showPopup = ref(false)
+const showPopup = ref(false);
 </script>

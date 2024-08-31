@@ -9,7 +9,8 @@
           <template v-slot:subtitle> This is a card subtitle </template>
 
           <template v-slot:text>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+            ratione debitis quis est labore voluptatibus!
           </template>
         </v-card>
       </VCol>
@@ -50,9 +51,9 @@
   </div>
 </template>
 <script setup type="ts">
-import PieChart from '#ustra/nuxt-vuetify/components/ustra/sample/chart/pie-chart.vue';
-import LineChart from '#ustra/nuxt-vuetify/components/ustra/sample/chart/line-chart.vue';
-import BarChart from '#ustra/nuxt-vuetify/components/ustra/sample/chart/bar-chart.vue';
+import PieChart from '#moong/nuxt-vuetify/components/ustra/sample/chart/pie-chart.vue';
+import LineChart from '#moong/nuxt-vuetify/components/ustra/sample/chart/line-chart.vue';
+import BarChart from '#moong/nuxt-vuetify/components/ustra/sample/chart/bar-chart.vue';
 
 
 definePageMeta({

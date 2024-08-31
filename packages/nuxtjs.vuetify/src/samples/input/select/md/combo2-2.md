@@ -18,14 +18,14 @@
   </v-chip>
 </template>
 <script lang="ts" setup>
-import { WjComboBox } from '#ustra/nuxt-wijmo/components'
-import { wijmoInput } from '#ustra/nuxt-wijmo'
+  import { WjComboBox } from "#moong/nuxt-wijmo/components";
+  import { wijmoInput } from "#moong/nuxt-wijmo";
 
-const comboBoxControl = shallowRef<wijmoInput.ComboBox>()
-const comboBoxValue = ref(null)
-const items = [
-  { value: '01', text: '항목1' },
-  { value: '02', text: '항목2' },
-]
+  const comboBoxControl = shallowRef<wijmoInput.ComboBox>();
+  const comboBoxValue = ref(null);
+  const items = [
+    { value: "01", text: "항목1" },
+    { value: "02", text: "항목2" },
+  ];
 </script>
 ```

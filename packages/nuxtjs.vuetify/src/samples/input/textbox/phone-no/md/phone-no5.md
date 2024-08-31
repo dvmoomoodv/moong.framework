@@ -4,8 +4,8 @@
 </template>
 
 <script setup lang="ts">
-import { UPhoneNoBox } from '#ustra/nuxt-vuetify/components'
+  import { UPhoneNoBox } from "#moong/nuxt-vuetify/components";
 
-const value = ref('')
+  const value = ref("");
 </script>
 ```

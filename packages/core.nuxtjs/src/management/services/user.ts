@@ -1,6 +1,6 @@
-import { apiModels } from '#ustra/core/data'
-import { defineUstraService } from '#ustra/nuxt/composables'
-import { UserCriteria, User } from '../models/user'
+import { apiModels } from "#moong/core/data";
+import { defineUstraService } from "#moong/nuxt/composables";
+import { UserCriteria, User } from "../models/user";
 
 /**
  * 사용자 서비스
@@ -13,11 +13,11 @@ export const useUstraUserService = defineUstraService(({ $ustra, api }) => {
   async function getUsers(criteria: UserCriteria) {
     return (
       await api.call<apiModels.ApiResponse<User[]>>({
-        url: '/api/system/user/group',
-        method: 'POST',
+        url: "/api/system/user/group",
+        method: "POST",
         data: criteria,
       })
-    )?.data?.body
+    )?.data?.body;
   }
 
   /**
@@ -29,14 +29,16 @@ export const useUstraUserService = defineUstraService(({ $ustra, api }) => {
   async function getUser(usrId: string, isPrivate: boolean = false) {
     return (
       await api.call<apiModels.ApiResponse<User>>({
-        url: !isPrivate ? '/api/system/user/detail' : '/api/system/user/detail/private',
-        method: 'POST',
+        url: !isPrivate
+          ? "/api/system/user/detail"
+          : "/api/system/user/detail/private",
+        method: "POST",
         data: {
           usrId,
           includePassword: false,
         },
       })
-    )?.data?.body
+    )?.data?.body;
   }
 
   /**
@@ -44,16 +46,16 @@ export const useUstraUserService = defineUstraService(({ $ustra, api }) => {
    * @param user 사용자 정보
    */
   async function add(user: User) {
-    user = $ustra.utils.model.removeSystemField(user)
+    user = $ustra.utils.model.removeSystemField(user);
 
     return (
       await api.call<apiModels.ApiResponse<User>>({
-        url: '/api/system/user',
-        method: 'POST',
+        url: "/api/system/user",
+        method: "POST",
         data: { user },
-        passOnResponseCode: ['FM11'],
+        passOnResponseCode: ["FM11"],
       })
-    )?.data
+    )?.data;
   }
 
   /**
@@ -62,15 +64,15 @@ export const useUstraUserService = defineUstraService(({ $ustra, api }) => {
    * @returns
    */
   async function edit(user: User) {
-    user = $ustra.utils.model.removeSystemField(user)
+    user = $ustra.utils.model.removeSystemField(user);
 
     return (
       await api.call<apiModels.ApiResponse<User>>({
-        url: '/api/system/user/edit',
-        method: 'POST',
+        url: "/api/system/user/edit",
+        method: "POST",
         data: { user },
       })
-    )?.data
+    )?.data;
   }
 
   /**
@@ -81,12 +83,12 @@ export const useUstraUserService = defineUstraService(({ $ustra, api }) => {
   async function remove(usrId: string) {
     return (
       await api.call<apiModels.ApiResponse<User>>({
-        url: '/api/system/user/remove',
-        method: 'POST',
+        url: "/api/system/user/remove",
+        method: "POST",
         data: { usrId },
       })
-    )?.data
+    )?.data;
   }
 
-  return { getUsers, getUser, add, edit, remove }
-})
+  return { getUsers, getUser, add, edit, remove };
+});

@@ -17,7 +17,13 @@
         :useImageUpload="true"
       />
 
-      <v-chip class="ma-2" color="pink" label text-color="white" style="height: auto; overflow: auto; white-space: normal">
+      <v-chip
+        class="ma-2"
+        color="pink"
+        label
+        text-color="white"
+        style="height: auto; overflow: auto; white-space: normal"
+      >
         <v-icon start icon="mdi-label"></v-icon>
         content :
         <pre>{{ content }}</pre>
@@ -26,21 +32,21 @@
   </VCard>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-import { UCkEditor5 } from '#ustra/nuxt-ckeditor5/components'
-import { useUstraCkEditor5 } from '#ustra/nuxt-ckeditor5/composables'
+import { ref } from "#moong/nuxt";
+import { UCkEditor5 } from "#moong/nuxt-ckeditor5/components";
+import { useUstraCkEditor5 } from "#moong/nuxt-ckeditor5/composables";
 
 // @ts-ignore
-import doc1 from './md/editor2.md'
+import doc1 from "./md/editor2.md";
 
-const content = ref('')
-const disabled = ref(false)
-const ckEditor = useUstraCkEditor5()
-const fileId = ref(null)
+const content = ref("");
+const disabled = ref(false);
+const ckEditor = useUstraCkEditor5();
+const fileId = ref(null);
 
 async function completeUpload() {
-  await ckEditor.completeUpload()
-  alert('저장이 완료되었습니다.')
+  await ckEditor.completeUpload();
+  alert("저장이 완료되었습니다.");
 }
 
 // function setValue() {

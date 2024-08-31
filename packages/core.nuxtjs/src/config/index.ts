@@ -1,4 +1,4 @@
-export * from 'nuxt'
+export * from "nuxt";
 export type {
   NuxtAppProps,
   BuildOptions,
@@ -14,8 +14,8 @@ export type {
   VueuseOptions,
   WijmoOptions,
   WijmoSampleMenuOptions,
-} from './nuxt-app-props'
-export { Profile, DeviceType, LogLevel } from './nuxt-app-props'
+} from "./nuxt-app-props";
+export { Profile, DeviceType, LogLevel } from "./nuxt-app-props";
 
-// import frameworkSupport from '#ustra/core/config/framework/framework-support'
+// import frameworkSupport from '#moong/core/config/framework/framework-support'
 // export { frameworkSupport }

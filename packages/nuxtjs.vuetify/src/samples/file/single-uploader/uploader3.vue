@@ -3,22 +3,28 @@
     <template #text>
       <h3>readonly</h3>
       <br />
-      readonly 속성은 기존 업로드 된 데이터를 조회 및 다운로드만 가능한 형태로 만든다.<br /><br />
+      readonly 속성은 기존 업로드 된 데이터를 조회 및 다운로드만 가능한 형태로
+      만든다.<br /><br />
       fileId :
       <VTextField v-model="fileId" style="width: 400px" />
-      <USingleFileUploader ref="uploader" fileGroupId="ustra-sample" v-model:fileId="fileId" :readonly="true" />
+      <USingleFileUploader
+        ref="uploader"
+        fileGroupId="ustra-sample"
+        v-model:fileId="fileId"
+        :readonly="true"
+      />
 
       <!-- <UMarkdownViewer :content="uploader3" /> -->
     </template>
   </VCard>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
+import { ref } from "#moong/nuxt";
 
 // @ts-ignore
-import uploader3 from './md/uploader3.md'
+import uploader3 from "./md/uploader3.md";
 
-const fileId = ref('xYjN4kTOwUDMzMDO1MEOlRXZXRERnVka1FmWzhjZPFXZpNF')
+const fileId = ref("xYjN4kTOwUDMzMDO1MEOlRXZXRERnVka1FmWzhjZPFXZpNF");
 
-const uploader = ref<InstanceType<typeof USingleFileUploader>>(null)
+const uploader = ref<InstanceType<typeof USingleFileUploader>>(null);
 </script>

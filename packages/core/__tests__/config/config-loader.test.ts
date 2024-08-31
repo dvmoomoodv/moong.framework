@@ -3,20 +3,20 @@
  * @packageDocumentation
  */
 
-import { logger } from '#ustra/core'
-import { Profile } from '#ustra/core/config'
-import { configLoader } from '#ustra/core/config/loader/config-loader'
+import { logger } from "#moong/core";
+import { Profile } from "#moong/core/config";
+import { configLoader } from "#moong/core/config/loader/config-loader";
 
-describe('config loader', () => {
-  test('load yaml config', () => {
+describe("config loader", () => {
+  test("load yaml config", () => {
     const configProp = configLoader.loadConfigProperties({
       app: {
         processPath: __dirname,
         profile: Profile.LOCAL,
-        configDirPath: './yaml',
+        configDirPath: "./yaml",
       },
-    })
+    });
 
-    logger.info('configProp', configProp)
-  })
-})
+    logger.info("configProp", configProp);
+  });
+});

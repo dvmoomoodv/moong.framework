@@ -1,13 +1,13 @@
-import { resolve, join } from 'pathe'
-import serveStatic from 'serve-static'
-import { Nuxt } from '@nuxt/schema'
-import { addTemplate, addServerHandler } from '@nuxt/kit'
-import { defineNodeMiddleware, fromNodeMiddleware } from 'h3'
-import { logger } from '#ustra/nuxt/utils/logger'
-import middlewareUtils from '#ustra/core/server/http/utils/middleware-utils'
-import { NuxtAppProps } from '../config/nuxt-app-props'
-import { addProxyMiddleware } from './server/proxy'
-import { addStaticMiddleware } from './server/static'
+import { resolve, join } from "pathe";
+import serveStatic from "serve-static";
+import { Nuxt } from "@nuxt/schema";
+import { addTemplate, addServerHandler } from "@nuxt/kit";
+import { defineNodeMiddleware, fromNodeMiddleware } from "h3";
+import { logger } from "#moong/nuxt/utils/logger";
+import middlewareUtils from "#moong/core/server/http/utils/middleware-utils";
+import { NuxtAppProps } from "../config/nuxt-app-props";
+import { addProxyMiddleware } from "./server/proxy";
+import { addStaticMiddleware } from "./server/static";
 // import { addSsrMiddleware } from './server/ssr'
 
 // function addStaticServes(options: NuxtAppProps, nuxt: Nuxt) {
@@ -31,14 +31,14 @@ function addMiddlewares(options: NuxtAppProps, nuxt: Nuxt) {
   // addSsrMiddleware(options, nuxt)
 
   if (options.server.middleware?.proxy?.proxies) {
-    addProxyMiddleware(options, nuxt)
+    addProxyMiddleware(options, nuxt);
   }
 
   if (options.server.middleware?.static) {
-    addStaticMiddleware(options, nuxt)
+    addStaticMiddleware(options, nuxt);
   }
 }
 
 export const server = (options: NuxtAppProps, nuxt: Nuxt) => {
-  addMiddlewares(options, nuxt)
-}
+  addMiddlewares(options, nuxt);
+};

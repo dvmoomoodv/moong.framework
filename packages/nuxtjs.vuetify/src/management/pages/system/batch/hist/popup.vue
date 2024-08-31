@@ -1,5 +1,10 @@
 <template>
-  <UPopup v-model="modelValue" :width="800" :height="1600" title="배치 실행 로그 조회">
+  <UPopup
+    v-model="modelValue"
+    :width="800"
+    :height="1600"
+    title="배치 실행 로그 조회"
+  >
     <div v-html="data" />
     <template #buttons>
       <VBtn text="닫기" style="primary" @click="close" />
@@ -7,47 +12,54 @@
   </UPopup>
 </template>
 <script lang="ts" setup>
-import { defineProps, ref, reactive, defineEmits, nextTick, watch } from '#ustra/nuxt'
-import { useVModel } from '@vueuse/core'
-import { useUstraBatchHistService } from '#ustra/nuxt/management'
-const service = useUstraBatchHistService()
+import {
+  defineProps,
+  ref,
+  reactive,
+  defineEmits,
+  nextTick,
+  watch,
+} from "#moong/nuxt";
+import { useVModel } from "@vueuse/core";
+import { useUstraBatchHistService } from "#moong/nuxt/management";
+const service = useUstraBatchHistService();
 
 const props = defineProps<{
-  modelValue: boolean
-  batHistId: string
-}>()
-const modelValue = useVModel(props, 'modelValue')
+  modelValue: boolean;
+  batHistId: string;
+}>();
+const modelValue = useVModel(props, "modelValue");
 
 watch(
   modelValue,
-  v => {
-    if (!props.batHistId) return
-    loadData(props.batHistId)
+  (v) => {
+    if (!props.batHistId) return;
+    loadData(props.batHistId);
   },
   {
     immediate: true,
-  },
-)
+  }
+);
 
 async function close() {
-  await batchHistLogging.value.close()
-  modelValue.value = false
+  await batchHistLogging.value.close();
+  modelValue.value = false;
 }
 
-const data = ref(null)
-const batchHistLogging = ref(null)
+const data = ref(null);
+const batchHistLogging = ref(null);
 async function loadData(batHistId: string) {
-  data.value = ''
-  batchHistLogging.value = await service.getLog(batHistId, async log => {
-    console.log('log : ', log)
+  data.value = "";
+  batchHistLogging.value = await service.getLog(batHistId, async (log) => {
+    console.log("log : ", log);
     if (!log) {
-      return
+      return;
     }
-    await nextTick()
+    await nextTick();
     if (data.value) {
-      data.value += '\n'
+      data.value += "\n";
     }
-    data.value += '<div>' + log + '</div>'
-  })
+    data.value += "<div>" + log + "</div>";
+  });
 }
 </script>

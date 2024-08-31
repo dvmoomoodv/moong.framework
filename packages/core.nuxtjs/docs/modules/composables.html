@@ -1,22 +1,881 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>composables | @ustra/nuxt</title><meta name="description" content="Documentation for @ustra/nuxt"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base=".."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">@ustra/nuxt</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb"><li><a href="../index.html">@ustra/nuxt</a></li><li><a href="composables.html">composables</a></li></ul><h1>Module composables</h1></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/composables/index.ts#L1">framework/nuxt/src/composables/index.ts:1</a></li></ul></aside><section class="tsd-panel-group tsd-index-group"><section class="tsd-panel tsd-index-panel"><details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><h5 class="tsd-index-heading uppercase" role="button" aria-expanded="false" tabIndex="0"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-chevronSmall"></use></svg> Index</h5></summary><div class="tsd-accordion-details"><section class="tsd-index-section"><h3 class="tsd-index-heading">References</h3><div class="tsd-index-list"><a href="composables.html#OnErrorOptions" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>On<wbr/>Error<wbr/>Options</span></a>
-<a href="composables.html#SetupFunction" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>Setup<wbr/>Function</span></a>
-<a href="composables.html#defineInitStore" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>define<wbr/>Init<wbr/>Store</span></a>
-<a href="composables.html#defineUstraService" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>define<wbr/>Ustra<wbr/>Service</span></a>
-<a href="composables.html#isPageComponent" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>is<wbr/>Page<wbr/>Component</span></a>
-<a href="composables.html#useAsyncTask" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Async<wbr/>Task</span></a>
-<a href="composables.html#useCurrentPageMeta" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Current<wbr/>Page<wbr/>Meta</span></a>
-<a href="composables.html#useDeepMerge" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Deep<wbr/>Merge</span></a>
-<a href="composables.html#useExposed" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Exposed</span></a>
-<a href="composables.html#useFunctionWrap" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Function<wbr/>Wrap</span></a>
-<a href="composables.html#useGetObjectAsync" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Get<wbr/>Object<wbr/>Async</span></a>
-<a href="composables.html#useGlobal" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Global</span></a>
-<a href="composables.html#useLoadingBar" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Loading<wbr/>Bar</span></a>
-<a href="composables.html#useMaskingText" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Masking<wbr/>Text</span></a>
-<a href="composables.html#useMediaQueryState" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Media<wbr/>Query<wbr/>State</span></a>
-<a href="composables.html#useMessage" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Message</span></a>
-<a href="composables.html#useOnError" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>On<wbr/>Error</span></a>
-<a href="composables.html#useUstra" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Ustra</span></a>
-<a href="composables.html#useUstraEnv" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Ustra<wbr/>Env</span></a>
-<a href="composables.html#useUstraLogger" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Ustra<wbr/>Logger</span></a>
-<a href="composables.html#useUstraUtils" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Ustra<wbr/>Utils</span></a>
-</div></section></div></details></section></section><section class="tsd-panel-group tsd-member-group"><h2>References</h2><section class="tsd-panel tsd-member"><a id="OnErrorOptions" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>On<wbr/>Error<wbr/>Options</span><a href="#OnErrorOptions" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../interfaces/composables_utils.OnErrorOptions.html">OnErrorOptions</a></section><section class="tsd-panel tsd-member"><a id="SetupFunction" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>Setup<wbr/>Function</span><a href="#SetupFunction" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../types/composables_service.SetupFunction.html">SetupFunction</a></section><section class="tsd-panel tsd-member"><a id="defineInitStore" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>define<wbr/>Init<wbr/>Store</span><a href="#defineInitStore" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/store.defineInitStore.html">defineInitStore</a></section><section class="tsd-panel tsd-member"><a id="defineUstraService" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>define<wbr/>Ustra<wbr/>Service</span><a href="#defineUstraService" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_service.defineUstraService.html">defineUstraService</a></section><section class="tsd-panel tsd-member"><a id="isPageComponent" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>is<wbr/>Page<wbr/>Component</span><a href="#isPageComponent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_utils.isPageComponent.html">isPageComponent</a></section><section class="tsd-panel tsd-member"><a id="useAsyncTask" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>use<wbr/>Async<wbr/>Task</span><a href="#useAsyncTask" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_utils.useAsyncTask.html">useAsyncTask</a></section><section class="tsd-panel tsd-member"><a id="useCurrentPageMeta" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>use<wbr/>Current<wbr/>Page<wbr/>Meta</span><a href="#useCurrentPageMeta" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_utils.useCurrentPageMeta.html">useCurrentPageMeta</a></section><section class="tsd-panel tsd-member"><a id="useDeepMerge" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>use<wbr/>Deep<wbr/>Merge</span><a href="#useDeepMerge" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_utils.useDeepMerge.html">useDeepMerge</a></section><section class="tsd-panel tsd-member"><a id="useExposed" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>use<wbr/>Exposed</span><a href="#useExposed" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_utils.useExposed.html">useExposed</a></section><section class="tsd-panel tsd-member"><a id="useFunctionWrap" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>use<wbr/>Function<wbr/>Wrap</span><a href="#useFunctionWrap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_utils.useFunctionWrap.html">useFunctionWrap</a></section><section class="tsd-panel tsd-member"><a id="useGetObjectAsync" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>use<wbr/>Get<wbr/>Object<wbr/>Async</span><a href="#useGetObjectAsync" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_utils.useGetObjectAsync.html">useGetObjectAsync</a></section><section class="tsd-panel tsd-member"><a id="useGlobal" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>use<wbr/>Global</span><a href="#useGlobal" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_utils.useGlobal.html">useGlobal</a></section><section class="tsd-panel tsd-member"><a id="useLoadingBar" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>use<wbr/>Loading<wbr/>Bar</span><a href="#useLoadingBar" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_utils.useLoadingBar.html">useLoadingBar</a></section><section class="tsd-panel tsd-member"><a id="useMaskingText" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>use<wbr/>Masking<wbr/>Text</span><a href="#useMaskingText" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_utils.useMaskingText.html">useMaskingText</a></section><section class="tsd-panel tsd-member"><a id="useMediaQueryState" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>use<wbr/>Media<wbr/>Query<wbr/>State</span><a href="#useMediaQueryState" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_utils.useMediaQueryState.html">useMediaQueryState</a></section><section class="tsd-panel tsd-member"><a id="useMessage" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>use<wbr/>Message</span><a href="#useMessage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_utils.useMessage.html">useMessage</a></section><section class="tsd-panel tsd-member"><a id="useOnError" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>use<wbr/>On<wbr/>Error</span><a href="#useOnError" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_utils.useOnError.html">useOnError</a></section><section class="tsd-panel tsd-member"><a id="useUstra" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>use<wbr/>Ustra</span><a href="#useUstra" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_ustra.useUstra.html">useUstra</a></section><section class="tsd-panel tsd-member"><a id="useUstraEnv" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>use<wbr/>Ustra<wbr/>Env</span><a href="#useUstraEnv" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_ustra.useUstraEnv.html">useUstraEnv</a></section><section class="tsd-panel tsd-member"><a id="useUstraLogger" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>use<wbr/>Ustra<wbr/>Logger</span><a href="#useUstraLogger" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_ustra.useUstraLogger.html">useUstraLogger</a></section><section class="tsd-panel tsd-member"><a id="useUstraUtils" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>use<wbr/>Ustra<wbr/>Utils</span><a href="#useUstraUtils" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>Re-exports <a href="../functions/composables_ustra.useUstraUtils.html">useUstraUtils</a></section></section></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-index-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><h4 class="uppercase">Member Visibility</h4><form><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div><div class="tsd-theme-toggle"><h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-index-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#OnErrorOptions" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>On<wbr/>Error<wbr/>Options</span></a><a href="#SetupFunction" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>Setup<wbr/>Function</span></a><a href="#defineInitStore" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>define<wbr/>Init<wbr/>Store</span></a><a href="#defineUstraService" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>define<wbr/>Ustra<wbr/>Service</span></a><a href="#isPageComponent" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>is<wbr/>Page<wbr/>Component</span></a><a href="#useAsyncTask" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Async<wbr/>Task</span></a><a href="#useCurrentPageMeta" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Current<wbr/>Page<wbr/>Meta</span></a><a href="#useDeepMerge" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Deep<wbr/>Merge</span></a><a href="#useExposed" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Exposed</span></a><a href="#useFunctionWrap" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Function<wbr/>Wrap</span></a><a href="#useGetObjectAsync" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Get<wbr/>Object<wbr/>Async</span></a><a href="#useGlobal" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Global</span></a><a href="#useLoadingBar" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Loading<wbr/>Bar</span></a><a href="#useMaskingText" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Masking<wbr/>Text</span></a><a href="#useMediaQueryState" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Media<wbr/>Query<wbr/>State</span></a><a href="#useMessage" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Message</span></a><a href="#useOnError" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>On<wbr/>Error</span></a><a href="#useUstra" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Ustra</span></a><a href="#useUstraEnv" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Ustra<wbr/>Env</span></a><a href="#useUstraLogger" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Ustra<wbr/>Logger</span></a><a href="#useUstraUtils" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-4194304"></use></svg><span>use<wbr/>Ustra<wbr/>Utils</span></a></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1"></use></svg><span>@ustra/nuxt</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base=".."><li>Loading...</li></ul></nav></div></div></div><div class="tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div></body></html>
+<!doctype html>
+<html class="default" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <title>composables | @moong/nuxt</title>
+    <meta name="description" content="Documentation for @moong/nuxt" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/highlight.css" />
+    <script defer src="../assets/main.js"></script>
+    <script async src="../assets/icons.js" id="tsd-icons-script"></script>
+    <script async src="../assets/search.js" id="tsd-search-script"></script>
+    <script async src="../assets/navigation.js" id="tsd-nav-script"></script>
+  </head>
+  <body>
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("tsd-theme") || "os";
+      document.body.style.display = "none";
+      setTimeout(
+        () =>
+          app ? app.showPage() : document.body.style.removeProperty("display"),
+        500
+      );
+    </script>
+    <header class="tsd-page-toolbar">
+      <div class="tsd-toolbar-contents container">
+        <div class="table-cell" id="tsd-search" data-base="..">
+          <div class="field">
+            <label
+              for="tsd-search-field"
+              class="tsd-widget tsd-toolbar-icon search no-caption"
+              ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use href="../assets/icons.svg#icon-search"></use></svg></label
+            ><input type="text" id="tsd-search-field" aria-label="Search" />
+          </div>
+          <div class="field"><div id="tsd-toolbar-links"></div></div>
+          <ul class="results">
+            <li class="state loading">Preparing search index...</li>
+            <li class="state failure">The search index is not available</li>
+          </ul>
+          <a href="../index.html" class="title">@moong/nuxt</a>
+        </div>
+        <div class="table-cell" id="tsd-widgets">
+          <a
+            href="#"
+            class="tsd-widget tsd-toolbar-icon menu no-caption"
+            data-toggle="menu"
+            aria-label="Menu"
+            ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use href="../assets/icons.svg#icon-menu"></use></svg
+          ></a>
+        </div>
+      </div>
+    </header>
+    <div class="container container-main">
+      <div class="col-content">
+        <div class="tsd-page-title">
+          <ul class="tsd-breadcrumb">
+            <li><a href="../index.html">@moong/nuxt</a></li>
+            <li><a href="composables.html">composables</a></li>
+          </ul>
+          <h1>Module composables</h1>
+        </div>
+        <aside class="tsd-sources">
+          <ul>
+            <li>
+              Defined in
+              <a
+                href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/composables/index.ts#L1"
+                >framework/nuxt/src/composables/index.ts:1</a
+              >
+            </li>
+          </ul>
+        </aside>
+        <section class="tsd-panel-group tsd-index-group">
+          <section class="tsd-panel tsd-index-panel">
+            <details class="tsd-index-content tsd-index-accordion" open>
+              <summary class="tsd-accordion-summary tsd-index-summary">
+                <h5
+                  class="tsd-index-heading uppercase"
+                  role="button"
+                  aria-expanded="false"
+                  tabindex="0"
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <use href="../assets/icons.svg#icon-chevronSmall"></use>
+                  </svg>
+                  Index
+                </h5>
+              </summary>
+              <div class="tsd-accordion-details">
+                <section class="tsd-index-section">
+                  <h3 class="tsd-index-heading">References</h3>
+                  <div class="tsd-index-list">
+                    <a
+                      href="composables.html#OnErrorOptions"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>On<wbr />Error<wbr />Options</span></a
+                    >
+                    <a
+                      href="composables.html#SetupFunction"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>Setup<wbr />Function</span></a
+                    >
+                    <a
+                      href="composables.html#defineInitStore"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>define<wbr />Init<wbr />Store</span></a
+                    >
+                    <a
+                      href="composables.html#defineUstraService"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>define<wbr />Ustra<wbr />Service</span></a
+                    >
+                    <a
+                      href="composables.html#isPageComponent"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>is<wbr />Page<wbr />Component</span></a
+                    >
+                    <a
+                      href="composables.html#useAsyncTask"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>use<wbr />Async<wbr />Task</span></a
+                    >
+                    <a
+                      href="composables.html#useCurrentPageMeta"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>use<wbr />Current<wbr />Page<wbr />Meta</span></a
+                    >
+                    <a
+                      href="composables.html#useDeepMerge"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>use<wbr />Deep<wbr />Merge</span></a
+                    >
+                    <a href="composables.html#useExposed" class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>use<wbr />Exposed</span></a
+                    >
+                    <a
+                      href="composables.html#useFunctionWrap"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>use<wbr />Function<wbr />Wrap</span></a
+                    >
+                    <a
+                      href="composables.html#useGetObjectAsync"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>use<wbr />Get<wbr />Object<wbr />Async</span></a
+                    >
+                    <a href="composables.html#useGlobal" class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>use<wbr />Global</span></a
+                    >
+                    <a
+                      href="composables.html#useLoadingBar"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>use<wbr />Loading<wbr />Bar</span></a
+                    >
+                    <a
+                      href="composables.html#useMaskingText"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>use<wbr />Masking<wbr />Text</span></a
+                    >
+                    <a
+                      href="composables.html#useMediaQueryState"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>use<wbr />Media<wbr />Query<wbr />State</span></a
+                    >
+                    <a href="composables.html#useMessage" class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>use<wbr />Message</span></a
+                    >
+                    <a href="composables.html#useOnError" class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>use<wbr />On<wbr />Error</span></a
+                    >
+                    <a href="composables.html#useUstra" class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>use<wbr />Ustra</span></a
+                    >
+                    <a
+                      href="composables.html#useUstraEnv"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>use<wbr />Ustra<wbr />Env</span></a
+                    >
+                    <a
+                      href="composables.html#useUstraLogger"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>use<wbr />Ustra<wbr />Logger</span></a
+                    >
+                    <a
+                      href="composables.html#useUstraUtils"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-4194304"></use></svg
+                      ><span>use<wbr />Ustra<wbr />Utils</span></a
+                    >
+                  </div>
+                </section>
+              </div>
+            </details>
+          </section>
+        </section>
+        <section class="tsd-panel-group tsd-member-group">
+          <h2>References</h2>
+          <section class="tsd-panel tsd-member">
+            <a id="OnErrorOptions" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>On<wbr />Error<wbr />Options</span
+              ><a
+                href="#OnErrorOptions"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../interfaces/composables_utils.OnErrorOptions.html"
+              >OnErrorOptions</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="SetupFunction" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>Setup<wbr />Function</span
+              ><a
+                href="#SetupFunction"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../types/composables_service.SetupFunction.html"
+              >SetupFunction</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="defineInitStore" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>define<wbr />Init<wbr />Store</span
+              ><a
+                href="#defineInitStore"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/store.defineInitStore.html"
+              >defineInitStore</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="defineUstraService" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>define<wbr />Ustra<wbr />Service</span
+              ><a
+                href="#defineUstraService"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_service.defineUstraService.html"
+              >defineUstraService</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="isPageComponent" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>is<wbr />Page<wbr />Component</span
+              ><a
+                href="#isPageComponent"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_utils.isPageComponent.html"
+              >isPageComponent</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="useAsyncTask" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>use<wbr />Async<wbr />Task</span
+              ><a
+                href="#useAsyncTask"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_utils.useAsyncTask.html"
+              >useAsyncTask</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="useCurrentPageMeta" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>use<wbr />Current<wbr />Page<wbr />Meta</span
+              ><a
+                href="#useCurrentPageMeta"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_utils.useCurrentPageMeta.html"
+              >useCurrentPageMeta</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="useDeepMerge" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>use<wbr />Deep<wbr />Merge</span
+              ><a
+                href="#useDeepMerge"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_utils.useDeepMerge.html"
+              >useDeepMerge</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="useExposed" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>use<wbr />Exposed</span
+              ><a
+                href="#useExposed"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_utils.useExposed.html"
+              >useExposed</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="useFunctionWrap" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>use<wbr />Function<wbr />Wrap</span
+              ><a
+                href="#useFunctionWrap"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_utils.useFunctionWrap.html"
+              >useFunctionWrap</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="useGetObjectAsync" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>use<wbr />Get<wbr />Object<wbr />Async</span
+              ><a
+                href="#useGetObjectAsync"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_utils.useGetObjectAsync.html"
+              >useGetObjectAsync</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="useGlobal" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>use<wbr />Global</span
+              ><a
+                href="#useGlobal"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_utils.useGlobal.html"
+              >useGlobal</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="useLoadingBar" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>use<wbr />Loading<wbr />Bar</span
+              ><a
+                href="#useLoadingBar"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_utils.useLoadingBar.html"
+              >useLoadingBar</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="useMaskingText" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>use<wbr />Masking<wbr />Text</span
+              ><a
+                href="#useMaskingText"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_utils.useMaskingText.html"
+              >useMaskingText</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="useMediaQueryState" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>use<wbr />Media<wbr />Query<wbr />State</span
+              ><a
+                href="#useMediaQueryState"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_utils.useMediaQueryState.html"
+              >useMediaQueryState</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="useMessage" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>use<wbr />Message</span
+              ><a
+                href="#useMessage"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_utils.useMessage.html"
+              >useMessage</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="useOnError" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>use<wbr />On<wbr />Error</span
+              ><a
+                href="#useOnError"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_utils.useOnError.html"
+              >useOnError</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="useUstra" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>use<wbr />Ustra</span
+              ><a
+                href="#useUstra"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_ustra.useUstra.html">useUstra</a>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="useUstraEnv" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>use<wbr />Ustra<wbr />Env</span
+              ><a
+                href="#useUstraEnv"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_ustra.useUstraEnv.html"
+              >useUstraEnv</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="useUstraLogger" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>use<wbr />Ustra<wbr />Logger</span
+              ><a
+                href="#useUstraLogger"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_ustra.useUstraLogger.html"
+              >useUstraLogger</a
+            >
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="useUstraUtils" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>use<wbr />Ustra<wbr />Utils</span
+              ><a
+                href="#useUstraUtils"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            Re-exports
+            <a href="../functions/composables_ustra.useUstraUtils.html"
+              >useUstraUtils</a
+            >
+          </section>
+        </section>
+      </div>
+      <div class="col-sidebar">
+        <div class="page-menu">
+          <div class="tsd-navigation settings">
+            <details class="tsd-index-accordion">
+              <summary class="tsd-accordion-summary">
+                <h3>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <use href="../assets/icons.svg#icon-chevronDown"></use></svg
+                  >Settings
+                </h3>
+              </summary>
+              <div class="tsd-accordion-details">
+                <div class="tsd-filter-visibility">
+                  <h4 class="uppercase">Member Visibility</h4>
+                  <form>
+                    <ul id="tsd-filter-options">
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-protected"
+                            name="protected"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Protected</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-private"
+                            name="private"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Private</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-inherited"
+                            name="inherited"
+                            checked
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Inherited</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-external"
+                            name="external"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>External</span></label
+                        >
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+                <div class="tsd-theme-toggle">
+                  <h4 class="uppercase">Theme</h4>
+                  <select id="tsd-theme">
+                    <option value="os">OS</option>
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                  </select>
+                </div>
+              </div>
+            </details>
+          </div>
+          <details open class="tsd-index-accordion tsd-page-navigation">
+            <summary class="tsd-accordion-summary">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <use href="../assets/icons.svg#icon-chevronDown"></use></svg
+                >On This Page
+              </h3>
+            </summary>
+            <div class="tsd-accordion-details">
+              <a href="#OnErrorOptions" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>On<wbr />Error<wbr />Options</span></a
+              ><a href="#SetupFunction" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>Setup<wbr />Function</span></a
+              ><a href="#defineInitStore" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>define<wbr />Init<wbr />Store</span></a
+              ><a href="#defineUstraService" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>define<wbr />Ustra<wbr />Service</span></a
+              ><a href="#isPageComponent" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>is<wbr />Page<wbr />Component</span></a
+              ><a href="#useAsyncTask" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>use<wbr />Async<wbr />Task</span></a
+              ><a href="#useCurrentPageMeta" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>use<wbr />Current<wbr />Page<wbr />Meta</span></a
+              ><a href="#useDeepMerge" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>use<wbr />Deep<wbr />Merge</span></a
+              ><a href="#useExposed" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>use<wbr />Exposed</span></a
+              ><a href="#useFunctionWrap" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>use<wbr />Function<wbr />Wrap</span></a
+              ><a href="#useGetObjectAsync" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>use<wbr />Get<wbr />Object<wbr />Async</span></a
+              ><a href="#useGlobal" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>use<wbr />Global</span></a
+              ><a href="#useLoadingBar" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>use<wbr />Loading<wbr />Bar</span></a
+              ><a href="#useMaskingText" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>use<wbr />Masking<wbr />Text</span></a
+              ><a href="#useMediaQueryState" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>use<wbr />Media<wbr />Query<wbr />State</span></a
+              ><a href="#useMessage" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>use<wbr />Message</span></a
+              ><a href="#useOnError" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>use<wbr />On<wbr />Error</span></a
+              ><a href="#useUstra" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>use<wbr />Ustra</span></a
+              ><a href="#useUstraEnv" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>use<wbr />Ustra<wbr />Env</span></a
+              ><a href="#useUstraLogger" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>use<wbr />Ustra<wbr />Logger</span></a
+              ><a href="#useUstraUtils" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-4194304"></use></svg
+                ><span>use<wbr />Ustra<wbr />Utils</span></a
+              >
+            </div>
+          </details>
+        </div>
+        <div class="site-menu">
+          <nav class="tsd-navigation">
+            <a href="../index.html"
+              ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                <use href="../assets/icons.svg#icon-1"></use></svg
+              ><span>@moong/nuxt</span></a
+            >
+            <ul
+              class="tsd-small-nested-navigation"
+              id="tsd-nav-container"
+              data-base=".."
+            >
+              <li>Loading...</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="tsd-generator">
+      <p>
+        Generated using
+        <a href="https://typedoc.org/" target="_blank">TypeDoc</a>
+      </p>
+    </div>
+    <div class="overlay"></div>
+  </body>
+</html>

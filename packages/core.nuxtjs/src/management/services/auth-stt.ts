@@ -1,6 +1,6 @@
-import { apiModels } from '#ustra/core/data'
-import { defineUstraService } from '#ustra/nuxt/composables/service'
-import { AuthStt, AuthSttCriteria } from '#ustra/nuxt/management'
+import { apiModels } from "#moong/core/data";
+import { defineUstraService } from "#moong/nuxt/composables/service";
+import { AuthStt, AuthSttCriteria } from "#moong/nuxt/management";
 
 export const useUstraAuthSttService = defineUstraService(({ api }) => {
   /**
@@ -10,12 +10,12 @@ export const useUstraAuthSttService = defineUstraService(({ api }) => {
    */
   async function getAuthSttUserList(criteria: AuthSttCriteria = {}) {
     const result = await $ustra.api.call<apiModels.ApiResponse<AuthStt[]>>({
-      url: '/api/system/auth-stt/user',
-      method: 'POST',
+      url: "/api/system/auth-stt/user",
+      method: "POST",
       data: criteria,
-    })
+    });
 
-    return result.data
+    return result.data;
   }
 
   /**
@@ -25,12 +25,12 @@ export const useUstraAuthSttService = defineUstraService(({ api }) => {
    */
   async function getAuthSttPeriodList(criteria: AuthSttCriteria = {}) {
     const result = await $ustra.api.call<apiModels.ApiResponse<AuthStt[]>>({
-      url: '/api/system/auth-stt/period',
-      method: 'POST',
+      url: "/api/system/auth-stt/period",
+      method: "POST",
       data: criteria,
-    })
+    });
 
-    return result.data
+    return result.data;
   }
 
   /**
@@ -40,12 +40,12 @@ export const useUstraAuthSttService = defineUstraService(({ api }) => {
    */
   async function getAuthSttCurrentList(criteria: AuthSttCriteria = {}) {
     const result = await $ustra.api.call<apiModels.ApiResponse<AuthStt[]>>({
-      url: '/api/system/auth-stt/current',
-      method: 'POST',
+      url: "/api/system/auth-stt/current",
+      method: "POST",
       data: criteria,
-    })
+    });
 
-    return result.data
+    return result.data;
   }
 
   /**
@@ -55,12 +55,12 @@ export const useUstraAuthSttService = defineUstraService(({ api }) => {
    */
   async function getAuthSttGrpHistList(criteria: AuthSttCriteria = {}) {
     const result = await $ustra.api.call<apiModels.ApiResponse<AuthStt[]>>({
-      url: '/api/system/auth-stt/grp',
-      method: 'POST',
+      url: "/api/system/auth-stt/grp",
+      method: "POST",
       data: criteria,
-    })
+    });
 
-    return result.data
+    return result.data;
   }
 
   /**
@@ -70,13 +70,19 @@ export const useUstraAuthSttService = defineUstraService(({ api }) => {
    */
   async function getAuthSttHistList(criteria: AuthSttCriteria = {}) {
     const result = await $ustra.api.call<apiModels.ApiResponse<AuthStt[]>>({
-      url: '/api/system/auth-stt/auth',
-      method: 'POST',
+      url: "/api/system/auth-stt/auth",
+      method: "POST",
       data: criteria,
-    })
+    });
 
-    return result.data
+    return result.data;
   }
 
-  return { getAuthSttUserList, getAuthSttPeriodList, getAuthSttCurrentList, getAuthSttGrpHistList, getAuthSttHistList }
-})
+  return {
+    getAuthSttUserList,
+    getAuthSttPeriodList,
+    getAuthSttCurrentList,
+    getAuthSttGrpHistList,
+    getAuthSttHistList,
+  };
+});

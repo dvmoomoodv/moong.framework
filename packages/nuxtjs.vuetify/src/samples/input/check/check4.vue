@@ -2,7 +2,8 @@
   <v-card>
     <template #text>
       <h3>itemAlign</h3>
-      itemAlign 속성은 하위 아이템의 정렬 기준을 변경할 수 있다. left / center / right 값을 설정할 수 있으며, 기본 값은 center 이다.<br />
+      itemAlign 속성은 하위 아이템의 정렬 기준을 변경할 수 있다. left / center /
+      right 값을 설정할 수 있으며, 기본 값은 center 이다.<br />
 
       <URadioGroupBox
         :items-source="[
@@ -31,13 +32,13 @@
   </v-card>
 </template>
 <script lang="ts" setup>
-import { ref, reactive } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
+import { ref, reactive } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
 
 // @ts-ignore
-import check5 from './md/check5.md'
+import check5 from "./md/check5.md";
 
-const checked5 = reactive(['N', 'N', 'N', 'N'])
+const checked5 = reactive(["N", "N", "N", "N"]);
 
-const alignValue = ref<'left' | 'center' | 'right'>('left')
+const alignValue = ref<"left" | "center" | "right">("left");
 </script>

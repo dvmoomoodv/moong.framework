@@ -10,17 +10,17 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from '#ustra/nuxt'
+import { computed } from "#moong/nuxt";
 const props = defineProps({
   type: {
     type: String,
-    default: 'info',
+    default: "info",
   },
-  message: { type: String, default: '' },
-})
+  message: { type: String, default: "" },
+});
 const classes = computed(() => {
-  return props.type
-})
+  return props.type;
+});
 </script>
 
 <style scoped></style>

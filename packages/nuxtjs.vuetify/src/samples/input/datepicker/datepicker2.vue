@@ -6,9 +6,18 @@
       readonly, disabled 속성을 사용하여 입력 박스의 상태를 제어할 수 있다.
       <br /><br />
 
-      <UVCheckGroupBox v-model="states" :stack="true" :itemsSource="[{ text: 'readonly' }, { text: 'disabled' }]" />
+      <UVCheckGroupBox
+        v-model="states"
+        :stack="true"
+        :itemsSource="[{ text: 'readonly' }, { text: 'disabled' }]"
+      />
 
-      <UDatepicker v-model="value" class="mt-2" :readonly="states[0]" :disabled="states[1]" />
+      <UDatepicker
+        v-model="value"
+        class="mt-2"
+        :readonly="states[0]"
+        :disabled="states[1]"
+      />
       <v-chip class="ma-2" color="pink" label text-color="white">
         <v-icon start icon="mdi-label"></v-icon>
         value : {{ value }}
@@ -19,14 +28,14 @@
   </VCard>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
-import UDatepicker from '#ustra/nuxt-vuetify/components/form/u-datepicker.vue'
-import UVCheckGroupBox from '#ustra/nuxt-vuetify/components/check-box/u-v-check-group-box.vue'
+import { ref } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
+import UDatepicker from "#moong/nuxt-vuetify/components/form/u-datepicker.vue";
+import UVCheckGroupBox from "#moong/nuxt-vuetify/components/check-box/u-v-check-group-box.vue";
 
 // @ts-ignore
-import doc1 from './md/datepicker2.md'
+import doc1 from "./md/datepicker2.md";
 
-const value = ref(null)
-const states = ref([false, false])
+const value = ref(null);
+const states = ref([false, false]);
 </script>

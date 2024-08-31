@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, useSlots } from '#ustra/nuxt'
+import { ref, computed, onMounted, useSlots } from "#moong/nuxt";
 const props = defineProps({
   top: {
     type: Boolean,
@@ -27,29 +27,29 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-})
+});
 
 const classes = computed(() => {
-  let tb
-  let lr
+  let tb;
+  let lr;
   if (props.top) {
-    tb = ' top '
+    tb = " top ";
   }
   if (props.bottom) {
-    tb = ' bottom '
+    tb = " bottom ";
   }
   if (props.right) {
-    lr = ' right '
+    lr = " right ";
   }
   if (props.left) {
-    lr = ' left '
+    lr = " left ";
   }
   if (props.center) {
-    lr = ' center '
+    lr = " center ";
   }
 
-  return tb + lr
-})
+  return tb + lr;
+});
 </script>
 <style scoped lang="scss">
 .u-button-box {

@@ -18,7 +18,11 @@
       <br />
       itemTemplate 속성을 사용하여 slot의 이름을 변경할 수 있다.
       <!-- <UMarkdownViewer :content="doc3" /> -->
-      <URadioGroupBox v-model="radioValue2" :itemsSource="radioItems" itemTemplate="custom">
+      <URadioGroupBox
+        v-model="radioValue2"
+        :itemsSource="radioItems"
+        itemTemplate="custom"
+      >
         <template #custom="{ item }">
           <span>{{ item.value }} : {{ item.text }}</span>
         </template>
@@ -27,24 +31,24 @@
   </v-card>
 </template>
 <script lang="ts" setup>
-import { ref, reactive } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
+import { ref, reactive } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
 
 // @ts-ignore
-import doc1 from './md/radio8-1.md'
+import doc1 from "./md/radio8-1.md";
 
 // @ts-ignore
-import doc2 from './md/radio8-2.md'
+import doc2 from "./md/radio8-2.md";
 
 // @ts-ignore
-import doc3 from './md/radio8-3.md'
+import doc3 from "./md/radio8-3.md";
 
 const radioItems = reactive([
-  { value: '1', text: 'radio1' },
-  { value: '2', text: 'radio2', disabled: true },
-  { value: '3', text: 'radio3' },
-])
+  { value: "1", text: "radio1" },
+  { value: "2", text: "radio2", disabled: true },
+  { value: "3", text: "radio3" },
+]);
 
-const radioValue = ref('1')
-const radioValue2 = ref('1')
+const radioValue = ref("1");
+const radioValue2 = ref("1");
 </script>

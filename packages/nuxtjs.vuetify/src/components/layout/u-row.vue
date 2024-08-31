@@ -26,20 +26,20 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from '#ustra/nuxt'
-import { dom } from '#ustra/core/utils/browser'
+import { computed } from "#moong/nuxt";
+import { dom } from "#moong/core/utils/browser";
 
-import './styles/layout.scss'
+import "./styles/layout.scss";
 
 // v-row
 const props = defineProps({
   style: {
     type: String,
-    default: '',
+    default: "",
   },
   class: {
     type: String,
-    default: '',
+    default: "",
   },
   height: {
     type: [Number, String],
@@ -115,7 +115,7 @@ const props = defineProps({
   },
   tag: {
     type: String,
-    default: 'div',
+    default: "div",
   },
   fix: {
     type: Boolean,
@@ -133,27 +133,27 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-})
+});
 
 const classes = computed(() => {
-  if (props.disabled) return 'u-layout-state-disabled'
-})
+  if (props.disabled) return "u-layout-state-disabled";
+});
 
 const styles = computed(() => {
-  const styleObj: Record<string, any> = {}
+  const styleObj: Record<string, any> = {};
 
   if (props.height !== 0) {
-    styleObj.height = dom.getCssUnit(props.height)
-    styleObj.minHeight = dom.getCssUnit(props.height)
+    styleObj.height = dom.getCssUnit(props.height);
+    styleObj.minHeight = dom.getCssUnit(props.height);
   }
 
   if (!props.fill) {
-    styleObj.flexGrow = '0'
+    styleObj.flexGrow = "0";
   }
 
-  styleObj.flexWrap = props.wrap ? 'wrap' : 'nowrap'
-  return styleObj
-})
+  styleObj.flexWrap = props.wrap ? "wrap" : "nowrap";
+  return styleObj;
+});
 
 // let heightStyle = ''
 

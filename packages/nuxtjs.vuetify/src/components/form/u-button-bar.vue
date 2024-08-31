@@ -2,12 +2,14 @@
   <div class="u-button-bar-container" :style="styles" v-bind="$attrs">
     <span class="u-button-bar-title" v-if="title">{{ title }}</span>
     <slot name="default" />
-    <div class="u-button" v-if="$slots.button"><slot name="button" :title="title" /></div>
+    <div class="u-button" v-if="$slots.button">
+      <slot name="button" :title="title" />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { computed } from '#ustra/nuxt'
+import { computed } from "#moong/nuxt";
 const props = defineProps({
   title: {
     type: String,
@@ -15,14 +17,14 @@ const props = defineProps({
   },
   backgroundColor: {
     type: String,
-    default: '#f8f8f8',
+    default: "#f8f8f8",
   },
-})
+});
 const styles = computed(() => {
-  const obj: Record<string, any> = {}
-  obj.backgroundColor = props.backgroundColor
-  return obj
-})
+  const obj: Record<string, any> = {};
+  obj.backgroundColor = props.backgroundColor;
+  return obj;
+});
 </script>
 
 <style scoped>

@@ -1,5 +1,5 @@
-import { FileOutput } from '#ustra/nuxt/management'
-import { apiModels } from '#ustra/core/data'
+import { FileOutput } from "#moong/nuxt/management";
+import { apiModels } from "#moong/core/data";
 
 /**
  * 백 오피스 파일
@@ -13,13 +13,13 @@ export class UstraManagmentFile {
    */
   getViewUrl(fileId: string, fileNo: number = 1, fileGroupId?: string) {
     return $ustra.api
-      .urlBuilder('/api/file/attach')
-      .add('fileId', fileId)
-      .add('fileNo', fileNo)
-      .add('attachmentFileName', '1')
-      .add('attach', '0')
-      .add('fileGrpId', fileGroupId || 'ustra')
-      .build()
+      .urlBuilder("/api/file/attach")
+      .add("fileId", fileId)
+      .add("fileNo", fileNo)
+      .add("attachmentFileName", "1")
+      .add("attach", "0")
+      .add("fileGrpId", fileGroupId || "ustra")
+      .build();
   }
 
   /**
@@ -31,8 +31,8 @@ export class UstraManagmentFile {
   async getWebAccessUrl(fileId, fileNo: number, fileGroupId: string) {
     const result = (
       await $ustra.api.call<apiModels.ApiResponse<FileOutput>>({
-        url: '/api/file/list',
-        method: 'POST',
+        url: "/api/file/list",
+        method: "POST",
         data: {
           fileId,
           fileNos: [fileNo],
@@ -40,13 +40,13 @@ export class UstraManagmentFile {
           includeAddtionalFiles: true,
         },
       })
-    )?.data?.body
+    )?.data?.body;
 
     if (result?.fileMetaDatas?.length > 0) {
-      return result.fileMetaDatas[0].accessUrl
+      return result.fileMetaDatas[0].accessUrl;
     }
 
-    return null
+    return null;
   }
 
   /**
@@ -56,27 +56,31 @@ export class UstraManagmentFile {
    * @param file 파일 객체 (null일 경우 업로드하지 않음.)
    */
   async upload(fileGroupId: string, fileId: string, file: File) {
-    const formData: FormData = new FormData()
-    formData.append('fileGrpId', fileGroupId)
-    formData.append('fileId', fileId || '')
+    const formData: FormData = new FormData();
+    formData.append("fileGrpId", fileGroupId);
+    formData.append("fileId", fileId || "");
 
     if (file) {
-      formData.append('file-1', file)
+      formData.append("file-1", file);
     }
 
     const result = await $ustra.api.call<apiModels.ApiResponse<FileOutput>>({
-      url: '/api/file/upload',
-      method: 'POST',
-      headers: { contentType: false, processData: false, enctype: 'multipart/form-data' },
+      url: "/api/file/upload",
+      method: "POST",
+      headers: {
+        contentType: false,
+        processData: false,
+        enctype: "multipart/form-data",
+      },
       data: formData,
       timeout: 0,
-    })
+    });
 
     return {
       fileId: result.data.body.fileId,
       fileMetaDatas: result.data.body.fileMetaDatas,
-      success: result.data.resultCode === '0000',
+      success: result.data.resultCode === "0000",
       convertData: null,
-    }
+    };
   }
 }

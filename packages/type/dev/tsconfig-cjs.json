@@ -20,12 +20,12 @@
     "types": ["@types/node", "@types/jest", "nuxt"],
     "baseUrl": "../../../",
     "paths": {
-      "#ustra/core": ["framework/core/src"],
-      "#ustra/core/*": ["framework/core/src/*"],
-      "#ustra/h3": ["framework/h3/src"],
-      "#ustra/h3/*": ["framework/h3/src/*"],
-      "#ustra/nuxt": ["framework/nuxt/src"],
-      "#ustra/nuxt/*": ["framework/nuxt/src/*"],
+      "#moong/core": ["framework/core/src"],
+      "#moong/core/*": ["framework/core/src/*"],
+      "#moong/h3": ["framework/h3/src"],
+      "#moong/h3/*": ["framework/h3/src/*"],
+      "#moong/nuxt": ["framework/nuxt/src"],
+      "#moong/nuxt/*": ["framework/nuxt/src/*"],
       "#app": ["node_modules/nuxt/dist/app"],
       "#app/*": ["node_modules/nuxt/dist/app/*"],
       "vue-demi": ["node_modules/nuxt/dist/app/compat/vue-demi"],
@@ -40,5 +40,5 @@
       "esModuleInterop": true
     }
   },
-  "include": ["@ustra/core/src/**/*.ts", "@ustra/h3/src/**/*.ts"]
+  "include": ["@moong/core/src/**/*.ts", "@moong/h3/src/**/*.ts"]
 }

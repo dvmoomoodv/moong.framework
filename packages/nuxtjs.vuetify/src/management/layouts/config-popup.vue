@@ -36,13 +36,13 @@
   </UPopup>
 </template>
 <script lang="ts" setup>
-import { defineProps, shallowRef, ref, computed, onMounted } from '#ustra/nuxt'
-import { UPopup } from '#ustra/nuxt-vuetify/components'
+import { defineProps, shallowRef, ref, computed, onMounted } from '#moong/nuxt'
+import { UPopup } from '#moong/nuxt-vuetify/components'
 import { useVModel } from '@vueuse/core'
-import {ConfigMenu} from '#ustra/nuxt'
+import {ConfigMenu} from '#moong/nuxt'
 import { VList } from 'vuetify/components'
-import ConfigPopupApplication from '#ustra/nuxt-vuetify/management/components/config/application.vue'
-import ConfigPopupPassword from '#ustra/nuxt-vuetify/management/components/config/password.vue'
+import ConfigPopupApplication from '#moong/nuxt-vuetify/management/components/config/application.vue'
+import ConfigPopupPassword from '#moong/nuxt-vuetify/management/components/config/password.vue'
 
 const drawer = ref(true)
 const toggle = ref(null)

@@ -1,1 +1,1 @@
-import { logger } from '#ustra/core'
+import { logger } from "#moong/core";

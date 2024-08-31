@@ -18,8 +18,8 @@
 /**
  * https://developer.mozilla.org/ko/docs/Web/HTML/Element/input/date
  */
-import { defineModel } from '#ustra/nuxt'
-import { core } from '#ustra/core/utils'
+import { defineModel } from "#moong/nuxt";
+import { core } from "#moong/core/utils";
 
 /**
  * value -> modelValue
@@ -51,19 +51,19 @@ import { core } from '#ustra/core/utils'
  * validation: required
  * pattern : browser 체크 필요
  */
-const modelValue = defineModel()
-const type = defineModel<string>('type', { default: 'date' })
+const modelValue = defineModel();
+const type = defineModel<string>("type", { default: "date" });
 const attrs = computed(() => {
-  const $attrs = useAttrs()
-  return core.deepMerge($attrs)
-})
+  const $attrs = useAttrs();
+  return core.deepMerge($attrs);
+});
 </script>
 
 <script lang="ts">
 export default {
-  name: 'UBaseDatepicker',
+  name: "UBaseDatepicker",
   inheritAttrs: false,
-}
+};
 </script>
 
 <style lang="scss"></style>

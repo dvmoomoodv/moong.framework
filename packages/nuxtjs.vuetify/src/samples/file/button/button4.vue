@@ -5,17 +5,19 @@
       <br /><br />
       <UFileButton :disabled="disabledButton"></UFileButton>
       <br />
-      <VBtn class="mt-2" @click="() => (disabledButton = !disabledButton)">Toggle Button</VBtn>
+      <VBtn class="mt-2" @click="() => (disabledButton = !disabledButton)"
+        >Toggle Button</VBtn
+      >
 
       <!-- <UMarkdownViewer :content="button4" /> -->
     </template>
   </VCard>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
+import { ref } from "#moong/nuxt";
 
 // @ts-ignore
-import button4 from './md/button4.md'
+import button4 from "./md/button4.md";
 
-const disabledButton = ref(false)
+const disabledButton = ref(false);
 </script>

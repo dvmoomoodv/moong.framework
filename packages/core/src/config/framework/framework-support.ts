@@ -2,14 +2,14 @@
  * 프레임워크 모듈 유틸리티
  * @packageDocumentation
  */
-import { FRAMEWORK_MODULE_DEFINITION } from './modules'
-import pathUtils from '../../utils/node/path'
-import fileUtils from '../../utils/node/file'
-import moduleUtils from '../../utils/node/module'
-import coreUtils from '../../utils/core'
-import { logger } from '../../'
-import { resolve, join } from 'pathe'
-import { existsSync } from 'node:fs'
+import { FRAMEWORK_MODULE_DEFINITION } from "./modules";
+import pathUtils from "../../utils/node/path";
+import fileUtils from "../../utils/node/file";
+import moduleUtils from "../../utils/node/module";
+import coreUtils from "../../utils/core";
+import { logger } from "../../";
+import { resolve, join } from "pathe";
+import { existsSync } from "node:fs";
 
 export class FrameworkSupport {
   /**
@@ -17,25 +17,30 @@ export class FrameworkSupport {
    * @param baseDir 기준 directory 경로
    */
   getModuleAlias(baseDir: string = undefined) {
-    if (process.env.BUILD_ENV !== 'prod') {
-      return {}
+    if (process.env.BUILD_ENV !== "prod") {
+      return {};
     }
 
-    baseDir = baseDir || process.cwd()
-    const modules = {}
-    FRAMEWORK_MODULE_DEFINITION.filter(def => def.requiredImport).forEach(def => {
-      const modulePath = moduleUtils.findNodeModuleDirPath(baseDir, def.moduleName)
+    baseDir = baseDir || process.cwd();
+    const modules = {};
+    FRAMEWORK_MODULE_DEFINITION.filter((def) => def.requiredImport).forEach(
+      (def) => {
+        const modulePath = moduleUtils.findNodeModuleDirPath(
+          baseDir,
+          def.moduleName
+        );
 
-      if (!modulePath) {
-        logger.warn(`cannot find module path : ${def.moduleName}`)
-        return []
+        if (!modulePath) {
+          logger.warn(`cannot find module path : ${def.moduleName}`);
+          return [];
+        }
+
+        // modules[def.moduleName] = modulePath
+        modules[def.alias] = resolve(modulePath, "src");
       }
+    );
 
-      // modules[def.moduleName] = modulePath
-      modules[def.alias] = resolve(modulePath, 'src')
-    })
-
-    return modules
+    return modules;
   }
 
   /**
@@ -43,7 +48,9 @@ export class FrameworkSupport {
    * @param moduleName 모듈 명
    */
   getModuleInfo(moduleName: string) {
-    return FRAMEWORK_MODULE_DEFINITION.find(module => module.moduleName === moduleName)
+    return FRAMEWORK_MODULE_DEFINITION.find(
+      (module) => module.moduleName === moduleName
+    );
   }
 
   /**
@@ -52,7 +59,7 @@ export class FrameworkSupport {
    * @param thrown 파일이 없을 경우, 예외 발생여부
    */
   parsePackageJson(baseDir: string, thrown: boolean = true) {
-    return moduleUtils.parsePackageJson(baseDir, thrown)
+    return moduleUtils.parsePackageJson(baseDir, thrown);
   }
 
   /**
@@ -61,7 +68,7 @@ export class FrameworkSupport {
    * @param content 내용
    */
   writePackageJson(baseDir: string, content: any) {
-    moduleUtils.writePackageJson(baseDir, content)
+    moduleUtils.writePackageJson(baseDir, content);
   }
 
   /**
@@ -69,18 +76,22 @@ export class FrameworkSupport {
    * @param baseDir 기준 디렉토리
    */
   getUseFrameworkModules(baseDir: string) {
-    const useModuleSet = new Set<string>()
-    const packageInfo = this.parsePackageJson(baseDir)
-    const dependencies = coreUtils.deepMerge({}, packageInfo.dependencies || {}, packageInfo.devDependencies || {})
+    const useModuleSet = new Set<string>();
+    const packageInfo = this.parsePackageJson(baseDir);
+    const dependencies = coreUtils.deepMerge(
+      {},
+      packageInfo.dependencies || {},
+      packageInfo.devDependencies || {}
+    );
 
-    FRAMEWORK_MODULE_DEFINITION.filter(def => {
-      return !!dependencies[def.moduleName]
-    }).forEach(def => {
-      useModuleSet.add(def.moduleName)
-      def.dependencyModuleNames.forEach(d => useModuleSet.add(d))
-    })
+    FRAMEWORK_MODULE_DEFINITION.filter((def) => {
+      return !!dependencies[def.moduleName];
+    }).forEach((def) => {
+      useModuleSet.add(def.moduleName);
+      def.dependencyModuleNames.forEach((d) => useModuleSet.add(d));
+    });
 
-    return useModuleSet
+    return useModuleSet;
   }
 
   /**
@@ -89,10 +100,10 @@ export class FrameworkSupport {
    * @param moduleName 모듈 명
    */
   getModulePathFromFrameworkPath(frameworkDir: string, moduleName: string) {
-    if (frameworkDir.includes('node_modules')) {
-      return resolve(frameworkDir, '../' + moduleName)
+    if (frameworkDir.includes("node_modules")) {
+      return resolve(frameworkDir, "../" + moduleName);
     } else {
-      return resolve(frameworkDir, './' + moduleName.split('/')[1])
+      return resolve(frameworkDir, "./" + moduleName.split("/")[1]);
     }
   }
 
@@ -102,26 +113,29 @@ export class FrameworkSupport {
    * @param frameworkDir 프레임워크 경로
    */
   getAllDevDependencies(baseDir: string, frameworkDir: string) {
-    const allDevDependencies = {}
+    const allDevDependencies = {};
 
-    this.getUseFrameworkModules(baseDir).forEach(moduleName => {
-      const moduleDir = this.getModulePathFromFrameworkPath(frameworkDir, moduleName)
-      const packageInfo = this.parsePackageJson(moduleDir, false)
+    this.getUseFrameworkModules(baseDir).forEach((moduleName) => {
+      const moduleDir = this.getModulePathFromFrameworkPath(
+        frameworkDir,
+        moduleName
+      );
+      const packageInfo = this.parsePackageJson(moduleDir, false);
 
       if (!packageInfo) {
-        logger.warn('cannot find module : ', moduleName)
-        return
+        logger.warn("cannot find module : ", moduleName);
+        return;
       }
 
-      const devDependencies = packageInfo.devDependencies || {}
+      const devDependencies = packageInfo.devDependencies || {};
       for (const key of Object.keys(devDependencies)) {
-        allDevDependencies[key] = devDependencies[key]
+        allDevDependencies[key] = devDependencies[key];
       }
-    })
+    });
 
-    return Object.keys(allDevDependencies).map(moduleName => {
-      return `${moduleName}@${allDevDependencies[moduleName]}`
-    })
+    return Object.keys(allDevDependencies).map((moduleName) => {
+      return `${moduleName}@${allDevDependencies[moduleName]}`;
+    });
   }
 
   /**
@@ -130,56 +144,80 @@ export class FrameworkSupport {
    * @param moduleName 모듈 명
    */
   getTemplateList(baseDir: string, frameworkDir: string) {
-    const templates: { dirPath: string; templateName: string; templateMessage: string; templatePostScript: string; packageInfo: any }[] = []
-    this.getUseFrameworkModules(baseDir).forEach(moduleName => {
-      const moduleDirPath = this.getModulePathFromFrameworkPath(frameworkDir, moduleName)
-      const templateDirPath = resolve(moduleDirPath, '__templates__')
+    const templates: {
+      dirPath: string;
+      templateName: string;
+      templateMessage: string;
+      templatePostScript: string;
+      packageInfo: any;
+    }[] = [];
+    this.getUseFrameworkModules(baseDir).forEach((moduleName) => {
+      const moduleDirPath = this.getModulePathFromFrameworkPath(
+        frameworkDir,
+        moduleName
+      );
+      const templateDirPath = resolve(moduleDirPath, "__templates__");
 
       if (!existsSync(templateDirPath)) {
-        return
+        return;
       }
 
-      fileUtils.getDirectoryFiles(templateDirPath, true).forEach(dir => {
-        const templateInfoPath = join(templateDirPath, dir.name, 'template-info.json')
+      fileUtils.getDirectoryFiles(templateDirPath, true).forEach((dir) => {
+        const templateInfoPath = join(
+          templateDirPath,
+          dir.name,
+          "template-info.json"
+        );
 
         if (!existsSync(templateInfoPath)) {
-          return
+          return;
         }
 
         const sharedTemplateInfoPath = join(
-          this.getModulePathFromFrameworkPath(frameworkDir, '@ustra/core'),
-          '__templates__',
-          'shared',
-          'template-info.json',
-        )
-        let sharedTemplateInfo = {}
+          this.getModulePathFromFrameworkPath(frameworkDir, "@moong/core"),
+          "__templates__",
+          "shared",
+          "template-info.json"
+        );
+        let sharedTemplateInfo = {};
 
         if (existsSync(sharedTemplateInfoPath)) {
-          sharedTemplateInfo = JSON.parse(fileUtils.readTextFile(sharedTemplateInfoPath))
+          sharedTemplateInfo = JSON.parse(
+            fileUtils.readTextFile(sharedTemplateInfoPath)
+          );
         }
 
-        const templateInfo = JSON.parse(fileUtils.readTextFile(templateInfoPath))
-        const templateName = templateInfo.name
-        const templateMessage = templateInfo.message
-        const templatePostScript = templateInfo.postScript ? resolve(join(templateDirPath, dir.name), templateInfo.postScript) : null
-        const packageInfo = this.parsePackageJson(baseDir)
+        const templateInfo = JSON.parse(
+          fileUtils.readTextFile(templateInfoPath)
+        );
+        const templateName = templateInfo.name;
+        const templateMessage = templateInfo.message;
+        const templatePostScript = templateInfo.postScript
+          ? resolve(join(templateDirPath, dir.name), templateInfo.postScript)
+          : null;
+        const packageInfo = this.parsePackageJson(baseDir);
 
-        delete templateInfo.name
-        delete templateInfo.message
-        delete templateInfo.postScript
+        delete templateInfo.name;
+        delete templateInfo.message;
+        delete templateInfo.postScript;
 
         templates.push({
           templateName,
           templateMessage,
           templatePostScript,
           dirPath: join(templateDirPath, dir.name),
-          packageInfo: coreUtils.deepMerge({}, sharedTemplateInfo, templateInfo, packageInfo),
-        })
-      })
-    })
+          packageInfo: coreUtils.deepMerge(
+            {},
+            sharedTemplateInfo,
+            templateInfo,
+            packageInfo
+          ),
+        });
+      });
+    });
 
-    return templates
+    return templates;
   }
 }
-const instance = new FrameworkSupport()
-export default instance
+const instance = new FrameworkSupport();
+export default instance;

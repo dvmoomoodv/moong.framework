@@ -13,24 +13,36 @@
 
       <v-text-field label="값을 입력해주세요." v-model="test"></v-text-field>
       <v-text-field label="값을 입력해주세요." v-model="test"></v-text-field>
-      <v-text-field label="값을 입력해주세요." v-model="test" disabled></v-text-field>
+      <v-text-field
+        label="값을 입력해주세요."
+        v-model="test"
+        disabled
+      ></v-text-field>
       <v-text-field label="값을 입력해주세요."></v-text-field>
       <v-text-field label="값을 입력해주세요." maxLength="5"></v-text-field>
-      <v-text-field label="값을 입력해주세요." v-model="test" readonly></v-text-field>
-      <v-text-field label="값을 입력해주세요." v-model="test" disabled></v-text-field>
+      <v-text-field
+        label="값을 입력해주세요."
+        v-model="test"
+        readonly
+      ></v-text-field>
+      <v-text-field
+        label="값을 입력해주세요."
+        v-model="test"
+        disabled
+      ></v-text-field>
       <!-- <UMarkdownViewer>{{ textBox1 }}</UMarkdownViewer> -->
     </template>
   </v-card>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
+import { ref } from "vue";
+import { UMarkdownViewer } from "#moong/nuxt/components";
 
 // @ts-ignore
-import textBox1 from './md/textbox1.md'
+import textBox1 from "./md/textbox1.md";
 
-const test = ref('123456789123456789')
+const test = ref("123456789123456789");
 </script>
 
 <style scoped></style>

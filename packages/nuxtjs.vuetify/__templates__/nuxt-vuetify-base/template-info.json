@@ -9,9 +9,9 @@
     "prepare": "nuxt prepare"
   },
   "imports": {
-    "#ustra/nuxt": "@ustra/nuxt/src",
-    "#ustra/nuxt/*": "@ustra/nuxt/src/*",
-    "#ustra/nuxt-vuetify": "@ustra/nuxt-vuetify/src",
-    "#ustra/nuxt-vuetify/*": "@ustra/nuxt-vuetify/src/*"
+    "#moong/nuxt": "@moong/nuxt/src",
+    "#moong/nuxt/*": "@moong/nuxt/src/*",
+    "#moong/nuxt-vuetify": "@moong/nuxt-vuetify/src",
+    "#moong/nuxt-vuetify/*": "@moong/nuxt-vuetify/src/*"
   }
 }

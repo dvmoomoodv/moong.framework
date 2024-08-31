@@ -1,18 +1,18 @@
 {
-  "name": "@ustra/types",
-  "version": "3.2.0-stable",
-  "description": "USTRA Node framework 3 - types",
-  "author": "Roy Lee <keymasroy@gsitm.com>",
+  "name": "@moong/types",
+  "version": "0.0.1",
+  "description": "types",
+  "author": "Moomoo <dvmoomoodv@gmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/ustraframework/ustra-framework3-node/tree/master/framework/core",
+  "repository": "https://github.com/dvmoomoodv/moong.framework/tree/master/framework/core",
   "homepage": "http://guide.ustraframework.kro.kr/",
   "keywords": [
     "node",
     "typescript"
   ],
   "bugs": {
-    "url": "http://guide.ustraframework.kro.kr/forum",
-    "email": "ustraframe@gmail.com"
+    "url": "https://github.com/dvmoomoodv/moong.framework/issues",
+    "email": "dvmoomoodv@gmail.com"
   },
   "files": [
     "dev/**/*.*",

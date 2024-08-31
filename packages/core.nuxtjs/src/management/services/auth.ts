@@ -1,7 +1,7 @@
-import { apiModels } from '#ustra/core/data'
-import { defineUstraService } from '#ustra/nuxt/composables'
-import { UsrApvTyCd } from '../models/common-code'
-import { Auth, AuthMenuTreeData } from '../models/auth'
+import { apiModels } from "#moong/core/data";
+import { defineUstraService } from "#moong/nuxt/composables";
+import { UsrApvTyCd } from "../models/common-code";
+import { Auth, AuthMenuTreeData } from "../models/auth";
 
 /**
  * 권한 서비스
@@ -13,11 +13,11 @@ export const useUstraAuthService = defineUstraService(({ api }) => {
   async function getAuthGroupInfo(authGrpId: number, sysCd?: string) {
     const res = await api.call<apiModels.ApiResponse<Auth>>({
       url: `/api/system/authority/auth-grp?authGrpId=${authGrpId}`,
-      method: 'GET',
-    })
+      method: "GET",
+    });
 
-    res.data.body.menus = createMenuData(res.data.body.menus, sysCd)
-    return res.data.body
+    res.data.body.menus = createMenuData(res.data.body.menus, sysCd);
+    return res.data.body;
   }
 
   /**
@@ -26,11 +26,11 @@ export const useUstraAuthService = defineUstraService(({ api }) => {
   async function getUserAuthInfo(usrId: string, sysCd?: string) {
     const res = await api.call<apiModels.ApiResponse<Auth>>({
       url: `/api/system/authority/user?usrId=${usrId}`,
-      method: 'GET',
-    })
+      method: "GET",
+    });
 
-    res.data.body.menus = createMenuData(res.data.body.menus, sysCd)
-    return res.data.body
+    res.data.body.menus = createMenuData(res.data.body.menus, sysCd);
+    return res.data.body;
   }
 
   /**
@@ -39,65 +39,72 @@ export const useUstraAuthService = defineUstraService(({ api }) => {
    * @param targetUsrId 대상 사용자 아이디
    * @param usrApvTyCd 사용자 승인 유형 코드
    */
-  async function hasApprovalAuth(usrId: string, targetUsrId: string, usrApvTyCd: UsrApvTyCd) {
+  async function hasApprovalAuth(
+    usrId: string,
+    targetUsrId: string,
+    usrApvTyCd: UsrApvTyCd
+  ) {
     const url = api
-      .urlBuilder('/api/system/authority/has-approval')
-      .add('usrId', usrId)
-      .add('targetUsrId', targetUsrId)
-      .add('usrApvTyCd', usrApvTyCd)
-      .build()
+      .urlBuilder("/api/system/authority/has-approval")
+      .add("usrId", usrId)
+      .add("targetUsrId", targetUsrId)
+      .add("usrApvTyCd", usrApvTyCd)
+      .build();
 
     return (
       await api.call<apiModels.ApiResponse<boolean>>({
         url,
-        method: 'GET',
+        method: "GET",
       })
-    )?.data?.body
+    )?.data?.body;
   }
 
   // 권한 설정에서 사용할 메뉴 데이터 생성
   function createMenuData(menuData: AuthMenuTreeData[], sysCd?: string) {
-    const findMenuById = (menus: AuthMenuTreeData[], mnuId: string): AuthMenuTreeData => {
+    const findMenuById = (
+      menus: AuthMenuTreeData[],
+      mnuId: string
+    ): AuthMenuTreeData => {
       if (!menus) {
-        return null
+        return null;
       }
 
       for (const menu of menus) {
         if (menu.mnuId === mnuId) {
-          return menu
+          return menu;
         }
 
-        const subMenu = findMenuById(menu.items, mnuId)
+        const subMenu = findMenuById(menu.items, mnuId);
         if (subMenu) {
-          return subMenu
+          return subMenu;
         }
       }
-    }
+    };
 
-    const menus: AuthMenuTreeData[] = []
+    const menus: AuthMenuTreeData[] = [];
     for (const ag of menuData) {
-      const treeMenu: AuthMenuTreeData = ag
-      treeMenu.items = []
-      treeMenu.expanded = false
-      treeMenu.selected = ag.authYn === 'Y'
+      const treeMenu: AuthMenuTreeData = ag;
+      treeMenu.items = [];
+      treeMenu.expanded = false;
+      treeMenu.selected = ag.authYn === "Y";
 
       if (!treeMenu.uprMnuId) {
-        menus.push(treeMenu)
+        menus.push(treeMenu);
       } else {
-        const uprAuthGroup = findMenuById(menus, treeMenu.uprMnuId)
+        const uprAuthGroup = findMenuById(menus, treeMenu.uprMnuId);
 
         if (uprAuthGroup) {
-          uprAuthGroup.items.push(treeMenu)
+          uprAuthGroup.items.push(treeMenu);
 
-          let dataCount = 0
+          let dataCount = 0;
           if (uprAuthGroup.selected) {
-            uprAuthGroup.items.forEach(item => {
+            uprAuthGroup.items.forEach((item) => {
               if (!item.selected) {
-                dataCount++
+                dataCount++;
               }
-            })
+            });
             if (dataCount > 0) {
-              uprAuthGroup.selected = false
+              uprAuthGroup.selected = false;
             }
           }
         }
@@ -105,10 +112,10 @@ export const useUstraAuthService = defineUstraService(({ api }) => {
     }
 
     if (sysCd) {
-      return menus.filter(menu => menu.sysCd === sysCd)
+      return menus.filter((menu) => menu.sysCd === sysCd);
     }
 
-    return menus
+    return menus;
   }
 
   /**
@@ -116,15 +123,15 @@ export const useUstraAuthService = defineUstraService(({ api }) => {
    */
   async function save(auth: Auth) {
     const result = await api.call<apiModels.ApiResponse<Auth>>({
-      url: '/api/system/authority',
-      method: 'POST',
+      url: "/api/system/authority",
+      method: "POST",
       data: auth,
       timeout: 60000,
-      passOnResponseCode: ['FM11'],
-    })
+      passOnResponseCode: ["FM11"],
+    });
 
-    return result.data
+    return result.data;
   }
 
-  return { hasApprovalAuth, getAuthGroupInfo, getUserAuthInfo, save }
-})
+  return { hasApprovalAuth, getAuthGroupInfo, getUserAuthInfo, save };
+});

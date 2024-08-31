@@ -11,13 +11,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
+import { ref } from "vue";
+import { UMarkdownViewer } from "#moong/nuxt/components";
 
 // @ts-ignore
-import phoneNo4 from './md/phone-no4.md'
+import phoneNo4 from "./md/phone-no4.md";
 
-const test4 = ref('')
+const test4 = ref("");
 </script>
 
 <style scoped></style>

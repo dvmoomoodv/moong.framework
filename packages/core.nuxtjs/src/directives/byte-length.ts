@@ -1,15 +1,15 @@
-import { ObjectDirective } from 'vue'
-import { string as stringUtils } from '#ustra/core/utils'
+import { ObjectDirective } from "vue";
+import { string as stringUtils } from "#moong/core/utils";
 
 const getTargetEl = (el: HTMLElement) => {
-  const queryTags = 'input,textarea'
+  const queryTags = "input,textarea";
 
   if (queryTags.includes(el.tagName.toLowerCase())) {
-    return el as HTMLElement
+    return el as HTMLElement;
   }
 
-  return el.querySelector(queryTags) as HTMLElement
-}
+  return el.querySelector(queryTags) as HTMLElement;
+};
 
 /**
  * input, textarea 입력을 제어
@@ -17,16 +17,16 @@ const getTargetEl = (el: HTMLElement) => {
 export const byteLength: ObjectDirective = {
   mounted(el, binding, vnode, prevVnode) {
     if (!binding.value) {
-      return
+      return;
     }
 
-    const input: HTMLElement = getTargetEl(el)
+    const input: HTMLElement = getTargetEl(el);
 
-    input.addEventListener('input', _e => {
-      const value = _e.target['value']
+    input.addEventListener("input", (_e) => {
+      const value = _e.target["value"];
       if (stringUtils.byteLength(value) > binding.value) {
-        _e.target['value'] = stringUtils.cutByteLength(value, binding.value)
+        _e.target["value"] = stringUtils.cutByteLength(value, binding.value);
       }
-    })
+    });
   },
-}
+};

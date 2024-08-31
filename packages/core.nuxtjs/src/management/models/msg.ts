@@ -3,7 +3,7 @@
  * @packageDocumentation
  */
 
-import { apiModels, baseModels } from '#ustra/core/data'
+import { apiModels, baseModels } from "#moong/core/data";
 
 /**
  * 메시지 검색 조건
@@ -12,123 +12,123 @@ export interface MessageCriteria {
   /**
    * 메시지 ID
    */
-  msgId?: number
+  msgId?: number;
 
   /**
    * 메시지 타입 ID
    */
-  msgTypeId?: string
+  msgTypeId?: string;
 
   /**
    * 상태
    */
-  msgSttCd?: string
+  msgSttCd?: string;
 
   /**
    * 제목
    */
-  title?: string
+  title?: string;
 
   /**
    * 발신자
    */
-  source?: string
+  source?: string;
 
   /**
    * 수신자
    */
-  target?: string
+  target?: string;
 
   /**
    * 발송 요청 일시 시작일
    */
-  startSendRqDt?: string
+  startSendRqDt?: string;
 
   /**
    * 발송 요청 일시 종료일
    */
-  endSendRqDt?: string
+  endSendRqDt?: string;
 
-  [propName: string]: any
+  [propName: string]: any;
 }
 
-type MessageBase = baseModels.BaseModel & MessageCriteria
+type MessageBase = baseModels.BaseModel & MessageCriteria;
 
 /**
  * 메시지
  */
 export interface Message extends MessageBase {
-    /**
+  /**
    * 메시지 ID
    */
-  msgId?: number
+  msgId?: number;
 
   /**
    * 메시지 타입 ID
    */
-  msgTypeId?: string
+  msgTypeId?: string;
 
   /**
    * 상태
    */
-  msgSttCd?: string
+  msgSttCd?: string;
 
   /**
    * 발송 요청 일시
    */
-  sendRqDttm?: Date
+  sendRqDttm?: Date;
 
   /**
    * 발송 완료 일시
    */
-  sendCpDttm?: Date
+  sendCpDttm?: Date;
 
   /**
    * 취소 요청 일시
    */
-  cancelRqDttm?: Date
+  cancelRqDttm?: Date;
 
   /**
    * 취소 완료 일시
    */
-  cancelCpDttm?: Date
+  cancelCpDttm?: Date;
 
   /**
    * 재발송 요청 횟수
    */
-  resendRqNum?: number
+  resendRqNum?: number;
 
   /**
    * 제목
    */
-  title?: string
+  title?: string;
 
   /**
    * 내용
    */
-  content?: string
+  content?: string;
 
   /**
    * 발신자
    */
-  source?: string
+  source?: string;
 
   /**
    * 참조
    */
-  cc?: string
+  cc?: string;
 
   /**
    * 숨은 참조
    */
-  bcc?: string
+  bcc?: string;
 
   /**
    * 첨부 파일 아이디
    */
-  fileId?: string
+  fileId?: string;
 
-  [propName: string]: any
+  [propName: string]: any;
 }
 
 /**
@@ -142,14 +142,14 @@ export interface MessageRqVo {
    * @type {ApiHeader}
    * @memberof MessageRqVo
    */
-  header?: apiModels.ApiHeader
+  header?: apiModels.ApiHeader;
 
   /**
    *
    * @type {Message}
    * @memberof MessageRqVo
    */
-  msg?: Message
+  msg?: Message;
 
-  sendRqDt? : string
+  sendRqDt?: string;
 }

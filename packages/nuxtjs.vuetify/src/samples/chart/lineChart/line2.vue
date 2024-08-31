@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, computed } from '#ustra/nuxt'
+import { ref, reactive, computed } from "#moong/nuxt";
 </script>
 
 <style scoped></style>

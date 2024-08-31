@@ -1,47 +1,1763 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>DateUtils | @ustra/core</title><meta name="description" content="Documentation for @ustra/core"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base=".."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">@ustra/core</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb"><li><a href="../index.html">@ustra/core</a></li><li><a href="../modules/utils_date.html">utils/date</a></li><li><a href="utils_date.DateUtils.html">DateUtils</a></li></ul><h1>Class DateUtils</h1></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L5">framework/core/src/utils/date.ts:5</a></li></ul></aside><section class="tsd-panel-group tsd-index-group"><section class="tsd-panel tsd-index-panel"><details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><h5 class="tsd-index-heading uppercase" role="button" aria-expanded="false" tabIndex="0"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-chevronSmall"></use></svg> Index</h5></summary><div class="tsd-accordion-details"><section class="tsd-index-section"><h3 class="tsd-index-heading">Constructors</h3><div class="tsd-index-list"><a href="utils_date.DateUtils.html#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a>
-</div></section><section class="tsd-index-section"><h3 class="tsd-index-heading">Methods</h3><div class="tsd-index-list"><a href="utils_date.DateUtils.html#addDays" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Days</span></a>
-<a href="utils_date.DateUtils.html#addHours" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Hours</span></a>
-<a href="utils_date.DateUtils.html#addMiliSeconds" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Mili<wbr/>Seconds</span></a>
-<a href="utils_date.DateUtils.html#addMinutes" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Minutes</span></a>
-<a href="utils_date.DateUtils.html#addMonths" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Months</span></a>
-<a href="utils_date.DateUtils.html#addSeconds" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Seconds</span></a>
-<a href="utils_date.DateUtils.html#addYears" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Years</span></a>
-<a href="utils_date.DateUtils.html#format" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>format</span></a>
-<a href="utils_date.DateUtils.html#formatDuration" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>format<wbr/>Duration</span></a>
-<a href="utils_date.DateUtils.html#getDaysInMonth" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Days<wbr/>In<wbr/>Month</span></a>
-<a href="utils_date.DateUtils.html#getMilliDuration" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Milli<wbr/>Duration</span></a>
-<a href="utils_date.DateUtils.html#isDate" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Date</span></a>
-<a href="utils_date.DateUtils.html#isLeapYear" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Leap<wbr/>Year</span></a>
-<a href="utils_date.DateUtils.html#isValidDate" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Valid<wbr/>Date</span></a>
-<a href="utils_date.DateUtils.html#parse" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>parse</span></a>
-<a href="utils_date.DateUtils.html#patchConvertJsonWithCurrentZone" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>patch<wbr/>Convert<wbr/>Json<wbr/>With<wbr/>Current<wbr/>Zone</span></a>
-<a href="utils_date.DateUtils.html#toLocalISOString" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>to<wbr/>LocalISOString</span></a>
-</div></section></div></details></section></section><section class="tsd-panel-group tsd-member-group"><h2>Constructors</h2><section class="tsd-panel tsd-member"><a id="constructor" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>constructor</span><a href="#constructor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="constructor.new_DateUtils" class="tsd-anchor"></a><span class="tsd-kind-constructor-signature">new <wbr/>Date<wbr/>Utils</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="utils_date.DateUtils.html" class="tsd-signature-type tsd-kind-class">DateUtils</a><a href="#constructor.new_DateUtils" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><h4 class="tsd-returns-title">Returns <a href="utils_date.DateUtils.html" class="tsd-signature-type tsd-kind-class">DateUtils</a></h4></li></ul></section></section><section class="tsd-panel-group tsd-member-group"><h2>Methods</h2><section class="tsd-panel tsd-member"><a id="addDays" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>add<wbr/>Days</span><a href="#addDays" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="addDays.addDays-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">add<wbr/>Days</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">date</span>, <span class="tsd-kind-parameter">days</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><a href="#addDays.addDays-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>add days</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">date</span>: <span class="tsd-signature-type">Date</span></span><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">days</span>: <span class="tsd-signature-type">number</span></span><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Date</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L47">framework/core/src/utils/date.ts:47</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="addHours" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>add<wbr/>Hours</span><a href="#addHours" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="addHours.addHours-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">add<wbr/>Hours</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">date</span>, <span class="tsd-kind-parameter">hour</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><a href="#addHours.addHours-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>add hours</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">date</span>: <span class="tsd-signature-type">Date</span></span><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">hour</span>: <span class="tsd-signature-type">number</span></span><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Date</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L38">framework/core/src/utils/date.ts:38</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="addMiliSeconds" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>add<wbr/>Mili<wbr/>Seconds</span><a href="#addMiliSeconds" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="addMiliSeconds.addMiliSeconds-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">add<wbr/>Mili<wbr/>Seconds</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">date</span>, <span class="tsd-kind-parameter">millis</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><a href="#addMiliSeconds.addMiliSeconds-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>date + milli second</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">date</span>: <span class="tsd-signature-type">Date</span></span><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">millis</span>: <span class="tsd-signature-type">number</span></span><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Date</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L11">framework/core/src/utils/date.ts:11</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="addMinutes" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>add<wbr/>Minutes</span><a href="#addMinutes" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="addMinutes.addMinutes-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">add<wbr/>Minutes</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">date</span>, <span class="tsd-kind-parameter">minutes</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><a href="#addMinutes.addMinutes-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>add minutes</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">date</span>: <span class="tsd-signature-type">Date</span></span><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">minutes</span>: <span class="tsd-signature-type">number</span></span><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Date</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L29">framework/core/src/utils/date.ts:29</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="addMonths" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>add<wbr/>Months</span><a href="#addMonths" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="addMonths.addMonths-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">add<wbr/>Months</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">date</span>, <span class="tsd-kind-parameter">months</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><a href="#addMonths.addMonths-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>add months</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">date</span>: <span class="tsd-signature-type">Date</span></span><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">months</span>: <span class="tsd-signature-type">number</span></span><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Date</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L58">framework/core/src/utils/date.ts:58</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="addSeconds" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>add<wbr/>Seconds</span><a href="#addSeconds" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="addSeconds.addSeconds-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">add<wbr/>Seconds</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">date</span>, <span class="tsd-kind-parameter">seconds</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><a href="#addSeconds.addSeconds-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>date + add seconds</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">date</span>: <span class="tsd-signature-type">Date</span></span><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">seconds</span>: <span class="tsd-signature-type">number</span></span><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Date</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L20">framework/core/src/utils/date.ts:20</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="addYears" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>add<wbr/>Years</span><a href="#addYears" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="addYears.addYears-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">add<wbr/>Years</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">date</span>, <span class="tsd-kind-parameter">years</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><a href="#addYears.addYears-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>add years</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">date</span>: <span class="tsd-signature-type">Date</span></span><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">years</span>: <span class="tsd-signature-type">number</span></span><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Date</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L69">framework/core/src/utils/date.ts:69</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="format" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>format</span><a href="#format" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="format.format-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">format</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">date</span>, <span class="tsd-kind-parameter">format</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#format.format-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>Date를 formatting 한다.</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">date</span>: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Date</span></span><div class="tsd-comment tsd-typography"><p>일자</p>
-</div><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">format</span>: <span class="tsd-signature-type">string</span></span><div class="tsd-comment tsd-typography"><p>포맷</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><div class="tsd-comment tsd-typography"><h4>See</h4><p><a href="https://date-fns.org/v2.16.1/docs/format">https://date-fns.org/v2.16.1/docs/format</a></p>
-</div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L99">framework/core/src/utils/date.ts:99</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="formatDuration" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>format<wbr/>Duration</span><a href="#formatDuration" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="formatDuration.formatDuration-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">format<wbr/>Duration</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">duration</span>, <span class="tsd-kind-parameter">unit</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#formatDuration.formatDuration-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>duration을 formatting 한다. (HH:MM:SS)</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">duration</span>: <span class="tsd-signature-type">number</span></span><div class="tsd-comment tsd-typography"><p>기간</p>
-</div><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">unit</span>: <span class="tsd-signature-type">&quot;milliSec&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;sec&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;minute&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;hour&quot;</span><span class="tsd-signature-symbol"> = &#39;sec&#39;</span></span><div class="tsd-comment tsd-typography"><p>duration 기간</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L147">framework/core/src/utils/date.ts:147</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="getDaysInMonth" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>get<wbr/>Days<wbr/>In<wbr/>Month</span><a href="#getDaysInMonth" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="getDaysInMonth.getDaysInMonth-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">get<wbr/>Days<wbr/>In<wbr/>Month</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">year</span>, <span class="tsd-kind-parameter">month</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#getDaysInMonth.getDaysInMonth-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>월별 일 수 반환</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">year</span>: <span class="tsd-signature-type">number</span></span><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">month</span>: <span class="tsd-signature-type">number</span></span><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L89">framework/core/src/utils/date.ts:89</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="getMilliDuration" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>get<wbr/>Milli<wbr/>Duration</span><a href="#getMilliDuration" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="getMilliDuration.getMilliDuration-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">get<wbr/>Milli<wbr/>Duration</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">date1</span>, <span class="tsd-kind-parameter">date2</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><a href="#getMilliDuration.getMilliDuration-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>일자 사이의 millisecond를 반환한다.</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">date1</span>: <span class="tsd-signature-type">Date</span></span><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">date2</span>: <span class="tsd-signature-type">Date</span></span><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L138">framework/core/src/utils/date.ts:138</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="isDate" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>is<wbr/>Date</span><a href="#isDate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="isDate.isDate-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">is<wbr/>Date</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">value</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#isDate.isDate-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>값이 date 유형인지 확인</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">value</span>: <span class="tsd-signature-type">any</span></span><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L129">framework/core/src/utils/date.ts:129</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="isLeapYear" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>is<wbr/>Leap<wbr/>Year</span><a href="#isLeapYear" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="isLeapYear.isLeapYear-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">is<wbr/>Leap<wbr/>Year</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">val</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#isLeapYear.isLeapYear-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>윤년 확인</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">val</span>: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Date</span></span><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L79">framework/core/src/utils/date.ts:79</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="isValidDate" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>is<wbr/>Valid<wbr/>Date</span><a href="#isValidDate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="isValidDate.isValidDate-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">is<wbr/>Valid<wbr/>Date</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">dateString</span>, <span class="tsd-kind-parameter">format</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#isValidDate.isValidDate-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>date 문자열이 유효하지 확인</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">dateString</span>: <span class="tsd-signature-type">string</span></span><div class="tsd-comment tsd-typography"><p>date 문자열</p>
-</div><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">format</span>: <span class="tsd-signature-type">string</span></span><div class="tsd-comment tsd-typography"><p>포맷</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><p>유효 여부</p>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L120">framework/core/src/utils/date.ts:120</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="parse" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>parse</span><a href="#parse" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="parse.parse-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">parse</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">dateString</span>, <span class="tsd-kind-parameter">format</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><a href="#parse.parse-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>문자열을 Date로 변환한다.</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">dateString</span>: <span class="tsd-signature-type">string</span></span><div class="tsd-comment tsd-typography"><p>문자열</p>
-</div><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">format</span>: <span class="tsd-signature-type">string</span></span><div class="tsd-comment tsd-typography"><p>포맷팅</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Date</span></h4><div class="tsd-comment tsd-typography"><h4>See</h4><p><a href="https://date-fns.org/v2.16.1/docs/parse">https://date-fns.org/v2.16.1/docs/parse</a></p>
-</div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L109">framework/core/src/utils/date.ts:109</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="patchConvertJsonWithCurrentZone" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>patch<wbr/>Convert<wbr/>Json<wbr/>With<wbr/>Current<wbr/>Zone</span><a href="#patchConvertJsonWithCurrentZone" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="patchConvertJsonWithCurrentZone.patchConvertJsonWithCurrentZone-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">patch<wbr/>Convert<wbr/>Json<wbr/>With<wbr/>Current<wbr/>Zone</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#patchConvertJsonWithCurrentZone.patchConvertJsonWithCurrentZone-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>JSON 변환 시, 일자를 현재 시간 기준으로 패치한다.</p>
-</div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L201">framework/core/src/utils/date.ts:201</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="toLocalISOString" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>to<wbr/>LocalISOString</span><a href="#toLocalISOString" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="toLocalISOString.toLocalISOString-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">to<wbr/>LocalISOString</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">date</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#toLocalISOString.toLocalISOString-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>local 유형의 ISO 문자열 반환</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">date</span>: <span class="tsd-signature-type">Date</span></span><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/utils/date.ts#L166">framework/core/src/utils/date.ts:166</a></li></ul></aside></li></ul></section></section></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-index-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><h4 class="uppercase">Member Visibility</h4><form><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div><div class="tsd-theme-toggle"><h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-index-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#constructor" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a><a href="#addDays" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Days</span></a><a href="#addHours" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Hours</span></a><a href="#addMiliSeconds" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Mili<wbr/>Seconds</span></a><a href="#addMinutes" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Minutes</span></a><a href="#addMonths" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Months</span></a><a href="#addSeconds" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Seconds</span></a><a href="#addYears" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Years</span></a><a href="#format" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>format</span></a><a href="#formatDuration" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>format<wbr/>Duration</span></a><a href="#getDaysInMonth" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Days<wbr/>In<wbr/>Month</span></a><a href="#getMilliDuration" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Milli<wbr/>Duration</span></a><a href="#isDate" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Date</span></a><a href="#isLeapYear" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Leap<wbr/>Year</span></a><a href="#isValidDate" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Valid<wbr/>Date</span></a><a href="#parse" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>parse</span></a><a href="#patchConvertJsonWithCurrentZone" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>patch<wbr/>Convert<wbr/>Json<wbr/>With<wbr/>Current<wbr/>Zone</span></a><a href="#toLocalISOString" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>to<wbr/>LocalISOString</span></a></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1"></use></svg><span>@ustra/core</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base=".."><li>Loading...</li></ul></nav></div></div></div><div class="tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div></body></html>
+<!doctype html>
+<html class="default" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <title>DateUtils | @moong/core</title>
+    <meta name="description" content="Documentation for @moong/core" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/highlight.css" />
+    <script defer src="../assets/main.js"></script>
+    <script async src="../assets/icons.js" id="tsd-icons-script"></script>
+    <script async src="../assets/search.js" id="tsd-search-script"></script>
+    <script async src="../assets/navigation.js" id="tsd-nav-script"></script>
+  </head>
+  <body>
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("tsd-theme") || "os";
+      document.body.style.display = "none";
+      setTimeout(
+        () =>
+          app ? app.showPage() : document.body.style.removeProperty("display"),
+        500
+      );
+    </script>
+    <header class="tsd-page-toolbar">
+      <div class="tsd-toolbar-contents container">
+        <div class="table-cell" id="tsd-search" data-base="..">
+          <div class="field">
+            <label
+              for="tsd-search-field"
+              class="tsd-widget tsd-toolbar-icon search no-caption"
+              ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use href="../assets/icons.svg#icon-search"></use></svg></label
+            ><input type="text" id="tsd-search-field" aria-label="Search" />
+          </div>
+          <div class="field"><div id="tsd-toolbar-links"></div></div>
+          <ul class="results">
+            <li class="state loading">Preparing search index...</li>
+            <li class="state failure">The search index is not available</li>
+          </ul>
+          <a href="../index.html" class="title">@moong/core</a>
+        </div>
+        <div class="table-cell" id="tsd-widgets">
+          <a
+            href="#"
+            class="tsd-widget tsd-toolbar-icon menu no-caption"
+            data-toggle="menu"
+            aria-label="Menu"
+            ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use href="../assets/icons.svg#icon-menu"></use></svg
+          ></a>
+        </div>
+      </div>
+    </header>
+    <div class="container container-main">
+      <div class="col-content">
+        <div class="tsd-page-title">
+          <ul class="tsd-breadcrumb">
+            <li><a href="../index.html">@moong/core</a></li>
+            <li><a href="../modules/utils_date.html">utils/date</a></li>
+            <li><a href="utils_date.DateUtils.html">DateUtils</a></li>
+          </ul>
+          <h1>Class DateUtils</h1>
+        </div>
+        <aside class="tsd-sources">
+          <ul>
+            <li>
+              Defined in
+              <a
+                href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L5"
+                >framework/core/src/utils/date.ts:5</a
+              >
+            </li>
+          </ul>
+        </aside>
+        <section class="tsd-panel-group tsd-index-group">
+          <section class="tsd-panel tsd-index-panel">
+            <details class="tsd-index-content tsd-index-accordion" open>
+              <summary class="tsd-accordion-summary tsd-index-summary">
+                <h5
+                  class="tsd-index-heading uppercase"
+                  role="button"
+                  aria-expanded="false"
+                  tabindex="0"
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <use href="../assets/icons.svg#icon-chevronSmall"></use>
+                  </svg>
+                  Index
+                </h5>
+              </summary>
+              <div class="tsd-accordion-details">
+                <section class="tsd-index-section">
+                  <h3 class="tsd-index-heading">Constructors</h3>
+                  <div class="tsd-index-list">
+                    <a
+                      href="utils_date.DateUtils.html#constructor"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-512"></use></svg
+                      ><span>constructor</span></a
+                    >
+                  </div>
+                </section>
+                <section class="tsd-index-section">
+                  <h3 class="tsd-index-heading">Methods</h3>
+                  <div class="tsd-index-list">
+                    <a
+                      href="utils_date.DateUtils.html#addDays"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>add<wbr />Days</span></a
+                    >
+                    <a
+                      href="utils_date.DateUtils.html#addHours"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>add<wbr />Hours</span></a
+                    >
+                    <a
+                      href="utils_date.DateUtils.html#addMiliSeconds"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>add<wbr />Mili<wbr />Seconds</span></a
+                    >
+                    <a
+                      href="utils_date.DateUtils.html#addMinutes"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>add<wbr />Minutes</span></a
+                    >
+                    <a
+                      href="utils_date.DateUtils.html#addMonths"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>add<wbr />Months</span></a
+                    >
+                    <a
+                      href="utils_date.DateUtils.html#addSeconds"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>add<wbr />Seconds</span></a
+                    >
+                    <a
+                      href="utils_date.DateUtils.html#addYears"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>add<wbr />Years</span></a
+                    >
+                    <a
+                      href="utils_date.DateUtils.html#format"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>format</span></a
+                    >
+                    <a
+                      href="utils_date.DateUtils.html#formatDuration"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>format<wbr />Duration</span></a
+                    >
+                    <a
+                      href="utils_date.DateUtils.html#getDaysInMonth"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>get<wbr />Days<wbr />In<wbr />Month</span></a
+                    >
+                    <a
+                      href="utils_date.DateUtils.html#getMilliDuration"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>get<wbr />Milli<wbr />Duration</span></a
+                    >
+                    <a
+                      href="utils_date.DateUtils.html#isDate"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>is<wbr />Date</span></a
+                    >
+                    <a
+                      href="utils_date.DateUtils.html#isLeapYear"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>is<wbr />Leap<wbr />Year</span></a
+                    >
+                    <a
+                      href="utils_date.DateUtils.html#isValidDate"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>is<wbr />Valid<wbr />Date</span></a
+                    >
+                    <a
+                      href="utils_date.DateUtils.html#parse"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>parse</span></a
+                    >
+                    <a
+                      href="utils_date.DateUtils.html#patchConvertJsonWithCurrentZone"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span
+                        >patch<wbr />Convert<wbr />Json<wbr />With<wbr />Current<wbr />Zone</span
+                      ></a
+                    >
+                    <a
+                      href="utils_date.DateUtils.html#toLocalISOString"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>to<wbr />LocalISOString</span></a
+                    >
+                  </div>
+                </section>
+              </div>
+            </details>
+          </section>
+        </section>
+        <section class="tsd-panel-group tsd-member-group">
+          <h2>Constructors</h2>
+          <section class="tsd-panel tsd-member">
+            <a id="constructor" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>constructor</span
+              ><a
+                href="#constructor"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="constructor.new_DateUtils" class="tsd-anchor"></a
+                ><span class="tsd-kind-constructor-signature"
+                  >new <wbr />Date<wbr />Utils</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><a
+                  href="utils_date.DateUtils.html"
+                  class="tsd-signature-type tsd-kind-class"
+                  >DateUtils</a
+                ><a
+                  href="#constructor.new_DateUtils"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <h4 class="tsd-returns-title">
+                  Returns
+                  <a
+                    href="utils_date.DateUtils.html"
+                    class="tsd-signature-type tsd-kind-class"
+                    >DateUtils</a
+                  >
+                </h4>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section class="tsd-panel-group tsd-member-group">
+          <h2>Methods</h2>
+          <section class="tsd-panel tsd-member">
+            <a id="addDays" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>add<wbr />Days</span
+              ><a href="#addDays" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="addDays.addDays-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature">add<wbr />Days</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">date</span>,
+                <span class="tsd-kind-parameter">days</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Date</span
+                ><a
+                  href="#addDays.addDays-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography"><p>add days</p></div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">date</span>:
+                        <span class="tsd-signature-type">Date</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">days</span>:
+                        <span class="tsd-signature-type">number</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Date</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L47"
+                        >framework/core/src/utils/date.ts:47</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="addHours" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>add<wbr />Hours</span
+              ><a
+                href="#addHours"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="addHours.addHours-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature">add<wbr />Hours</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">date</span>,
+                <span class="tsd-kind-parameter">hour</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Date</span
+                ><a
+                  href="#addHours.addHours-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography"><p>add hours</p></div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">date</span>:
+                        <span class="tsd-signature-type">Date</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">hour</span>:
+                        <span class="tsd-signature-type">number</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Date</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L38"
+                        >framework/core/src/utils/date.ts:38</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="addMiliSeconds" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>add<wbr />Mili<wbr />Seconds</span
+              ><a
+                href="#addMiliSeconds"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="addMiliSeconds.addMiliSeconds-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature"
+                  >add<wbr />Mili<wbr />Seconds</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">date</span>,
+                <span class="tsd-kind-parameter">millis</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Date</span
+                ><a
+                  href="#addMiliSeconds.addMiliSeconds-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>date + milli second</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">date</span>:
+                        <span class="tsd-signature-type">Date</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">millis</span>:
+                        <span class="tsd-signature-type">number</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Date</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L11"
+                        >framework/core/src/utils/date.ts:11</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="addMinutes" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>add<wbr />Minutes</span
+              ><a
+                href="#addMinutes"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="addMinutes.addMinutes-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature">add<wbr />Minutes</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">date</span>,
+                <span class="tsd-kind-parameter">minutes</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Date</span
+                ><a
+                  href="#addMinutes.addMinutes-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography"><p>add minutes</p></div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">date</span>:
+                        <span class="tsd-signature-type">Date</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">minutes</span>:
+                        <span class="tsd-signature-type">number</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Date</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L29"
+                        >framework/core/src/utils/date.ts:29</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="addMonths" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>add<wbr />Months</span
+              ><a
+                href="#addMonths"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="addMonths.addMonths-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature">add<wbr />Months</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">date</span>,
+                <span class="tsd-kind-parameter">months</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Date</span
+                ><a
+                  href="#addMonths.addMonths-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography"><p>add months</p></div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">date</span>:
+                        <span class="tsd-signature-type">Date</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">months</span>:
+                        <span class="tsd-signature-type">number</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Date</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L58"
+                        >framework/core/src/utils/date.ts:58</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="addSeconds" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>add<wbr />Seconds</span
+              ><a
+                href="#addSeconds"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="addSeconds.addSeconds-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature">add<wbr />Seconds</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">date</span>,
+                <span class="tsd-kind-parameter">seconds</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Date</span
+                ><a
+                  href="#addSeconds.addSeconds-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>date + add seconds</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">date</span>:
+                        <span class="tsd-signature-type">Date</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">seconds</span>:
+                        <span class="tsd-signature-type">number</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Date</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L20"
+                        >framework/core/src/utils/date.ts:20</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="addYears" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>add<wbr />Years</span
+              ><a
+                href="#addYears"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="addYears.addYears-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature">add<wbr />Years</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">date</span>,
+                <span class="tsd-kind-parameter">years</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Date</span
+                ><a
+                  href="#addYears.addYears-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography"><p>add years</p></div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">date</span>:
+                        <span class="tsd-signature-type">Date</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">years</span>:
+                        <span class="tsd-signature-type">number</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Date</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L69"
+                        >framework/core/src/utils/date.ts:69</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="format" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>format</span
+              ><a href="#format" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="format.format-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature">format</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">date</span>,
+                <span class="tsd-kind-parameter">format</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">string</span
+                ><a
+                  href="#format.format-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>Date를 formatting 한다.</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">date</span>:
+                        <span class="tsd-signature-type">number</span
+                        ><span class="tsd-signature-symbol"> | </span
+                        ><span class="tsd-signature-type">Date</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"><p>일자</p></div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">format</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"><p>포맷</p></div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">string</span>
+                </h4>
+                <div class="tsd-comment tsd-typography">
+                  <h4>See</h4>
+                  <p>
+                    <a href="https://date-fns.org/v2.16.1/docs/format"
+                      >https://date-fns.org/v2.16.1/docs/format</a
+                    >
+                  </p>
+                </div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L99"
+                        >framework/core/src/utils/date.ts:99</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="formatDuration" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>format<wbr />Duration</span
+              ><a
+                href="#formatDuration"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="formatDuration.formatDuration-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature"
+                  >format<wbr />Duration</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">duration</span>,
+                <span class="tsd-kind-parameter">unit</span
+                ><span class="tsd-signature-symbol">?</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">string</span
+                ><a
+                  href="#formatDuration.formatDuration-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>duration을 formatting 한다. (HH:MM:SS)</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">duration</span>:
+                        <span class="tsd-signature-type">number</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"><p>기간</p></div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">unit</span>:
+                        <span class="tsd-signature-type"
+                          >&quot;milliSec&quot;</span
+                        ><span class="tsd-signature-symbol"> | </span
+                        ><span class="tsd-signature-type">&quot;sec&quot;</span
+                        ><span class="tsd-signature-symbol"> | </span
+                        ><span class="tsd-signature-type"
+                          >&quot;minute&quot;</span
+                        ><span class="tsd-signature-symbol"> | </span
+                        ><span class="tsd-signature-type">&quot;hour&quot;</span
+                        ><span class="tsd-signature-symbol">
+                          = &#39;sec&#39;</span
+                        ></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>duration 기간</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">string</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L147"
+                        >framework/core/src/utils/date.ts:147</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="getDaysInMonth" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>get<wbr />Days<wbr />In<wbr />Month</span
+              ><a
+                href="#getDaysInMonth"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="getDaysInMonth.getDaysInMonth-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature"
+                  >get<wbr />Days<wbr />In<wbr />Month</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">year</span>,
+                <span class="tsd-kind-parameter">month</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">number</span
+                ><a
+                  href="#getDaysInMonth.getDaysInMonth-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>월별 일 수 반환</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">year</span>:
+                        <span class="tsd-signature-type">number</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">month</span>:
+                        <span class="tsd-signature-type">number</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">number</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L89"
+                        >framework/core/src/utils/date.ts:89</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="getMilliDuration" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>get<wbr />Milli<wbr />Duration</span
+              ><a
+                href="#getMilliDuration"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="getMilliDuration.getMilliDuration-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >get<wbr />Milli<wbr />Duration</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">date1</span>,
+                <span class="tsd-kind-parameter">date2</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">number</span
+                ><a
+                  href="#getMilliDuration.getMilliDuration-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>일자 사이의 millisecond를 반환한다.</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">date1</span>:
+                        <span class="tsd-signature-type">Date</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">date2</span>:
+                        <span class="tsd-signature-type">Date</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">number</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L138"
+                        >framework/core/src/utils/date.ts:138</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="isDate" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>is<wbr />Date</span
+              ><a href="#isDate" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="isDate.isDate-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature">is<wbr />Date</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">value</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">boolean</span
+                ><a
+                  href="#isDate.isDate-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>값이 date 유형인지 확인</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">value</span>:
+                        <span class="tsd-signature-type">any</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">boolean</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L129"
+                        >framework/core/src/utils/date.ts:129</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="isLeapYear" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>is<wbr />Leap<wbr />Year</span
+              ><a
+                href="#isLeapYear"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="isLeapYear.isLeapYear-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature"
+                  >is<wbr />Leap<wbr />Year</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">val</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">boolean</span
+                ><a
+                  href="#isLeapYear.isLeapYear-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography"><p>윤년 확인</p></div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">val</span>:
+                        <span class="tsd-signature-type">number</span
+                        ><span class="tsd-signature-symbol"> | </span
+                        ><span class="tsd-signature-type">Date</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">boolean</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L79"
+                        >framework/core/src/utils/date.ts:79</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="isValidDate" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>is<wbr />Valid<wbr />Date</span
+              ><a
+                href="#isValidDate"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="isValidDate.isValidDate-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature"
+                  >is<wbr />Valid<wbr />Date</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">dateString</span>,
+                <span class="tsd-kind-parameter">format</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">boolean</span
+                ><a
+                  href="#isValidDate.isValidDate-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>date 문자열이 유효하지 확인</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">dateString</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>date 문자열</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">format</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"><p>포맷</p></div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">boolean</span>
+                </h4>
+                <p>유효 여부</p>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L120"
+                        >framework/core/src/utils/date.ts:120</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="parse" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>parse</span
+              ><a href="#parse" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="parse.parse-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature">parse</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">dateString</span>,
+                <span class="tsd-kind-parameter">format</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Date</span
+                ><a
+                  href="#parse.parse-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>문자열을 Date로 변환한다.</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">dateString</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>문자열</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">format</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>포맷팅</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Date</span>
+                </h4>
+                <div class="tsd-comment tsd-typography">
+                  <h4>See</h4>
+                  <p>
+                    <a href="https://date-fns.org/v2.16.1/docs/parse"
+                      >https://date-fns.org/v2.16.1/docs/parse</a
+                    >
+                  </p>
+                </div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L109"
+                        >framework/core/src/utils/date.ts:109</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="patchConvertJsonWithCurrentZone" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span
+                >patch<wbr />Convert<wbr />Json<wbr />With<wbr />Current<wbr />Zone</span
+              ><a
+                href="#patchConvertJsonWithCurrentZone"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="patchConvertJsonWithCurrentZone.patchConvertJsonWithCurrentZone-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >patch<wbr />Convert<wbr />Json<wbr />With<wbr />Current<wbr />Zone</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">void</span
+                ><a
+                  href="#patchConvertJsonWithCurrentZone.patchConvertJsonWithCurrentZone-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>JSON 변환 시, 일자를 현재 시간 기준으로 패치한다.</p>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">void</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L201"
+                        >framework/core/src/utils/date.ts:201</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="toLocalISOString" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>to<wbr />LocalISOString</span
+              ><a
+                href="#toLocalISOString"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="toLocalISOString.toLocalISOString-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >to<wbr />LocalISOString</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">date</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">string</span
+                ><a
+                  href="#toLocalISOString.toLocalISOString-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>local 유형의 ISO 문자열 반환</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">date</span>:
+                        <span class="tsd-signature-type">Date</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">string</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/utils/date.ts#L166"
+                        >framework/core/src/utils/date.ts:166</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </div>
+      <div class="col-sidebar">
+        <div class="page-menu">
+          <div class="tsd-navigation settings">
+            <details class="tsd-index-accordion">
+              <summary class="tsd-accordion-summary">
+                <h3>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <use href="../assets/icons.svg#icon-chevronDown"></use></svg
+                  >Settings
+                </h3>
+              </summary>
+              <div class="tsd-accordion-details">
+                <div class="tsd-filter-visibility">
+                  <h4 class="uppercase">Member Visibility</h4>
+                  <form>
+                    <ul id="tsd-filter-options">
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-protected"
+                            name="protected"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Protected</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-private"
+                            name="private"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Private</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-inherited"
+                            name="inherited"
+                            checked
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Inherited</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-external"
+                            name="external"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>External</span></label
+                        >
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+                <div class="tsd-theme-toggle">
+                  <h4 class="uppercase">Theme</h4>
+                  <select id="tsd-theme">
+                    <option value="os">OS</option>
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                  </select>
+                </div>
+              </div>
+            </details>
+          </div>
+          <details open class="tsd-index-accordion tsd-page-navigation">
+            <summary class="tsd-accordion-summary">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <use href="../assets/icons.svg#icon-chevronDown"></use></svg
+                >On This Page
+              </h3>
+            </summary>
+            <div class="tsd-accordion-details">
+              <a href="#constructor" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-512"></use></svg
+                ><span>constructor</span></a
+              ><a href="#addDays" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>add<wbr />Days</span></a
+              ><a href="#addHours" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>add<wbr />Hours</span></a
+              ><a href="#addMiliSeconds" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>add<wbr />Mili<wbr />Seconds</span></a
+              ><a href="#addMinutes" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>add<wbr />Minutes</span></a
+              ><a href="#addMonths" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>add<wbr />Months</span></a
+              ><a href="#addSeconds" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>add<wbr />Seconds</span></a
+              ><a href="#addYears" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>add<wbr />Years</span></a
+              ><a href="#format" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>format</span></a
+              ><a href="#formatDuration" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>format<wbr />Duration</span></a
+              ><a href="#getDaysInMonth" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>get<wbr />Days<wbr />In<wbr />Month</span></a
+              ><a href="#getMilliDuration" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>get<wbr />Milli<wbr />Duration</span></a
+              ><a href="#isDate" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>is<wbr />Date</span></a
+              ><a href="#isLeapYear" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>is<wbr />Leap<wbr />Year</span></a
+              ><a href="#isValidDate" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>is<wbr />Valid<wbr />Date</span></a
+              ><a href="#parse" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>parse</span></a
+              ><a href="#patchConvertJsonWithCurrentZone" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span
+                  >patch<wbr />Convert<wbr />Json<wbr />With<wbr />Current<wbr />Zone</span
+                ></a
+              ><a href="#toLocalISOString" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>to<wbr />LocalISOString</span></a
+              >
+            </div>
+          </details>
+        </div>
+        <div class="site-menu">
+          <nav class="tsd-navigation">
+            <a href="../index.html"
+              ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                <use href="../assets/icons.svg#icon-1"></use></svg
+              ><span>@moong/core</span></a
+            >
+            <ul
+              class="tsd-small-nested-navigation"
+              id="tsd-nav-container"
+              data-base=".."
+            >
+              <li>Loading...</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="tsd-generator">
+      <p>
+        Generated using
+        <a href="https://typedoc.org/" target="_blank">TypeDoc</a>
+      </p>
+    </div>
+    <div class="overlay"></div>
+  </body>
+</html>

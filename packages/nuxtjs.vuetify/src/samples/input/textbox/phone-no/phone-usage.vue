@@ -7,7 +7,13 @@
           <template #subtitle> </template>
           <template #text>
             <div class="sample-wrap">
-              <UPhoneNoBox v-model="data" :width="width" :disabled="disabled" :required="required" :maxlength="maxlength"></UPhoneNoBox>
+              <UPhoneNoBox
+                v-model="data"
+                :width="width"
+                :disabled="disabled"
+                :required="required"
+                :maxlength="maxlength"
+              ></UPhoneNoBox>
             </div>
           </template>
         </v-card>
@@ -31,12 +37,20 @@
               </UFieldRow>
               <UFieldRow>
                 <UField label="required">
-                  <VBtn :type="required ? 'primary' : ' '" @click="setProps('required')">Click</VBtn>
+                  <VBtn
+                    :type="required ? 'primary' : ' '"
+                    @click="setProps('required')"
+                    >Click</VBtn
+                  >
                 </UField>
               </UFieldRow>
               <UFieldRow>
                 <UField label="disabled">
-                  <VBtn :type="disabled ? 'primary' : ' '" @click="setProps('disabled')">Click</VBtn>
+                  <VBtn
+                    :type="disabled ? 'primary' : ' '"
+                    @click="setProps('disabled')"
+                    >Click</VBtn
+                  >
                 </UField>
               </UFieldRow>
             </UFieldSet>
@@ -48,19 +62,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from '#ustra/nuxt'
-const data = ref(null)
-const width = ref(null)
-const maxlength = ref('14')
-const disabled = ref(false)
-const required = ref(false)
-const setProps = propsValue => {
-  if (propsValue === 'disabled') {
-    disabled.value = !disabled.value
-  } else if (propsValue === 'required') {
-    required.value = !required.value
+import { ref } from "#moong/nuxt";
+const data = ref(null);
+const width = ref(null);
+const maxlength = ref("14");
+const disabled = ref(false);
+const required = ref(false);
+const setProps = (propsValue) => {
+  if (propsValue === "disabled") {
+    disabled.value = !disabled.value;
+  } else if (propsValue === "required") {
+    required.value = !required.value;
   }
-}
+};
 </script>
 
 <style scoped lang="scss"></style>

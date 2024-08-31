@@ -1,7 +1,11 @@
-import { apiModels } from '#ustra/core/data'
-import { defineUstraService } from '#ustra/nuxt/composables/service'
-import { ApiOriginOptions } from '#ustra/nuxt/config/nuxt-app-props'
-import { BatchWorkerCriteria, BatchWorker, UstraBatchWorkerRqVo } from '#ustra/nuxt/management'
+import { apiModels } from "#moong/core/data";
+import { defineUstraService } from "#moong/nuxt/composables/service";
+import { ApiOriginOptions } from "#moong/nuxt/config/nuxt-app-props";
+import {
+  BatchWorkerCriteria,
+  BatchWorker,
+  UstraBatchWorkerRqVo,
+} from "#moong/nuxt/management";
 
 export const useUstraBatchWorkerService = defineUstraService(({ api }) => {
   /**
@@ -9,16 +13,20 @@ export const useUstraBatchWorkerService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function modifyWorker(data: UstraBatchWorkerRqVo, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function modifyWorker(
+    data: UstraBatchWorkerRqVo,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<BatchWorker>>({
       ...option,
       url: `/api/system/batch-worker/edit`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -26,16 +34,20 @@ export const useUstraBatchWorkerService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function createWorker(data: UstraBatchWorkerRqVo, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function createWorker(
+    data: UstraBatchWorkerRqVo,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<apiModels.ResponseCode>>({
       ...option,
       url: `/api/system/batch-worker`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -43,16 +55,20 @@ export const useUstraBatchWorkerService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function deleteWorker(data: BatchWorkerCriteria, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function deleteWorker(
+    data: BatchWorkerCriteria,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<apiModels.ResponseCode>>({
       ...option,
       url: `/api/system/batch-worker/remove`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -60,16 +76,20 @@ export const useUstraBatchWorkerService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function enableWorker(data: UstraBatchWorkerRqVo, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function enableWorker(
+    data: UstraBatchWorkerRqVo,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<BatchWorker>>({
       ...option,
       url: `/api/system/batch-worker/enable`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -77,16 +97,20 @@ export const useUstraBatchWorkerService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function disableWorker(data: UstraBatchWorkerRqVo, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function disableWorker(
+    data: UstraBatchWorkerRqVo,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<BatchWorker>>({
       ...option,
       url: `/api/system/batch-worker/disable`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -94,16 +118,20 @@ export const useUstraBatchWorkerService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function getWorkerList(data: BatchWorkerCriteria, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function getWorkerList(
+    data: BatchWorkerCriteria,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<BatchWorker[]>>({
       ...option,
       url: `/api/system/batch-worker/list`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -111,17 +139,29 @@ export const useUstraBatchWorkerService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function getWorker(data: BatchWorkerCriteria, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function getWorker(
+    data: BatchWorkerCriteria,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<BatchWorker>>({
       ...option,
       url: `/api/system/batch-worker/detail`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
-  return { modifyWorker, createWorker, deleteWorker, enableWorker, disableWorker, getWorkerList, getWorker }
-})
+  return {
+    modifyWorker,
+    createWorker,
+    deleteWorker,
+    enableWorker,
+    disableWorker,
+    getWorkerList,
+    getWorker,
+  };
+});

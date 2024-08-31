@@ -1,8 +1,8 @@
-import { join } from 'pathe'
-import { ProxyOptions } from '#ustra/core/server/http/middlewares/proxy'
-import { NuxtAppProps } from '#ustra/nuxt/config'
-import { addTemplate, addServerHandler } from '@nuxt/kit'
-import { Nuxt } from '@nuxt/schema'
+import { join } from "pathe";
+import { ProxyOptions } from "#moong/core/server/http/middlewares/proxy";
+import { NuxtAppProps } from "#moong/nuxt/config";
+import { addTemplate, addServerHandler } from "@nuxt/kit";
+import { Nuxt } from "@nuxt/schema";
 
 /**
  * proxy middleware 추가
@@ -15,29 +15,29 @@ import { Nuxt } from '@nuxt/schema'
  */
 export const addProxyMiddleware = (options: NuxtAppProps, nuxt: Nuxt) => {
   if (!nuxt.options.dev && !nuxt.options.ssr) {
-    return
+    return;
   }
 
-  const proxyOptions = options.server.middleware.proxy.proxies
+  const proxyOptions = options.server.middleware.proxy.proxies;
 
-  console.info('$ustra proxyOptions', proxyOptions)
+  console.info("$ustra proxyOptions", proxyOptions);
 
   addTemplate({
-    filename: 'ustra/http-proxy.ts',
+    filename: "ustra/http-proxy.ts",
     write: true,
     getContents: () => proxyMiddlewareContent(proxyOptions),
-  })
+  });
   addServerHandler({
-    handler: join(nuxt.options.buildDir, 'ustra', 'http-proxy.ts'),
+    handler: join(nuxt.options.buildDir, "ustra", "http-proxy.ts"),
     middleware: true,
-  })
-}
+  });
+};
 
 function converter(key, val) {
-  if (typeof val === 'function' || (val && val.constructor === RegExp)) {
-    return String(val)
+  if (typeof val === "function" || (val && val.constructor === RegExp)) {
+    return String(val);
   }
-  return val
+  return val;
 }
 
 function proxyMiddlewareContent(options: ProxyOptions): string {
@@ -179,5 +179,5 @@ function doesProxyContextMatchUrl(context: string, url: string): boolean {
       (context.startsWith('^') && new RegExp(context).test(url)) || url.startsWith(context)
   )
 }
-`
+`;
 }

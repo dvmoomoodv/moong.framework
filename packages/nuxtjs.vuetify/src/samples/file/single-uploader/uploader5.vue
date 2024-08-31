@@ -7,7 +7,8 @@
       fileGroupId="ustra-sample"
       v-model:fileId="fileId"
       :messages="{
-        'ustra.file.errorOnDownloadFile': '파일을 다운로드할 수 없습니다. 파일이 존재하는지 확인해주세요.',
+        'ustra.file.errorOnDownloadFile':
+          '파일을 다운로드할 수 없습니다. 파일이 존재하는지 확인해주세요.',
       }"
     />
     <VBtn class="mt-2" @click="() => uploadFile()">Upload</VBtn>
@@ -16,22 +17,22 @@
   </USampleContentContainer>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-import { USampleContentContainer } from '#ustra/nuxt-vuetify/samples'
+import { ref } from "#moong/nuxt";
+import { USampleContentContainer } from "#moong/nuxt-vuetify/samples";
 
 // @ts-ignore
-import doc1 from './md/uploader5-1.md'
+import doc1 from "./md/uploader5-1.md";
 
 // @ts-ignore
-import doc2 from './md/uploader5-2.md'
+import doc2 from "./md/uploader5-2.md";
 
-const fileId = ref(null)
-const uploader = ref<InstanceType<typeof USingleFileUploader>>(null)
+const fileId = ref(null);
+const uploader = ref<InstanceType<typeof USingleFileUploader>>(null);
 
 async function uploadFile() {
-  const result = await uploader.value.upload()
+  const result = await uploader.value.upload();
 
-  $ustra.logger.info('file upload result', result)
-  alert('업로드가 완료되었습니다. file id : ' + result.fileId)
+  $ustra.logger.info("file upload result", result);
+  alert("업로드가 완료되었습니다. file id : " + result.fileId);
 }
 </script>

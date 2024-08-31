@@ -3,10 +3,19 @@
     <VRow class="h-100 contents">
       <VCol class="">
         <VRow>
-          <VCol align="center"><img src="@ustra/nuxt-vuetify/src/management/resources/img/gsitm.png" style="margin-bottom: 5px" /></VCol>
+          <VCol align="center"
+            ><img
+              src="@moong/nuxt-vuetify/src/management/resources/img/gsitm.png"
+              style="margin-bottom: 5px"
+          /></VCol>
         </VRow>
         <VRow>
-          <VCol align="center" class="inter text-h6 font-weight-bold text-white"> U.STRA Node Framework Sample - BO </VCol>
+          <VCol
+            align="center"
+            class="inter text-h6 font-weight-bold text-white"
+          >
+            U.STRA Node Framework Sample - BO
+          </VCol>
         </VRow>
         <VRow>
           <VCol align="center">
@@ -41,14 +50,26 @@
             <div class="px-10">
               <!-- <UCheckGroupBox :items-source="[{ text: '아이디 기억하기' }]" v-model="rememberId"> </UCheckGroupBox> -->
 
-              <VBtn prepend-icon="mdi-login" block class="bg-primary mb-2" @click="() => login()" v-show="loginBtnShow">로그인</VBtn>
+              <VBtn
+                prepend-icon="mdi-login"
+                block
+                class="bg-primary mb-2"
+                @click="() => login()"
+                v-show="loginBtnShow"
+                >로그인</VBtn
+              >
             </div>
           </VCol>
         </VRow>
         <VRow>
           <VCol align="center">
-            <span class="text-notice d-block">※ 테스트 시, 사용자 삭제 및 비밀번호 변경에 주의하시기 바랍니다.</span>
-            <span class="text-white d-block">㉿ GSITM 2020-{{ new Date().getFullYear() }}</span>
+            <span class="text-notice d-block"
+              >※ 테스트 시, 사용자 삭제 및 비밀번호 변경에 주의하시기
+              바랍니다.</span
+            >
+            <span class="text-white d-block"
+              >㉿ GSITM 2020-{{ new Date().getFullYear() }}</span
+            >
           </VCol>
         </VRow>
       </VCol>
@@ -56,17 +77,18 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { useUstraManagementLoginPage } from '#ustra/nuxt/management/composables'
-import { useUstraManagementApp } from '#ustra/nuxt/management/composables/ui'
-import { onMounted, ref } from '#ustra/nuxt'
-import { useOnError } from '#ustra/nuxt/composables/utils'
-const { inputData, doLogin, appTitle, footerText, init, getRememberId } = useUstraManagementLoginPage(true)
-const { passwordPopup } = useUstraManagementApp()
-const passwordInput = ref()
-const rememberId = ref(false)
-const loginBtnShow = ref(true)
+import { useUstraManagementLoginPage } from "#moong/nuxt/management/composables";
+import { useUstraManagementApp } from "#moong/nuxt/management/composables/ui";
+import { onMounted, ref } from "#moong/nuxt";
+import { useOnError } from "#moong/nuxt/composables/utils";
+const { inputData, doLogin, appTitle, footerText, init, getRememberId } =
+  useUstraManagementLoginPage(true);
+const { passwordPopup } = useUstraManagementApp();
+const passwordInput = ref();
+const rememberId = ref(false);
+const loginBtnShow = ref(true);
 
-passwordPopup.onHidden(() => init())
+passwordPopup.onHidden(() => init());
 
 async function login() {
   // const validationResult = await validationGroup.value.validate()
@@ -83,34 +105,34 @@ async function login() {
         completion: false,
         storeIdOnSuccess: rememberId.value,
         onRequireApproval: async (type, name, result) => {
-          console.log('result', result)
-          await confirm(result.actionResponse.message)
+          console.log("result", result);
+          await confirm(result.actionResponse.message);
         },
         onRequirePasswordChange: async (optional, result) => {
           if (optional) {
-            const confirmResult = await confirm(result.actionResponse.message)
+            const confirmResult = await confirm(result.actionResponse.message);
 
             if (confirmResult) {
-              await passwordPopup.value.openAndWait()
-              return
+              await passwordPopup.value.openAndWait();
+              return;
             }
-            return true
+            return true;
           } else {
-            await alert(result.actionResponse.message)
-            await passwordPopup.value.openAndWait()
-            return false
+            await alert(result.actionResponse.message);
+            await passwordPopup.value.openAndWait();
+            return false;
           }
 
-          return false
+          return false;
         },
-        onLoginSuccess: nextUrl => {
-          navigateTo(nextUrl)
+        onLoginSuccess: (nextUrl) => {
+          navigateTo(nextUrl);
         },
       }),
     {
-      message: '로그인 처리 중 오류가 발생하였습니다.',
-    },
-  )()
+      message: "로그인 처리 중 오류가 발생하였습니다.",
+    }
+  )();
 }
 
 definePageMeta({
@@ -118,11 +140,11 @@ definePageMeta({
   auth: {
     required: false,
   },
-})
+});
 </script>
 <style scoped lang="scss">
 #login-wrapper {
-  background-image: url('@ustra/nuxt-vuetify/src/management/resources/img/main-background.jpg');
+  background-image: url("@moong/nuxt-vuetify/src/management/resources/img/main-background.jpg");
   background-size: cover;
   background-position: center center;
   .contents {

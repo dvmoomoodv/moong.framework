@@ -15,7 +15,11 @@
               />
             </UField>
             <UButtonBox right top>
-              <VBtn text="신규" :width="80" @click="() => openNewForm(0, null)" />
+              <VBtn
+                text="신규"
+                :width="80"
+                @click="() => openNewForm(0, null)"
+              />
               <VBtn
                 v-if="!!selectedGrpCode"
                 text="수정"
@@ -24,8 +28,8 @@
                   () => {
                     openEditForm(
                       0,
-                      groupCodes.find(c => c.grpCd === selectedGrpCode),
-                    )
+                      groupCodes.find((c) => c.grpCd === selectedGrpCode)
+                    );
                   }
                 "
               />
@@ -38,13 +42,18 @@
       <UBox direction="row">
         <UItem :ratio="1">
           <UstraSystemCodeList
-            :ref="c => listComponents.push(c as InstanceType<typeof UstraSystemCodeList>)"
+            :ref="
+              (c) =>
+                listComponents.push(
+                  c as InstanceType<typeof UstraSystemCodeList>
+                )
+            "
             :depth="1"
             :parentCode="parentCode1"
             @selectionChanged="
-              data => {
-                parentCode3 = null
-                parentCode2 = data
+              (data) => {
+                parentCode3 = null;
+                parentCode2 = data;
               }
             "
             @clickEditButton="(depth, data) => openEditForm(depth, data)"
@@ -53,12 +62,17 @@
         </UItem>
         <UItem :ratio="1">
           <UstraSystemCodeList
-            :ref="c => listComponents.push(c as InstanceType<typeof UstraSystemCodeList>)"
+            :ref="
+              (c) =>
+                listComponents.push(
+                  c as InstanceType<typeof UstraSystemCodeList>
+                )
+            "
             :depth="2"
             :parentCode="parentCode2"
             @selectionChanged="
-              data => {
-                parentCode3 = data
+              (data) => {
+                parentCode3 = data;
               }
             "
             @clickEditButton="(depth, data) => openEditForm(depth, data)"
@@ -67,7 +81,12 @@
         </UItem>
         <UItem :ratio="1">
           <UstraSystemCodeList
-            :ref="c => listComponents.push(c as InstanceType<typeof UstraSystemCodeList>)"
+            :ref="
+              (c) =>
+                listComponents.push(
+                  c as InstanceType<typeof UstraSystemCodeList>
+                )
+            "
             :depth="3"
             :parentCode="parentCode3"
             @clickEditButton="(depth, data) => openEditForm(depth, data)"
@@ -88,52 +107,59 @@
   </UBox>
 </template>
 <script lang="ts" setup>
-import { reactive, onBeforeMount, ref, computed, watch } from '#ustra/nuxt'
-import { useOnError } from '#ustra/nuxt/composables'
-import { UBox, UItem, UButtonBar, UFieldRow, UFieldSet, UField } from '#ustra/nuxt-vuetify/components'
-import { Code } from '#ustra/nuxt/management/models/code'
-import { useUstraCodeService } from '#ustra/nuxt/management/services/code'
-import UstraSystemCodeList from './list.vue'
-import UstraSystemCodeFrom from './form.vue'
-import { useLogger } from '#ustra/core'
-import { nextTick } from 'process'
+import { reactive, onBeforeMount, ref, computed, watch } from "#moong/nuxt";
+import { useOnError } from "#moong/nuxt/composables";
+import {
+  UBox,
+  UItem,
+  UButtonBar,
+  UFieldRow,
+  UFieldSet,
+  UField,
+} from "#moong/nuxt-vuetify/components";
+import { Code } from "#moong/nuxt/management/models/code";
+import { useUstraCodeService } from "#moong/nuxt/management/services/code";
+import UstraSystemCodeList from "./list.vue";
+import UstraSystemCodeFrom from "./form.vue";
+import { useLogger } from "#moong/core";
+import { nextTick } from "process";
 
-const codeService = useUstraCodeService()
-const groupCodes = ref<Code[]>([])
-const selectedGrpCode = ref<string>(null)
+const codeService = useUstraCodeService();
+const groupCodes = ref<Code[]>([]);
+const selectedGrpCode = ref<string>(null);
 
 //#region gropup code
 const loadGroupCode = useOnError(async () => {
   groupCodes.value = (await codeService.getCodeGroups({}))
-    .map(code => {
-      code.displayText = `${code.grpCd} : ${code.cdNm}`
-      return code
+    .map((code) => {
+      code.displayText = `${code.grpCd} : ${code.cdNm}`;
+      return code;
     })
-    .sort((a, b) => a.grpCd.localeCompare(b.grpCd))
+    .sort((a, b) => a.grpCd.localeCompare(b.grpCd));
 
-  useLogger().debug('selectedGrpCode.value', selectedGrpCode.value)
+  useLogger().debug("selectedGrpCode.value", selectedGrpCode.value);
   if (selectedGrpCode.value == null && groupCodes.value.length > 0) {
-    selectedGrpCode.value = groupCodes.value[0].grpCd
-    await nextTick(() => {})
+    selectedGrpCode.value = groupCodes.value[0].grpCd;
+    await nextTick(() => {});
   }
-  useLogger().debug('selectedGrpCode.value', selectedGrpCode.value)
-})
-onBeforeMount(() => loadGroupCode())
+  useLogger().debug("selectedGrpCode.value", selectedGrpCode.value);
+});
+onBeforeMount(() => loadGroupCode());
 //#endregion
 
 //#region reload
-const listComponents = ref<InstanceType<typeof UstraSystemCodeList>[]>([])
+const listComponents = ref<InstanceType<typeof UstraSystemCodeList>[]>([]);
 async function reload(depth: number, code: string) {
-  isOpendForm.value = false
+  isOpendForm.value = false;
 
   if (depth === 0) {
-    await loadGroupCode()
+    await loadGroupCode();
 
     if (code) {
-      selectedGrpCode.value = code
+      selectedGrpCode.value = code;
     }
   } else {
-    listComponents.value[depth - 1].loadCodes(code)
+    listComponents.value[depth - 1].loadCodes(code);
   }
 }
 //#endregion
@@ -141,69 +167,69 @@ async function reload(depth: number, code: string) {
 //#region parent code
 const parentCode1 = computed(() => {
   if (!selectedGrpCode.value) {
-    return null
+    return null;
   }
 
-  return { grpCd: selectedGrpCode.value }
-})
+  return { grpCd: selectedGrpCode.value };
+});
 
-const parentCode2 = ref(null)
-const parentCode3 = ref(null)
+const parentCode2 = ref(null);
+const parentCode3 = ref(null);
 
-watch(parentCode1, v => {
-  parentCode2.value = null
-  parentCode3.value = null
-})
+watch(parentCode1, (v) => {
+  parentCode2.value = null;
+  parentCode3.value = null;
+});
 //#endregion
 
 // for form
-const isOpendForm = ref(false)
-const selectedCode = ref<Code>(null)
-const formDepth = ref(0)
-const newSortNo = ref(0)
+const isOpendForm = ref(false);
+const selectedCode = ref<Code>(null);
+const formDepth = ref(0);
+const newSortNo = ref(0);
 
 // 신규 폼 오픈
 function openNewForm(depth, sortNo: number) {
-  newSortNo.value = sortNo
-  selectedCode.value = null
-  formDepth.value = depth
+  newSortNo.value = sortNo;
+  selectedCode.value = null;
+  formDepth.value = depth;
 
   if (depth === 1) {
     selectedCode.value = {
       grpCd: selectedGrpCode.value,
-      grpNm: groupCodes.value.find(c => c.grpCd === selectedGrpCode.value).cdNm,
-    }
+      grpNm: groupCodes.value.find((c) => c.grpCd === selectedGrpCode.value)
+        .cdNm,
+    };
   }
 
   if (depth > 1) {
-    const prevListComponent = listComponents.value[depth - 2]
+    const prevListComponent = listComponents.value[depth - 2];
 
     selectedCode.value = {
       uprGrpCd: prevListComponent.selectedRowData.grpCd,
       uprDtlCd: prevListComponent.selectedRowData.dtlCd,
       grpCd: `${prevListComponent.selectedRowData.grpCd}_${prevListComponent.selectedRowData.dtlCd}`,
-    }
+    };
   }
 
-  isOpendForm.value = true
+  isOpendForm.value = true;
 }
 
 // 수정 폼 오픈
 function openEditForm(depth, data: Code) {
-  console.log('openEditForm => data', data)
-  selectedCode.value = data
-  formDepth.value = depth
+  console.log("openEditForm => data", data);
+  selectedCode.value = data;
+  formDepth.value = depth;
 
-  isOpendForm.value = true
+  isOpendForm.value = true;
 }
 
 definePageMeta({
-  layout: 'ustra'
-})
-
+  layout: "ustra",
+});
 </script>
 <script lang="ts">
 export default {
-  name: 'UstraSystemCode',
-}
+  name: "UstraSystemCode",
+};
 </script>

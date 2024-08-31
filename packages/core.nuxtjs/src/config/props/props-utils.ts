@@ -1,7 +1,7 @@
-import { NuxtAppProps, Profile } from '../nuxt-app-props'
-import { defaultProps as _defaultProps } from '#ustra/core/config/props/props-utils'
-import { core } from '#ustra/core/utils'
-import { crypto } from '#ustra/core/utils/browser'
+import { NuxtAppProps, Profile } from "../nuxt-app-props";
+import { defaultProps as _defaultProps } from "#moong/core/config/props/props-utils";
+import { core } from "#moong/core/utils";
+import { crypto } from "#moong/core/utils/browser";
 
 /**
  * 기본 properties 조회
@@ -17,7 +17,7 @@ export const defaultProps = (appProps?: NuxtAppProps): NuxtAppProps => {
           pluginProps: [],
         },
         error: {
-          handlerType: 'logging',
+          handlerType: "logging",
           statusCode: 500,
         },
         router: {
@@ -31,17 +31,17 @@ export const defaultProps = (appProps?: NuxtAppProps): NuxtAppProps => {
           enabled: false,
           styles: {
             useCss: true,
-            theme: 'light',
+            theme: "light",
             addFrameworkCustomStyle: true,
           },
-          culture: 'ko',
+          culture: "ko",
           samples: {
             enabled: true,
-            path: '/samples/wijmo',
+            path: "/samples/wijmo",
             copyResource: {
               enabled: true,
               overwrite: true,
-              targetDirPath: './components/ustra',
+              targetDirPath: "./components/ustra",
             },
           },
           components: {
@@ -69,16 +69,16 @@ export const defaultProps = (appProps?: NuxtAppProps): NuxtAppProps => {
           vuetifyOptions: {
             defaults: {},
             theme: {
-              defaultTheme: 'light',
+              defaultTheme: "light",
             },
           },
           samples: {
             enabled: true,
-            path: '/samples/vuetify',
+            path: "/samples/vuetify",
             copyResource: {
               enabled: true,
               overwrite: true,
-              targetDirPath: './components/ustra',
+              targetDirPath: "./components/ustra",
             },
           },
           datepicker: {
@@ -89,15 +89,17 @@ export const defaultProps = (appProps?: NuxtAppProps): NuxtAppProps => {
           enabled: false,
           editor: {
             ClassicEditor: {
-              buildPath: '@ustra/nuxt-ckeditor5/src/builtin/classic-basic3/ckeditor',
-              mapPath: '@ustra/nuxt-ckeditor5/src/builtin/classic-basic3/ckeditor.js.map',
-              language: 'ko',
+              buildPath:
+                "@moong/nuxt-ckeditor5/src/builtin/classic-basic3/ckeditor",
+              mapPath:
+                "@moong/nuxt-ckeditor5/src/builtin/classic-basic3/ckeditor.js.map",
+              language: "ko",
             },
           },
         },
         markdown: {
           enabled: false,
-          theme: 'github',
+          theme: "github",
         },
         ui: {
           useDefaultFont: true,
@@ -108,9 +110,9 @@ export const defaultProps = (appProps?: NuxtAppProps): NuxtAppProps => {
         api: {
           occurErrorwhenReceivedApiErrCode: true,
           excludeAuthValidation: false,
-          passOnResponseCode: ['0000'],
+          passOnResponseCode: ["0000"],
           showLoadingBar: true,
-          method: 'GET',
+          method: "GET",
           disableCheckErrorWhenAuthInactivated: true,
           excludeAuthValidationOnServer: true,
           maximumConcurrentNumber: 3,
@@ -118,23 +120,30 @@ export const defaultProps = (appProps?: NuxtAppProps): NuxtAppProps => {
           retries: 0,
         },
         env: {
-          secureClientProps: ['app.processPath', 'app.configDir', 'app.types', 'logger.file.dirname', 'server.middleware', 'nuxt._build'],
+          secureClientProps: [
+            "app.processPath",
+            "app.configDir",
+            "app.types",
+            "logger.file.dirname",
+            "server.middleware",
+            "nuxt._build",
+          ],
           secret: crypto.generateSecret(),
         },
         build: {
           generation: {
-            profileApiUrl: '/api/current-profile',
+            profileApiUrl: "/api/current-profile",
             generateProfiles: [Profile.PRODUCTION, Profile.QA, Profile.STAGING],
           },
         },
         management: {
           enabled: false,
-          systemApiUrlPrefix: '/api/system',
+          systemApiUrlPrefix: "/api/system",
           ui: {
             displayHomeMenu: true,
-            mainPagePath: '/main',
-            componentType: 'wijmo',
-            appTitle: 'U.STRA Node Framework3 Management System',
+            mainPagePath: "/main",
+            componentType: "wijmo",
+            appTitle: "U.STRA Node Framework3 Management System",
             favoriteMenu: {
               enabled: true,
               highlightDefault: true,
@@ -151,36 +160,36 @@ export const defaultProps = (appProps?: NuxtAppProps): NuxtAppProps => {
             defaultPage: {
               layout: {
                 include: true,
-                layoutName: 'ustra',
+                layoutName: "ustra",
               },
               login: {
                 include: true,
-                path: '/login',
+                path: "/login",
               },
               main: {
                 include: true,
-                path: '/main',
+                path: "/main",
               },
               system: {
                 include: true,
-                pathPrefix: '/system',
+                pathPrefix: "/system",
                 copyResource: {
                   enabled: false,
                   overwrite: true,
-                  targetDirPath: './components/ustra',
+                  targetDirPath: "./components/ustra",
                 },
               },
             },
           },
           initialData: {
             enabled: true,
-            initialDataApiUrl: '/api/system/initializing-data.json',
+            initialDataApiUrl: "/api/system/initializing-data.json",
             useCache: true,
           },
           security: {
             password: {
               creationPolicyHtmlText:
-                '비밀번호 길이는 <b>10~16 자</b>로 설정하여야 하며, 아이디와 비밀번호는 동일할 수 없습니다.<br />동일한 문자는 3자 이상 사용이 불가하며, 연속된 문자 (예:abc, 123 등) 또한 3자리 이상 사용이 불가능합니다.',
+                "비밀번호 길이는 <b>10~16 자</b>로 설정하여야 하며, 아이디와 비밀번호는 동일할 수 없습니다.<br />동일한 문자는 3자 이상 사용이 불가하며, 연속된 문자 (예:abc, 123 등) 또한 3자리 이상 사용이 불가능합니다.",
             },
           },
         },
@@ -200,10 +209,10 @@ export const defaultProps = (appProps?: NuxtAppProps): NuxtAppProps => {
           mediaQuery: {
             enabled: true,
             breakPoitns: {
-              XS: '(max-width: 599.99px)',
-              S: '(min-width: 600px) and (max-width: 959.99px)',
-              M: '(min-width: 960px) and (max-width: 1279.99px)',
-              L: '(min-width: 1280px)',
+              XS: "(max-width: 599.99px)",
+              S: "(min-width: 600px) and (max-width: 959.99px)",
+              M: "(min-width: 960px) and (max-width: 1279.99px)",
+              L: "(min-width: 1280px)",
             },
           },
         },
@@ -237,6 +246,6 @@ export const defaultProps = (appProps?: NuxtAppProps): NuxtAppProps => {
         },
       },
     } as NuxtAppProps,
-    appProps,
-  )
-}
+    appProps
+  );
+};

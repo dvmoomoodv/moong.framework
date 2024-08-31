@@ -3,9 +3,9 @@
  * @exports {@link KeepAlive}
  * @packageDocumentation
  */
-import { getCurrentInstance } from '#ustra/nuxt'
-import { ComponentInternalInstance } from '#ustra/nuxt'
-import type { Ustra } from '../plugins/ustra'
+import { getCurrentInstance } from "#moong/nuxt";
+import { ComponentInternalInstance } from "#moong/nuxt";
+import type { Ustra } from "../plugins/ustra";
 
 export class KeepAlive {
   constructor(private $ustra: Ustra) {}
@@ -16,38 +16,46 @@ export class KeepAlive {
    * @returns
    */
   getCurrentKeepAliveComponents(instance?: ComponentInternalInstance) {
-    instance ||= getCurrentInstance()
+    instance ||= getCurrentInstance();
 
-    console.log('instance', instance)
+    console.log("instance", instance);
 
     if (!instance) {
-      return []
+      return [];
     }
 
-    return $ustra.utils.component.findChildComponents(instance, child => child?.type?.['__isKeepAlive'] === true)
+    return $ustra.utils.component.findChildComponents(
+      instance,
+      (child) => child?.type?.["__isKeepAlive"] === true
+    );
   }
 
   /**
    * app에 존재하는 모든 KeepAliveComponents를 조회한다.
    */
   getAllKeepAliveComponents() {
-    const rootComponent = this.$ustra.nuxtApp.vueApp._instance || this.$ustra.nuxtApp.vueApp._container?.['_vnode']?.component
+    const rootComponent =
+      this.$ustra.nuxtApp.vueApp._instance ||
+      this.$ustra.nuxtApp.vueApp._container?.["_vnode"]?.component;
 
-    console.log('rootComponent', rootComponent)
+    console.log("rootComponent", rootComponent);
     if (!rootComponent) {
-      return []
+      return [];
     }
 
     return $ustra.utils.component
-      .findChildComponents(rootComponent, child => {
-        return child?.type?.['__isKeepAlive'] === true || child.subTree?.type?.['__isKeepAlive'] === true
+      .findChildComponents(rootComponent, (child) => {
+        return (
+          child?.type?.["__isKeepAlive"] === true ||
+          child.subTree?.type?.["__isKeepAlive"] === true
+        );
       })
-      .map(child => {
-        if (child.subTree?.type?.['__isKeepAlive'] === true) {
-          return child.subTree.component
+      .map((child) => {
+        if (child.subTree?.type?.["__isKeepAlive"] === true) {
+          return child.subTree.component;
         }
-        return child
-      })
+        return child;
+      });
   }
 
   /**
@@ -55,10 +63,10 @@ export class KeepAlive {
    * @param predicator
    */
   removePageCache(predicate?: (name: string) => boolean) {
-    const keepAliveComponents = this.getAllKeepAliveComponents()
+    const keepAliveComponents = this.getAllKeepAliveComponents();
 
     if (keepAliveComponents.length > 0) {
-      this.remove(keepAliveComponents[0], predicate)
+      this.remove(keepAliveComponents[0], predicate);
     }
   }
 
@@ -67,25 +75,30 @@ export class KeepAlive {
    * @param keepAliveComponent KeepAlive 컴포넌트 인스턴스
    * @param predicate 삭제 여부를 판단하는 function
    */
-  remove(keepAliveComponent: ComponentInternalInstance, predicate?: (name: string) => boolean) {
+  remove(
+    keepAliveComponent: ComponentInternalInstance,
+    predicate?: (name: string) => boolean
+  ) {
     if (!keepAliveComponent) {
-      return
+      return;
     }
 
-    if (keepAliveComponent['__v_cache']) {
-      const removingEntiries = []
-      for (const cachedEntry of keepAliveComponent['__v_cache']) {
+    if (keepAliveComponent["__v_cache"]) {
+      const removingEntiries = [];
+      for (const cachedEntry of keepAliveComponent["__v_cache"]) {
         if (Array.isArray(cachedEntry)) {
-          const result = !predicate ? true : predicate(cachedEntry[1]?.type?.name)
+          const result = !predicate
+            ? true
+            : predicate(cachedEntry[1]?.type?.name);
 
           if (result === true) {
-            removingEntiries.push(cachedEntry[0])
+            removingEntiries.push(cachedEntry[0]);
           }
         }
       }
 
       for (const key of removingEntiries) {
-        keepAliveComponent['__v_cache'].delete(key)
+        keepAliveComponent["__v_cache"].delete(key);
       }
 
       // keepAliveComponent['__v_cache']?.clear()

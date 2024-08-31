@@ -5,16 +5,30 @@
       <UButtonBar>
         <UFieldSet>
           <UFieldRow>
-            <UField v-if="tabType === 'IN'" label="시스템 코드" totalWidth="400">
-              <UVCodeComboBox grpCd="SYS_CD" v-model="searchActions.criteria.sysCd" />
+            <UField
+              v-if="tabType === 'IN'"
+              label="시스템 코드"
+              totalWidth="400"
+            >
+              <UVCodeComboBox
+                grpCd="SYS_CD"
+                v-model="searchActions.criteria.sysCd"
+              />
             </UField>
             <UField v-else label="채널 코드" totalWidth="400">
-              <UVCodeComboBox grpCd="CHNL_CD" v-model="searchActions.criteria.chnlOutCd" />
+              <UVCodeComboBox
+                grpCd="CHNL_CD"
+                v-model="searchActions.criteria.chnlOutCd"
+              />
             </UField>
           </UFieldRow>
           <UFieldRow>
             <UField v-if="tabType === 'IN'" label="채널 코드" totalWidth="400">
-              <UVCodeComboBox grpCd="CHNL_CD" v-model="searchActions.criteria.chnlCd" displayNullText="전체" />
+              <UVCodeComboBox
+                grpCd="CHNL_CD"
+                v-model="searchActions.criteria.chnlCd"
+                displayNullText="전체"
+              />
             </UField>
             <UField label="I/F 아이디" totalWidth="400">
               <VTextField v-model="searchActions.criteria.ifId" />
@@ -50,11 +64,14 @@
     <UItem ratio="1">
       <UBox direction="row">
         <UItem ratio="1" :disabled="listDisabled">
-          <IfsList :ref="e => (listComponent = e as InstanceType<typeof IfsList>)" @select="rowSelected"></IfsList>
+          <IfsList
+            :ref="(e) => (listComponent = e as InstanceType<typeof IfsList>)"
+            @select="rowSelected"
+          ></IfsList>
         </UItem>
         <UItem ratio="1" :disabled="formDisabled">
           <IfsForm
-            :ref="e => (formComponent = e as InstanceType<typeof IfsForm>)"
+            :ref="(e) => (formComponent = e as InstanceType<typeof IfsForm>)"
             :tabType="tabType"
             @saved="onSaved"
             @show-hist="shownHist"
@@ -69,66 +86,79 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref, nextTick, shallowRef, onBeforeMount, useDeepMerge, useOnError, computed, watch } from '#ustra/nuxt'
-import { IfsCriteria, Ifs } from '#ustra/nuxt/management'
-import IfsList from './ifs-list.vue'
-import IfsForm from './ifs-form.vue'
-import IfsHist from '../ifs-hist/index.vue'
-import UVCodeComboBox from '#ustra/nuxt-vuetify/management/components/combo-box/u-v-code-combo-box.vue'
+import {
+  reactive,
+  ref,
+  nextTick,
+  shallowRef,
+  onBeforeMount,
+  useDeepMerge,
+  useOnError,
+  computed,
+  watch,
+} from "#moong/nuxt";
+import { IfsCriteria, Ifs } from "#moong/nuxt/management";
+import IfsList from "./ifs-list.vue";
+import IfsForm from "./ifs-form.vue";
+import IfsHist from "../ifs-hist/index.vue";
+import UVCodeComboBox from "#moong/nuxt-vuetify/management/components/combo-box/u-v-code-combo-box.vue";
 
 const props = defineProps({
   tabType: String,
-})
+});
 
-const formComponent = ref<InstanceType<typeof IfsForm>>(null)
-const listComponent = ref<InstanceType<typeof IfsList>>(null)
-const histComponent = ref<InstanceType<typeof IfsHist>>(null)
+const formComponent = ref<InstanceType<typeof IfsForm>>(null);
+const listComponent = ref<InstanceType<typeof IfsList>>(null);
+const histComponent = ref<InstanceType<typeof IfsHist>>(null);
 
-const showPopup = ref(false)
-const listDisabled = ref(true)
-const formDisabled = ref(true)
+const showPopup = ref(false);
+const listDisabled = ref(true);
+const formDisabled = ref(true);
 
 async function onConditionChanged(searchCond) {
-  searchActions.criteria = searchCond
-  await nextTick()
+  searchActions.criteria = searchCond;
+  await nextTick();
   if (searchCond) {
-    listActions.search()
-    formActions.newIfs()
-    listDisabled.value = false
-    formDisabled.value = true
+    listActions.search();
+    formActions.newIfs();
+    listDisabled.value = false;
+    formDisabled.value = true;
   } else {
-    listDisabled.value = true
-    formDisabled.value = true
+    listDisabled.value = true;
+    formDisabled.value = true;
   }
 }
 
 function search() {
-  formDisabled.value = true
-  formComponent.value.init(searchActions.criteria, false)
-  listComponent.value.loadData(searchActions.criteria)
-  listDisabled.value = false
-  listComponent.value.clearSelection()
+  formDisabled.value = true;
+  formComponent.value.init(searchActions.criteria, false);
+  listComponent.value.loadData(searchActions.criteria);
+  listDisabled.value = false;
+  listComponent.value.clearSelection();
 }
 
 function rowSelected(ifs: Ifs) {
-  formDisabled.value = false
-  formComponent.value.updateForm(ifs)
+  formDisabled.value = false;
+  formComponent.value.updateForm(ifs);
 }
 
 function onSaved() {
-  formDisabled.value = true
-  formComponent.value.init(searchActions.criteria, false)
-  listComponent.value.loadData(searchActions.criteria)
+  formDisabled.value = true;
+  formComponent.value.init(searchActions.criteria, false);
+  listComponent.value.loadData(searchActions.criteria);
 }
 
 function shownHist(ifId: string) {
-  showPopup.value = true
+  showPopup.value = true;
   const histSearch = {
     ifId: ifId,
-    searchSrtDttm: $ustra.utils.formatting.date($ustra.utils.date.addDays(new Date(), -120), 'yyyyMMdd'),
-    searchEndDttm: $ustra.utils.formatting.date(new Date(), 'yyyyMMdd'),
-    succYn: '',
-  }
+    searchSrtDttm: $ustra.utils.formatting.date(
+      $ustra.utils.date.addDays(new Date(), -120),
+      "yyyyMMdd"
+    ),
+    searchEndDttm: $ustra.utils.formatting.date(new Date(), "yyyyMMdd"),
+    succYn: "",
+  };
 
   // TODO
   // histComponent.value.search(histSearch)
@@ -143,44 +173,44 @@ const searchActions = (() => {
     chnlOutCd: null,
     ifId: null,
     ifVer: null,
-    useYn: '',
+    useYn: "",
     ifNm: null,
     url: null,
     ifDirCd: props.tabType,
-  })
+  });
 
-  return { criteria }
-})()
+  return { criteria };
+})();
 
 const listActions = (() => {
   async function search() {
-    listComponent.value.loadData(searchActions.criteria)
+    listComponent.value.loadData(searchActions.criteria);
   }
-  return { search }
-})()
+  return { search };
+})();
 
 const formActions = (() => {
   async function newIfs() {
-    formDisabled.value = false
-    formComponent.value.init(searchActions.criteria)
+    formDisabled.value = false;
+    formComponent.value.init(searchActions.criteria);
     // TODO grid clear selection
     //listComponent.value.clearSelection()
   }
-  return { newIfs }
-})()
+  return { newIfs };
+})();
 
 const ynList = reactive([
-  { code: '', name: '전체' },
-  { code: 'Y', name: '사용' },
-  { code: 'N', name: '미사용' },
-])
+  { code: "", name: "전체" },
+  { code: "Y", name: "사용" },
+  { code: "N", name: "미사용" },
+]);
 
 watch(
   () => searchActions.criteria.sysCd,
   (newValue, oldValue) => {
-    onConditionChanged(searchActions.criteria)
-  },
-)
+    onConditionChanged(searchActions.criteria);
+  }
+);
 </script>
 
 <style scoped></style>

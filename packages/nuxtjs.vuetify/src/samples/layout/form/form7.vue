@@ -6,7 +6,9 @@
       <div class="sample-wrap">
         <UFieldSet>
           <UFieldRow>
-            <UField label="필드1" direction="col" itemDirection="row"><v-text-field></v-text-field> </UField>
+            <UField label="필드1" direction="col" itemDirection="row"
+              ><v-text-field></v-text-field>
+            </UField>
             <UField blank center middle>
               <UButtonBox>
                 <v-btn>수정</v-btn>
@@ -36,9 +38,9 @@
 </template>
 
 <script setup lang="ts">
-import './style/form.scss'
-import form7 from './md/form7.md'
-import UField from '#ustra/nuxt-vuetify/components/form/u-field.vue'
+import "./style/form.scss";
+import form7 from "./md/form7.md";
+import UField from "#moong/nuxt-vuetify/components/form/u-field.vue";
 </script>
 
 <style scoped></style>

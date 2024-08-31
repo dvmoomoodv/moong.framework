@@ -2,7 +2,12 @@
   <USampleContentContainer title="API 연계">
     <!-- <UMarkdownViewer :content="doc1" /> -->
 
-    <WjAutoComplete v-model="value" displayMemberPath="title" selectedValuePath="id" :itemsSourceFunction="searchItems" />
+    <WjAutoComplete
+      v-model="value"
+      displayMemberPath="title"
+      selectedValuePath="id"
+      :itemsSourceFunction="searchItems"
+    />
     <br /><br />
 
     <br /><br />
@@ -16,24 +21,30 @@
   </USampleContentContainer>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-import { USampleContentContainer } from '#ustra/nuxt-vuetify/samples'
+import { ref } from "#moong/nuxt";
+import { USampleContentContainer } from "#moong/nuxt-vuetify/samples";
 // @ts-ignore
-import doc1 from './md/auto-complete2-1.md'
+import doc1 from "./md/auto-complete2-1.md";
 
 // @ts-ignore
-import doc2 from './md/auto-complete2-2.md'
+import doc2 from "./md/auto-complete2-2.md";
 
-const value = ref(null)
+const value = ref(null);
 
 function searchItems(query: string, max: number, callback: Function) {
   $ustra.api
     .call<{ userId: number; id: number; title: string; body: string }[]>({
-      url: 'https://jsonplaceholder.typicode.com/posts',
+      url: "https://jsonplaceholder.typicode.com/posts",
       showLoadingBar: false,
     })
-    .then(result => {
-      callback(!query ? result.data : result.data.filter(data => data.title.includes(query)).slice(0, max))
-    })
+    .then((result) => {
+      callback(
+        !query
+          ? result.data
+          : result.data
+              .filter((data) => data.title.includes(query))
+              .slice(0, max)
+      );
+    });
 }
 </script>

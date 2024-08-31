@@ -7,54 +7,54 @@
 /**
  * 사용자 모델
  */
-import { baseModels } from '#ustra/core/data'
-import { UsrSttCd } from './common-code'
+import { baseModels } from "#moong/core/data";
+import { UsrSttCd } from "./common-code";
 
 export interface UserCriteria {
   /**
    * 사용자 아이디 & 사용자명
    */
-  usrId?: string
+  usrId?: string;
 
   /**
    * 사용자 명
    */
-  usrNm?: string
+  usrNm?: string;
 
   /**
    * 사용자 상태 코드
    */
-  usrSttCd?: UsrSttCd
+  usrSttCd?: UsrSttCd;
 
   /**
    * 사용 구분 코드
    */
-  useDvCd?: string
+  useDvCd?: string;
 
   /**
    * 사용 구분 코드 목록
    */
-  useDvCds?: string[]
+  useDvCds?: string[];
 
   /**
    * 부서 명
    */
-  deptNm?: string
+  deptNm?: string;
 
   /**
    * 소속 그룹 여부
    */
-  authGrpNoneYn?: string
+  authGrpNoneYn?: string;
 
   /**
    * 소속 그룹 리스트 여부
    */
-  showAuthNoneGrp?: boolean
+  showAuthNoneGrp?: boolean;
 
-  [propName: string]: any
+  [propName: string]: any;
 }
 
-type UserBase = baseModels.BaseModel & UserCriteria
+type UserBase = baseModels.BaseModel & UserCriteria;
 
 /**
  * 사용자
@@ -63,136 +63,136 @@ export interface User extends UserBase {
   /**
    * 사용자 아이디
    */
-  usrId?: string
+  usrId?: string;
 
   /**
    * 사용자명
    */
-  usrNm?: string
+  usrNm?: string;
 
   /**
    * 부서 코드
    */
-  deptCd?: string
+  deptCd?: string;
 
   /**
    * 회사명
    */
-  deptNm?: string
+  deptNm?: string;
 
   /**
    * 비밀번호
    */
-  pwd?: string
+  pwd?: string;
 
   /**
    * 비밀번호 최종 수정 일시
    */
-  pwdLstUpdDttm?: string | Date
+  pwdLstUpdDttm?: string | Date;
 
   /**
    * 이메일
    */
-  email?: string
+  email?: string;
 
   /**
    * 전화번호
    */
-  phNo?: string
+  phNo?: string;
 
   /**
    * 핸드폰 번호
    */
-  cphNo?: string
+  cphNo?: string;
 
   /**
    * 팩스번호
    */
-  faxNo?: string
+  faxNo?: string;
 
   /**
    * 권한 그룹 목록
    */
-  authGrps?: string[]
+  authGrps?: string[];
 
   /**
    * 사용시작일
    */
-  useSrtDt?: string
+  useSrtDt?: string;
 
   /**
    * 사용종료일
    */
-  useEndDt?: string
+  useEndDt?: string;
 
   /**
    * 사용구분코드
    */
-  useDvCd?: string
+  useDvCd?: string;
 
   /**
    * 최종 로그인 일시
    */
-  lstLoginDttm?: string
+  lstLoginDttm?: string;
 
   /**
    * 로그인 실패 건수
    */
-  loginFailCnt?: number
+  loginFailCnt?: number;
 
   /**
    * 비밀번호 초기화 여부
    */
-  pwdResetYn?: string
+  pwdResetYn?: string;
 
   /**
    * 아이피 제한 여부
    */
-  ipLmtYn?: string
+  ipLmtYn?: string;
 
   /**
    * 아이피 목록
    */
-  ipList?: any
+  ipList?: any;
 
   /**
    * 사번
    */
-  empNo?: string
+  empNo?: string;
 
   /**
    * 비교
    */
-  rmk?: string
+  rmk?: string;
 
   /**
    * 기관 코드
    */
-  orgCd?: string
+  orgCd?: string;
 
   /**
    * 승인 완료 여부
    */
-  apvCmplYn?: string
+  apvCmplYn?: string;
 
   /**
    * 사용자 승인 아이디
    */
-  usrApvId?: string
+  usrApvId?: string;
 
   /**
    * 소속 그룹
    */
-  authGrp?: string
+  authGrp?: string;
 
-  [propName: string]: any
+  [propName: string]: any;
 }
 
 /**
  * 사용자 메뉴 목록
  */
 export interface UserMenus {
-  updates: Array<UserMenu>
+  updates: Array<UserMenu>;
 }
 
 /**
@@ -202,15 +202,15 @@ export interface UserMenuCriteria extends Record<string, any> {
   /**
    * 사용자아이디
    */
-  usrId?: string
+  usrId?: string;
 
   /**
    * 시스템 코드
    */
-  sysCd?: string
+  sysCd?: string;
 }
 
-type UserMenuBase = baseModels.BaseModel & UserMenuCriteria
+type UserMenuBase = baseModels.BaseModel & UserMenuCriteria;
 
 /**
  * 사용자 메뉴
@@ -219,63 +219,63 @@ export interface UserMenu extends UserMenuBase {
   /**
    * 사용자아이디
    */
-  usrId?: string
+  usrId?: string;
   /**
    * 메뉴아이디
    */
-  mnuId?: string
+  mnuId?: string;
   /**
    * 메뉴명
    */
-  mnuNm?: string
+  mnuNm?: string;
   /**
    * 메뉴URL
    */
-  mnuUrl?: string
+  mnuUrl?: string;
   /**
    * 기본메뉴여부
    */
-  defMnuYn?: string
+  defMnuYn?: string;
   /**
    * 정렬번호
    */
-  srtNo?: string
+  srtNo?: string;
 
   /**
    * 시스템 코드
    */
-  sysCd?: string
+  sysCd?: string;
 }
 
 export interface Criteria {
   /**
    * 사용자 아이디
    */
-  usrId?: string
+  usrId?: string;
 
   /**
    * 사용자 명
    */
-  usrNm?: string
+  usrNm?: string;
 
   /**
    * 검색 기간 시작 일자
    */
-  searchSrtDttm?: Date
+  searchSrtDttm?: Date;
   /**
    * 검색 기간 종료 일자
    */
-  searchEndDttm?: Date
+  searchEndDttm?: Date;
 
   /**
    * 비밀번호 포함 여부
    */
-  includePassword?: boolean
+  includePassword?: boolean;
 
-  [propName: string]: any
+  [propName: string]: any;
 }
 
-type UserHistBase = baseModels.BaseModel & Criteria
+type UserHistBase = baseModels.BaseModel & Criteria;
 
 /**
  * 사용자 이력
@@ -284,141 +284,141 @@ export interface UserHist extends UserHistBase {
   /**
    * 사용자 아이디
    */
-  usrId?: string
+  usrId?: string;
 
   /**
    * 입력 일시
    */
-  inpDttm?: Date
+  inpDttm?: Date;
 
   /**
    * 사용자명
    */
-  usrNm?: string
+  usrNm?: string;
 
   /**
    * 부서 코드
    */
-  deptCd?: string
+  deptCd?: string;
 
   /**
    * 회사명
    */
-  deptNm?: string
+  deptNm?: string;
 
   /**
    * 비밀번호
    */
-  pwd?: string
+  pwd?: string;
 
   /**
    * 비밀번호 최종 수정 일시
    */
-  pwdLstUpdDttm?: string
+  pwdLstUpdDttm?: string;
 
   /**
    * 이메일
    */
-  email?: string
+  email?: string;
 
   /**
    * 전화번호
    */
-  phNo?: string
+  phNo?: string;
 
   /**
    * 핸드폰 번호
    */
-  cphNo?: string
+  cphNo?: string;
 
   /**
    * 팩스번호
    */
-  faxNo?: string
+  faxNo?: string;
 
   /**
    * 사용자 상태 코드
    */
-  usrSttCd?: string
+  usrSttCd?: string;
   /**
    * 사용자 상태 명
    */
-  usrSttNm?: string
+  usrSttNm?: string;
 
   /**
    * 사용시작일
    */
-  useSrtDt?: string
+  useSrtDt?: string;
 
   /**
    * 사용종료일
    */
-  useEndDt?: string
+  useEndDt?: string;
 
   /**
    * 사용구분코드
    */
-  useDvCd?: string
+  useDvCd?: string;
   /**
    * 사용구분명
    */
-  useDvNm?: string
+  useDvNm?: string;
 
   /**
    * 최종 로그인 일시
    */
-  lstLoginDttm?: string
+  lstLoginDttm?: string;
 
   /**
    * 로그인 실패 건수
    */
-  loginFailCnt?: number
+  loginFailCnt?: number;
 
   /**
    * 비밀번호 초기화 여부
    */
-  pwdResetYn?: string
+  pwdResetYn?: string;
 
   /**
    * 아이피 제한 여부
    */
-  ipLmtYn?: string
+  ipLmtYn?: string;
 
   /**
    * 아이피 목록
    */
-  ipList?: string
+  ipList?: string;
 
   /**
    * 사원 번호
    */
-  empNo?: string
+  empNo?: string;
 
   /**
    * 비교
    */
-  rmk?: string
+  rmk?: string;
 
   /**
    * 기관 코드
    */
-  orgCd?: string
+  orgCd?: string;
   /**
    * 기관 명
    */
-  orgNm?: string
+  orgNm?: string;
 
   /**
    * 업무 구분 코드
    */
-  workDvCd?: string
+  workDvCd?: string;
   /**
    * 업무 구분 명
    */
-  workDvNm?: string
+  workDvNm?: string;
 
   /**
    * 사용 시간 초
    */
-  useSec?: number
+  useSec?: number;
 }

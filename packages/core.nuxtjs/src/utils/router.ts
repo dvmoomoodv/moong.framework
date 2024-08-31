@@ -3,8 +3,8 @@
  * @exports {@link Router}
  * @packageDocumentation
  */
-import { useRouter, useRoute } from '#app'
-import { defineAsyncComponent, defineComponent } from '#ustra/nuxt'
+import { useRouter, useRoute } from "#app";
+import { defineAsyncComponent, defineComponent } from "#moong/nuxt";
 
 export class Router {
   /**
@@ -12,17 +12,21 @@ export class Router {
    * @param path
    * @returns
    */
-  findComponentByPath(path: string): ReturnType<typeof defineAsyncComponent | typeof defineComponent> {
-    const route = useRouter().resolve(path)
+  findComponentByPath(
+    path: string
+  ): ReturnType<typeof defineAsyncComponent | typeof defineComponent> {
+    const route = useRouter().resolve(path);
 
     if (!route || route.matched.length < 1) {
-      return null
+      return null;
     }
 
-    const component = route.matched[0].components.default
+    const component = route.matched[0].components.default;
 
     // @ts-ignore
-    return typeof component === 'function' ? defineAsyncComponent(component) : component
+    return typeof component === "function"
+      ? defineAsyncComponent(component)
+      : component;
   }
 
   /**
@@ -31,7 +35,7 @@ export class Router {
    * @returns
    */
   findRoute(path: string): ReturnType<typeof useRoute> {
-    return useRouter().resolve(path)
+    return useRouter().resolve(path);
   }
 
   /**
@@ -41,15 +45,15 @@ export class Router {
    */
   equalPath(path1: string, path2: string) {
     if (!path1 || !path2) {
-      return false
+      return false;
     }
 
-    path1 = path1.endsWith('/') ? path1 : path1 + '/'
-    path2 = path2.endsWith('/') ? path2 : path2 + '/'
+    path1 = path1.endsWith("/") ? path1 : path1 + "/";
+    path2 = path2.endsWith("/") ? path2 : path2 + "/";
 
-    return path1 === path2
+    return path1 === path2;
   }
 }
 
-const instance = new Router()
-export default instance
+const instance = new Router();
+export default instance;

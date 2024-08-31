@@ -1,6 +1,12 @@
 <template>
   <template v-if="!blank">
-    <UItem class="u-field" :class="uFieldClasses" :style="uFieldStyles" :ratio="ratio" :baseSize="totalWidth">
+    <UItem
+      class="u-field"
+      :class="uFieldClasses"
+      :style="uFieldStyles"
+      :ratio="ratio"
+      :baseSize="totalWidth"
+    >
       <div :style="labelStyles" :class="labelClasses" class="u-field-label">
         <template v-if="!$slots.label">
           <span :class="labelSpanClasses">{{ label }}</span>
@@ -10,7 +16,9 @@
         </template>
       </div>
 
-      <div class="u-field-slot" :class="slotClasses" :style="slotStyles"><slot /></div>
+      <div class="u-field-slot" :class="slotClasses" :style="slotStyles">
+        <slot />
+      </div>
     </UItem>
   </template>
 
@@ -22,14 +30,21 @@
 </template>
 
 <script setup lang="ts">
-import { computed, getCurrentInstance, nextTick, ref, onMounted, onUpdated } from '#ustra/nuxt'
-import { core } from '#ustra/core/utils'
-import { dom } from '#ustra/core/utils/browser'
-import { component } from '#ustra/nuxt/utils'
-import { useMounted, computedAsync } from '@vueuse/core'
-import './styles/form.scss'
+import {
+  computed,
+  getCurrentInstance,
+  nextTick,
+  ref,
+  onMounted,
+  onUpdated,
+} from "#moong/nuxt";
+import { core } from "#moong/core/utils";
+import { dom } from "#moong/core/utils/browser";
+import { component } from "#moong/nuxt/utils";
+import { useMounted, computedAsync } from "@vueuse/core";
+import "./styles/form.scss";
 
-const isMounted = useMounted()
+const isMounted = useMounted();
 
 const props = defineProps({
   totalWidth: {
@@ -46,11 +61,11 @@ const props = defineProps({
   },
   direction: {
     type: String,
-    default: 'row',
+    default: "row",
   },
   itemDirection: {
     type: String,
-    default: 'col',
+    default: "col",
   },
   label: {
     type: String,
@@ -101,154 +116,157 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-})
+});
 
-const evaluating = ref(false)
-const currentInstance = getCurrentInstance()
+const evaluating = ref(false);
+const currentInstance = getCurrentInstance();
 const required = computedAsync(async () => {
   if (!core.isEmpty(props.required)) {
-    return props.required
+    return props.required;
   }
 
   if (!isMounted.value) {
-    return false
+    return false;
   }
 
-  await nextTick()
-  const requiredChildNodes = component.queryChildNodes(currentInstance.vnode, node => {
-    if (node.props?.required || node.props?.isRequired) {
-      return true
-    }
+  await nextTick();
+  const requiredChildNodes = component.queryChildNodes(
+    currentInstance.vnode,
+    (node) => {
+      if (node.props?.required || node.props?.isRequired) {
+        return true;
+      }
 
-    if (node.props?.validation && node.props?.validation?.rules) {
-      for (const rule of node.props?.validation?.rules) {
-        if (rule === 'required' || rule?.type == 'required') {
-          return true
+      if (node.props?.validation && node.props?.validation?.rules) {
+        for (const rule of node.props?.validation?.rules) {
+          if (rule === "required" || rule?.type == "required") {
+            return true;
+          }
+        }
+      }
+
+      if (node.el) {
+        const el = node.el as HTMLElement;
+
+        if (el.hasAttribute("required")) {
+          return true;
         }
       }
     }
+  );
 
-    if (node.el) {
-      const el = node.el as HTMLElement
+  return requiredChildNodes.length > 0;
+}, false);
 
-      if (el.hasAttribute('required')) {
-        return true
-      }
-    }
-  })
-
-  return requiredChildNodes.length > 0
-}, false)
-
-onMounted(() => (evaluating.value = true))
-onUpdated(() => (evaluating.value = true))
+onMounted(() => (evaluating.value = true));
+onUpdated(() => (evaluating.value = true));
 
 const uFieldClasses = computed(() => {
-  let classes = ''
+  let classes = "";
   if (props.disabled) {
-    classes += 'u-form-state-disabled'
+    classes += "u-form-state-disabled";
   }
-  return classes
-})
+  return classes;
+});
 
 const uFieldStyles = computed(() => {
-  const obj: Record<string, any> = {}
+  const obj: Record<string, any> = {};
   if (!props.blank) {
-    if (props.direction === 'col') {
-      obj.flexDirection = 'column'
-      obj.justifyContent = 'flex-start'
-      obj.alignItems = 'stretch'
+    if (props.direction === "col") {
+      obj.flexDirection = "column";
+      obj.justifyContent = "flex-start";
+      obj.alignItems = "stretch";
     } else {
-      obj.flexDirection = 'row'
-      obj.justifyContent = 'flex-start'
+      obj.flexDirection = "row";
+      obj.justifyContent = "flex-start";
     }
     if (props.totalWidth) {
-      obj.maxWidth = dom.getCssUnit(props.totalWidth)
+      obj.maxWidth = dom.getCssUnit(props.totalWidth);
     }
   } else {
     if (props.right) {
-      obj.justifyContent = 'flex-end'
+      obj.justifyContent = "flex-end";
     }
     if (props.bottom) {
-      obj.alignItems = 'flex-end'
+      obj.alignItems = "flex-end";
     }
     if (props.left) {
-      obj.justifyContent = 'flex-start'
+      obj.justifyContent = "flex-start";
     }
     if (props.center) {
-      obj.justifyContent = 'center'
+      obj.justifyContent = "center";
     }
     if (props.middle) {
-      obj.alignItems = 'center'
+      obj.alignItems = "center";
     }
     if (props.top) {
-      obj.alignItems = 'flex-start'
+      obj.alignItems = "flex-start";
     }
   }
-  return obj
-})
+  return obj;
+});
 
 const labelClasses = computed(() => {
-  let classes = ''
-  if (props.direction === 'row') {
-    classes += 'row'
+  let classes = "";
+  if (props.direction === "row") {
+    classes += "row";
     if (props.left) {
-      classes += ' left'
+      classes += " left";
     } else if (props.right) {
-      classes += ' right'
+      classes += " right";
     }
   }
-  if (props.direction === 'col') {
-    classes += 'col'
+  if (props.direction === "col") {
+    classes += "col";
   }
-  return classes
-})
+  return classes;
+});
 
 // let labelWidthFix: boolean
 const labelStyles = computed(() => {
-  const obj: Record<string, any> = {}
-  if (props.direction === 'row') {
-    obj.width = dom.getCssUnit(props.labelWidth)
+  const obj: Record<string, any> = {};
+  if (props.direction === "row") {
+    obj.width = dom.getCssUnit(props.labelWidth);
   } else {
     if (props.width) {
-      obj.width = dom.getCssUnit(props.width)
+      obj.width = dom.getCssUnit(props.width);
     } else {
-      obj.width = '100%'
+      obj.width = "100%";
     }
   }
-  obj.minWidth = dom.getCssUnit(props.labelWidth)
+  obj.minWidth = dom.getCssUnit(props.labelWidth);
 
-  return obj
-})
+  return obj;
+});
 const labelSpanClasses = computed(() => {
-  let spanClass = ''
+  let spanClass = "";
   if (required.value) {
-    spanClass += 'required'
+    spanClass += "required";
   }
-  return spanClass
-})
+  return spanClass;
+});
 const slotClasses = computed(() => {
-  let slotClass = ''
-  if (props.itemDirection === 'row') {
-    slotClass += ' row '
+  let slotClass = "";
+  if (props.itemDirection === "row") {
+    slotClass += " row ";
   } else {
-    slotClass += ' col '
+    slotClass += " col ";
   }
-  return slotClass
-})
+  return slotClass;
+});
 const slotStyles = computed(() => {
-  const obj: Record<string, any> = {}
+  const obj: Record<string, any> = {};
   if (props.width) {
-    obj.minWidth = dom.getCssUnit(props.width)
+    obj.minWidth = dom.getCssUnit(props.width);
   } else {
-    obj.width = dom.getCssUnit('100%')
+    obj.width = dom.getCssUnit("100%");
   }
 
-  if (props.direction === 'row') {
-    obj.backgroundColor = '#fff'
+  if (props.direction === "row") {
+    obj.backgroundColor = "#fff";
   }
-  return obj
-})
+  return obj;
+});
 </script>
 
 <style scoped lang="scss">

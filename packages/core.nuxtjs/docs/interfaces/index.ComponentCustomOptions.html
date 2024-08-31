@@ -1,29 +1,549 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>ComponentCustomOptions | @ustra/nuxt</title><meta name="description" content="Documentation for @ustra/nuxt"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base=".."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">@ustra/nuxt</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb"><li><a href="../index.html">@ustra/nuxt</a></li><li><a href="../modules/index.html">index</a></li><li><a href="index.ComponentCustomOptions.html">ComponentCustomOptions</a></li></ul><h1>Interface ComponentCustomOptions</h1></div><section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography"><p>Interface for declaring custom options.</p>
-</div><div class="tsd-comment tsd-typography"><h4>Example</h4><pre><code class="language-ts"><span class="hl-0">declare</span><span class="hl-3"> </span><span class="hl-0">module</span><span class="hl-3"> </span><span class="hl-2">&#39;@vue/runtime-core&#39;</span><span class="hl-3"> {</span><br/><span class="hl-3">  </span><span class="hl-0">interface</span><span class="hl-3"> </span><span class="hl-7">ComponentCustomOptions</span><span class="hl-3"> {</span><br/><span class="hl-3">    </span><span class="hl-8">beforeRouteUpdate</span><span class="hl-3">?(</span><br/><span class="hl-3">      </span><span class="hl-4">to</span><span class="hl-3">: </span><span class="hl-7">Route</span><span class="hl-3">,</span><br/><span class="hl-3">      </span><span class="hl-4">from</span><span class="hl-3">: </span><span class="hl-7">Route</span><span class="hl-3">,</span><br/><span class="hl-3">      </span><span class="hl-8">next</span><span class="hl-3">: () </span><span class="hl-0">=&gt;</span><span class="hl-3"> </span><span class="hl-7">void</span><br/><span class="hl-3">    ): </span><span class="hl-7">void</span><br/><span class="hl-3">  }</span><br/><span class="hl-3">}</span>
+<!doctype html>
+<html class="default" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <title>ComponentCustomOptions | @moong/nuxt</title>
+    <meta name="description" content="Documentation for @moong/nuxt" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/highlight.css" />
+    <script defer src="../assets/main.js"></script>
+    <script async src="../assets/icons.js" id="tsd-icons-script"></script>
+    <script async src="../assets/search.js" id="tsd-search-script"></script>
+    <script async src="../assets/navigation.js" id="tsd-nav-script"></script>
+  </head>
+  <body>
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("tsd-theme") || "os";
+      document.body.style.display = "none";
+      setTimeout(
+        () =>
+          app ? app.showPage() : document.body.style.removeProperty("display"),
+        500
+      );
+    </script>
+    <header class="tsd-page-toolbar">
+      <div class="tsd-toolbar-contents container">
+        <div class="table-cell" id="tsd-search" data-base="..">
+          <div class="field">
+            <label
+              for="tsd-search-field"
+              class="tsd-widget tsd-toolbar-icon search no-caption"
+              ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use href="../assets/icons.svg#icon-search"></use></svg></label
+            ><input type="text" id="tsd-search-field" aria-label="Search" />
+          </div>
+          <div class="field"><div id="tsd-toolbar-links"></div></div>
+          <ul class="results">
+            <li class="state loading">Preparing search index...</li>
+            <li class="state failure">The search index is not available</li>
+          </ul>
+          <a href="../index.html" class="title">@moong/nuxt</a>
+        </div>
+        <div class="table-cell" id="tsd-widgets">
+          <a
+            href="#"
+            class="tsd-widget tsd-toolbar-icon menu no-caption"
+            data-toggle="menu"
+            aria-label="Menu"
+            ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use href="../assets/icons.svg#icon-menu"></use></svg
+          ></a>
+        </div>
+      </div>
+    </header>
+    <div class="container container-main">
+      <div class="col-content">
+        <div class="tsd-page-title">
+          <ul class="tsd-breadcrumb">
+            <li><a href="../index.html">@moong/nuxt</a></li>
+            <li><a href="../modules/index.html">index</a></li>
+            <li>
+              <a href="index.ComponentCustomOptions.html"
+                >ComponentCustomOptions</a
+              >
+            </li>
+          </ul>
+          <h1>Interface ComponentCustomOptions</h1>
+        </div>
+        <section class="tsd-panel tsd-comment">
+          <div class="tsd-comment tsd-typography">
+            <p>Interface for declaring custom options.</p>
+          </div>
+          <div class="tsd-comment tsd-typography">
+            <h4>Example</h4>
+            <pre><code class="language-ts"><span class="hl-0">declare</span><span class="hl-3"> </span><span class="hl-0">module</span><span class="hl-3"> </span><span class="hl-2">&#39;@vue/runtime-core&#39;</span><span class="hl-3"> {</span><br/><span class="hl-3">  </span><span class="hl-0">interface</span><span class="hl-3"> </span><span class="hl-7">ComponentCustomOptions</span><span class="hl-3"> {</span><br/><span class="hl-3">    </span><span class="hl-8">beforeRouteUpdate</span><span class="hl-3">?(</span><br/><span class="hl-3">      </span><span class="hl-4">to</span><span class="hl-3">: </span><span class="hl-7">Route</span><span class="hl-3">,</span><br/><span class="hl-3">      </span><span class="hl-4">from</span><span class="hl-3">: </span><span class="hl-7">Route</span><span class="hl-3">,</span><br/><span class="hl-3">      </span><span class="hl-8">next</span><span class="hl-3">: () </span><span class="hl-0">=&gt;</span><span class="hl-3"> </span><span class="hl-7">void</span><br/><span class="hl-3">    ): </span><span class="hl-7">void</span><br/><span class="hl-3">  }</span><br/><span class="hl-3">}</span>
 </code><button>Copy</button></pre>
-</div></section><div class="tsd-signature"><span class="tsd-signature-keyword">interface </span><span class="tsd-kind-interface">ComponentCustomOptions</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span><a class="tsd-kind-property" href="index.ComponentCustomOptions.html#beforeRouteEnter">beforeRouteEnter</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">NavigationGuardWithThis</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="index.ComponentCustomOptions.html#beforeRouteLeave">beforeRouteLeave</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">NavigationGuard</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="index.ComponentCustomOptions.html#beforeRouteUpdate">beforeRouteUpdate</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">NavigationGuard</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div><section class="tsd-panel tsd-hierarchy"><h4>Hierarchy (<a class="link" href="../hierarchy.html#index.ComponentCustomOptions">view full</a>)</h4><ul class="tsd-hierarchy"><li><span class="target">ComponentCustomOptions</span><ul class="tsd-hierarchy"><li><a href="index.ComponentOptionsBase.html" class="tsd-signature-type tsd-kind-interface">ComponentOptionsBase</a></li></ul></li></ul></section><aside class="tsd-sources"><ul><li>Defined in node_modules/@vue/runtime-core/dist/runtime-core.d.ts:585</li><li>Defined in node_modules/vue-router/dist/vue-router.d.ts:1453</li></ul></aside><section class="tsd-panel-group tsd-index-group"><section class="tsd-panel tsd-index-panel"><details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><h5 class="tsd-index-heading uppercase" role="button" aria-expanded="false" tabIndex="0"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-chevronSmall"></use></svg> Index</h5></summary><div class="tsd-accordion-details"><section class="tsd-index-section"><h3 class="tsd-index-heading">Properties</h3><div class="tsd-index-list"><a href="index.ComponentCustomOptions.html#beforeRouteEnter" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>before<wbr/>Route<wbr/>Enter?</span></a>
-<a href="index.ComponentCustomOptions.html#beforeRouteLeave" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>before<wbr/>Route<wbr/>Leave?</span></a>
-<a href="index.ComponentCustomOptions.html#beforeRouteUpdate" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>before<wbr/>Route<wbr/>Update?</span></a>
-</div></section></div></details></section></section><section class="tsd-panel-group tsd-member-group"><h2>Properties</h2><section class="tsd-panel tsd-member tsd-is-external"><a id="beforeRouteEnter" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>before<wbr/>Route<wbr/>Enter</span><a href="#beforeRouteEnter" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">before<wbr/>Route<wbr/>Enter</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">NavigationGuardWithThis</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div><div class="tsd-comment tsd-typography"><p>Guard called when the router is navigating to the route that is rendering
-this component from a different route. Differently from <code>beforeRouteUpdate</code>
-and <code>beforeRouteLeave</code>, <code>beforeRouteEnter</code> does not have access to the
-component instance through <code>this</code> because it triggers before the component
-is even mounted.</p>
-</div><div class="tsd-comment tsd-typography"><h4>Param: to</h4><p>RouteLocationRaw we are navigating to</p>
-<h4>Param: from</h4><p>RouteLocationRaw we are navigating from</p>
-<h4>Param: next</h4><p>function to validate, cancel or modify (by redirecting) the
-navigation</p>
-</div><aside class="tsd-sources"><ul><li>Defined in node_modules/vue-router/dist/vue-router.d.ts:1466</li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-external"><a id="beforeRouteLeave" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>before<wbr/>Route<wbr/>Leave</span><a href="#beforeRouteLeave" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">before<wbr/>Route<wbr/>Leave</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">NavigationGuard</span></div><div class="tsd-comment tsd-typography"><p>Guard called when the router is navigating away from the current route that
-is rendering this component.</p>
-</div><div class="tsd-comment tsd-typography"><h4>Param: to</h4><p>RouteLocationRaw we are navigating to</p>
-<h4>Param: from</h4><p>RouteLocationRaw we are navigating from</p>
-<h4>Param: next</h4><p>function to validate, cancel or modify (by redirecting) the
-navigation</p>
-</div><aside class="tsd-sources"><ul><li>Defined in node_modules/vue-router/dist/vue-router.d.ts:1493</li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-external"><a id="beforeRouteUpdate" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>before<wbr/>Route<wbr/>Update</span><a href="#beforeRouteUpdate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">before<wbr/>Route<wbr/>Update</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">NavigationGuard</span></div><div class="tsd-comment tsd-typography"><p>Guard called whenever the route that renders this component has changed, but
-it is reused for the new route. This allows you to guard for changes in
-params, the query or the hash.</p>
-</div><div class="tsd-comment tsd-typography"><h4>Param: to</h4><p>RouteLocationRaw we are navigating to</p>
-<h4>Param: from</h4><p>RouteLocationRaw we are navigating from</p>
-<h4>Param: next</h4><p>function to validate, cancel or modify (by redirecting) the
-navigation</p>
-</div><aside class="tsd-sources"><ul><li>Defined in node_modules/vue-router/dist/vue-router.d.ts:1480</li></ul></aside></section></section></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-index-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><h4 class="uppercase">Member Visibility</h4><form><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div><div class="tsd-theme-toggle"><h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-index-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#beforeRouteEnter" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>before<wbr/>Route<wbr/>Enter</span></a><a href="#beforeRouteLeave" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>before<wbr/>Route<wbr/>Leave</span></a><a href="#beforeRouteUpdate" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>before<wbr/>Route<wbr/>Update</span></a></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1"></use></svg><span>@ustra/nuxt</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base=".."><li>Loading...</li></ul></nav></div></div></div><div class="tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div></body></html>
+          </div>
+        </section>
+        <div class="tsd-signature">
+          <span class="tsd-signature-keyword">interface </span
+          ><span class="tsd-kind-interface">ComponentCustomOptions</span>
+          <span class="tsd-signature-symbol">{ </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="index.ComponentCustomOptions.html#beforeRouteEnter"
+            >beforeRouteEnter</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">NavigationGuardWithThis</span
+          ><span class="tsd-signature-symbol">&lt;</span
+          ><span class="tsd-signature-type">undefined</span
+          ><span class="tsd-signature-symbol">&gt;</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="index.ComponentCustomOptions.html#beforeRouteLeave"
+            >beforeRouteLeave</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">NavigationGuard</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="index.ComponentCustomOptions.html#beforeRouteUpdate"
+            >beforeRouteUpdate</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">NavigationGuard</span
+          ><span class="tsd-signature-symbol">; </span><br /><span
+            class="tsd-signature-symbol"
+            >}</span
+          >
+        </div>
+        <section class="tsd-panel tsd-hierarchy">
+          <h4>
+            Hierarchy (<a
+              class="link"
+              href="../hierarchy.html#index.ComponentCustomOptions"
+              >view full</a
+            >)
+          </h4>
+          <ul class="tsd-hierarchy">
+            <li>
+              <span class="target">ComponentCustomOptions</span>
+              <ul class="tsd-hierarchy">
+                <li>
+                  <a
+                    href="index.ComponentOptionsBase.html"
+                    class="tsd-signature-type tsd-kind-interface"
+                    >ComponentOptionsBase</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <aside class="tsd-sources">
+          <ul>
+            <li>
+              Defined in
+              node_modules/@vue/runtime-core/dist/runtime-core.d.ts:585
+            </li>
+            <li>
+              Defined in node_modules/vue-router/dist/vue-router.d.ts:1453
+            </li>
+          </ul>
+        </aside>
+        <section class="tsd-panel-group tsd-index-group">
+          <section class="tsd-panel tsd-index-panel">
+            <details class="tsd-index-content tsd-index-accordion" open>
+              <summary class="tsd-accordion-summary tsd-index-summary">
+                <h5
+                  class="tsd-index-heading uppercase"
+                  role="button"
+                  aria-expanded="false"
+                  tabindex="0"
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <use href="../assets/icons.svg#icon-chevronSmall"></use>
+                  </svg>
+                  Index
+                </h5>
+              </summary>
+              <div class="tsd-accordion-details">
+                <section class="tsd-index-section">
+                  <h3 class="tsd-index-heading">Properties</h3>
+                  <div class="tsd-index-list">
+                    <a
+                      href="index.ComponentCustomOptions.html#beforeRouteEnter"
+                      class="tsd-index-link tsd-is-external"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>before<wbr />Route<wbr />Enter?</span></a
+                    >
+                    <a
+                      href="index.ComponentCustomOptions.html#beforeRouteLeave"
+                      class="tsd-index-link tsd-is-external"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>before<wbr />Route<wbr />Leave?</span></a
+                    >
+                    <a
+                      href="index.ComponentCustomOptions.html#beforeRouteUpdate"
+                      class="tsd-index-link tsd-is-external"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>before<wbr />Route<wbr />Update?</span></a
+                    >
+                  </div>
+                </section>
+              </div>
+            </details>
+          </section>
+        </section>
+        <section class="tsd-panel-group tsd-member-group">
+          <h2>Properties</h2>
+          <section class="tsd-panel tsd-member tsd-is-external">
+            <a id="beforeRouteEnter" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>before<wbr />Route<wbr />Enter</span
+              ><a
+                href="#beforeRouteEnter"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property"
+                >before<wbr />Route<wbr />Enter</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">NavigationGuardWithThis</span
+              ><span class="tsd-signature-symbol">&lt;</span
+              ><span class="tsd-signature-type">undefined</span
+              ><span class="tsd-signature-symbol">&gt;</span>
+            </div>
+            <div class="tsd-comment tsd-typography">
+              <p>
+                Guard called when the router is navigating to the route that is
+                rendering this component from a different route. Differently
+                from <code>beforeRouteUpdate</code> and
+                <code>beforeRouteLeave</code>,
+                <code>beforeRouteEnter</code> does not have access to the
+                component instance through <code>this</code> because it triggers
+                before the component is even mounted.
+              </p>
+            </div>
+            <div class="tsd-comment tsd-typography">
+              <h4>Param: to</h4>
+              <p>RouteLocationRaw we are navigating to</p>
+              <h4>Param: from</h4>
+              <p>RouteLocationRaw we are navigating from</p>
+              <h4>Param: next</h4>
+              <p>
+                function to validate, cancel or modify (by redirecting) the
+                navigation
+              </p>
+            </div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in node_modules/vue-router/dist/vue-router.d.ts:1466
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-external">
+            <a id="beforeRouteLeave" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>before<wbr />Route<wbr />Leave</span
+              ><a
+                href="#beforeRouteLeave"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property"
+                >before<wbr />Route<wbr />Leave</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">NavigationGuard</span>
+            </div>
+            <div class="tsd-comment tsd-typography">
+              <p>
+                Guard called when the router is navigating away from the current
+                route that is rendering this component.
+              </p>
+            </div>
+            <div class="tsd-comment tsd-typography">
+              <h4>Param: to</h4>
+              <p>RouteLocationRaw we are navigating to</p>
+              <h4>Param: from</h4>
+              <p>RouteLocationRaw we are navigating from</p>
+              <h4>Param: next</h4>
+              <p>
+                function to validate, cancel or modify (by redirecting) the
+                navigation
+              </p>
+            </div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in node_modules/vue-router/dist/vue-router.d.ts:1493
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-external">
+            <a id="beforeRouteUpdate" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>before<wbr />Route<wbr />Update</span
+              ><a
+                href="#beforeRouteUpdate"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property"
+                >before<wbr />Route<wbr />Update</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">NavigationGuard</span>
+            </div>
+            <div class="tsd-comment tsd-typography">
+              <p>
+                Guard called whenever the route that renders this component has
+                changed, but it is reused for the new route. This allows you to
+                guard for changes in params, the query or the hash.
+              </p>
+            </div>
+            <div class="tsd-comment tsd-typography">
+              <h4>Param: to</h4>
+              <p>RouteLocationRaw we are navigating to</p>
+              <h4>Param: from</h4>
+              <p>RouteLocationRaw we are navigating from</p>
+              <h4>Param: next</h4>
+              <p>
+                function to validate, cancel or modify (by redirecting) the
+                navigation
+              </p>
+            </div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in node_modules/vue-router/dist/vue-router.d.ts:1480
+                </li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+      </div>
+      <div class="col-sidebar">
+        <div class="page-menu">
+          <div class="tsd-navigation settings">
+            <details class="tsd-index-accordion">
+              <summary class="tsd-accordion-summary">
+                <h3>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <use href="../assets/icons.svg#icon-chevronDown"></use></svg
+                  >Settings
+                </h3>
+              </summary>
+              <div class="tsd-accordion-details">
+                <div class="tsd-filter-visibility">
+                  <h4 class="uppercase">Member Visibility</h4>
+                  <form>
+                    <ul id="tsd-filter-options">
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-protected"
+                            name="protected"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Protected</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-private"
+                            name="private"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Private</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-inherited"
+                            name="inherited"
+                            checked
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Inherited</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-external"
+                            name="external"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>External</span></label
+                        >
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+                <div class="tsd-theme-toggle">
+                  <h4 class="uppercase">Theme</h4>
+                  <select id="tsd-theme">
+                    <option value="os">OS</option>
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                  </select>
+                </div>
+              </div>
+            </details>
+          </div>
+          <details open class="tsd-index-accordion tsd-page-navigation">
+            <summary class="tsd-accordion-summary">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <use href="../assets/icons.svg#icon-chevronDown"></use></svg
+                >On This Page
+              </h3>
+            </summary>
+            <div class="tsd-accordion-details">
+              <a href="#beforeRouteEnter" class="tsd-is-external"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>before<wbr />Route<wbr />Enter</span></a
+              ><a href="#beforeRouteLeave" class="tsd-is-external"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>before<wbr />Route<wbr />Leave</span></a
+              ><a href="#beforeRouteUpdate" class="tsd-is-external"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>before<wbr />Route<wbr />Update</span></a
+              >
+            </div>
+          </details>
+        </div>
+        <div class="site-menu">
+          <nav class="tsd-navigation">
+            <a href="../index.html"
+              ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                <use href="../assets/icons.svg#icon-1"></use></svg
+              ><span>@moong/nuxt</span></a
+            >
+            <ul
+              class="tsd-small-nested-navigation"
+              id="tsd-nav-container"
+              data-base=".."
+            >
+              <li>Loading...</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="tsd-generator">
+      <p>
+        Generated using
+        <a href="https://typedoc.org/" target="_blank">TypeDoc</a>
+      </p>
+    </div>
+    <div class="overlay"></div>
+  </body>
+</html>

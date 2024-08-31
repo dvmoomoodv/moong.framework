@@ -1,7 +1,7 @@
 // import { NuxtApp } from '#app'
-// import { useUstra } from '#ustra/nuxt'
+// import { useUstra } from '#moong/nuxt'
 // import { createVuetify } from 'vuetify'
-export * from './dialog'
+export * from "./dialog";
 
 // /**
 //  * vuetify 플러그인을 등록한다.

@@ -38,31 +38,31 @@
   </v-card>
 </template>
 <script lang="ts" setup>
-import { ref, reactive } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
-import UVRadioGroupBox from '#ustra/nuxt-vuetify/components/radio/u-v-radio-group-box.vue'
+import { ref, reactive } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
+import UVRadioGroupBox from "#moong/nuxt-vuetify/components/radio/u-v-radio-group-box.vue";
 
 // @ts-ignore
-import doc1 from './md/radio9-1.md'
+import doc1 from "./md/radio9-1.md";
 
 // @ts-ignore
-import doc2 from './md/radio9-2.md'
+import doc2 from "./md/radio9-2.md";
 
 // @ts-ignore
-import doc3 from './md/radio9-3.md'
+import doc3 from "./md/radio9-3.md";
 
 const items = reactive([
-  { value: '1', text: '금액설정', amountType: '1', amountValue: 0 },
-  { value: '2', text: '할인설정', selectedDcOptions: [false, false] },
-])
+  { value: "1", text: "금액설정", amountType: "1", amountValue: 0 },
+  { value: "2", text: "할인설정", selectedDcOptions: [false, false] },
+]);
 
 const items2 = reactive([
-  { value: '1', text: '정액' },
-  { value: '2', text: '정률' },
-])
+  { value: "1", text: "정액" },
+  { value: "2", text: "정률" },
+]);
 
-const items3 = reactive([{ text: '선할인' }, { text: '후적립' }])
+const items3 = reactive([{ text: "선할인" }, { text: "후적립" }]);
 
-const radioValue = ref('1')
-const radioValue2 = ref('1')
+const radioValue = ref("1");
+const radioValue2 = ref("1");
 </script>

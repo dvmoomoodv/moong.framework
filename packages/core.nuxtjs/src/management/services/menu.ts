@@ -1,6 +1,6 @@
-import { apiModels } from '#ustra/core/data'
-import { defineUstraService } from '#ustra/nuxt/composables'
-import { MenuCriteria, Menu, MenuTreeData } from '../models/menu'
+import { apiModels } from "#moong/core/data";
+import { defineUstraService } from "#moong/nuxt/composables";
+import { MenuCriteria, Menu, MenuTreeData } from "../models/menu";
 
 /**
  * 메뉴 서비스
@@ -12,50 +12,53 @@ export const useUstraMenuService = defineUstraService(({ api }) => {
    */
   async function getMenus(creteria?: MenuCriteria, maxDepth?: number) {
     const res = await api.call<apiModels.ApiResponse<Menu[]>>({
-      url: '/api/system/menu/list',
-      method: 'POST',
+      url: "/api/system/menu/list",
+      method: "POST",
       data: creteria,
-    })
+    });
 
-    const findMenuById = (menus: MenuTreeData[], mnuId: string): MenuTreeData => {
+    const findMenuById = (
+      menus: MenuTreeData[],
+      mnuId: string
+    ): MenuTreeData => {
       if (!menus) {
-        return null
+        return null;
       }
 
       for (const menu of menus) {
         if (menu.mnuId === mnuId) {
-          return menu
+          return menu;
         }
 
-        const subMenu = findMenuById(menu.items, mnuId)
+        const subMenu = findMenuById(menu.items, mnuId);
         if (subMenu) {
-          return subMenu
+          return subMenu;
         }
       }
-    }
+    };
 
-    const menus: MenuTreeData[] = []
+    const menus: MenuTreeData[] = [];
     for (const ag of res.data.body) {
-      const treeMenu: MenuTreeData = ag
-      treeMenu.items = []
-      treeMenu.expanded = false
+      const treeMenu: MenuTreeData = ag;
+      treeMenu.items = [];
+      treeMenu.expanded = false;
 
       if (maxDepth <= treeMenu.mnuStepNo) {
-        treeMenu.icon = 'file'
+        treeMenu.icon = "file";
       }
 
       if (!treeMenu.uprMnuId) {
-        menus.push(treeMenu)
+        menus.push(treeMenu);
       } else {
-        const uprAuthGroup = findMenuById(menus, treeMenu.uprMnuId)
+        const uprAuthGroup = findMenuById(menus, treeMenu.uprMnuId);
 
         if (uprAuthGroup) {
-          uprAuthGroup.items.push(treeMenu)
+          uprAuthGroup.items.push(treeMenu);
         }
       }
     }
 
-    return menus
+    return menus;
   }
 
   /**
@@ -64,12 +67,12 @@ export const useUstraMenuService = defineUstraService(({ api }) => {
    */
   async function getMenuList(creteria?: MenuCriteria) {
     const result = await api.call<apiModels.ApiResponse<Menu[]>>({
-      url: '/api/system/menu/list',
-      method: 'POST',
+      url: "/api/system/menu/list",
+      method: "POST",
       data: creteria,
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
   /**
@@ -79,10 +82,10 @@ export const useUstraMenuService = defineUstraService(({ api }) => {
   async function getMenu(mnuId: string) {
     const result = await api.call<apiModels.ApiResponse<Menu>>({
       url: `/api/system/menu/${mnuId}`,
-      method: 'GET',
-    })
+      method: "GET",
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
   /**
@@ -92,12 +95,12 @@ export const useUstraMenuService = defineUstraService(({ api }) => {
    */
   async function addMenu(menu: Menu) {
     const result = await api.call<apiModels.ApiResponse<Menu>>({
-      url: '/api/system/menu',
-      method: 'POST',
+      url: "/api/system/menu",
+      method: "POST",
       data: menu,
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
   /**
@@ -105,16 +108,16 @@ export const useUstraMenuService = defineUstraService(({ api }) => {
    * @param menu 메뉴 정보
    */
   async function updateMenu(menu: Menu) {
-    delete menu.updDttm
-    delete menu.updUsrId
-    delete menu.updUsrIp
+    delete menu.updDttm;
+    delete menu.updUsrId;
+    delete menu.updUsrIp;
     const result = await api.call<apiModels.ApiResponse<Menu>>({
-      url: '/api/system/menu/edit',
-      method: 'POST',
+      url: "/api/system/menu/edit",
+      method: "POST",
       data: menu,
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
   /**
@@ -122,18 +125,18 @@ export const useUstraMenuService = defineUstraService(({ api }) => {
    * @param menu
    */
   async function updateMenuBatch(menus: Menu[]) {
-    menus.forEach(menu => {
-      delete menu.updDttm
-      delete menu.updUsrId
-      delete menu.updUsrIp
-    })
+    menus.forEach((menu) => {
+      delete menu.updDttm;
+      delete menu.updUsrId;
+      delete menu.updUsrIp;
+    });
     const result = await api.call<apiModels.ApiResponse<Menu>>({
-      url: '/api/system/menu/batch',
-      method: 'POST',
+      url: "/api/system/menu/batch",
+      method: "POST",
       data: { menus },
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
   /**
@@ -142,12 +145,12 @@ export const useUstraMenuService = defineUstraService(({ api }) => {
    */
   async function removeMenu(menu: Menu) {
     const result = await api.call<apiModels.ApiResponse<Menu>>({
-      url: '/api/system/menu/remove',
-      method: 'POST',
+      url: "/api/system/menu/remove",
+      method: "POST",
       data: menu,
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
   /**
@@ -158,11 +161,11 @@ export const useUstraMenuService = defineUstraService(({ api }) => {
   async function addAccessHistory(mnuId: string, mnuUrl: string) {
     try {
       await api.call<apiModels.ApiResponse<any>>({
-        url: '/api/system/menu/access',
-        method: 'POST',
+        url: "/api/system/menu/access",
+        method: "POST",
         data: { mnuId, mnuUrl },
         showLoadingBar: false,
-      })
+      });
     } catch (e) {}
   }
 
@@ -174,13 +177,23 @@ export const useUstraMenuService = defineUstraService(({ api }) => {
   async function addFunctionAccessHistory(mnuId: string, fncId: string) {
     try {
       await api.call<apiModels.ApiResponse<any>>({
-        url: '/api/system/menu/access/function',
-        method: 'POST',
+        url: "/api/system/menu/access/function",
+        method: "POST",
         data: { mnuId, fncId },
         showLoadingBar: false,
-      })
+      });
     } catch (e) {}
   }
 
-  return { getMenus, getMenuList, getMenu, addMenu, updateMenu, updateMenuBatch, removeMenu, addAccessHistory, addFunctionAccessHistory }
-})
+  return {
+    getMenus,
+    getMenuList,
+    getMenu,
+    addMenu,
+    updateMenu,
+    updateMenuBatch,
+    removeMenu,
+    addAccessHistory,
+    addFunctionAccessHistory,
+  };
+});

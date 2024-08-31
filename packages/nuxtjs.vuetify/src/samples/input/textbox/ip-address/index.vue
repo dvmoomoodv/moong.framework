@@ -7,7 +7,9 @@
     </v-card>
     <v-card>
       <template #title> 단일 입력 </template>
-      <template #subtitle> UIpAddressTextBox를 사용하여 IP 입력 처리를 할 수 있다. </template>
+      <template #subtitle>
+        UIpAddressTextBox를 사용하여 IP 입력 처리를 할 수 있다.
+      </template>
       <template #text>
         <div>
           <UIpAddressTextBox v-model="ipValue" :width="200" />
@@ -25,10 +27,16 @@
     </v-card>
     <v-card>
       <template #title> 목록 입력 </template>
-      <template #subtitle> UIpAddressListBox를 사용하여 IP 목록의 입력 처리를 할 수 있다. </template>
+      <template #subtitle>
+        UIpAddressListBox를 사용하여 IP 목록의 입력 처리를 할 수 있다.
+      </template>
       <template #text>
         <div>
-          <UIpAddressListBox v-model="ipListValue" :width="230" :height="100"></UIpAddressListBox>
+          <UIpAddressListBox
+            v-model="ipListValue"
+            :width="230"
+            :height="100"
+          ></UIpAddressListBox>
         </div>
         <div>
           <v-chip class="ma-2" color="pink" label text-color="white">
@@ -48,28 +56,28 @@
 </template>
 <script lang="ts" setup>
 definePageMeta({
-  layout: 'samples',
-})
-import { UMarkdownViewer } from '#ustra/nuxt/components'
-import { ref } from 'vue'
+  layout: "samples",
+});
+import { UMarkdownViewer } from "#moong/nuxt/components";
+import { ref } from "vue";
 
 // @ts-ignore
-import ipAddress1 from './md/ip-address1.md'
+import ipAddress1 from "./md/ip-address1.md";
 
 // @ts-ignore
-import ipAddress2 from './md/ip-address2.md'
+import ipAddress2 from "./md/ip-address2.md";
 
-let ipValue = ref<string>('127.0.0.1')
-let ipListValue = ref(['127.0.0.1', '127.0.0.2', '127.0.0.3'])
+let ipValue = ref<string>("127.0.0.1");
+let ipListValue = ref(["127.0.0.1", "127.0.0.2", "127.0.0.3"]);
 
 const chk1 = () => {
-  alert(ipValue.value)
-}
+  alert(ipValue.value);
+};
 
 const chkListValue = () => {
-  alert(ipListValue.value)
-}
+  alert(ipListValue.value);
+};
 const setListValue = () => {
-  ipListValue.value = ['127.0.0.1', '127.0.0.2', '127.0.0.3']
-}
+  ipListValue.value = ["127.0.0.1", "127.0.0.2", "127.0.0.3"];
+};
 </script>

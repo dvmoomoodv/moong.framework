@@ -2,8 +2,8 @@
   "name": "Nuxt 기본 템플릿 (Not SSR)",
   "message": "run script : yarn run parepare",
   "imports": {
-    "#ustra/nuxt": "@ustra/nuxt/src",
-    "#ustra/nuxt/*": "@ustra/nuxt/src/*"
+    "#moong/nuxt": "@moong/nuxt/src",
+    "#moong/nuxt/*": "@moong/nuxt/src/*"
   },
   "scripts": {
     "dev": "cross-env CONFIG_ENV=local nuxt dev",

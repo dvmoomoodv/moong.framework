@@ -3,8 +3,8 @@
  * @packageDocumentation
  */
 
-import { baseModels } from '#ustra/core/data'
-import { Menu, MenuFunction } from './menu'
+import { baseModels } from "#moong/core/data";
+import { Menu, MenuFunction } from "./menu";
 
 /**
  * 권한
@@ -13,46 +13,46 @@ export interface Auth extends baseModels.BaseModel {
   /**
    * 권한 아이디
    */
-  authId?: number
+  authId?: number;
   /**
    * 권한 그룹 아이디
    */
-  authGrpId?: number
+  authGrpId?: number;
 
   /**
    * 사용자 아이디
    */
-  usrId?: string
+  usrId?: string;
 
   /**
    * 권한 유형 코드
    */
-  authTyCd?: string
+  authTyCd?: string;
 
   /**
    * 사용 시작일
    */
-  useSrtDt?: string
+  useSrtDt?: string;
 
   /**
    * 사용 종료일
    */
-  useEndDt?: string
+  useEndDt?: string;
 
   /**
    * 메뉴별 권한 목록
    */
-  menus?: AuthMenuTreeData[]
+  menus?: AuthMenuTreeData[];
 
   /**
    * 권한 그룹 삭제 여부
    */
-  authGrpDelYn?: string
+  authGrpDelYn?: string;
 
   /**
    * 추가 역할 목록 값
    */
-  addRolListVal?: string
+  addRolListVal?: string;
 }
 
 /**
@@ -62,12 +62,12 @@ export interface AuthMenu extends Menu {
   /**
    * 권한 적용 여부
    */
-  authYn?: string
+  authYn?: string;
 
   /**
    * functions
    */
-  authFncs?: AuthMenuFunction[]
+  authFncs?: AuthMenuFunction[];
 }
 
 /**
@@ -77,7 +77,7 @@ export interface AuthMenuFunction extends MenuFunction {
   /**
    * 권한 적용 여부
    */
-  authYn?: string
+  authYn?: string;
 }
 
 /**
@@ -87,20 +87,20 @@ export type AuthMenuTreeData = AuthMenu & {
   /**
    * 하위 목록
    */
-  items?: AuthMenuTreeData[]
+  items?: AuthMenuTreeData[];
 
   /**
    * 아이콘
    */
-  icon?: string
+  icon?: string;
 
   /**
    * 확장 여부
    */
-  expanded?: boolean
+  expanded?: boolean;
 
   /**
    * 선택 여부
    */
-  selected?: boolean
-}
+  selected?: boolean;
+};

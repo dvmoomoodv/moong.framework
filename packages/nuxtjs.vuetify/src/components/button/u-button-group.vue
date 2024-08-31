@@ -5,14 +5,21 @@
         v-for="(item, index) in modelValue"
         :key="index"
         @click="
-          e => {
+          (e) => {
             if (e.target['tagName'] === 'LABEL') {
-              e.stopPropagation()
+              e.stopPropagation();
             }
           }
         "
       >
-        <input type="checkbox" :id="id + index" :value="item.value" v-model="props.checkValueArray" :readonly="readonly" :disabled="disabled" />
+        <input
+          type="checkbox"
+          :id="id + index"
+          :value="item.value"
+          v-model="props.checkValueArray"
+          :readonly="readonly"
+          :disabled="disabled"
+        />
         <label :for="id + index">{{ item.label }}</label>
       </li>
     </ul>
@@ -22,9 +29,9 @@
         v-for="(item, index) in modelValue"
         :key="index"
         @click="
-          e => {
+          (e) => {
             if (e.target['tagName'] === 'LABEL') {
-              e.stopPropagation()
+              e.stopPropagation();
             }
           }
         "
@@ -38,7 +45,7 @@
           :readonly="readonly"
           :disabled="disabled"
           :checked="props.checkValue === item.value"
-          @change="e => $emit('update:checkValue', e.target['value'])"
+          @change="(e) => $emit('update:checkValue', e.target['value'])"
         />
         <label :for="id + index">{{ item.label }}</label>
       </li>
@@ -47,10 +54,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed, PropType, watch } from '#ustra/nuxt'
-import { dom } from '#ustra/core/utils/browser'
+import { computed, PropType, watch } from "#moong/nuxt";
+import { dom } from "#moong/core/utils/browser";
 
-const name = $ustra.utils.system.uuidBase62()
+const name = $ustra.utils.system.uuidBase62();
 
 const props = defineProps({
   modelValue: {
@@ -59,19 +66,19 @@ const props = defineProps({
   },
   type: {
     type: String,
-    default: 'checkbox',
+    default: "checkbox",
   },
   id: {
     type: String,
-    default: 'button-group',
+    default: "button-group",
   },
   checkValueArray: {
     type: Array as PropType<any[]>,
-    default: [''],
+    default: [""],
   },
   checkValue: {
     type: String,
-    default: '',
+    default: "",
   },
   readonly: {
     type: Boolean,
@@ -85,12 +92,12 @@ const props = defineProps({
     type: [String, Number],
     default: null,
   },
-})
+});
 
 const styles = computed(() => {
-  const obj: Record<string, any> = {}
-  obj.width = dom.getCssUnit(props.width)
-  obj.minWidth = dom.getCssUnit(props.width)
-  return obj
-})
+  const obj: Record<string, any> = {};
+  obj.width = dom.getCssUnit(props.width);
+  obj.minWidth = dom.getCssUnit(props.width);
+  return obj;
+});
 </script>

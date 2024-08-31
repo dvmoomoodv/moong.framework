@@ -1,7 +1,7 @@
 // import micromatch from 'micromatch'
 // import AntPathMatcher from 'ant-path-matcher'
 // import AntPathMatcher2 from '@howiefh/ant-path-matcher'
-// import { logger } from '#ustra/core'
+// import { logger } from '#moong/core'
 
 // describe('pattern test', () => {
 //   test('micromatch', () => {

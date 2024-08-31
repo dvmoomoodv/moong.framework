@@ -1,6 +1,6 @@
-import { apiModels } from '#ustra/core/data'
-import { defineUstraService } from '#ustra/nuxt/composables'
-import { MessageCriteria, Message, MessageRqVo } from '../models/msg'
+import { apiModels } from "#moong/core/data";
+import { defineUstraService } from "#moong/nuxt/composables";
+import { MessageCriteria, Message, MessageRqVo } from "../models/msg";
 
 /**
  * 메시지 서비스
@@ -13,11 +13,11 @@ export const useUstraMessageService = defineUstraService(({ $ustra, api }) => {
   async function getMsgs(criteria: MessageCriteria) {
     return (
       await api.call<apiModels.ApiResponse<Message[]>>({
-        url: '/api/system/msg/list',
-        method: 'POST',
+        url: "/api/system/msg/list",
+        method: "POST",
         data: criteria,
       })
-    )?.data?.body
+    )?.data?.body;
   }
 
   /**
@@ -28,13 +28,13 @@ export const useUstraMessageService = defineUstraService(({ $ustra, api }) => {
   async function getMsg(msgId: number) {
     return (
       await api.call<apiModels.ApiResponse<Message>>({
-        url: '/api/system/msg/detail',
-        method: 'POST',
+        url: "/api/system/msg/detail",
+        method: "POST",
         data: {
           msgId,
         },
       })
-    )?.data?.body
+    )?.data?.body;
   }
 
   /**
@@ -44,11 +44,11 @@ export const useUstraMessageService = defineUstraService(({ $ustra, api }) => {
   async function addMsg(msgRqVo: MessageRqVo) {
     return (
       await api.call<apiModels.ApiResponse<Message>>({
-        url: '/api/system/msg',
-        method: 'POST',
-        data: { sendRqDt : msgRqVo.sendRqDt, msg : msgRqVo.msg },
+        url: "/api/system/msg",
+        method: "POST",
+        data: { sendRqDt: msgRqVo.sendRqDt, msg: msgRqVo.msg },
       })
-    )?.data
+    )?.data;
   }
 
   /**
@@ -59,11 +59,11 @@ export const useUstraMessageService = defineUstraService(({ $ustra, api }) => {
   async function removeMsg(msgId: number) {
     return (
       await api.call<apiModels.ApiResponse<Message>>({
-        url: '/api/system/msg/remove',
-        method: 'POST',
+        url: "/api/system/msg/remove",
+        method: "POST",
         data: { msgId },
       })
-    )?.data
+    )?.data;
   }
 
   /**
@@ -71,15 +71,15 @@ export const useUstraMessageService = defineUstraService(({ $ustra, api }) => {
    * @param msgId 메시지 아이디
    * @returns
    */
-    async function resendMsg(msgId: number) {
-      return (
-        await api.call<apiModels.ApiResponse<Message>>({
-          url: '/api/system/msg/resend',
-          method: 'POST',
-          data: { msgId },
-        })
-      )?.data
-    }
+  async function resendMsg(msgId: number) {
+    return (
+      await api.call<apiModels.ApiResponse<Message>>({
+        url: "/api/system/msg/resend",
+        method: "POST",
+        data: { msgId },
+      })
+    )?.data;
+  }
 
   /**
    * 취소 요청
@@ -89,12 +89,12 @@ export const useUstraMessageService = defineUstraService(({ $ustra, api }) => {
   async function cancelMsg(msgId: number) {
     return (
       await api.call<apiModels.ApiResponse<Message>>({
-        url: '/api/system/msg/cancel',
-        method: 'POST',
+        url: "/api/system/msg/cancel",
+        method: "POST",
         data: { msgId },
       })
-    )?.data
+    )?.data;
   }
 
-  return { getMsgs, getMsg, addMsg, removeMsg, resendMsg, cancelMsg }
-})
+  return { getMsgs, getMsg, addMsg, removeMsg, resendMsg, cancelMsg };
+});

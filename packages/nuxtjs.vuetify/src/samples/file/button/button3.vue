@@ -8,7 +8,7 @@
       <br />
       <v-chip class="mt-2" color="pink" label text-color="white">
         <v-icon start icon="mdi-label"></v-icon>
-        selectedFiles : {{ selectedFiles.map(file => file.name) }}
+        selectedFiles : {{ selectedFiles.map((file) => file.name) }}
       </v-chip>
 
       <!-- <UMarkdownViewer :content="button3" /> -->
@@ -16,17 +16,17 @@
   </VCard>
 </template>
 <script lang="ts" setup>
-import { shallowRef } from '#ustra/nuxt'
+import { shallowRef } from "#moong/nuxt";
 
 // @ts-ignore
-import button3 from './md/button3.md'
+import button3 from "./md/button3.md";
 
-const selectedFiles = shallowRef<File[]>([])
+const selectedFiles = shallowRef<File[]>([]);
 
 function onChangeFiles(e) {
-  selectedFiles.value = []
+  selectedFiles.value = [];
   for (let i = 0; i < e.srcElement.files.length; i++) {
-    selectedFiles.value.push(e.srcElement.files[i])
+    selectedFiles.value.push(e.srcElement.files[i]);
   }
 }
 </script>

@@ -1,6 +1,13 @@
-import toString from 'lodash/toString'
-import { ref, watch, UstraDialogHookInfo, nextTick, computed, useUstra } from '#ustra/nuxt'
-import { Queue } from '#ustra/core/utils'
+import toString from "lodash/toString";
+import {
+  ref,
+  watch,
+  UstraDialogHookInfo,
+  nextTick,
+  computed,
+  useUstra,
+} from "#moong/nuxt";
+import { Queue } from "#moong/core/utils";
 
 /**
  * Dialog Component를 정의
@@ -17,19 +24,19 @@ export const defineUstraDialogComponent = (
     /**
      * dialog 오픈 callback
      */
-    onShownDialog?: (dialogInfo: UstraDialogHookInfo) => void
+    onShownDialog?: (dialogInfo: UstraDialogHookInfo) => void;
 
     /**
      * dialog hidden callback
      */
-    onHiddenDialog?: (dialogInfo: UstraDialogHookInfo) => void
+    onHiddenDialog?: (dialogInfo: UstraDialogHookInfo) => void;
 
     /**
      * router 변경 시 dialog hidden 여부
      *
      */
-    hideDialogWhenRouteChanges?: boolean
-  } = {},
+    hideDialogWhenRouteChanges?: boolean;
+  } = {}
 ) => {
   /**
    * 토스트 메시지
@@ -38,47 +45,53 @@ export const defineUstraDialogComponent = (
     /**
      * 메시지 텍스트
      */
-    text: string
+    text: string;
 
     /**
      * 타임아웃
      */
-    timeout: number
-  }
+    timeout: number;
+  };
 
-  const $ustra = useUstra()
+  const $ustra = useUstra();
 
-  options = $ustra.utils.core.deepMerge({ hideDialogWhenRouteChanges: true }, options)
+  options = $ustra.utils.core.deepMerge(
+    { hideDialogWhenRouteChanges: true },
+    options
+  );
 
   const dialogStates = (() => {
-    const showDialog = ref(false)
-    const lastDialogInfo = ref<UstraDialogHookInfo>()
-    const confirmResult = ref<boolean>(false)
+    const showDialog = ref(false);
+    const lastDialogInfo = ref<UstraDialogHookInfo>();
+    const confirmResult = ref<boolean>(false);
 
-    watch(showDialog, v => {
+    watch(showDialog, (v) => {
       if (!v && lastDialogInfo.value) {
         if (lastDialogInfo.value.closeCallback) {
-          if (lastDialogInfo.value.type === 'alert') {
-            lastDialogInfo.value.closeCallback()
+          if (lastDialogInfo.value.type === "alert") {
+            lastDialogInfo.value.closeCallback();
           } else {
-            lastDialogInfo.value.closeCallback(confirmResult.value)
+            lastDialogInfo.value.closeCallback(confirmResult.value);
           }
         }
 
-        const dialogInfo = lastDialogInfo.value
+        const dialogInfo = lastDialogInfo.value;
         if (options.onHiddenDialog) {
           nextTick(() => {
-            options.onHiddenDialog(dialogInfo)
-          })
+            options.onHiddenDialog(dialogInfo);
+          });
         }
 
-        lastDialogInfo.value = null
+        lastDialogInfo.value = null;
       }
-    })
+    });
 
     const message = computed(() => {
-      return (toString(lastDialogInfo.value?.message) || '').replace(/\n/g, '<br/>')
-    })
+      return (toString(lastDialogInfo.value?.message) || "").replace(
+        /\n/g,
+        "<br/>"
+      );
+    });
 
     return {
       /**
@@ -100,17 +113,17 @@ export const defineUstraDialogComponent = (
        * 현재 노출 메시지
        */
       message,
-    }
-  })()
+    };
+  })();
 
   const toastStates = (() => {
-    const showToast = ref(false)
-    const toastQueue = new Queue<ToastMessage>()
-    const currentToast = ref<ToastMessage>(null)
+    const showToast = ref(false);
+    const toastQueue = new Queue<ToastMessage>();
+    const currentToast = ref<ToastMessage>(null);
 
     function showNextToast() {
-      toastStates.currentToast.value = toastQueue.dequeue()
-      toastStates.showToast.value = !!currentToast.value
+      toastStates.currentToast.value = toastQueue.dequeue();
+      toastStates.showToast.value = !!currentToast.value;
     }
 
     return {
@@ -133,43 +146,43 @@ export const defineUstraDialogComponent = (
        * 다음 Queue에 존재하는 toast show
        */
       showNextToast,
-    }
-  })()
+    };
+  })();
 
-  $ustra.hooks.hook('ui:dialog', async dialog => {
-    await nextTick()
-    if (dialog.type === 'alert' || dialog.type === 'confirm') {
-      dialogStates.lastDialogInfo.value = dialog
-      dialogStates.confirmResult.value = false
-      dialogStates.showDialog.value = true
+  $ustra.hooks.hook("ui:dialog", async (dialog) => {
+    await nextTick();
+    if (dialog.type === "alert" || dialog.type === "confirm") {
+      dialogStates.lastDialogInfo.value = dialog;
+      dialogStates.confirmResult.value = false;
+      dialogStates.showDialog.value = true;
 
       if (options.onShownDialog) {
         nextTick(() => {
-          options.onShownDialog(dialog)
-        })
+          options.onShownDialog(dialog);
+        });
       }
-    } else if (dialog.type === 'toast') {
+    } else if (dialog.type === "toast") {
       toastStates.toastQueue.enqueue({
         text: dialog.message,
         timeout: dialog.displayTime,
-      })
+      });
 
-      toastStates.showNextToast()
+      toastStates.showNextToast();
     }
-  })
+  });
 
-  $ustra.hooks.hook('ui:dialog:close', () => {
-    dialogStates.showDialog.value = false
+  $ustra.hooks.hook("ui:dialog:close", () => {
+    dialogStates.showDialog.value = false;
     for (let n = 0; n < toastStates.toastQueue.length; n++) {
-      toastStates.toastQueue.removeHead()
+      toastStates.toastQueue.removeHead();
     }
-  })
+  });
 
-  $ustra.nuxtApp.hook('page:start', () => {
+  $ustra.nuxtApp.hook("page:start", () => {
     if (options.hideDialogWhenRouteChanges) {
-      $ustra.ui.dialog.closeAll()
+      $ustra.ui.dialog.closeAll();
     }
-  })
+  });
 
   return {
     /**
@@ -181,5 +194,5 @@ export const defineUstraDialogComponent = (
      * toast 상태
      */
     toastStates,
-  }
-}
+  };
+};

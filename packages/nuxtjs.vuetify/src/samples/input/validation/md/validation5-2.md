@@ -1,4 +1,3 @@
-
 ```html
 <template>
   <div ref="root">
@@ -6,50 +5,52 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { ref, shallowRef, defineExpose } from '#ustra/nuxt'
-import { watchValidationData } from '#ustra/nuxt-wijmo/composables/validation'
+  import { ref, shallowRef, defineExpose } from "#moong/nuxt";
+  import { watchValidationData } from "#moong/nuxt-wijmo/composables/validation";
 
-const textValue1 = ref('')
-const textValue2 = ref('')
-const root = shallowRef<HTMLDivElement>()
+  const textValue1 = ref("");
+  const textValue2 = ref("");
+  const root = shallowRef<HTMLDivElement>();
 
-// textValue1, textValue2 값이 변경될 경우, validation 재실행
-watchValidationData([textValue1, textValue2])
+  // textValue1, textValue2 값이 변경될 경우, validation 재실행
+  watchValidationData([textValue1, textValue2]);
 
-defineExpose({
-  validate: () => {
-    let message = null
-    if (!textValue1.value || !textValue2.value) {
-      message = '필수 입력이예요!'
-    }
+  defineExpose({
+    validate: () => {
+      let message = null;
+      if (!textValue1.value || !textValue2.value) {
+        message = "필수 입력이예요!";
+      }
 
-    if (textValue1.value !== textValue2.value) {
-      message = '동일한 값을 입력하세요!'
-    }
+      if (textValue1.value !== textValue2.value) {
+        message = "동일한 값을 입력하세요!";
+      }
 
-    const els = []
-    root.value.querySelectorAll('.wj-input-group').forEach(i => els.push(i))
+      const els = [];
+      root.value
+        .querySelectorAll(".wj-input-group")
+        .forEach((i) => els.push(i));
 
-    return {
-      isValid: !message,
-      els,
-      message,
-      onValidated(result) {
-        els.forEach(el => {
-          if (!result) {
-            el.classList.add('ustra-invalidate')
-          } else {
-            el.classList.remove('ustra-invalidate')
-          }
-        })
-      },
-      onInit() {
-        els.forEach(el => {
-          el.classList.remove('ustra-invalidate')
-        })
-      },
-    }
-  },
-})
+      return {
+        isValid: !message,
+        els,
+        message,
+        onValidated(result) {
+          els.forEach((el) => {
+            if (!result) {
+              el.classList.add("ustra-invalidate");
+            } else {
+              el.classList.remove("ustra-invalidate");
+            }
+          });
+        },
+        onInit() {
+          els.forEach((el) => {
+            el.classList.remove("ustra-invalidate");
+          });
+        },
+      };
+    },
+  });
 </script>
 ```

@@ -11,8 +11,14 @@
       ></WjTreeView> -->
 
       <div class="mt-2">
-        <UButton text="Collapse All" @click="() => treeView.collapseToLevel(0)" />
-        <UButton text="Expand All" @click="() => treeView.collapseToLevel(100)" />
+        <UButton
+          text="Collapse All"
+          @click="() => treeView.collapseToLevel(0)"
+        />
+        <UButton
+          text="Expand All"
+          @click="() => treeView.collapseToLevel(100)"
+        />
       </div>
 
       <UMarkdownViewer :content="treeDesc" />
@@ -20,18 +26,18 @@
   </VCard>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-// import { WjTreeView } from '#ustra/nuxt-wijmo/components'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
+import { ref } from "#moong/nuxt";
+// import { WjTreeView } from '#moong/nuxt-wijmo/components'
+import { UMarkdownViewer } from "#moong/nuxt/components";
 // import { TreeView } from '@grapecity/wijmo.nav'
 
 // @ts-ignore
-import treeDesc from './md/tree1.md'
+import treeDesc from "./md/tree1.md";
 
 // const treeView = ref<TreeView>()
 
 const treeData = [
-  { text: 'Root', items: [{ text: 'Child1' }, { text: 'Child2' }] },
-  { text: 'Root2', items: [{ text: 'Child1' }, { text: 'Child2' }] },
-]
+  { text: "Root", items: [{ text: "Child1" }, { text: "Child2" }] },
+  { text: "Root2", items: [{ text: "Child1" }, { text: "Child2" }] },
+];
 </script>

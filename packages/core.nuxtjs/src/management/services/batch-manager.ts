@@ -1,7 +1,11 @@
-import { apiModels } from '#ustra/core/data'
-import { defineUstraService } from '#ustra/nuxt/composables/service'
-import { ApiOriginOptions } from '#ustra/nuxt/config/nuxt-app-props'
-import { BatchManagerCriteria, BatchManager, UstraBatchManagerRqVo } from '#ustra/nuxt/management'
+import { apiModels } from "#moong/core/data";
+import { defineUstraService } from "#moong/nuxt/composables/service";
+import { ApiOriginOptions } from "#moong/nuxt/config/nuxt-app-props";
+import {
+  BatchManagerCriteria,
+  BatchManager,
+  UstraBatchManagerRqVo,
+} from "#moong/nuxt/management";
 
 export const useUstraBatchManagerService = defineUstraService(({ api }) => {
   /**
@@ -9,16 +13,20 @@ export const useUstraBatchManagerService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function modifyManager(data: UstraBatchManagerRqVo, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function modifyManager(
+    data: UstraBatchManagerRqVo,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<BatchManager>>({
       ...option,
       url: `/api/system/batch-manager/edit`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -26,16 +34,20 @@ export const useUstraBatchManagerService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function createManager(data: UstraBatchManagerRqVo, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function createManager(
+    data: UstraBatchManagerRqVo,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<apiModels.ResponseCode>>({
       ...option,
       url: `/api/system/batch-manager`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -43,16 +55,20 @@ export const useUstraBatchManagerService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function deleteManager(data: BatchManagerCriteria, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function deleteManager(
+    data: BatchManagerCriteria,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<apiModels.ResponseCode>>({
       ...option,
       url: `/api/system/batch-manager/remove`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -60,16 +76,20 @@ export const useUstraBatchManagerService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function enableManager(data: BatchManager, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function enableManager(
+    data: BatchManager,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<BatchManager>>({
       ...option,
       url: `/api/system/batch-manager/enable`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -77,16 +97,20 @@ export const useUstraBatchManagerService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function disableManager(data: BatchManager, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function disableManager(
+    data: BatchManager,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<BatchManager>>({
       ...option,
       url: `/api/system/batch-manager/disable`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -94,16 +118,20 @@ export const useUstraBatchManagerService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function getManagerList(data: BatchManagerCriteria, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function getManagerList(
+    data: BatchManagerCriteria,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<BatchManager[]>>({
       ...option,
       url: `/api/system/batch-manager/list`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -111,16 +139,20 @@ export const useUstraBatchManagerService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function getManager(data: BatchManagerCriteria, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function getManager(
+    data: BatchManagerCriteria,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<BatchManager>>({
       ...option,
       url: `/api/system/batch-manager/detail`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   return {
@@ -131,5 +163,5 @@ export const useUstraBatchManagerService = defineUstraService(({ api }) => {
     disableManager,
     getManagerList,
     getManager,
-  }
-})
+  };
+});

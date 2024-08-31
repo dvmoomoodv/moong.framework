@@ -4,8 +4,10 @@
       Check 버튼은 UCheckGroupBox 컴포넌트를 사용하여 렌더링한다.
       <!-- <UMarkdownViewer :content="check1" /> -->
 
-      <UCheckGroupBox :items-source="[{ text: 'Item1' }]" v-model="checked"> </UCheckGroupBox>
-      <UCheckGroupBox :items-source="[{ text: 'Item2' }]" v-model="checked1"> </UCheckGroupBox>
+      <UCheckGroupBox :items-source="[{ text: 'Item1' }]" v-model="checked">
+      </UCheckGroupBox>
+      <UCheckGroupBox :items-source="[{ text: 'Item2' }]" v-model="checked1">
+      </UCheckGroupBox>
 
       <div class="d-inline-flex">
         <v-checkbox label="Checkbox"></v-checkbox>
@@ -21,12 +23,12 @@
   </v-card>
 </template>
 <script lang="ts" setup>
-import { ref, reactive } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
+import { ref, reactive } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
 
 // @ts-ignore
-import check1 from './md/check1.md'
+import check1 from "./md/check1.md";
 
-const checked = ref(true)
-const checked1 = ref(true)
+const checked = ref(true);
+const checked1 = ref(true);
 </script>

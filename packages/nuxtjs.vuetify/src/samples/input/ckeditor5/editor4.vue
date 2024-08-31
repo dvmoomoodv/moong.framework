@@ -22,7 +22,13 @@
         }"
       />
 
-      <v-chip class="ma-2" color="pink" label text-color="white" style="height: auto; overflow: auto; white-space: normal">
+      <v-chip
+        class="ma-2"
+        color="pink"
+        label
+        text-color="white"
+        style="height: auto; overflow: auto; white-space: normal"
+      >
         <v-icon start icon="mdi-label"></v-icon>
         content :
         <pre>{{ content }}</pre>
@@ -31,20 +37,28 @@
       <!-- <UMarkdownViewer :content="doc2" /> -->
 
       <div class="mb-2">
-        <VBtn @click="() => (content = `<a style='color: blue; text-decoration: underline'>테스트 링크</a>`)">글자 색상 변경</VBtn>
+        <VBtn
+          @click="
+            () =>
+              (content = `<a style='color: blue; text-decoration: underline'>테스트 링크</a>`)
+          "
+          >글자 색상 변경</VBtn
+        >
       </div>
     </template>
   </VCard>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-import { UCkEditor5 } from '#ustra/nuxt-ckeditor5/components'
+import { ref } from "#moong/nuxt";
+import { UCkEditor5 } from "#moong/nuxt-ckeditor5/components";
 
 // @ts-ignore
-import doc1 from './md/editor4-1.md'
+import doc1 from "./md/editor4-1.md";
 
 // @ts-ignore
-import doc2 from './md/editor4-2.md'
+import doc2 from "./md/editor4-2.md";
 
-const content = ref('<a style="color:red;text-decoration:underline;">테스트 링크</a>')
+const content = ref(
+  '<a style="color:red;text-decoration:underline;">테스트 링크</a>'
+);
 </script>

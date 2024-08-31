@@ -13,12 +13,36 @@
 
         <UTextBoxButtonBox align="right">
           <UTextBoxButton icon="mdi-check" @click="set(2)" />
-          <UTextBoxButton icon="mdi-menu-up" mdiIconColor="red" @click="set(3)" />
-          <UTextBoxButton icon="mdi-menu-down" mdiIconColor="blue" @click="set(4)" />
-          <UTextBoxButton icon="mdi-menu-down" mdiIconColor="blue" @click="set(5)" />
-          <UTextBoxButton icon="mdi-menu-down" mdiIconColor="blue" @click="set(6)" />
-          <UTextBoxButton icon="mdi-menu-down" mdiIconColor="blue" @click="set(7)" />
-          <UTextBoxButton icon="mdi-menu-down" mdiIconColor="blue" @click="set(8)" />
+          <UTextBoxButton
+            icon="mdi-menu-up"
+            mdiIconColor="red"
+            @click="set(3)"
+          />
+          <UTextBoxButton
+            icon="mdi-menu-down"
+            mdiIconColor="blue"
+            @click="set(4)"
+          />
+          <UTextBoxButton
+            icon="mdi-menu-down"
+            mdiIconColor="blue"
+            @click="set(5)"
+          />
+          <UTextBoxButton
+            icon="mdi-menu-down"
+            mdiIconColor="blue"
+            @click="set(6)"
+          />
+          <UTextBoxButton
+            icon="mdi-menu-down"
+            mdiIconColor="blue"
+            @click="set(7)"
+          />
+          <UTextBoxButton
+            icon="mdi-menu-down"
+            mdiIconColor="blue"
+            @click="set(8)"
+          />
         </UTextBoxButtonBox>
       </UTextBox>
       <div>
@@ -33,16 +57,16 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
+import { ref } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
 
 // @ts-ignore
-import textBox8 from './md/textbox8.md'
+import textBox8 from "./md/textbox8.md";
 
-const data = ref(null)
-const set = val => {
-  data.value = val
-}
+const data = ref(null);
+const set = (val) => {
+  data.value = val;
+};
 </script>
 
 <style scoped></style>

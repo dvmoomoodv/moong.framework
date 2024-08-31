@@ -13,32 +13,32 @@
   </VCard>
 </template>
 <script lang="ts" setup>
-import { ref, getCurrentInstance } from '#ustra/nuxt'
+import { ref, getCurrentInstance } from "#moong/nuxt";
 
 // @ts-ignore
-import doc1 from './md/rendering3-1.md'
+import doc1 from "./md/rendering3-1.md";
 
 // @ts-ignore
-import doc2 from './md/rendering3-2.md'
+import doc2 from "./md/rendering3-2.md";
 
-const renderEl = ref()
-const instance = getCurrentInstance()
+const renderEl = ref();
+const instance = getCurrentInstance();
 
 const { renderButton, destoryButton } = (() => {
-  const destoryFn = ref<() => void>(null)
+  const destoryFn = ref<() => void>(null);
   function renderButton() {
     const { destroy } = $ustra.utils.component.mount(UButton, instance, {
       element: renderEl.value,
       props: {
-        text: '렌더링된 버튼',
+        text: "렌더링된 버튼",
         onClick() {
-          alert('버튼 클릭')
+          alert("버튼 클릭");
         },
       },
-    })
-    destoryFn.value = destroy
+    });
+    destoryFn.value = destroy;
   }
 
-  return { renderButton, destoryButton: destoryFn }
-})()
+  return { renderButton, destoryButton: destoryFn };
+})();
 </script>

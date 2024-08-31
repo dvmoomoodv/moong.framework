@@ -4,7 +4,7 @@
  * @packageDocumentation
  */
 
-import { baseModels, paginationModels } from '#ustra/core/data'
+import { baseModels, paginationModels } from "#moong/core/data";
 
 /**
  * 검색 조건
@@ -13,26 +13,26 @@ export interface MenuAccessCriteria {
   /**
    * 페이징 요청 정보
    */
-  paginationRequest?: paginationModels.PaginationRequest
+  paginationRequest?: paginationModels.PaginationRequest;
 
   /**
    * 검색 기간 시작 일자
    */
-  searchSrtDttm?: Date
+  searchSrtDttm?: Date;
   /**
    * 검색 기간 종료 일자
    */
-  searchEndDttm?: Date
+  searchEndDttm?: Date;
   /**
    * 사용자 아이디 또는 명
    */
-  usrIdOrNm?: string
+  usrIdOrNm?: string;
   /**
    * 메뉴 명
    */
-  mnuNm?: string
+  mnuNm?: string;
 
-  [propName: string]: any
+  [propName: string]: any;
 }
 
 /**
@@ -42,36 +42,36 @@ export interface MenuAccess extends baseModels.BaseModel {
   /**
    * 메뉴 접근 이력 아이디
    */
-  mnuAccId?: number
+  mnuAccId?: number;
   /**
    * 메뉴 아이디
    */
-  mnuId?: string
+  mnuId?: string;
   /**
    * 사용자 아이디
    */
-  usrId?: string
+  usrId?: string;
   /**
    * 프로세스 아이디
    */
-  procId?: string
+  procId?: string;
 
   /**
    * 요청 아이디
    */
-  reqId?: string
+  reqId?: string;
   /**
    * 메뉴 URL
    */
-  mnuUrl?: string
+  mnuUrl?: string;
   /**
    * 사용자 명
    */
-  usrNm?: string
+  usrNm?: string;
   /**
    * 메뉴 명
    */
-  mnuNm?: string
+  mnuNm?: string;
 }
 
 /**
@@ -81,30 +81,30 @@ export interface MenuFunctionAccess extends baseModels.BaseModel {
   /**
    * 메뉴 기능 접근 아이디
    */
-  mnuFncAccId: number
+  mnuFncAccId: number;
 
   /**
    * 메뉴 아이디
    */
-  mnuId: string
+  mnuId: string;
 
   /**
    * 기능 아이디
    */
-  fncId: string
+  fncId: string;
 
   /**
    * 사용자 아이디
    */
-  usrId: string
+  usrId: string;
 
   /**
    * 요청 아이디
    */
-  reqId: string
+  reqId: string;
 
   /**
    * 프로세스 아이디
    */
-  procId: string
+  procId: string;
 }

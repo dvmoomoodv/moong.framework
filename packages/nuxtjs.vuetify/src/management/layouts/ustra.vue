@@ -12,7 +12,10 @@
             </span>
 
             <span>
-              {{ $ustra.management?.navigation?.currentProgramMenu?.parentMenus[0]?.mnuNm }}
+              {{
+                $ustra.management?.navigation?.currentProgramMenu
+                  ?.parentMenus[0]?.mnuNm
+              }}
               /
               <span class="text-primary">
                 {{ $ustra.management?.navigation?.currentProgramMenu?.mnuNm }}
@@ -28,24 +31,28 @@
       </VMain>
       <VFooter color="primary" app>
         <v-spacer></v-spacer>
-        <span style="color: white">&copy; GSITM since 2020-{{ $ustra.utils.date.format(new Date(), 'yyyy') }}</span>
+        <span style="color: white"
+          >&copy; GSITM since 2020-{{
+            $ustra.utils.date.format(new Date(), "yyyy")
+          }}</span
+        >
       </VFooter>
     </VLayout>
   </VApp>
 </template>
 <script lang="ts" setup>
-import { Navigation } from '#ustra/nuxt/management/store/models/navigation'
-import Lnb from '#ustra/nuxt-vuetify/management/components/layout/lnb.vue' 
-import Gnb from '#ustra/nuxt-vuetify/management/components/layout/gnb.vue'
-import FavoritesButton from '#ustra/nuxt-vuetify/management/components/favorites-button.vue'
-const { openMenu } = useUstraManagementLayoutUtils()
-const drawer = ref(false)
-const route = useRoute()
+import { Navigation } from "#moong/nuxt/management/store/models/navigation";
+import Lnb from "#moong/nuxt-vuetify/management/components/layout/lnb.vue";
+import Gnb from "#moong/nuxt-vuetify/management/components/layout/gnb.vue";
+import FavoritesButton from "#moong/nuxt-vuetify/management/components/favorites-button.vue";
+const { openMenu } = useUstraManagementLayoutUtils();
+const drawer = ref(false);
+const route = useRoute();
 
 function navigationSelected(nav: Navigation) {
   if (nav) {
     // openMenu(nav)
-    useRouter().push(nav.path)
+    useRouter().push(nav.path);
   }
 }
 </script>

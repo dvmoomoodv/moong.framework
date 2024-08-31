@@ -15,10 +15,10 @@
   </v-card>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
+import { ref } from "#moong/nuxt";
 
 // @ts-ignore
-import doc1 from './md/biz-no3.md'
+import doc1 from "./md/biz-no3.md";
 
-const value = ref(null)
+const value = ref(null);
 </script>

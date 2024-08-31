@@ -1,6 +1,10 @@
 ```html
 <template>
-  <UMenuInputBox v-model="menu" v-model:objectValue="objectValue" :canSelectSysCd="false" />
+  <UMenuInputBox
+    v-model="menu"
+    v-model:objectValue="objectValue"
+    :canSelectSysCd="false"
+  />
 
   <br />
   <v-chip class="ma-2" color="pink" label text-color="white">
@@ -18,9 +22,9 @@
   <UButton text="menu = null" @click="() => (menu = null)" />
 </template>
 <script lang="ts" setup>
-import { UMenuInputBox } from '#ustra/nuxt-wijmo/management/components'
+  import { UMenuInputBox } from "#moong/nuxt-wijmo/management/components";
 
-const menu = ref(null)
-const objectValue = ref(null)
+  const menu = ref(null);
+  const objectValue = ref(null);
 </script>
 ```

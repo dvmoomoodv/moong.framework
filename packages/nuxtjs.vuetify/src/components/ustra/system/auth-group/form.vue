@@ -2,40 +2,57 @@
   <UBox direction="col" style="padding: 5px">
     <UItem :ratio="1">
       <!-- <Vuelidate ref="validationGroup"> -->
-        <UFieldSet>
-          <UFieldRow>
-            <UField label="상위 권한 그룹 명">
-              <div>{{ inputData.uprAuthGrpId ? inputData.uprAuthGrpPathText : '없음.' }}</div>
-            </UField>
-          </UFieldRow>
-          <UFieldRow v-if="!isNew">
-            <UField label="그룹 아이디">{{ inputData.authGrpId }}</UField>
-          </UFieldRow>
-          <UFieldRow>
-            <UField required label="권한그룹 명" :required="true"><VTextField v-model="inputData.authGrpNm" :initialized="e => (authGroupNameInput = e)" /></UField>
-          </UFieldRow>
-          <UFieldRow>
-            <UField label="권한그룹 구분 ID"><VTextField v-model="inputData.authGrpDvVal" :isRequired="false" /></UField>
-          </UFieldRow>
-          <UFieldRow>
-            <UField label="권한그룹 설명"><VTextField v-model="inputData.authGrpDesc" type="textarea"></VTextField></UField>
-          </UFieldRow>
-          <UFieldRow>
-            <UField required label="권한그룹 순번"><VTextField v-model="inputData.srtNo" /></UField>
-          </UFieldRow>
-          <UFieldRow>
-            <UField label="사용여부" :required="true">
-              <UVRadioGroupBox
-                :itemsSource="[
-                  { value: 'Y', text: '사용' },
-                  { value: 'N', text: '미사용' },
-                ]"
-                v-model="inputData.useYn"
-              ></UVRadioGroupBox>
-            </UField>
-          </UFieldRow>
-          <Users v-if="canAssignUserInAuthorityGroup" v-model="users" />
-        </UFieldSet>
+      <UFieldSet>
+        <UFieldRow>
+          <UField label="상위 권한 그룹 명">
+            <div>
+              {{
+                inputData.uprAuthGrpId ? inputData.uprAuthGrpPathText : "없음."
+              }}
+            </div>
+          </UField>
+        </UFieldRow>
+        <UFieldRow v-if="!isNew">
+          <UField label="그룹 아이디">{{ inputData.authGrpId }}</UField>
+        </UFieldRow>
+        <UFieldRow>
+          <UField required label="권한그룹 명" :required="true"
+            ><VTextField
+              v-model="inputData.authGrpNm"
+              :initialized="(e) => (authGroupNameInput = e)"
+          /></UField>
+        </UFieldRow>
+        <UFieldRow>
+          <UField label="권한그룹 구분 ID"
+            ><VTextField v-model="inputData.authGrpDvVal" :isRequired="false"
+          /></UField>
+        </UFieldRow>
+        <UFieldRow>
+          <UField label="권한그룹 설명"
+            ><VTextField
+              v-model="inputData.authGrpDesc"
+              type="textarea"
+            ></VTextField
+          ></UField>
+        </UFieldRow>
+        <UFieldRow>
+          <UField required label="권한그룹 순번"
+            ><VTextField v-model="inputData.srtNo"
+          /></UField>
+        </UFieldRow>
+        <UFieldRow>
+          <UField label="사용여부" :required="true">
+            <UVRadioGroupBox
+              :itemsSource="[
+                { value: 'Y', text: '사용' },
+                { value: 'N', text: '미사용' },
+              ]"
+              v-model="inputData.useYn"
+            ></UVRadioGroupBox>
+          </UField>
+        </UFieldRow>
+        <Users v-if="canAssignUserInAuthorityGroup" v-model="users" />
+      </UFieldSet>
       <!-- </Vuelidate> -->
     </UItem>
     <UItem>
@@ -47,18 +64,25 @@
   </UBox>
 </template>
 <script lang="ts" setup>
-import { AuthGroup, useUstraAuthGroupService, useUstraAuthService, useUstraManagementUser } from '#ustra/nuxt/management'
-import UVCodeMultiComboBox from '#ustra/nuxt-vuetify/management/components/combo-box/u-v-code-multi-combo-box.vue'
-import UVCodeComboBox from '#ustra/nuxt-vuetify/management/components/combo-box/u-v-code-combo-box.vue'
-import UVRadioGroupBox from '#ustra/nuxt-vuetify/components/radio/u-v-radio-group-box.vue'
-import { usePathText } from './index.vue'
-import Users from './user.vue'
+import {
+  AuthGroup,
+  useUstraAuthGroupService,
+  useUstraAuthService,
+  useUstraManagementUser,
+} from "#moong/nuxt/management";
+import UVCodeMultiComboBox from "#moong/nuxt-vuetify/management/components/combo-box/u-v-code-multi-combo-box.vue";
+import UVCodeComboBox from "#moong/nuxt-vuetify/management/components/combo-box/u-v-code-combo-box.vue";
+import UVRadioGroupBox from "#moong/nuxt-vuetify/components/radio/u-v-radio-group-box.vue";
+import { usePathText } from "./index.vue";
+import Users from "./user.vue";
 
-const getPathText = usePathText()
-const authGroupService = useUstraAuthGroupService()
-const ustraAuthService = useUstraAuthService()
+const getPathText = usePathText();
+const authGroupService = useUstraAuthGroupService();
+const ustraAuthService = useUstraAuthService();
 
-const canAssignUserInAuthorityGroup = computed(() => $ustra.management.serverAppProps.canAssignUserInAuthorityGroup)
+const canAssignUserInAuthorityGroup = computed(
+  () => $ustra.management.serverAppProps.canAssignUserInAuthorityGroup
+);
 
 const inputData: AuthGroup = reactive({
   authGrpId: null,
@@ -67,47 +91,47 @@ const inputData: AuthGroup = reactive({
   authGrpNm: null,
   authGrpDesc: null,
   srtNo: 0,
-  useYn: 'Y',
-  delYn: 'N',
-  prvTrtYn: 'N',
+  useYn: "Y",
+  delYn: "N",
+  prvTrtYn: "N",
   sysCd: null,
-  apvGrpYn: 'N',
+  apvGrpYn: "N",
   apvNecYn: null,
   authGrpStepNo: 1,
-  addRolListVal: '',
-  useDvCdListVal: '',
+  addRolListVal: "",
+  useDvCdListVal: "",
   apvAuthGrps: [],
   users: [],
   requetTargetGroups: [],
   useDvCdList: computed({
     get() {
       if (!inputData.useDvCdListVal) {
-        return []
+        return [];
       }
 
-      return (inputData.useDvCdListVal || '').split(',')
+      return (inputData.useDvCdListVal || "").split(",");
     },
     set(v: string[]) {
-      inputData.useDvCdListVal = v.join(',')
+      inputData.useDvCdListVal = v.join(",");
     },
   }),
-})
-const isNew = ref(true)
+});
+const isNew = ref(true);
 // const validationGroup = ref<InstanceType<typeof Vuelidate>>()
-const authGroupNameInput = shallowRef<wijmoInput.InputMask>()
+const authGroupNameInput = shallowRef<wijmoInput.InputMask>();
 
 const emits = defineEmits<{
-  (e: 'updated', authGrpId?: number): void
-}>()
+  (e: "updated", authGrpId?: number): void;
+}>();
 
 const props = defineProps<{
   /**
    * 시스템 코드
    */
-  systemCode: string
-}>()
+  systemCode: string;
+}>();
 
-const parentGroup: AuthGroup = ref(null)
+const parentGroup: AuthGroup = ref(null);
 
 /**
  * 폼 초기화
@@ -123,39 +147,41 @@ async function init(srtNo?: number) {
     authGrpNm: null,
     authGrpDesc: null,
     srtNo: srtNo || 0,
-    useYn: 'Y',
-    delYn: 'N',
-    prvTrtYn: 'N',
+    useYn: "Y",
+    delYn: "N",
+    prvTrtYn: "N",
     sysCd: props.systemCode,
-    apvGrpYn: 'N',
-    apvNecYn: this.hasApproval ? 'Y' : 'N',
+    apvGrpYn: "N",
+    apvNecYn: this.hasApproval ? "Y" : "N",
     authGrpStepNo: 1,
-    addRolListVal: '',
-    useDvCdListVal: '',
+    addRolListVal: "",
+    useDvCdListVal: "",
     useDvCdList: [],
     apvAuthGrps: [],
     users: [],
     requetTargetGroups: [],
-  })
+  });
 
-  users.value = []
-  isNew.value = true
+  users.value = [];
+  isNew.value = true;
 
   if (parentGroup) {
-    inputData.uprAuthGrpId = parentGroup.authGrpId
-    inputData.uprAuthGrpPathText = getPathText(parentGroup.authGrpId).join(' > ')
-    inputData.authGrpStepNo = parentGroup.authGrpStepNo + 1
+    inputData.uprAuthGrpId = parentGroup.authGrpId;
+    inputData.uprAuthGrpPathText = getPathText(parentGroup.authGrpId).join(
+      " > "
+    );
+    inputData.authGrpStepNo = parentGroup.authGrpStepNo + 1;
   }
 
   // validationGroup.value.init()
-  await nextTick()
+  await nextTick();
 
   if (authGroupNameInput.value) {
-    authGroupNameInput.value.focus()
+    authGroupNameInput.value.focus();
   }
 }
 
-const users = ref([])
+const users = ref([]);
 
 /**
  * 상세 정보 조회
@@ -164,24 +190,23 @@ const users = ref([])
 const detail = function (authGrpId: number) {
   useOnError(
     async () => {
-      const result = await authGroupService.getAuthGroup(authGrpId)
-      useDeepMerge(inputData, result)
-      useDeepMerge(parentGroup, inputData)
+      const result = await authGroupService.getAuthGroup(authGrpId);
+      useDeepMerge(inputData, result);
+      useDeepMerge(parentGroup, inputData);
 
       if (result.uprAuthGrpId) {
         // inputData.uprAuthGrpPathText = getPathText(result.uprAuthGrpId).join(' > ')
-        inputData.uprAuthGrpPathText = parentGroup.authGrpNm
+        inputData.uprAuthGrpPathText = parentGroup.authGrpNm;
       }
 
-      isNew.value = false
-      users.value = result.users
+      isNew.value = false;
+      users.value = result.users;
     },
     {
-      message: '상세 정보 조회 중 오류가 발생하였습니다.',
-    },
-  )()
-}
-
+      message: "상세 정보 조회 중 오류가 발생하였습니다.",
+    }
+  )();
+};
 
 const save = useOnError(async () => {
   // const result = await validationGroup.validate()
@@ -189,81 +214,88 @@ const save = useOnError(async () => {
   // if (!result.isValid) {
   //   return
   // }
-  
-  const saveData = $ustra.utils.core.deepMerge({}, inputData)
-  saveData.sysCd = props.systemCode.dtlCd
-  parentGroup.value = null
+
+  const saveData = $ustra.utils.core.deepMerge({}, inputData);
+  saveData.sysCd = props.systemCode.dtlCd;
+  parentGroup.value = null;
   if (isNew.value) {
-    const result = await authGroupService.add(saveData)
+    const result = await authGroupService.add(saveData);
 
-    if (result.resultCode === 'FM11') {
+    if (result.resultCode === "FM11") {
       // TODO: 승인 요청 처리
-      return
+      return;
     }
-    
-    emits('updated', result.body.authGrpId)
+
+    emits("updated", result.body.authGrpId);
   } else {
-    const result = await authGroupService.edit(saveData)
+    const result = await authGroupService.edit(saveData);
 
-    if (result.resultCode === 'FM11') {
+    if (result.resultCode === "FM11") {
       // TODO: 승인 요청 처리
-      return
+      return;
     }
 
-    emits('updated', result.body.authGrpId)
+    emits("updated", result.body.authGrpId);
   }
-})
+});
 
 const remove = useOnError(async () => {
-  if (await confirm('권한 그룹을 삭제하시겠습니까?')) {
-    const result = await authGroupService.remove(inputData)
+  if (await confirm("권한 그룹을 삭제하시겠습니까?")) {
+    const result = await authGroupService.remove(inputData);
 
-    if (result.resultCode === 'FM11') {
+    if (result.resultCode === "FM11") {
       // TODO: 승인 요청 처리
-      return
+      return;
     }
-    parentGroup.value = null
-    emits('updated', inputData.uprAuthGrpId)
+    parentGroup.value = null;
+    emits("updated", inputData.uprAuthGrpId);
   }
-})
+});
 
 const configProps = await (async () => {
   /**
    * 승인 유형
    */
-  const approvalType = $ustra.management.serverAppProps.authApprovalType
+  const approvalType = $ustra.management.serverAppProps.authApprovalType;
 
   /**
    * 승인 사용 여부
    */
-  const useApproval = approvalType != 'NONE'
+  const useApproval = approvalType != "NONE";
 
   /**
    * 커스톰 권한 승인 지정일 경우, 승인 그룹을 권한 그룹별로 별도 지정
    */
   const isSelectApvAuthGrp = computed(() => {
-    return approvalType === 'CUSTOM_BY_GROUP' && inputData.apvNecYn === 'Y'
-  })
+    return approvalType === "CUSTOM_BY_GROUP" && inputData.apvNecYn === "Y";
+  });
 
   /**
    * 개인 정보 시스템 여부
    */
-  const isPersonalInfoSystem = $ustra.management.serverAppProps.isPersonalInfoSystem
+  const isPersonalInfoSystem =
+    $ustra.management.serverAppProps.isPersonalInfoSystem;
 
   /**
    * 사용자 구분 제한 여부
    */
-  const limitAuthGroupByUserType = $ustra.management.serverAppProps.limitAuthGroupByUserType
+  const limitAuthGroupByUserType =
+    $ustra.management.serverAppProps.limitAuthGroupByUserType;
 
   /**
    * 사용자 신청 가능 권한 그룹 사용 여부
    */
-  const useUserRequestableAuthGroup = $ustra.management.serverAppProps.useUserRequestableAuthGroup
+  const useUserRequestableAuthGroup =
+    $ustra.management.serverAppProps.useUserRequestableAuthGroup;
 
   /**
    * 권한 그룹을 승인할 수 있는 권한 보유 여부
    */
-  const hasAuthApproval = await ustraAuthService.hasApprovalAuth(useUstraManagementUser().sub, null, '07')
+  const hasAuthApproval = await ustraAuthService.hasApprovalAuth(
+    useUstraManagementUser().sub,
+    null,
+    "07"
+  );
 
   return {
     approvalType,
@@ -273,13 +305,13 @@ const configProps = await (async () => {
     limitAuthGroupByUserType,
     useUserRequestableAuthGroup,
     hasAuthApproval,
-  }
-})()
+  };
+})();
 
-defineExpose({ init, detail })
+defineExpose({ init, detail });
 </script>
 <script lang="ts">
 export default {
-  name: 'UstraManagementSystemAuthGroupForm',
-}
+  name: "UstraManagementSystemAuthGroupForm",
+};
 </script>

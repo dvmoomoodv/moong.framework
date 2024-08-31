@@ -9,14 +9,14 @@
   </VCard>
 </template>
 <script lang="ts" setup>
-import { defineProps } from '#ustra/nuxt'
+import { defineProps } from "#moong/nuxt";
 
 const props = defineProps<{
-  title?: string
-}>()
+  title?: string;
+}>();
 </script>
 <script lang="ts">
 export default {
-  name: 'USampleContentContainer',
-}
+  name: "USampleContentContainer",
+};
 </script>

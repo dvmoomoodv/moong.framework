@@ -7,15 +7,15 @@
  * profile declaration
  */
 enum Profile {
-  LOCAL = 'local,loc',
-  DEV = 'dev',
-  QA = 'qa',
-  STAGING = 'staging,tst,sta,stg',
-  PRODUCTION = 'prd,production,env',
+  LOCAL = "local,loc",
+  DEV = "dev",
+  QA = "qa",
+  STAGING = "staging,tst,sta,stg",
+  PRODUCTION = "prd,production,env",
 }
 
 export class Env {
-  private lastConfigEnv = null
+  private lastConfigEnv = null;
 
   /**
    * 현재 프로파일 조회
@@ -23,16 +23,19 @@ export class Env {
    * @param defaultProfile profile 값이 없을 경우, 조회할 default profile
    * @returns 현재 프로파일
    * ```typescript
-   * import { Env } from '#ustra/core'
+   * import { Env } from '#moong/core'
    * // process.env.CONFIG_ENV 설정의 현재 프로파일 조회
    * Env.currentProfile()
    * ```
    */
-  currentProfile(configEnv?: string, defaultProfile: Profile = Profile.PRODUCTION): Profile {
+  currentProfile(
+    configEnv?: string,
+    defaultProfile: Profile = Profile.PRODUCTION
+  ): Profile {
     if (!configEnv) {
-      configEnv = this.lastConfigEnv || process.env.CONFIG_ENV
+      configEnv = this.lastConfigEnv || process.env.CONFIG_ENV;
     }
-    return this.getProfile(configEnv, defaultProfile)
+    return this.getProfile(configEnv, defaultProfile);
   }
 
   /**
@@ -40,7 +43,7 @@ export class Env {
    * @param configEnv
    */
   updateCurrentProfile(configEnv: string) {
-    this.lastConfigEnv = configEnv
+    this.lastConfigEnv = configEnv;
   }
 
   /**
@@ -49,51 +52,51 @@ export class Env {
    */
   propertyProfileName(profile?: Profile) {
     if (!profile) {
-      profile = this.currentProfile()
+      profile = this.currentProfile();
     }
 
-    return this.findProfileKey(profile).toLowerCase()
+    return this.findProfileKey(profile).toLowerCase();
   }
 
   /**
    * local dev server 환경 여부
    */
   isDevServer(): boolean {
-    const nodeEnv = process.env.NODE_ENV
+    const nodeEnv = process.env.NODE_ENV;
 
-    if (!nodeEnv || nodeEnv !== 'production') {
-      return true
+    if (!nodeEnv || nodeEnv !== "production") {
+      return true;
     }
 
-    return false
+    return false;
   }
 
   /**
    * local 개발 환경 여부
    */
   isLocal(): boolean {
-    return this.currentProfile() === Profile.LOCAL
+    return this.currentProfile() === Profile.LOCAL;
   }
 
   /**
    * 운영 환경인지 확인
    */
   isProduction(): boolean {
-    return this.currentProfile() === Profile.PRODUCTION
+    return this.currentProfile() === Profile.PRODUCTION;
   }
 
   /**
    * 개발 환경인지 확인
    */
   isDev(): boolean {
-    return this.currentProfile() === Profile.DEV
+    return this.currentProfile() === Profile.DEV;
   }
 
   /**
    * Staging 환경인지 확인
    */
   isStaging(): boolean {
-    return this.currentProfile() === Profile.STAGING
+    return this.currentProfile() === Profile.STAGING;
   }
 
   /**
@@ -101,7 +104,7 @@ export class Env {
    * @returns
    */
   isQa(): boolean {
-    return this.currentProfile() === Profile.QA
+    return this.currentProfile() === Profile.QA;
   }
 
   /**
@@ -109,12 +112,15 @@ export class Env {
    * @param profile 현재설정된 profile 환경변수 값
    * @param defaultProfile {Profile}
    */
-  getProfile(profile: string, defaultProfile: Profile = Profile.LOCAL): Profile {
+  getProfile(
+    profile: string,
+    defaultProfile: Profile = Profile.LOCAL
+  ): Profile {
     if (!this.existsProfile(profile)) {
-      return defaultProfile
+      return defaultProfile;
     }
 
-    return this.findProfile(profile)
+    return this.findProfile(profile);
   }
 
   /**
@@ -123,52 +129,52 @@ export class Env {
    */
   getServerProfileName(profile: Profile) {
     if (profile === Profile.LOCAL) {
-      return 'local'
+      return "local";
     } else if (profile === Profile.DEV) {
-      return 'dev'
+      return "dev";
     } else if (profile === Profile.STAGING) {
-      return 'stg'
+      return "stg";
     } else if (profile === Profile.QA) {
-      return 'qa'
+      return "qa";
     } else {
-      return 'prd'
+      return "prd";
     }
   }
 
   private existsProfile(profile: string): boolean {
     if (!profile) {
-      return false
+      return false;
     }
 
     for (const m in Profile) {
       if ((Profile[m] as string).indexOf(profile) >= 0) {
-        return true
+        return true;
       }
     }
 
-    return Profile[profile] !== undefined
+    return Profile[profile] !== undefined;
   }
 
   private findProfile(profile: string): Profile {
     for (const m in Profile) {
       if ((Profile[m] as string).indexOf(profile) >= 0) {
-        return Profile[m]
+        return Profile[m];
       }
     }
 
-    return null
+    return null;
   }
 
   private findProfileKey(profile: Profile): string {
     for (const key in Profile) {
       if (Profile[key] === profile) {
-        return key
+        return key;
       }
     }
 
-    return null
+    return null;
   }
 }
 
-const instance = new Env()
-export { instance as env, Profile }
+const instance = new Env();
+export { instance as env, Profile };

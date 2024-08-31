@@ -1,6 +1,6 @@
 // import { defineNuxtPlugin, NuxtApp } from '#app'
-// import { createVuetifyPlugin } from '#ustra/nuxt-vuetify/composables'
-// import { logger } from '#ustra/nuxt/utils/logger'
+// import { createVuetifyPlugin } from '#moong/nuxt-vuetify/composables'
+// import { logger } from '#moong/nuxt/utils/logger'
 
 // export default defineNuxtPlugin(async nuxtApp => {
 //   logger.info(`😸[${$ustra.uuid}] Start loading U.STRA Vuetify plugin`)

@@ -1,6 +1,6 @@
-import { defineUstraService } from '#ustra/nuxt/composables'
-import { apiModels } from '#ustra/core/data'
-import { UserMenu } from '#ustra/nuxt/management'
+import { defineUstraService } from "#moong/nuxt/composables";
+import { apiModels } from "#moong/core/data";
+import { UserMenu } from "#moong/nuxt/management";
 
 /**
  * 백오피스 로그인 및 계정 연계 서비스
@@ -16,7 +16,7 @@ export const useUstraLoginService = defineUstraService(({ api }) => {
     if (!completion) {
       const result = await api.call<apiModels.ApiResponse<LoginResult>>({
         url: `/api/authentication/login`,
-        method: 'POST',
+        method: "POST",
         passOnResponseError: true,
         secured: true,
         data: {
@@ -26,22 +26,22 @@ export const useUstraLoginService = defineUstraService(({ api }) => {
           // encAccount: encryptAes256(JSON.stringify({ userId, userPw }), process.env.SERVER_PROP_ENC_KEY),
           // authSysCd: this.$ustra.store.config().appProp.serverAppProp.systemCode,
         },
-      })
+      });
 
-      return result.data
+      return result.data;
     } else {
       const result = await api.call<apiModels.ApiResponse<LoginResult>>({
         url: `/api/authentication/login-complete`,
-        method: 'POST',
+        method: "POST",
         passOnResponseError: true,
         secured: true,
         data: {
           userId,
           authenticationKey: userPw,
         },
-      })
+      });
 
-      return result.data
+      return result.data;
     }
   }
 
@@ -50,16 +50,16 @@ export const useUstraLoginService = defineUstraService(({ api }) => {
    */
   async function logout() {
     if (!process.server) {
-      await api.cancel()
+      await api.cancel();
     }
     const result = await api.call<apiModels.ApiResponse<string>>({
       url: `/api/authentication/logout`,
-      method: 'POST',
+      method: "POST",
       passOnResponseError: true,
       data: {},
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
   /**
@@ -73,11 +73,11 @@ export const useUstraLoginService = defineUstraService(({ api }) => {
     const result = await api.call<apiModels.ApiResponse<string>>({
       url: `/api/authentication/edit-password`,
       secured: true,
-      method: 'POST',
+      method: "POST",
       data: { usrId, oldPwd, newPwd },
-    })
+    });
 
-    return result.data
+    return result.data;
   }
 
   /**
@@ -88,14 +88,14 @@ export const useUstraLoginService = defineUstraService(({ api }) => {
   async function validId(userId: string) {
     const result = await api.call<apiModels.ApiResponse<ValidationResult>>({
       url: `/api/authentication/validate/id`,
-      method: 'GET',
+      method: "GET",
       secured: true,
       params: {
         userId,
       },
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
   /**
@@ -105,10 +105,14 @@ export const useUstraLoginService = defineUstraService(({ api }) => {
    * @param userId 사용자 아이디
    * @returns 검증 결과
    */
-  async function validPassword(password: string, oldPassword: string, userId: string) {
+  async function validPassword(
+    password: string,
+    oldPassword: string,
+    userId: string
+  ) {
     const result = await api.call<apiModels.ApiResponse<ValidationResult>>({
       url: `/api/authentication/validate/password`,
-      method: 'GET',
+      method: "GET",
       secured: false,
       showLoadingBar: false,
       params: {
@@ -116,13 +120,13 @@ export const useUstraLoginService = defineUstraService(({ api }) => {
         oldPassword,
         userId,
       },
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
-  return { login, logout, updatePassword, validId, validPassword }
-})
+  return { login, logout, updatePassword, validId, validPassword };
+});
 
 /**
  * 로그인 결과
@@ -131,77 +135,77 @@ export interface LoginResult extends Record<string, any> {
   /**
    * 인증 여부
    */
-  isAuthenticated?: boolean
+  isAuthenticated?: boolean;
 
   /**
    * 사용자 조회 여부
    */
-  hasUser?: boolean
+  hasUser?: boolean;
 
   /**
    * 사용자 키
    */
-  usrKey?: string
+  usrKey?: string;
 
   /**
    * 중복인증 제어 값
    */
-  duplicationKey?: string
+  duplicationKey?: string;
 
   /**
    * 사용자 명
    */
-  userName?: string
+  userName?: string;
 
   /**
    * 조직 명
    */
-  orgNm?: string
+  orgNm?: string;
 
   /**
    * 부서 코드
    */
-  deptCd?: string
+  deptCd?: string;
 
   /**
    * 부서 명
    */
-  deptNm?: string
+  deptNm?: string;
 
   /**
    * 패스워드 초기화 여부
    */
-  resetPassword?: boolean
+  resetPassword?: boolean;
 
   /**
    * 로그인 실패 수
    */
-  loginFailCnt?: number
+  loginFailCnt?: number;
 
   /**
    * 비밀번호 미변경 일수
    */
-  pwdUnchangedDays?: number
+  pwdUnchangedDays?: number;
 
   /**
    * 응답 코드
    */
-  resCd?: string
+  resCd?: string;
 
   /**
    * 사용자 메뉴 목록
    */
-  userMenus?: UserMenu[]
+  userMenus?: UserMenu[];
 
   /**
    * 권한 목록
    */
-  authorities?: Authority[]
+  authorities?: Authority[];
 
   /**
    * 인증 완료 여부
    */
-  completed?: boolean
+  completed?: boolean;
 
   /**
    * 후 처리 Action 구분
@@ -215,28 +219,33 @@ export interface LoginResult extends Record<string, any> {
      *  - SUCCESS_RECOMMEND_CHANGE_PASSWORD : 로그인 성공 후 패스워드 변경 (추천)
      *  - FAIL_REQUIRE_APPROVAL : 실패 후 승인 요청 필요
      */
-    action?: 'SUCCESS' | 'SHOW_DIALOG' | 'REQUIRE_CHANGE_PASSWORD' | 'SUCCESS_RECOMMEND_CHANGE_PASSWORD' | 'FAIL_REQUIRE_APPROVAL'
+    action?:
+      | "SUCCESS"
+      | "SHOW_DIALOG"
+      | "REQUIRE_CHANGE_PASSWORD"
+      | "SUCCESS_RECOMMEND_CHANGE_PASSWORD"
+      | "FAIL_REQUIRE_APPROVAL";
 
     /**
      * 표시 메시지
      */
-    message?: string
+    message?: string;
 
     /**
      * 승인 요청 유형
      */
-    approvalType?: string
+    approvalType?: string;
 
     /**
      * 승인 요청 명
      */
-    approvalName?: string
+    approvalName?: string;
 
     /**
      * 성공 시 이동할 화면
      */
-    nextPath?: string
-  }
+    nextPath?: string;
+  };
 }
 
 /**
@@ -246,22 +255,22 @@ export interface Authority {
   /**
    * 메뉴 아이디
    */
-  menuId?: string
+  menuId?: string;
 
   /**
    * 프로그램 아이디
    */
-  programId?: string
+  programId?: string;
 
   /**
    * function id
    */
-  functionId?: string
+  functionId?: string;
 
   /**
    * 클라이언트 인증용 권한
    */
-  clientAuthority?: string
+  clientAuthority?: string;
 }
 
 /**
@@ -271,10 +280,10 @@ export interface ValidationResult {
   /**
    * 성공 여부
    */
-  valid?: boolean
+  valid?: boolean;
 
   /**
    * 실패 메시지
    */
-  invalidMessage?: string
+  invalidMessage?: string;
 }

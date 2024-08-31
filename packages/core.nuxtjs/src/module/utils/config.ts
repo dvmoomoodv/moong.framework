@@ -3,11 +3,11 @@
  * @exports {@link Config}
  * @packageDocumentation
  */
-import { NuxtAppProps, Profile } from '#ustra/nuxt/config'
-import { core, objects } from '#ustra/core/utils'
-import { env } from '#ustra/core/config/env'
-import { resolve } from 'pathe'
-import { existsSync } from 'node:fs'
+import { NuxtAppProps, Profile } from "#moong/nuxt/config";
+import { core, objects } from "#moong/core/utils";
+import { env } from "#moong/core/config/env";
+import { resolve } from "pathe";
+import { existsSync } from "node:fs";
 
 /**
  * config 설정
@@ -19,22 +19,22 @@ export class Config {
    * @param profile profile
    */
   async getProfileNuxtAppProps(appDirPath: string, profile: Profile) {
-    const profileName = env.getServerProfileName(profile)
-    const beforeConfigEnv = process.env.CONFIG_ENV
+    const profileName = env.getServerProfileName(profile);
+    const beforeConfigEnv = process.env.CONFIG_ENV;
 
-    process.env.CONFIG_ENV = profileName
+    process.env.CONFIG_ENV = profileName;
 
     try {
-      const nuxtConfigPath = resolve(appDirPath, './nuxt.config.ts')
+      const nuxtConfigPath = resolve(appDirPath, "./nuxt.config.ts");
       if (!existsSync(nuxtConfigPath)) {
-        return null
+        return null;
       }
 
-      const nuxtConfig = await (await import(nuxtConfigPath)).default
+      const nuxtConfig = await (await import(nuxtConfigPath)).default;
 
-      return nuxtConfig?.ustra
+      return nuxtConfig?.ustra;
     } finally {
-      process.env.CONFIG_ENV = beforeConfigEnv
+      process.env.CONFIG_ENV = beforeConfigEnv;
     }
   }
 
@@ -45,18 +45,18 @@ export class Config {
    */
   getClientOptions(options: NuxtAppProps) {
     if (!options.nuxt.env.secureClientProps) {
-      return options
+      return options;
     }
 
-    const prop = core.deepMerge({}, options)
+    const prop = core.deepMerge({}, options);
 
     for (const secureClientProp of options.nuxt.env.secureClientProps) {
-      objects.deleteProperty(prop, secureClientProp)
+      objects.deleteProperty(prop, secureClientProp);
     }
 
-    return prop
+    return prop;
   }
 }
 
-const instance = new Config()
-export default instance
+const instance = new Config();
+export default instance;

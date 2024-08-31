@@ -15,18 +15,18 @@
 </UBox>
 
 <script setup lang="ts">
-import { reactive, ref } from '#ustra/nuxt'
-const data1 = reactive([
-  { value: 1, label: 'test1' },
-  { value: 2, label: 'test2' },
-  { value: 3, label: 'test3' },
-  { value: 4, label: 'test4' },
-])
-const data2 = reactive([
-  { value: 1, label: 'test1' },
-  { value: 2, label: 'test2' },
-  { value: 3, label: 'test3' },
-  { value: 4, label: 'test4' },
-])
+  import { reactive, ref } from "#moong/nuxt";
+  const data1 = reactive([
+    { value: 1, label: "test1" },
+    { value: 2, label: "test2" },
+    { value: 3, label: "test3" },
+    { value: 4, label: "test4" },
+  ]);
+  const data2 = reactive([
+    { value: 1, label: "test1" },
+    { value: 2, label: "test2" },
+    { value: 3, label: "test3" },
+    { value: 4, label: "test4" },
+  ]);
 </script>
 ```

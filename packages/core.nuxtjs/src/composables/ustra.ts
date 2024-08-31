@@ -1,7 +1,7 @@
-import { useLogger } from '#ustra/nuxt/utils/logger'
-import { NuxtApp } from '#app'
-import type { Ustra } from '../plugins/ustra'
-import nuxtUtils from '../utils/nuxt'
+import { useLogger } from "#moong/nuxt/utils/logger";
+import { NuxtApp } from "#app";
+import type { Ustra } from "../plugins/ustra";
+import nuxtUtils from "../utils/nuxt";
 
 /**
  * $ustra 플러그인 반환
@@ -9,8 +9,8 @@ import nuxtUtils from '../utils/nuxt'
  * @returns
  */
 export const useUstra = (nuxtApp?: NuxtApp): Ustra => {
-  return nuxtUtils.useUstra(nuxtApp)
-}
+  return nuxtUtils.useUstra(nuxtApp);
+};
 
 /**
  * logger 객체 반환
@@ -20,27 +20,27 @@ export const useUstra = (nuxtApp?: NuxtApp): Ustra => {
  */
 // @ts-ignore
 export const useUstraLogger = (name: string = null, nuxtApp?: NuxtApp) => {
-  const $ustra = useUstra(nuxtApp)
+  const $ustra = useUstra(nuxtApp);
 
   if (!$ustra) {
-    throw new Error('ustra instance unavailable')
+    throw new Error("ustra instance unavailable");
   }
 
-  return name ? useLogger(name) : $ustra.logger
-}
+  return name ? useLogger(name) : $ustra.logger;
+};
 
 /**
  * Ustra utils
  * @returns
  */
 export const useUstraUtils = (nuxtApp?: NuxtApp) => {
-  return useUstra(nuxtApp).utils
-}
+  return useUstra(nuxtApp).utils;
+};
 
 /**
  * Ustra env
  * @returns
  */
 export const useUstraEnv = (nuxtApp?: NuxtApp) => {
-  return useUstra(nuxtApp).env
-}
+  return useUstra(nuxtApp).env;
+};

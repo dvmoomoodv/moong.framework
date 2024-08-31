@@ -4,7 +4,10 @@
       <UFieldSet>
         <UFieldRow :ratio="[1, 1, 1, 1]">
           <UField label="배치 이력 아이디">
-            <VTextField type="text" v-model="searchAction.searchParam.batHistId" />
+            <VTextField
+              type="text"
+              v-model="searchAction.searchParam.batHistId"
+            />
           </UField>
           <UField label="배치 아이디">
             <VTextField type="text" v-model="searchAction.searchParam.batId" />
@@ -14,8 +17,16 @@
           </UField>
           <UField blank>
             <VBtnBox :right="true">
-              <VBtn text="초기화" class="gray ico_reset" @click="searchAction.clearSearchParam" />
-              <VBtn text="조회" class="primary ico_search" @click="() => searchAction.loadSearchedData()" />
+              <VBtn
+                text="초기화"
+                class="gray ico_reset"
+                @click="searchAction.clearSearchParam"
+              />
+              <VBtn
+                text="조회"
+                class="primary ico_search"
+                @click="() => searchAction.loadSearchedData()"
+              />
             </VBtnBox>
           </UField>
         </UFieldRow>
@@ -44,66 +55,89 @@
               <td>{{ each.accDttm }}</td>
               <td>{{ each.succYn }}</td>
               <td>{{ each.batInstCd }}</td>
-              <td><VBtn text="로그" class="primary ico_search" @click="() => gridAction.printLog(each.batHistId)" /></td>
+              <td>
+                <VBtn
+                  text="로그"
+                  class="primary ico_search"
+                  @click="() => gridAction.printLog(each.batHistId)"
+                />
+              </td>
             </tr>
           </tbody>
         </VTable>
-        <LogPopup v-model="gridAction.logShow.value" :batHistId="gridAction.logBatHistId.value" />
+        <LogPopup
+          v-model="gridAction.logShow.value"
+          :batHistId="gridAction.logBatHistId.value"
+        />
       </UBox>
     </UItem>
   </UBox>
 </template>
 <script lang="ts" setup>
-import { ref, reactive, watch, onMounted, useOnError, provide, inject, shallowRef, computed } from '#ustra/nuxt'
-import { BatchHistCriteria, BatchHist, useUstraBatchHistService } from '#ustra/nuxt/management'
-import LogPopup from './popup.vue'
+import {
+  ref,
+  reactive,
+  watch,
+  onMounted,
+  useOnError,
+  provide,
+  inject,
+  shallowRef,
+  computed,
+} from "#moong/nuxt";
+import {
+  BatchHistCriteria,
+  BatchHist,
+  useUstraBatchHistService,
+} from "#moong/nuxt/management";
+import LogPopup from "./popup.vue";
 
-const service = useUstraBatchHistService()
+const service = useUstraBatchHistService();
 const searchAction = (function () {
   const searchParam: BatchHistCriteria = reactive({
     batHistId: null,
     batId: null,
     batNm: null,
-  })
+  });
 
   function clearSearchParam() {
-    searchParam.batHistId = null
-    searchParam.batId = null
-    searchParam.batNm = null
+    searchParam.batHistId = null;
+    searchParam.batId = null;
+    searchParam.batNm = null;
   }
 
   async function loadSearchedData(batId?: string) {
     if (batId) {
-      searchParam.batId = batId
+      searchParam.batId = batId;
     }
-    gridAction.histGrid.pagination.loadPageData(1)
+    gridAction.histGrid.pagination.loadPageData(1);
   }
 
   return {
     searchParam,
     clearSearchParam,
     loadSearchedData,
-  }
-})()
+  };
+})();
 
 const gridAction = (function () {
   function renderUsePeroid(data: BatchHist) {
     if (!data.srtDttm) {
-      return ''
+      return "";
     }
 
     if (!data.endDttm) {
-      return `${$ustra.utils.formatting.datetime(data.srtDttm)} ~`
+      return `${$ustra.utils.formatting.datetime(data.srtDttm)} ~`;
     }
 
-    return `${$ustra.utils.formatting.datetime(data.srtDttm)} ~ ${$ustra.utils.formatting.datetime(data.endDttm)}`
+    return `${$ustra.utils.formatting.datetime(data.srtDttm)} ~ ${$ustra.utils.formatting.datetime(data.endDttm)}`;
   }
 
-  const logShow = ref(false)
-  const logBatHistId = ref(null)
+  const logShow = ref(false);
+  const logBatHistId = ref(null);
   function printLog(batHistId: string) {
-    logShow.value = true
-    logBatHistId.value = batHistId
+    logShow.value = true;
+    logBatHistId.value = batHistId;
   }
 
   return {
@@ -111,16 +145,16 @@ const gridAction = (function () {
     printLog,
     logShow,
     logBatHistId,
-  }
-})()
+  };
+})();
 
 defineExpose({
   searchAction,
-})
+});
 </script>
 <script lang="ts">
 export default {
-  name: 'UstraManagementSystemBatchHist',
-}
+  name: "UstraManagementSystemBatchHist",
+};
 </script>
 <style scoped></style>

@@ -2,7 +2,8 @@
   <VCard>
     <template #text>
       <h3>displayNullText</h3>
-      displayNullText 속성으로 value 값이 null로 세팅된 체크박스를 추가할 수 있으며, 콤보 박스를 전체 선택하는 기능을 제공한다.
+      displayNullText 속성으로 value 값이 null로 세팅된 체크박스를 추가할 수
+      있으며, 콤보 박스를 전체 선택하는 기능을 제공한다.
 
       <div class="mt-2 mb-5">
         <!-- <UCodeCheckGroupBox v-model="checkValue" grpCd="SYS_CD" displayNullText="전체" /> -->
@@ -18,10 +19,10 @@
   </VCard>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
+import { ref } from "#moong/nuxt";
 
 // @ts-ignore
-import check4 from './md/check4.md'
+import check4 from "./md/check4.md";
 
-const checkValue = ref(null)
+const checkValue = ref(null);
 </script>

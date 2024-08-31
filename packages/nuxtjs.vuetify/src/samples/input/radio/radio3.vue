@@ -21,13 +21,23 @@
 
       <v-radio-group v-model="data" column>
         <v-radio color="red" label="red" value="red"></v-radio>
-        <v-radio color="red-darken-3" label="red-darken-3" value="red-darken-3" disabled></v-radio>
+        <v-radio
+          color="red-darken-3"
+          label="red-darken-3"
+          value="red-darken-3"
+          disabled
+        ></v-radio>
         <v-radio color="indigo" label="indigo" value="indigo"></v-radio>
       </v-radio-group>
 
       <v-radio-group v-model="data" inline>
         <v-radio color="red" label="red" value="red"></v-radio>
-        <v-radio color="red-darken-3" label="red-darken-3" value="red-darken-3" disabled></v-radio>
+        <v-radio
+          color="red-darken-3"
+          label="red-darken-3"
+          value="red-darken-3"
+          disabled
+        ></v-radio>
         <v-radio color="indigo" label="indigo" value="indigo"></v-radio>
       </v-radio-group>
 
@@ -36,13 +46,13 @@
   </VCard>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
+import { ref } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
 
 // @ts-ignore
-import doc1 from './md/radio3.md'
+import doc1 from "./md/radio3.md";
 
-const data = ref(null)
+const data = ref(null);
 
-const radioValue = ref('01')
+const radioValue = ref("01");
 </script>

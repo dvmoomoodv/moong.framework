@@ -1,6 +1,13 @@
-import { Ifs, IfsCriteria, IfsChnl, IfsHist, IfsKey, IfsHistCriteria } from '../models/interfaces'
-import { apiModels } from '#ustra/core/data'
-import { defineUstraService } from '#ustra/nuxt/composables'
+import {
+  Ifs,
+  IfsCriteria,
+  IfsChnl,
+  IfsHist,
+  IfsKey,
+  IfsHistCriteria,
+} from "../models/interfaces";
+import { apiModels } from "#moong/core/data";
+import { defineUstraService } from "#moong/nuxt/composables";
 
 /**
  * 프레임워크 인터페이스 서비스
@@ -14,11 +21,11 @@ export const useUstraInterfaceService = defineUstraService(({ api }) => {
   async function getInterfaces(criteria?: IfsCriteria) {
     return (
       await api.call<apiModels.ApiResponse<Ifs[]>>({
-        url: '/api/system/ifs/list',
-        method: 'POST',
+        url: "/api/system/ifs/list",
+        method: "POST",
         data: criteria,
       })
-    )?.data?.body
+    )?.data?.body;
   }
 
   /**
@@ -30,14 +37,14 @@ export const useUstraInterfaceService = defineUstraService(({ api }) => {
   async function getInterface(id: string, ver: string) {
     return (
       await api.call<apiModels.ApiResponse<Ifs>>({
-        url: '/api/system/ifs/detail',
-        method: 'POST',
+        url: "/api/system/ifs/detail",
+        method: "POST",
         data: {
           ifId: id,
           ifVer: ver,
         },
       })
-    )?.data?.body
+    )?.data?.body;
   }
 
   /**
@@ -49,14 +56,14 @@ export const useUstraInterfaceService = defineUstraService(({ api }) => {
     const param: apiModels.ApiRequest = {
       header: {},
       ifs,
-    }
+    };
     return (
       await api.call<apiModels.ApiResponse<Ifs>>({
-        url: '/api/system/ifs',
-        method: 'POST',
+        url: "/api/system/ifs",
+        method: "POST",
         data: param,
       })
-    )?.data?.body
+    )?.data?.body;
   }
 
   /**
@@ -68,14 +75,14 @@ export const useUstraInterfaceService = defineUstraService(({ api }) => {
     const param: apiModels.ApiRequest = {
       header: {},
       ifs,
-    }
+    };
     return (
       await api.call<apiModels.ApiResponse<Ifs>>({
-        url: '/api/system/ifs/edit',
-        method: 'POST',
+        url: "/api/system/ifs/edit",
+        method: "POST",
         data: param,
       })
-    )?.data?.body
+    )?.data?.body;
   }
 
   /**
@@ -88,14 +95,14 @@ export const useUstraInterfaceService = defineUstraService(({ api }) => {
       header: {},
       ifId: id,
       ifVer: ver,
-    }
+    };
     return (
       await api.call<apiModels.ApiResponse<Ifs>>({
-        url: '/api/system/ifs/remove',
-        method: 'POST',
+        url: "/api/system/ifs/remove",
+        method: "POST",
         data: param,
       })
-    )?.data?.body
+    )?.data?.body;
   }
 
   /**
@@ -106,8 +113,8 @@ export const useUstraInterfaceService = defineUstraService(({ api }) => {
   async function getIntefaceHistories(criteria?: Partial<IfsHistCriteria>) {
     return (
       await api.call<apiModels.ApiResponse<IfsHist[]>>({
-        url: '/api/system/ifshist/list',
-        method: 'POST',
+        url: "/api/system/ifshist/list",
+        method: "POST",
         // data: criteria,
         data: {
           header: {
@@ -116,7 +123,7 @@ export const useUstraInterfaceService = defineUstraService(({ api }) => {
           searchValue: criteria.searchValue,
         },
       })
-    )?.data
+    )?.data;
   }
 
   /**
@@ -127,14 +134,22 @@ export const useUstraInterfaceService = defineUstraService(({ api }) => {
   async function getInterfaceHistory(histId: number) {
     return (
       await api.call<apiModels.ApiResponse<IfsHist>>({
-        url: '/api/system/ifshist/detail',
-        method: 'POST',
+        url: "/api/system/ifshist/detail",
+        method: "POST",
         data: {
           ifHistId: histId,
         },
       })
-    )?.data?.body
+    )?.data?.body;
   }
 
-  return { getInterfaces, getInterface, addInterface, editInterface, removeInterface, getIntefaceHistories, getInterfaceHistory }
-})
+  return {
+    getInterfaces,
+    getInterface,
+    addInterface,
+    editInterface,
+    removeInterface,
+    getIntefaceHistories,
+    getInterfaceHistory,
+  };
+});

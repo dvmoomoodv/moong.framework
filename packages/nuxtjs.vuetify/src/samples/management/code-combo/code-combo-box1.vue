@@ -13,7 +13,11 @@
     <template #text>
       <!-- <UCodeComboBox :grpCd="grpCd" v-model="comboValue" v-model:objectValue="comboObjectValue" /> -->
 
-      <UVCodeComboBox :grpCd="grpCd" v-model="comboValue" v-model:objectValue="comboObjectValue" />
+      <UVCodeComboBox
+        :grpCd="grpCd"
+        v-model="comboValue"
+        v-model:objectValue="comboObjectValue"
+      />
       <div>
         <v-chip class="ma-2" color="pink" label text-color="white">
           <v-icon start icon="mdi-label"></v-icon>
@@ -28,28 +32,28 @@
   </v-card>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-import { useUstraCodeList } from '#ustra/nuxt/management/composables'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
-import UVCodeComboBox from '#ustra/nuxt-vuetify/management/components/combo-box/u-v-code-combo-box.vue'
+import { ref } from "#moong/nuxt";
+import { useUstraCodeList } from "#moong/nuxt/management/composables";
+import { UMarkdownViewer } from "#moong/nuxt/components";
+import UVCodeComboBox from "#moong/nuxt-vuetify/management/components/combo-box/u-v-code-combo-box.vue";
 
 // @ts-ignore
-import desc from './md/code-combo-box1.md'
+import desc from "./md/code-combo-box1.md";
 
-const comboValue = ref('SC')
-const comboObjectValue = ref(null)
-const grpCd = ref('SYS_CD')
+const comboValue = ref("SC");
+const comboObjectValue = ref(null);
+const grpCd = ref("SYS_CD");
 
 function changeComboValue() {
-  const codes = useUstraCodeList(grpCd.value, true)
+  const codes = useUstraCodeList(grpCd.value, true);
 
   if (codes.length > 0) {
-    comboValue.value = codes[codes.length - 1].dtlCd
+    comboValue.value = codes[codes.length - 1].dtlCd;
   }
 }
 </script>
 <script lang="ts">
 export default {
-  name: 'CodeComboBox1',
-}
+  name: "CodeComboBox1",
+};
 </script>

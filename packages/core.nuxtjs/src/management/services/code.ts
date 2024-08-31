@@ -1,6 +1,6 @@
-import { apiModels } from '#ustra/core/data'
-import { defineUstraService } from '#ustra/nuxt/composables'
-import { Code, CodeCriteria } from '../models/code'
+import { apiModels } from "#moong/core/data";
+import { defineUstraService } from "#moong/nuxt/composables";
+import { Code, CodeCriteria } from "../models/code";
 
 /**
  * 코드 서비스
@@ -13,12 +13,12 @@ export const useUstraCodeService = defineUstraService(({ api }) => {
    */
   async function getCodeGroups(criteria: CodeCriteria = {}) {
     const result = await api.call<apiModels.ApiResponse<Code[]>>({
-      url: '/api/system/code/group/list',
-      method: 'POST',
+      url: "/api/system/code/group/list",
+      method: "POST",
       data: criteria,
-    })
+    });
 
-    return result.data?.body
+    return result.data?.body;
   }
 
   /**
@@ -29,14 +29,14 @@ export const useUstraCodeService = defineUstraService(({ api }) => {
     const param: apiModels.ApiRequest = {
       header: {},
       grpCds: [grpCd],
-    }
+    };
     const result = await api.call<apiModels.ApiResponse<Code[]>>({
-      url: '/api/system/code/group',
-      method: 'POST',
+      url: "/api/system/code/group",
+      method: "POST",
       data: param,
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
   /**
@@ -50,14 +50,14 @@ export const useUstraCodeService = defineUstraService(({ api }) => {
       header: {},
       uprGrpCd,
       uprDtlCd,
-    }
+    };
     const result = await api.call<apiModels.ApiResponse<Code[]>>({
-      url: '/api/system/code/group/depth',
-      method: 'POST',
+      url: "/api/system/code/group/depth",
+      method: "POST",
       data: param,
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
   /**
@@ -67,12 +67,12 @@ export const useUstraCodeService = defineUstraService(({ api }) => {
    */
   async function getCodeList(criteria: CodeCriteria = {}) {
     const result = await api.call<apiModels.ApiResponse<Code[]>>({
-      url: '/api/system/code/list',
-      method: 'POST',
+      url: "/api/system/code/list",
+      method: "POST",
       data: criteria,
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
   /**
@@ -86,14 +86,14 @@ export const useUstraCodeService = defineUstraService(({ api }) => {
       header: {},
       grpCd,
       dtlCd,
-    }
+    };
     const result = await api.call<apiModels.ApiResponse<Code>>({
-      url: '/api/system/code/detail',
-      method: 'POST',
+      url: "/api/system/code/detail",
+      method: "POST",
       data: param,
-    })
+    });
 
-    return result.data?.body
+    return result.data?.body;
   }
 
   /**
@@ -105,14 +105,14 @@ export const useUstraCodeService = defineUstraService(({ api }) => {
     const param: apiModels.ApiRequest = {
       header: {},
       code,
-    }
+    };
     const result = await api.call<apiModels.ApiResponse<Code>>({
-      url: '/api/system/code',
-      method: 'POST',
+      url: "/api/system/code",
+      method: "POST",
       data: param,
-    })
+    });
 
-    return result.data?.body
+    return result.data?.body;
   }
 
   /**
@@ -121,20 +121,20 @@ export const useUstraCodeService = defineUstraService(({ api }) => {
    * @returns
    */
   async function modCode(code: Code) {
-    delete code.updDttm
-    delete code.updUsrId
-    delete code.updUsrIp
+    delete code.updDttm;
+    delete code.updUsrId;
+    delete code.updUsrIp;
     const param: apiModels.ApiRequest = {
       header: {},
       code,
-    }
+    };
     const result = await api.call<apiModels.ApiResponse<Code>>({
-      url: '/api/system/code/edit',
-      method: 'POST',
+      url: "/api/system/code/edit",
+      method: "POST",
       data: param,
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
   /**
@@ -148,15 +148,24 @@ export const useUstraCodeService = defineUstraService(({ api }) => {
       header: {},
       grpCd,
       dtlCd,
-    }
+    };
     const result = await api.call<apiModels.ApiResponse<Code>>({
-      url: '/api/system/code/remove',
-      method: 'POST',
+      url: "/api/system/code/remove",
+      method: "POST",
       data: param,
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
-  return { getCodeGroups, getCodesByGroup, getCodeGroupDepth, getCodeList, getCode, addCode, modCode, delCode }
-})
+  return {
+    getCodeGroups,
+    getCodesByGroup,
+    getCodeGroupDepth,
+    getCodeList,
+    getCode,
+    addCode,
+    modCode,
+    delCode,
+  };
+});

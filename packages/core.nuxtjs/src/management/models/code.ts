@@ -3,7 +3,7 @@
  * @exports {@link CodeCriteria}
  * @packageDocumentation
  */
-import { baseModels } from '#ustra/core/data'
+import { baseModels } from "#moong/core/data";
 
 /**
  * 코드 검색 조건
@@ -12,48 +12,48 @@ export interface CodeCriteria extends Record<string, any> {
   /**
    * 그룹 코드
    */
-  grpCd?: string
+  grpCd?: string;
 
   /**
    * 상세 코드
    */
-  dtlCd?: string
+  dtlCd?: string;
 
   /**
    * 상위 그룹 코드
    */
-  uprGrpCd?: string
+  uprGrpCd?: string;
 
   /**
    * 상위 상세 코드
    */
-  uprDtlCd?: string
+  uprDtlCd?: string;
 
   /**
    * 사용 여부
    */
-  useYn?: string
+  useYn?: string;
   /**
    * 대분류 코드
    */
-  lclsCd?: string
+  lclsCd?: string;
   /**
    * 중분류 코드
    */
-  mclsCd?: string
+  mclsCd?: string;
 
   /**
    * 코드 명
    */
-  cdNm?: string
+  cdNm?: string;
 
   /**
    * 그룹 코드 명
    */
-  grpNm?: string
+  grpNm?: string;
 }
 
-type CodeBase = baseModels.BaseModel & CodeCriteria
+type CodeBase = baseModels.BaseModel & CodeCriteria;
 
 /**
  * 코드 정보
@@ -62,85 +62,85 @@ export interface Code extends CodeBase {
   /**
    * 그룹 코드
    */
-  grpCd?: string
+  grpCd?: string;
 
   /**
    * 상세 코드
    */
-  dtlCd?: string
+  dtlCd?: string;
 
   /**
    * 상위 그룹 코드
    */
-  uprGrpCd?: string
+  uprGrpCd?: string;
 
   /**
    * 상위 상세 코드
    */
-  uprDtlCd?: string
+  uprDtlCd?: string;
 
   /**
    * 사용 여부
    */
-  useYn?: string
+  useYn?: string;
   /**
    * 코드 명
    */
-  cdNm?: string
+  cdNm?: string;
 
   /**
    * 정렬번호
    */
-  srtNo?: number
+  srtNo?: number;
 
   /**
    * 코드 설명
    */
-  cdDesc?: string
+  cdDesc?: string;
 
   /**
    * 비고
    */
-  rmk?: string
+  rmk?: string;
 
   /**
    * 기타필드1
    */
-  etc1?: string
+  etc1?: string;
   /**
    * 기타필드2
    */
-  etc2?: string
+  etc2?: string;
   /**
    * 기타필드3
    */
-  etc3?: string
+  etc3?: string;
   /**
    * 기타필드4
    */
-  etc4?: string
+  etc4?: string;
   /**
    * 기타필드5
    */
-  etc5?: string
+  etc5?: string;
   /**
    * 그룹코드 명
    */
-  grpNm?: string
+  grpNm?: string;
   /**
    * 대분류 코드
    */
-  lclsCd?: string
+  lclsCd?: string;
   /**
    * 대분류 명
    */
-  lclsNm?: string
+  lclsNm?: string;
   /**
    * 중분류 코드
    */
-  mclsCd?: string
+  mclsCd?: string;
   /**
    * 중분류 코드명
    */
-  mclsNm?: string
+  mclsNm?: string;
 }

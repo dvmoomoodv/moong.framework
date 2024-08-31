@@ -1,70 +1,813 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>store | @ustra/nuxt</title><meta name="description" content="Documentation for @ustra/nuxt"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base=".."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">@ustra/nuxt</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb"><li><a href="../index.html">@ustra/nuxt</a></li><li><a href="store.html">store</a></li></ul><h1>Module store</h1></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/store/index.ts#L1">framework/nuxt/src/store/index.ts:1</a></li></ul></aside><section class="tsd-panel-group tsd-index-group"><section class="tsd-panel tsd-index-panel"><h3 class="tsd-index-heading uppercase">Index</h3><section class="tsd-index-section"><h3 class="tsd-index-heading">Enumerations</h3><div class="tsd-index-list"><a href="../enums/store.MutationType.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-8"></use></svg><span>Mutation<wbr/>Type</span></a>
-</div></section><section class="tsd-index-section"><h3 class="tsd-index-heading">Interfaces</h3><div class="tsd-index-list"><a href="../interfaces/store.DefineSetupStoreOptions.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>Define<wbr/>Setup<wbr/>Store<wbr/>Options</span></a>
-<a href="../interfaces/store.DefineStoreOptions.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>Define<wbr/>Store<wbr/>Options</span></a>
-<a href="../interfaces/store.DefineStoreOptionsBase.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>Define<wbr/>Store<wbr/>Options<wbr/>Base</span></a>
-<a href="../interfaces/store.DefineStoreOptionsInPlugin.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>Define<wbr/>Store<wbr/>Options<wbr/>In<wbr/>Plugin</span></a>
-<a href="../interfaces/store.MapStoresCustomization.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>Map<wbr/>Stores<wbr/>Customization</span></a>
-<a href="../interfaces/store.Pinia.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>Pinia</span></a>
-<a href="../interfaces/store.PiniaCustomProperties.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>Pinia<wbr/>Custom<wbr/>Properties</span></a>
-<a href="../interfaces/store.PiniaCustomStateProperties.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>Pinia<wbr/>Custom<wbr/>State<wbr/>Properties</span></a>
-<a href="../interfaces/store.PiniaPlugin.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>Pinia<wbr/>Plugin</span></a>
-<a href="../interfaces/store.PiniaPluginContext.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>Pinia<wbr/>Plugin<wbr/>Context</span></a>
-<a href="../interfaces/store.SetupStoreDefinition.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>Setup<wbr/>Store<wbr/>Definition</span></a>
-<a href="../interfaces/store.StoreDefinition.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>Store<wbr/>Definition</span></a>
-<a href="../interfaces/store.StoreProperties.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>Store<wbr/>Properties</span></a>
-<a href="../interfaces/store.SubscriptionCallbackMutationDirect.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>Subscription<wbr/>Callback<wbr/>Mutation<wbr/>Direct</span></a>
-<a href="../interfaces/store.SubscriptionCallbackMutationPatchFunction.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>Subscription<wbr/>Callback<wbr/>Mutation<wbr/>Patch<wbr/>Function</span></a>
-<a href="../interfaces/store.SubscriptionCallbackMutationPatchObject.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>Subscription<wbr/>Callback<wbr/>Mutation<wbr/>Patch<wbr/>Object</span></a>
-<a href="../interfaces/store._StoreOnActionListenerContext.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>_<wbr/>Store<wbr/>On<wbr/>Action<wbr/>Listener<wbr/>Context</span></a>
-<a href="../interfaces/store._StoreWithState.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>_<wbr/>Store<wbr/>With<wbr/>State</span></a>
-<a href="../interfaces/store._SubscriptionCallbackMutationBase.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-256"></use></svg><span>_<wbr/>Subscription<wbr/>Callback<wbr/>Mutation<wbr/>Base</span></a>
-</div></section><section class="tsd-index-section"><h3 class="tsd-index-heading">Type Aliases</h3><div class="tsd-index-list"><a href="../types/store.InitFunction.html" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>Init<wbr/>Function</span></a>
-<a href="../types/store.PiniaStorePlugin.html" class="tsd-index-link deprecated tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>Pinia<wbr/>Store<wbr/>Plugin</span></a>
-<a href="../types/store.StateTree.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>State<wbr/>Tree</span></a>
-<a href="../types/store.Store.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>Store</span></a>
-<a href="../types/store.StoreActions.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>Store<wbr/>Actions</span></a>
-<a href="../types/store.StoreGeneric.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>Store<wbr/>Generic</span></a>
-<a href="../types/store.StoreGetters.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>Store<wbr/>Getters</span></a>
-<a href="../types/store.StoreOnActionListener.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>Store<wbr/>On<wbr/>Action<wbr/>Listener</span></a>
-<a href="../types/store.StoreOnActionListenerContext.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>Store<wbr/>On<wbr/>Action<wbr/>Listener<wbr/>Context</span></a>
-<a href="../types/store.StoreState.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>Store<wbr/>State</span></a>
-<a href="../types/store.SubscriptionCallback.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>Subscription<wbr/>Callback</span></a>
-<a href="../types/store.SubscriptionCallbackMutation.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>Subscription<wbr/>Callback<wbr/>Mutation</span></a>
-<a href="../types/store._ActionsTree.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Actions<wbr/>Tree</span></a>
-<a href="../types/store._Awaited.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Awaited</span></a>
-<a href="../types/store._DeepPartial.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Deep<wbr/>Partial</span></a>
-<a href="../types/store._ExtractActionsFromSetupStore.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Extract<wbr/>Actions<wbr/>From<wbr/>Setup<wbr/>Store</span></a>
-<a href="../types/store._ExtractActionsFromSetupStore_Keys.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Extract<wbr/>Actions<wbr/>From<wbr/>Setup<wbr/>Store_<wbr/>Keys</span></a>
-<a href="../types/store._ExtractGettersFromSetupStore.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Extract<wbr/>Getters<wbr/>From<wbr/>Setup<wbr/>Store</span></a>
-<a href="../types/store._ExtractGettersFromSetupStore_Keys.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Extract<wbr/>Getters<wbr/>From<wbr/>Setup<wbr/>Store_<wbr/>Keys</span></a>
-<a href="../types/store._ExtractStateFromSetupStore.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Extract<wbr/>State<wbr/>From<wbr/>Setup<wbr/>Store</span></a>
-<a href="../types/store._ExtractStateFromSetupStore_Keys.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Extract<wbr/>State<wbr/>From<wbr/>Setup<wbr/>Store_<wbr/>Keys</span></a>
-<a href="../types/store._GettersTree.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Getters<wbr/>Tree</span></a>
-<a href="../types/store._MapActionsObjectReturn.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Map<wbr/>Actions<wbr/>Object<wbr/>Return</span></a>
-<a href="../types/store._MapActionsReturn.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Map<wbr/>Actions<wbr/>Return</span></a>
-<a href="../types/store._MapStateObjectReturn.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Map<wbr/>State<wbr/>Object<wbr/>Return</span></a>
-<a href="../types/store._MapStateReturn.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Map<wbr/>State<wbr/>Return</span></a>
-<a href="../types/store._MapWritableStateObjectReturn.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Map<wbr/>Writable<wbr/>State<wbr/>Object<wbr/>Return</span></a>
-<a href="../types/store._MapWritableStateReturn.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Map<wbr/>Writable<wbr/>State<wbr/>Return</span></a>
-<a href="../types/store._Method.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Method</span></a>
-<a href="../types/store._Spread.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Spread</span></a>
-<a href="../types/store._StoreObject.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Store<wbr/>Object</span></a>
-<a href="../types/store._StoreWithActions.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Store<wbr/>With<wbr/>Actions</span></a>
-<a href="../types/store._StoreWithGetters.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Store<wbr/>With<wbr/>Getters</span></a>
-<a href="../types/store._UnwrapAll.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2097152"></use></svg><span>_<wbr/>Unwrap<wbr/>All</span></a>
-</div></section><section class="tsd-index-section"><h3 class="tsd-index-heading">Variables</h3><div class="tsd-index-list"><a href="../variables/store.PiniaVuePlugin.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-32"></use></svg><span>Pinia<wbr/>Vue<wbr/>Plugin</span></a>
-</div></section><section class="tsd-index-section"><h3 class="tsd-index-heading">Functions</h3><div class="tsd-index-list"><a href="../functions/store.acceptHMRUpdate.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-64"></use></svg><span>acceptHMRUpdate</span></a>
-<a href="../functions/store.createPinia.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-64"></use></svg><span>create<wbr/>Pinia</span></a>
-<a href="../functions/store.defineInitStore.html" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-64"></use></svg><span>define<wbr/>Init<wbr/>Store</span></a>
-<a href="../functions/store.defineStore.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-64"></use></svg><span>define<wbr/>Store</span></a>
-<a href="../functions/store.getActivePinia.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-64"></use></svg><span>get<wbr/>Active<wbr/>Pinia</span></a>
-<a href="../functions/store.mapActions.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-64"></use></svg><span>map<wbr/>Actions</span></a>
-<a href="../functions/store.mapGetters.html" class="tsd-index-link deprecated tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-64"></use></svg><span>map<wbr/>Getters</span></a>
-<a href="../functions/store.mapState.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-64"></use></svg><span>map<wbr/>State</span></a>
-<a href="../functions/store.mapStores.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-64"></use></svg><span>map<wbr/>Stores</span></a>
-<a href="../functions/store.mapWritableState.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-64"></use></svg><span>map<wbr/>Writable<wbr/>State</span></a>
-<a href="../functions/store.setActivePinia.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-64"></use></svg><span>set<wbr/>Active<wbr/>Pinia</span></a>
-<a href="../functions/store.setMapStoreSuffix.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-64"></use></svg><span>set<wbr/>Map<wbr/>Store<wbr/>Suffix</span></a>
-<a href="../functions/store.skipHydrate.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-64"></use></svg><span>skip<wbr/>Hydrate</span></a>
-<a href="../functions/store.storeToRefs.html" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-64"></use></svg><span>store<wbr/>To<wbr/>Refs</span></a>
-</div></section></section></section></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-index-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><h4 class="uppercase">Member Visibility</h4><form><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div><div class="tsd-theme-toggle"><h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div></div><div class="site-menu"><nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1"></use></svg><span>@ustra/nuxt</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base=".."><li>Loading...</li></ul></nav></div></div></div><div class="tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div></body></html>
+<!doctype html>
+<html class="default" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <title>store | @moong/nuxt</title>
+    <meta name="description" content="Documentation for @moong/nuxt" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/highlight.css" />
+    <script defer src="../assets/main.js"></script>
+    <script async src="../assets/icons.js" id="tsd-icons-script"></script>
+    <script async src="../assets/search.js" id="tsd-search-script"></script>
+    <script async src="../assets/navigation.js" id="tsd-nav-script"></script>
+  </head>
+  <body>
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("tsd-theme") || "os";
+      document.body.style.display = "none";
+      setTimeout(
+        () =>
+          app ? app.showPage() : document.body.style.removeProperty("display"),
+        500
+      );
+    </script>
+    <header class="tsd-page-toolbar">
+      <div class="tsd-toolbar-contents container">
+        <div class="table-cell" id="tsd-search" data-base="..">
+          <div class="field">
+            <label
+              for="tsd-search-field"
+              class="tsd-widget tsd-toolbar-icon search no-caption"
+              ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use href="../assets/icons.svg#icon-search"></use></svg></label
+            ><input type="text" id="tsd-search-field" aria-label="Search" />
+          </div>
+          <div class="field"><div id="tsd-toolbar-links"></div></div>
+          <ul class="results">
+            <li class="state loading">Preparing search index...</li>
+            <li class="state failure">The search index is not available</li>
+          </ul>
+          <a href="../index.html" class="title">@moong/nuxt</a>
+        </div>
+        <div class="table-cell" id="tsd-widgets">
+          <a
+            href="#"
+            class="tsd-widget tsd-toolbar-icon menu no-caption"
+            data-toggle="menu"
+            aria-label="Menu"
+            ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use href="../assets/icons.svg#icon-menu"></use></svg
+          ></a>
+        </div>
+      </div>
+    </header>
+    <div class="container container-main">
+      <div class="col-content">
+        <div class="tsd-page-title">
+          <ul class="tsd-breadcrumb">
+            <li><a href="../index.html">@moong/nuxt</a></li>
+            <li><a href="store.html">store</a></li>
+          </ul>
+          <h1>Module store</h1>
+        </div>
+        <aside class="tsd-sources">
+          <ul>
+            <li>
+              Defined in
+              <a
+                href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/store/index.ts#L1"
+                >framework/nuxt/src/store/index.ts:1</a
+              >
+            </li>
+          </ul>
+        </aside>
+        <section class="tsd-panel-group tsd-index-group">
+          <section class="tsd-panel tsd-index-panel">
+            <h3 class="tsd-index-heading uppercase">Index</h3>
+            <section class="tsd-index-section">
+              <h3 class="tsd-index-heading">Enumerations</h3>
+              <div class="tsd-index-list">
+                <a
+                  href="../enums/store.MutationType.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-8"></use></svg
+                  ><span>Mutation<wbr />Type</span></a
+                >
+              </div>
+            </section>
+            <section class="tsd-index-section">
+              <h3 class="tsd-index-heading">Interfaces</h3>
+              <div class="tsd-index-list">
+                <a
+                  href="../interfaces/store.DefineSetupStoreOptions.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span>Define<wbr />Setup<wbr />Store<wbr />Options</span></a
+                >
+                <a
+                  href="../interfaces/store.DefineStoreOptions.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span>Define<wbr />Store<wbr />Options</span></a
+                >
+                <a
+                  href="../interfaces/store.DefineStoreOptionsBase.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span>Define<wbr />Store<wbr />Options<wbr />Base</span></a
+                >
+                <a
+                  href="../interfaces/store.DefineStoreOptionsInPlugin.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span
+                    >Define<wbr />Store<wbr />Options<wbr />In<wbr />Plugin</span
+                  ></a
+                >
+                <a
+                  href="../interfaces/store.MapStoresCustomization.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span>Map<wbr />Stores<wbr />Customization</span></a
+                >
+                <a
+                  href="../interfaces/store.Pinia.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span>Pinia</span></a
+                >
+                <a
+                  href="../interfaces/store.PiniaCustomProperties.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span>Pinia<wbr />Custom<wbr />Properties</span></a
+                >
+                <a
+                  href="../interfaces/store.PiniaCustomStateProperties.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span
+                    >Pinia<wbr />Custom<wbr />State<wbr />Properties</span
+                  ></a
+                >
+                <a
+                  href="../interfaces/store.PiniaPlugin.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span>Pinia<wbr />Plugin</span></a
+                >
+                <a
+                  href="../interfaces/store.PiniaPluginContext.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span>Pinia<wbr />Plugin<wbr />Context</span></a
+                >
+                <a
+                  href="../interfaces/store.SetupStoreDefinition.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span>Setup<wbr />Store<wbr />Definition</span></a
+                >
+                <a
+                  href="../interfaces/store.StoreDefinition.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span>Store<wbr />Definition</span></a
+                >
+                <a
+                  href="../interfaces/store.StoreProperties.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span>Store<wbr />Properties</span></a
+                >
+                <a
+                  href="../interfaces/store.SubscriptionCallbackMutationDirect.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span
+                    >Subscription<wbr />Callback<wbr />Mutation<wbr />Direct</span
+                  ></a
+                >
+                <a
+                  href="../interfaces/store.SubscriptionCallbackMutationPatchFunction.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span
+                    >Subscription<wbr />Callback<wbr />Mutation<wbr />Patch<wbr />Function</span
+                  ></a
+                >
+                <a
+                  href="../interfaces/store.SubscriptionCallbackMutationPatchObject.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span
+                    >Subscription<wbr />Callback<wbr />Mutation<wbr />Patch<wbr />Object</span
+                  ></a
+                >
+                <a
+                  href="../interfaces/store._StoreOnActionListenerContext.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span
+                    >_<wbr />Store<wbr />On<wbr />Action<wbr />Listener<wbr />Context</span
+                  ></a
+                >
+                <a
+                  href="../interfaces/store._StoreWithState.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span>_<wbr />Store<wbr />With<wbr />State</span></a
+                >
+                <a
+                  href="../interfaces/store._SubscriptionCallbackMutationBase.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-256"></use></svg
+                  ><span
+                    >_<wbr />Subscription<wbr />Callback<wbr />Mutation<wbr />Base</span
+                  ></a
+                >
+              </div>
+            </section>
+            <section class="tsd-index-section">
+              <h3 class="tsd-index-heading">Type Aliases</h3>
+              <div class="tsd-index-list">
+                <a
+                  href="../types/store.InitFunction.html"
+                  class="tsd-index-link"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>Init<wbr />Function</span></a
+                >
+                <a
+                  href="../types/store.PiniaStorePlugin.html"
+                  class="tsd-index-link deprecated tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>Pinia<wbr />Store<wbr />Plugin</span></a
+                >
+                <a
+                  href="../types/store.StateTree.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>State<wbr />Tree</span></a
+                >
+                <a
+                  href="../types/store.Store.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>Store</span></a
+                >
+                <a
+                  href="../types/store.StoreActions.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>Store<wbr />Actions</span></a
+                >
+                <a
+                  href="../types/store.StoreGeneric.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>Store<wbr />Generic</span></a
+                >
+                <a
+                  href="../types/store.StoreGetters.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>Store<wbr />Getters</span></a
+                >
+                <a
+                  href="../types/store.StoreOnActionListener.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>Store<wbr />On<wbr />Action<wbr />Listener</span></a
+                >
+                <a
+                  href="../types/store.StoreOnActionListenerContext.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span
+                    >Store<wbr />On<wbr />Action<wbr />Listener<wbr />Context</span
+                  ></a
+                >
+                <a
+                  href="../types/store.StoreState.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>Store<wbr />State</span></a
+                >
+                <a
+                  href="../types/store.SubscriptionCallback.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>Subscription<wbr />Callback</span></a
+                >
+                <a
+                  href="../types/store.SubscriptionCallbackMutation.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>Subscription<wbr />Callback<wbr />Mutation</span></a
+                >
+                <a
+                  href="../types/store._ActionsTree.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>_<wbr />Actions<wbr />Tree</span></a
+                >
+                <a
+                  href="../types/store._Awaited.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>_<wbr />Awaited</span></a
+                >
+                <a
+                  href="../types/store._DeepPartial.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>_<wbr />Deep<wbr />Partial</span></a
+                >
+                <a
+                  href="../types/store._ExtractActionsFromSetupStore.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span
+                    >_<wbr />Extract<wbr />Actions<wbr />From<wbr />Setup<wbr />Store</span
+                  ></a
+                >
+                <a
+                  href="../types/store._ExtractActionsFromSetupStore_Keys.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span
+                    >_<wbr />Extract<wbr />Actions<wbr />From<wbr />Setup<wbr />Store_<wbr />Keys</span
+                  ></a
+                >
+                <a
+                  href="../types/store._ExtractGettersFromSetupStore.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span
+                    >_<wbr />Extract<wbr />Getters<wbr />From<wbr />Setup<wbr />Store</span
+                  ></a
+                >
+                <a
+                  href="../types/store._ExtractGettersFromSetupStore_Keys.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span
+                    >_<wbr />Extract<wbr />Getters<wbr />From<wbr />Setup<wbr />Store_<wbr />Keys</span
+                  ></a
+                >
+                <a
+                  href="../types/store._ExtractStateFromSetupStore.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span
+                    >_<wbr />Extract<wbr />State<wbr />From<wbr />Setup<wbr />Store</span
+                  ></a
+                >
+                <a
+                  href="../types/store._ExtractStateFromSetupStore_Keys.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span
+                    >_<wbr />Extract<wbr />State<wbr />From<wbr />Setup<wbr />Store_<wbr />Keys</span
+                  ></a
+                >
+                <a
+                  href="../types/store._GettersTree.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>_<wbr />Getters<wbr />Tree</span></a
+                >
+                <a
+                  href="../types/store._MapActionsObjectReturn.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span
+                    >_<wbr />Map<wbr />Actions<wbr />Object<wbr />Return</span
+                  ></a
+                >
+                <a
+                  href="../types/store._MapActionsReturn.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>_<wbr />Map<wbr />Actions<wbr />Return</span></a
+                >
+                <a
+                  href="../types/store._MapStateObjectReturn.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span
+                    >_<wbr />Map<wbr />State<wbr />Object<wbr />Return</span
+                  ></a
+                >
+                <a
+                  href="../types/store._MapStateReturn.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>_<wbr />Map<wbr />State<wbr />Return</span></a
+                >
+                <a
+                  href="../types/store._MapWritableStateObjectReturn.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span
+                    >_<wbr />Map<wbr />Writable<wbr />State<wbr />Object<wbr />Return</span
+                  ></a
+                >
+                <a
+                  href="../types/store._MapWritableStateReturn.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span
+                    >_<wbr />Map<wbr />Writable<wbr />State<wbr />Return</span
+                  ></a
+                >
+                <a
+                  href="../types/store._Method.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>_<wbr />Method</span></a
+                >
+                <a
+                  href="../types/store._Spread.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>_<wbr />Spread</span></a
+                >
+                <a
+                  href="../types/store._StoreObject.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>_<wbr />Store<wbr />Object</span></a
+                >
+                <a
+                  href="../types/store._StoreWithActions.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>_<wbr />Store<wbr />With<wbr />Actions</span></a
+                >
+                <a
+                  href="../types/store._StoreWithGetters.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>_<wbr />Store<wbr />With<wbr />Getters</span></a
+                >
+                <a
+                  href="../types/store._UnwrapAll.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-2097152"></use></svg
+                  ><span>_<wbr />Unwrap<wbr />All</span></a
+                >
+              </div>
+            </section>
+            <section class="tsd-index-section">
+              <h3 class="tsd-index-heading">Variables</h3>
+              <div class="tsd-index-list">
+                <a
+                  href="../variables/store.PiniaVuePlugin.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-32"></use></svg
+                  ><span>Pinia<wbr />Vue<wbr />Plugin</span></a
+                >
+              </div>
+            </section>
+            <section class="tsd-index-section">
+              <h3 class="tsd-index-heading">Functions</h3>
+              <div class="tsd-index-list">
+                <a
+                  href="../functions/store.acceptHMRUpdate.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-64"></use></svg
+                  ><span>acceptHMRUpdate</span></a
+                >
+                <a
+                  href="../functions/store.createPinia.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-64"></use></svg
+                  ><span>create<wbr />Pinia</span></a
+                >
+                <a
+                  href="../functions/store.defineInitStore.html"
+                  class="tsd-index-link"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-64"></use></svg
+                  ><span>define<wbr />Init<wbr />Store</span></a
+                >
+                <a
+                  href="../functions/store.defineStore.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-64"></use></svg
+                  ><span>define<wbr />Store</span></a
+                >
+                <a
+                  href="../functions/store.getActivePinia.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-64"></use></svg
+                  ><span>get<wbr />Active<wbr />Pinia</span></a
+                >
+                <a
+                  href="../functions/store.mapActions.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-64"></use></svg
+                  ><span>map<wbr />Actions</span></a
+                >
+                <a
+                  href="../functions/store.mapGetters.html"
+                  class="tsd-index-link deprecated tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-64"></use></svg
+                  ><span>map<wbr />Getters</span></a
+                >
+                <a
+                  href="../functions/store.mapState.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-64"></use></svg
+                  ><span>map<wbr />State</span></a
+                >
+                <a
+                  href="../functions/store.mapStores.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-64"></use></svg
+                  ><span>map<wbr />Stores</span></a
+                >
+                <a
+                  href="../functions/store.mapWritableState.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-64"></use></svg
+                  ><span>map<wbr />Writable<wbr />State</span></a
+                >
+                <a
+                  href="../functions/store.setActivePinia.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-64"></use></svg
+                  ><span>set<wbr />Active<wbr />Pinia</span></a
+                >
+                <a
+                  href="../functions/store.setMapStoreSuffix.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-64"></use></svg
+                  ><span>set<wbr />Map<wbr />Store<wbr />Suffix</span></a
+                >
+                <a
+                  href="../functions/store.skipHydrate.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-64"></use></svg
+                  ><span>skip<wbr />Hydrate</span></a
+                >
+                <a
+                  href="../functions/store.storeToRefs.html"
+                  class="tsd-index-link tsd-is-external"
+                  ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-64"></use></svg
+                  ><span>store<wbr />To<wbr />Refs</span></a
+                >
+              </div>
+            </section>
+          </section>
+        </section>
+      </div>
+      <div class="col-sidebar">
+        <div class="page-menu">
+          <div class="tsd-navigation settings">
+            <details class="tsd-index-accordion">
+              <summary class="tsd-accordion-summary">
+                <h3>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <use href="../assets/icons.svg#icon-chevronDown"></use></svg
+                  >Settings
+                </h3>
+              </summary>
+              <div class="tsd-accordion-details">
+                <div class="tsd-filter-visibility">
+                  <h4 class="uppercase">Member Visibility</h4>
+                  <form>
+                    <ul id="tsd-filter-options">
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-protected"
+                            name="protected"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Protected</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-private"
+                            name="private"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Private</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-inherited"
+                            name="inherited"
+                            checked
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Inherited</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-external"
+                            name="external"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>External</span></label
+                        >
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+                <div class="tsd-theme-toggle">
+                  <h4 class="uppercase">Theme</h4>
+                  <select id="tsd-theme">
+                    <option value="os">OS</option>
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                  </select>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+        <div class="site-menu">
+          <nav class="tsd-navigation">
+            <a href="../index.html"
+              ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                <use href="../assets/icons.svg#icon-1"></use></svg
+              ><span>@moong/nuxt</span></a
+            >
+            <ul
+              class="tsd-small-nested-navigation"
+              id="tsd-nav-container"
+              data-base=".."
+            >
+              <li>Loading...</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="tsd-generator">
+      <p>
+        Generated using
+        <a href="https://typedoc.org/" target="_blank">TypeDoc</a>
+      </p>
+    </div>
+    <div class="overlay"></div>
+  </body>
+</html>

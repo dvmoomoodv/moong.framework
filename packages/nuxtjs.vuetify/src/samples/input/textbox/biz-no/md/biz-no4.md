@@ -12,9 +12,9 @@
   </v-chip>
 </template>
 <script lang="ts" setup>
-import { UValidationGroup } from '#ustra/nuxt-wijmo/components'
+  import { UValidationGroup } from "#moong/nuxt-wijmo/components";
 
-const value = ref(null)
-const validationGroup = ref<InstanceType<typeof UValidationGroup>>()
+  const value = ref(null);
+  const validationGroup = ref<InstanceType<typeof UValidationGroup>>();
 </script>
 ```

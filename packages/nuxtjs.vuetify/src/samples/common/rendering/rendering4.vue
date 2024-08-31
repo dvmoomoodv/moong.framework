@@ -9,49 +9,56 @@
   </VCard>
 </template>
 <script lang="ts" setup>
-import { ref, getCurrentInstance, computed, onMounted, onBeforeUnmount, VNode } from '#ustra/nuxt'
-import RenderPopup from './popup/render-popup.vue'
+import {
+  ref,
+  getCurrentInstance,
+  computed,
+  onMounted,
+  onBeforeUnmount,
+  VNode,
+} from "#moong/nuxt";
+import RenderPopup from "./popup/render-popup.vue";
 
 // @ts-ignore
-import doc1 from './md/rendering4-1.md'
+import doc1 from "./md/rendering4-1.md";
 
 // @ts-ignore
-import doc2 from './md/rendering4-2.md'
+import doc2 from "./md/rendering4-2.md";
 
-const renderEl = ref()
+const renderEl = ref();
 
 const { showPopup } = (() => {
-  const instance = getCurrentInstance()
-  const popupVNode = ref<VNode>()
+  const instance = getCurrentInstance();
+  const popupVNode = ref<VNode>();
   const showPopup = computed({
     get() {
       if (!popupVNode.value) {
-        return false
+        return false;
       }
-      return popupVNode.value.component.props.modelValue
+      return popupVNode.value.component.props.modelValue;
     },
     set(value) {
-      popupVNode.value.component.props.modelValue = value
+      popupVNode.value.component.props.modelValue = value;
     },
-  })
+  });
 
   onMounted(() => {
     const { vNode } = $ustra.utils.component.mount(RenderPopup, instance, {
       props: {
         modelValue: showPopup.value,
-        'onUpdate:modelValue': value => {
-          showPopup.value = value
+        "onUpdate:modelValue": (value) => {
+          showPopup.value = value;
         },
       },
       children: undefined,
       element: renderEl.value,
-    })
+    });
 
-    popupVNode.value = vNode
-  }, instance)
+    popupVNode.value = vNode;
+  }, instance);
 
-  onBeforeUnmount(() => (showPopup.value = false), instance)
+  onBeforeUnmount(() => (showPopup.value = false), instance);
 
-  return { showPopup }
-})()
+  return { showPopup };
+})();
 </script>

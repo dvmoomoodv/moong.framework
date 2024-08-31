@@ -1,10 +1,17 @@
 ```html
 <template>
-  <UValidationGroup ref="validationGroup" :checkValidationOnUpdate="checkValidationOnUpdate">
+  <UValidationGroup
+    ref="validationGroup"
+    :checkValidationOnUpdate="checkValidationOnUpdate"
+  >
     <div class="mb-3">
       <div class="mt-2">
         필수 입력 :
-        <UCodeComboBox grpCd="SYS_CD" v-model="fieldValue2" displayNullText="전체" />
+        <UCodeComboBox
+          grpCd="SYS_CD"
+          v-model="fieldValue2"
+          displayNullText="전체"
+        />
       </div>
     </div>
   </UValidationGroup>
@@ -16,18 +23,17 @@
   ></UButton>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
+  import { ref } from "#moong/nuxt";
 
-const fieldValue1 = ref(null)
-const fieldValue2 = ref(null)
-const checkValidationOnUpdate = ref(false)
+  const fieldValue1 = ref(null);
+  const fieldValue2 = ref(null);
+  const checkValidationOnUpdate = ref(false);
 
-const validationGroup = ref<InstanceType<typeof UValidationGroup>>()
-async function validateForm() {
-  const result = await validationGroup.value.validate()
+  const validationGroup = ref<InstanceType<typeof UValidationGroup>>();
+  async function validateForm() {
+    const result = await validationGroup.value.validate();
 
-  console.log('result', result)
-}
+    console.log("result", result);
+  }
 </script>
-
 ```

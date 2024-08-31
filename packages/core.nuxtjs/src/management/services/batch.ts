@@ -1,7 +1,12 @@
-import { apiModels } from '#ustra/core/data'
-import { defineUstraService } from '#ustra/nuxt/composables/service'
-import { ApiOriginOptions } from '#ustra/nuxt/config/nuxt-app-props'
-import { BatchCriteria, Batch, UstraBatchRqVo, UstraBatchOneRqVo } from '#ustra/nuxt/management'
+import { apiModels } from "#moong/core/data";
+import { defineUstraService } from "#moong/nuxt/composables/service";
+import { ApiOriginOptions } from "#moong/nuxt/config/nuxt-app-props";
+import {
+  BatchCriteria,
+  Batch,
+  UstraBatchRqVo,
+  UstraBatchOneRqVo,
+} from "#moong/nuxt/management";
 
 export const useUstraBatchService = defineUstraService(({ api }) => {
   /**
@@ -9,16 +14,20 @@ export const useUstraBatchService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function modBatch(data: UstraBatchRqVo, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function modBatch(
+    data: UstraBatchRqVo,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<apiModels.ResponseCode>>({
       ...option,
       url: `/api/system/batch/edit`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -26,16 +35,20 @@ export const useUstraBatchService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function addBatch(data: UstraBatchRqVo, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function addBatch(
+    data: UstraBatchRqVo,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<apiModels.ResponseCode>>({
       ...option,
       url: `/api/system/batch`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -43,16 +56,20 @@ export const useUstraBatchService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function delBatch(data: UstraBatchOneRqVo, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function delBatch(
+    data: UstraBatchOneRqVo,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<apiModels.ResponseCode>>({
       ...option,
       url: `/api/system/batch/remove`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -60,16 +77,20 @@ export const useUstraBatchService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function startBatch(data: UstraBatchOneRqVo, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function startBatch(
+    data: UstraBatchOneRqVo,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<apiModels.ResponseCode>>({
       ...option,
       url: `/api/system/batch/start`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -77,16 +98,20 @@ export const useUstraBatchService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function getBatchList(data: BatchCriteria, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function getBatchList(
+    data: BatchCriteria,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<Batch[]>>({
       ...option,
       url: `/api/system/batch/list`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
   /**
@@ -94,17 +119,21 @@ export const useUstraBatchService = defineUstraService(({ api }) => {
    *
    *
    */
-  async function getBatch(data: UstraBatchOneRqVo, option: ApiOriginOptions = {}, showLoadingBar: boolean = true) {
+  async function getBatch(
+    data: UstraBatchOneRqVo,
+    option: ApiOriginOptions = {},
+    showLoadingBar: boolean = true
+  ) {
     const res = await api.call<apiModels.ApiResponse<Batch>>({
       ...option,
       url: `/api/system/batch/detail`,
-      method: 'POST',
+      method: "POST",
       showLoadingBar,
       data: data,
-    })
+    });
 
-    return res.data
+    return res.data;
   }
 
-  return { modBatch, addBatch, delBatch, startBatch, getBatchList, getBatch }
-})
+  return { modBatch, addBatch, delBatch, startBatch, getBatchList, getBatch };
+});

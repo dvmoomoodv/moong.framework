@@ -1,75 +1,2569 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>UstraApi | @ustra/nuxt</title><meta name="description" content="Documentation for @ustra/nuxt"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base=".."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">@ustra/nuxt</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb"><li><a href="../index.html">@ustra/nuxt</a></li><li><a href="../modules/plugins_desc_api.html">plugins/desc/api</a></li><li><a href="plugins_desc_api.UstraApi.html">UstraApi</a></li></ul><h1>Class UstraApi</h1></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L22">framework/nuxt/src/plugins/desc/api.ts:22</a></li></ul></aside><section class="tsd-panel-group tsd-index-group"><section class="tsd-panel tsd-index-panel"><details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><h5 class="tsd-index-heading uppercase" role="button" aria-expanded="false" tabIndex="0"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-chevronSmall"></use></svg> Index</h5></summary><div class="tsd-accordion-details"><section class="tsd-index-section"><h3 class="tsd-index-heading">Constructors</h3><div class="tsd-index-list"><a href="plugins_desc_api.UstraApi.html#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a>
-</div></section><section class="tsd-index-section"><h3 class="tsd-index-heading">Properties</h3><div class="tsd-index-list"><a href="plugins_desc_api.UstraApi.html#_ustra" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>$ustra</span></a>
-<a href="plugins_desc_api.UstraApi.html#apiQueue" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>api<wbr/>Queue</span></a>
-<a href="plugins_desc_api.UstraApi.html#axiosConfig" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>axios<wbr/>Config</span></a>
-<a href="plugins_desc_api.UstraApi.html#axiosInstance" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>axios<wbr/>Instance</span></a>
-<a href="plugins_desc_api.UstraApi.html#completedCheckTimer" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>completed<wbr/>Check<wbr/>Timer</span></a>
-<a href="plugins_desc_api.UstraApi.html#cookieStorage" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>cookie<wbr/>Storage</span></a>
-<a href="plugins_desc_api.UstraApi.html#sseInstance" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>sse<wbr/>Instance</span></a>
-</div></section><section class="tsd-index-section"><h3 class="tsd-index-heading">Accessors</h3><div class="tsd-index-list"><a href="plugins_desc_api.UstraApi.html#appProps" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-262144"></use></svg><span>app<wbr/>Props</span></a>
-</div></section><section class="tsd-index-section"><h3 class="tsd-index-heading">Methods</h3><div class="tsd-index-list"><a href="plugins_desc_api.UstraApi.html#addInterceptors" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Interceptors</span></a>
-<a href="plugins_desc_api.UstraApi.html#addRequestCompletedCallback" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Request<wbr/>Completed<wbr/>Callback</span></a>
-<a href="plugins_desc_api.UstraApi.html#applyGlobalRequestInterceptor" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>apply<wbr/>Global<wbr/>Request<wbr/>Interceptor</span></a>
-<a href="plugins_desc_api.UstraApi.html#applyResCodeCheckingInterceptor" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>apply<wbr/>Res<wbr/>Code<wbr/>Checking<wbr/>Interceptor</span></a>
-<a href="plugins_desc_api.UstraApi.html#call" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>call</span></a>
-<a href="plugins_desc_api.UstraApi.html#callNext" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>call<wbr/>Next</span></a>
-<a href="plugins_desc_api.UstraApi.html#cancel" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>cancel</span></a>
-<a href="plugins_desc_api.UstraApi.html#createCancelToken" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create<wbr/>Cancel<wbr/>Token</span></a>
-<a href="plugins_desc_api.UstraApi.html#createUrlEncodedParameter" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create<wbr/>Url<wbr/>Encoded<wbr/>Parameter</span></a>
-<a href="plugins_desc_api.UstraApi.html#defaultRetryCondition" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>default<wbr/>Retry<wbr/>Condition</span></a>
-<a href="plugins_desc_api.UstraApi.html#downloadFile" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>download<wbr/>File</span></a>
-<a href="plugins_desc_api.UstraApi.html#getAxiosInstance" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Axios<wbr/>Instance</span></a>
-<a href="plugins_desc_api.UstraApi.html#getSseInstance" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Sse<wbr/>Instance</span></a>
-<a href="plugins_desc_api.UstraApi.html#isCancel" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Cancel</span></a>
-<a href="plugins_desc_api.UstraApi.html#isInactivatedAuthResponse" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Inactivated<wbr/>Auth<wbr/>Response</span></a>
-<a href="plugins_desc_api.UstraApi.html#normalizeRequestConfig" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>normalize<wbr/>Request<wbr/>Config</span></a>
-<a href="plugins_desc_api.UstraApi.html#sse" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>sse</span></a>
-<a href="plugins_desc_api.UstraApi.html#urlBuilder" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>url<wbr/>Builder</span></a>
-</div></section></div></details></section></section><section class="tsd-panel-group tsd-member-group"><h2>Constructors</h2><section class="tsd-panel tsd-member"><a id="constructor" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>constructor</span><a href="#constructor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="constructor.new_UstraApi" class="tsd-anchor"></a><span class="tsd-kind-constructor-signature">new <wbr/>Ustra<wbr/>Api</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">$ustra</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="plugins_desc_api.UstraApi.html" class="tsd-signature-type tsd-kind-class">UstraApi</a><a href="#constructor.new_UstraApi" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">$ustra</span>: <a href="plugins_ustra.Ustra.html" class="tsd-signature-type tsd-kind-class">Ustra</a></span></li></ul></div><h4 class="tsd-returns-title">Returns <a href="plugins_desc_api.UstraApi.html" class="tsd-signature-type tsd-kind-class">UstraApi</a></h4><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L39">framework/nuxt/src/plugins/desc/api.ts:39</a></li></ul></aside></li></ul></section></section><section class="tsd-panel-group tsd-member-group"><h2>Properties</h2><section class="tsd-panel tsd-member tsd-is-private"><a id="_ustra" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>$ustra</span><a href="#_ustra" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">$ustra</span><span class="tsd-signature-symbol">:</span> <a href="plugins_ustra.Ustra.html" class="tsd-signature-type tsd-kind-class">Ustra</a></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L39">framework/nuxt/src/plugins/desc/api.ts:39</a></li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-private"><a id="apiQueue" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>api<wbr/>Queue</span><a href="#apiQueue" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">api<wbr/>Queue</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">TaskQueue</span></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L37">framework/nuxt/src/plugins/desc/api.ts:37</a></li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-private"><a id="axiosConfig" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>axios<wbr/>Config</span><a href="#axiosConfig" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">axios<wbr/>Config</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RequestConfig</span><span class="tsd-signature-symbol"> = null</span></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L36">framework/nuxt/src/plugins/desc/api.ts:36</a></li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-private"><a id="axiosInstance" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>axios<wbr/>Instance</span><a href="#axiosInstance" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">axios<wbr/>Instance</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">AxiosInstance</span><span class="tsd-signature-symbol"> = null</span></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L34">framework/nuxt/src/plugins/desc/api.ts:34</a></li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-private"><a id="completedCheckTimer" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>completed<wbr/>Check<wbr/>Timer</span><a href="#completedCheckTimer" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">completed<wbr/>Check<wbr/>Timer</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> = null</span></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L539">framework/nuxt/src/plugins/desc/api.ts:539</a></li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-private"><a id="cookieStorage" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>cookie<wbr/>Storage</span><a href="#cookieStorage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">cookie<wbr/>Storage</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">default</span><span class="tsd-signature-symbol"> = ...</span></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L23">framework/nuxt/src/plugins/desc/api.ts:23</a></li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-private"><a id="sseInstance" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>sse<wbr/>Instance</span><a href="#sseInstance" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">sse<wbr/>Instance</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Sse</span><span class="tsd-signature-symbol"> = null</span></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L35">framework/nuxt/src/plugins/desc/api.ts:35</a></li></ul></aside></section></section><section class="tsd-panel-group tsd-member-group"><h2>Accessors</h2><section class="tsd-panel tsd-member tsd-is-private"><a id="appProps" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>app<wbr/>Props</span><a href="#appProps" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures tsd-is-private"><li class="tsd-signature" id="appProps.appProps-1"><span class="tsd-signature-keyword">get</span> appProps<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/config_nuxt_app_props.NuxtAppProps.html" class="tsd-signature-type tsd-kind-interface">NuxtAppProps</a></li><li class="tsd-description"><h4 class="tsd-returns-title">Returns <a href="../interfaces/config_nuxt_app_props.NuxtAppProps.html" class="tsd-signature-type tsd-kind-interface">NuxtAppProps</a></h4><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L47">framework/nuxt/src/plugins/desc/api.ts:47</a></li></ul></aside></li></ul></section></section><section class="tsd-panel-group tsd-member-group"><h2>Methods</h2><section class="tsd-panel tsd-member"><a id="addInterceptors" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>add<wbr/>Interceptors</span><a href="#addInterceptors" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="addInterceptors.addInterceptors-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">add<wbr/>Interceptors</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#addInterceptors.addInterceptors-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>기본 인터셉터 등록</p>
-</div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L96">framework/nuxt/src/plugins/desc/api.ts:96</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="addRequestCompletedCallback" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>add<wbr/>Request<wbr/>Completed<wbr/>Callback</span><a href="#addRequestCompletedCallback" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="addRequestCompletedCallback.addRequestCompletedCallback-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">add<wbr/>Request<wbr/>Completed<wbr/>Callback</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">callback</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#addRequestCompletedCallback.addRequestCompletedCallback-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>서버 요청 응답 시 처리 call back 전달</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">callback</span>: <span class="tsd-signature-type">Function</span></span><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L544">framework/nuxt/src/plugins/desc/api.ts:544</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member tsd-is-private"><a id="applyGlobalRequestInterceptor" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>apply<wbr/>Global<wbr/>Request<wbr/>Interceptor</span><a href="#applyGlobalRequestInterceptor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures tsd-is-private"><li class="tsd-signature tsd-anchor-link"><a id="applyGlobalRequestInterceptor.applyGlobalRequestInterceptor-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">apply<wbr/>Global<wbr/>Request<wbr/>Interceptor</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#applyGlobalRequestInterceptor.applyGlobalRequestInterceptor-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>global api request interceptor를 등록한다.</p>
-</div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L212">framework/nuxt/src/plugins/desc/api.ts:212</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member tsd-is-private"><a id="applyResCodeCheckingInterceptor" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>apply<wbr/>Res<wbr/>Code<wbr/>Checking<wbr/>Interceptor</span><a href="#applyResCodeCheckingInterceptor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures tsd-is-private"><li class="tsd-signature tsd-anchor-link"><a id="applyResCodeCheckingInterceptor.applyResCodeCheckingInterceptor-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">apply<wbr/>Res<wbr/>Code<wbr/>Checking<wbr/>Interceptor</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">appProp</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#applyResCodeCheckingInterceptor.applyResCodeCheckingInterceptor-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>API 오류 처리 interceptor를 등록한다.</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">appProp</span>: <a href="../interfaces/config_nuxt_app_props.NuxtAppProps.html" class="tsd-signature-type tsd-kind-interface">NuxtAppProps</a></span><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L137">framework/nuxt/src/plugins/desc/api.ts:137</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="call" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>call</span><a href="#call" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="call.call-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">call</span><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="plugins_desc_api.UstraApi.html#call.call-1.T">T</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">option</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="plugins_desc_api.UstraApi.html#call.call-1.T">T</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><a href="#call.call-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>API를 호출한다.</p>
-</div><section class="tsd-panel"><h4>Type Parameters</h4><ul class="tsd-type-parameter-list"><li><span><a id="call.call-1.T" class="tsd-anchor"></a><span class="tsd-kind-type-parameter">T</span> = <span class="tsd-signature-type">any</span></span></li></ul></section><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">option</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/config_props_api.ApiOriginOptions.html" class="tsd-signature-type tsd-kind-interface">ApiOriginOptions</a></span><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="plugins_desc_api.UstraApi.html#call.call-1.T">T</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L321">framework/nuxt/src/plugins/desc/api.ts:321</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member tsd-is-private"><a id="callNext" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>call<wbr/>Next</span><a href="#callNext" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures tsd-is-private"><li class="tsd-signature tsd-anchor-link"><a id="callNext.callNext-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">call<wbr/>Next</span><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="plugins_desc_api.UstraApi.html#callNext.callNext-1.T-1">T</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">requestOption</span>, <span class="tsd-kind-parameter">requestId</span>, <span class="tsd-kind-parameter">resolve</span>, <span class="tsd-kind-parameter">reject</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#callNext.callNext-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><section class="tsd-panel"><h4>Type Parameters</h4><ul class="tsd-type-parameter-list"><li><span><a id="callNext.callNext-1.T-1" class="tsd-anchor"></a><span class="tsd-kind-type-parameter">T</span> = <span class="tsd-signature-type">any</span></span></li></ul></section><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">requestOption</span>: <a href="../interfaces/config_props_api.ApiOriginOptions.html" class="tsd-signature-type tsd-kind-interface">ApiOriginOptions</a></span></li><li><span><span class="tsd-kind-parameter">requestId</span>: <span class="tsd-signature-type">string</span></span></li><li><span><span class="tsd-kind-parameter">resolve</span>: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">data</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></span><ul class="tsd-parameters"><li class="tsd-parameter-signature"><ul class="tsd-signatures"><li class="tsd-signature"><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">data</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li><li class="tsd-description"><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">data</span>: <span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="plugins_desc_api.UstraApi.html#callNext.callNext-1.T-1">T</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></span></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></li><li><span><span class="tsd-kind-parameter">reject</span>: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">err</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></span><ul class="tsd-parameters"><li class="tsd-parameter-signature"><ul class="tsd-signatures"><li class="tsd-signature"><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">err</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li><li class="tsd-description"><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">err</span>: <span class="tsd-signature-type">Error</span></span></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L334">framework/nuxt/src/plugins/desc/api.ts:334</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="cancel" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>cancel</span><a href="#cancel" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="cancel.cancel-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">cancel</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">tranTypeId</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#cancel.cancel-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>API 호출을 취소한다.</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">tranTypeId</span>: <span class="tsd-signature-type">string</span></span><div class="tsd-comment tsd-typography"><p>취소할 트랜잭션 유형 아이디</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L401">framework/nuxt/src/plugins/desc/api.ts:401</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="createCancelToken" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>create<wbr/>Cancel<wbr/>Token</span><a href="#createCancelToken" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="createCancelToken.createCancelToken-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">create<wbr/>Cancel<wbr/>Token</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">CancelTokenSource</span><a href="#createCancelToken.createCancelToken-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>cancel token 생성</p>
-</div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">CancelTokenSource</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L409">framework/nuxt/src/plugins/desc/api.ts:409</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="createUrlEncodedParameter" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>create<wbr/>Url<wbr/>Encoded<wbr/>Parameter</span><a href="#createUrlEncodedParameter" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="createUrlEncodedParameter.createUrlEncodedParameter-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">create<wbr/>Url<wbr/>Encoded<wbr/>Parameter</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">params</span>, <span class="tsd-kind-parameter">encodeBase64</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#createUrlEncodedParameter.createUrlEncodedParameter-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>URL encoded parameter를 생성한다.</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">params</span>: <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></span><div class="tsd-comment tsd-typography"><p>파라메터</p>
-</div><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">encodeBase64</span>: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = false</span></span><div class="tsd-comment tsd-typography"><p>base64 인코딩 여부</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L577">framework/nuxt/src/plugins/desc/api.ts:577</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="defaultRetryCondition" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>default<wbr/>Retry<wbr/>Condition</span><a href="#defaultRetryCondition" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="defaultRetryCondition.defaultRetryCondition-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">default<wbr/>Retry<wbr/>Condition</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">err</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#defaultRetryCondition.defaultRetryCondition-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>기본 retry 조건 조회</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">err</span>: <span class="tsd-signature-type">Error</span></span><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L109">framework/nuxt/src/plugins/desc/api.ts:109</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="downloadFile" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>download<wbr/>File</span><a href="#downloadFile" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="downloadFile.downloadFile-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">download<wbr/>File</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">option</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span><a href="#downloadFile.downloadFile-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>파일을 다운로드 한다.</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">option</span>: <span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">data</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">excludeAuthValidation</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">failMessage</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">fileName</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">method</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Method</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">params</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">showLoadingBar</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">timeout</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">url</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></span><div class="tsd-comment tsd-typography"><p>옵션</p>
-<ul>
-<li>url : 호출 URL</li>
-<li>fileName : 다운로드 파일 명</li>
-<li>method : 호출 HTTP 메소드</li>
-<li>showLoadingBar : 로딩바 표시 여부</li>
-<li>data : 호출 데이터</li>
-<li>params : 파라메터</li>
-<li>timeout : 다운로드 timeout</li>
-<li>excludeAuthValidation : 인증 검증 제외 여부</li>
-<li>failMessage : 다운로드 실패 시 메시지</li>
-</ul>
-</div><div class="tsd-comment tsd-typography"></div><ul class="tsd-parameters"><li class="tsd-parameter"><h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-property">data</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span></h5><div class="tsd-comment tsd-typography"><p>데이터</p>
-</div><div class="tsd-comment tsd-typography"></div></li><li class="tsd-parameter"><h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-property">exclude<wbr/>Auth<wbr/>Validation</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5><div class="tsd-comment tsd-typography"><p>인증 검증 제외 여부</p>
-</div><div class="tsd-comment tsd-typography"></div></li><li class="tsd-parameter"><h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-property">fail<wbr/>Message</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span></h5><div class="tsd-comment tsd-typography"><p>다운로드 실패 시 메시지</p>
-</div><div class="tsd-comment tsd-typography"><h4>Default</h4><pre><code class="language-ts"><span class="hl-4">ustra</span><span class="hl-3">.</span><span class="hl-4">file</span><span class="hl-3">.</span><span class="hl-4">errorOnDownloadFile</span>
+<!doctype html>
+<html class="default" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <title>UstraApi | @moong/nuxt</title>
+    <meta name="description" content="Documentation for @moong/nuxt" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/highlight.css" />
+    <script defer src="../assets/main.js"></script>
+    <script async src="../assets/icons.js" id="tsd-icons-script"></script>
+    <script async src="../assets/search.js" id="tsd-search-script"></script>
+    <script async src="../assets/navigation.js" id="tsd-nav-script"></script>
+  </head>
+  <body>
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("tsd-theme") || "os";
+      document.body.style.display = "none";
+      setTimeout(
+        () =>
+          app ? app.showPage() : document.body.style.removeProperty("display"),
+        500
+      );
+    </script>
+    <header class="tsd-page-toolbar">
+      <div class="tsd-toolbar-contents container">
+        <div class="table-cell" id="tsd-search" data-base="..">
+          <div class="field">
+            <label
+              for="tsd-search-field"
+              class="tsd-widget tsd-toolbar-icon search no-caption"
+              ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use href="../assets/icons.svg#icon-search"></use></svg></label
+            ><input type="text" id="tsd-search-field" aria-label="Search" />
+          </div>
+          <div class="field"><div id="tsd-toolbar-links"></div></div>
+          <ul class="results">
+            <li class="state loading">Preparing search index...</li>
+            <li class="state failure">The search index is not available</li>
+          </ul>
+          <a href="../index.html" class="title">@moong/nuxt</a>
+        </div>
+        <div class="table-cell" id="tsd-widgets">
+          <a
+            href="#"
+            class="tsd-widget tsd-toolbar-icon menu no-caption"
+            data-toggle="menu"
+            aria-label="Menu"
+            ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use href="../assets/icons.svg#icon-menu"></use></svg
+          ></a>
+        </div>
+      </div>
+    </header>
+    <div class="container container-main">
+      <div class="col-content">
+        <div class="tsd-page-title">
+          <ul class="tsd-breadcrumb">
+            <li><a href="../index.html">@moong/nuxt</a></li>
+            <li>
+              <a href="../modules/plugins_desc_api.html">plugins/desc/api</a>
+            </li>
+            <li><a href="plugins_desc_api.UstraApi.html">UstraApi</a></li>
+          </ul>
+          <h1>Class UstraApi</h1>
+        </div>
+        <aside class="tsd-sources">
+          <ul>
+            <li>
+              Defined in
+              <a
+                href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L22"
+                >framework/nuxt/src/plugins/desc/api.ts:22</a
+              >
+            </li>
+          </ul>
+        </aside>
+        <section class="tsd-panel-group tsd-index-group">
+          <section class="tsd-panel tsd-index-panel">
+            <details class="tsd-index-content tsd-index-accordion" open>
+              <summary class="tsd-accordion-summary tsd-index-summary">
+                <h5
+                  class="tsd-index-heading uppercase"
+                  role="button"
+                  aria-expanded="false"
+                  tabindex="0"
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <use href="../assets/icons.svg#icon-chevronSmall"></use>
+                  </svg>
+                  Index
+                </h5>
+              </summary>
+              <div class="tsd-accordion-details">
+                <section class="tsd-index-section">
+                  <h3 class="tsd-index-heading">Constructors</h3>
+                  <div class="tsd-index-list">
+                    <a
+                      href="plugins_desc_api.UstraApi.html#constructor"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-512"></use></svg
+                      ><span>constructor</span></a
+                    >
+                  </div>
+                </section>
+                <section class="tsd-index-section">
+                  <h3 class="tsd-index-heading">Properties</h3>
+                  <div class="tsd-index-list">
+                    <a
+                      href="plugins_desc_api.UstraApi.html#_ustra"
+                      class="tsd-index-link tsd-is-private"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>$ustra</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#apiQueue"
+                      class="tsd-index-link tsd-is-private"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>api<wbr />Queue</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#axiosConfig"
+                      class="tsd-index-link tsd-is-private"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>axios<wbr />Config</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#axiosInstance"
+                      class="tsd-index-link tsd-is-private"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>axios<wbr />Instance</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#completedCheckTimer"
+                      class="tsd-index-link tsd-is-private"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>completed<wbr />Check<wbr />Timer</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#cookieStorage"
+                      class="tsd-index-link tsd-is-private"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>cookie<wbr />Storage</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#sseInstance"
+                      class="tsd-index-link tsd-is-private"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>sse<wbr />Instance</span></a
+                    >
+                  </div>
+                </section>
+                <section class="tsd-index-section">
+                  <h3 class="tsd-index-heading">Accessors</h3>
+                  <div class="tsd-index-list">
+                    <a
+                      href="plugins_desc_api.UstraApi.html#appProps"
+                      class="tsd-index-link tsd-is-private"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-262144"></use></svg
+                      ><span>app<wbr />Props</span></a
+                    >
+                  </div>
+                </section>
+                <section class="tsd-index-section">
+                  <h3 class="tsd-index-heading">Methods</h3>
+                  <div class="tsd-index-list">
+                    <a
+                      href="plugins_desc_api.UstraApi.html#addInterceptors"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>add<wbr />Interceptors</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#addRequestCompletedCallback"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span
+                        >add<wbr />Request<wbr />Completed<wbr />Callback</span
+                      ></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#applyGlobalRequestInterceptor"
+                      class="tsd-index-link tsd-is-private"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span
+                        >apply<wbr />Global<wbr />Request<wbr />Interceptor</span
+                      ></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#applyResCodeCheckingInterceptor"
+                      class="tsd-index-link tsd-is-private"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span
+                        >apply<wbr />Res<wbr />Code<wbr />Checking<wbr />Interceptor</span
+                      ></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#call"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>call</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#callNext"
+                      class="tsd-index-link tsd-is-private"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>call<wbr />Next</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#cancel"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>cancel</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#createCancelToken"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>create<wbr />Cancel<wbr />Token</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#createUrlEncodedParameter"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span
+                        >create<wbr />Url<wbr />Encoded<wbr />Parameter</span
+                      ></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#defaultRetryCondition"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>default<wbr />Retry<wbr />Condition</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#downloadFile"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>download<wbr />File</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#getAxiosInstance"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>get<wbr />Axios<wbr />Instance</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#getSseInstance"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>get<wbr />Sse<wbr />Instance</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#isCancel"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>is<wbr />Cancel</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#isInactivatedAuthResponse"
+                      class="tsd-index-link tsd-is-private"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span
+                        >is<wbr />Inactivated<wbr />Auth<wbr />Response</span
+                      ></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#normalizeRequestConfig"
+                      class="tsd-index-link tsd-is-private"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>normalize<wbr />Request<wbr />Config</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#sse"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>sse</span></a
+                    >
+                    <a
+                      href="plugins_desc_api.UstraApi.html#urlBuilder"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>url<wbr />Builder</span></a
+                    >
+                  </div>
+                </section>
+              </div>
+            </details>
+          </section>
+        </section>
+        <section class="tsd-panel-group tsd-member-group">
+          <h2>Constructors</h2>
+          <section class="tsd-panel tsd-member">
+            <a id="constructor" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>constructor</span
+              ><a
+                href="#constructor"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="constructor.new_UstraApi" class="tsd-anchor"></a
+                ><span class="tsd-kind-constructor-signature"
+                  >new <wbr />Ustra<wbr />Api</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">$ustra</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><a
+                  href="plugins_desc_api.UstraApi.html"
+                  class="tsd-signature-type tsd-kind-class"
+                  >UstraApi</a
+                ><a
+                  href="#constructor.new_UstraApi"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">$ustra</span>:
+                        <a
+                          href="plugins_ustra.Ustra.html"
+                          class="tsd-signature-type tsd-kind-class"
+                          >Ustra</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns
+                  <a
+                    href="plugins_desc_api.UstraApi.html"
+                    class="tsd-signature-type tsd-kind-class"
+                    >UstraApi</a
+                  >
+                </h4>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L39"
+                        >framework/nuxt/src/plugins/desc/api.ts:39</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section class="tsd-panel-group tsd-member-group">
+          <h2>Properties</h2>
+          <section class="tsd-panel tsd-member tsd-is-private">
+            <a id="_ustra" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagPrivate">Private</code>
+              <span>$ustra</span
+              ><a href="#_ustra" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">$ustra</span
+              ><span class="tsd-signature-symbol">:</span>
+              <a
+                href="plugins_ustra.Ustra.html"
+                class="tsd-signature-type tsd-kind-class"
+                >Ustra</a
+              >
+            </div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L39"
+                    >framework/nuxt/src/plugins/desc/api.ts:39</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-private">
+            <a id="apiQueue" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagPrivate">Private</code>
+              <span>api<wbr />Queue</span
+              ><a
+                href="#apiQueue"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">api<wbr />Queue</span
+              ><span class="tsd-signature-symbol">:</span>
+              <span class="tsd-signature-type">TaskQueue</span>
+            </div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L37"
+                    >framework/nuxt/src/plugins/desc/api.ts:37</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-private">
+            <a id="axiosConfig" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagPrivate">Private</code>
+              <span>axios<wbr />Config</span
+              ><a
+                href="#axiosConfig"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">axios<wbr />Config</span
+              ><span class="tsd-signature-symbol">:</span>
+              <span class="tsd-signature-type">RequestConfig</span
+              ><span class="tsd-signature-symbol"> = null</span>
+            </div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L36"
+                    >framework/nuxt/src/plugins/desc/api.ts:36</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-private">
+            <a id="axiosInstance" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagPrivate">Private</code>
+              <span>axios<wbr />Instance</span
+              ><a
+                href="#axiosInstance"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">axios<wbr />Instance</span
+              ><span class="tsd-signature-symbol">:</span>
+              <span class="tsd-signature-type">AxiosInstance</span
+              ><span class="tsd-signature-symbol"> = null</span>
+            </div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L34"
+                    >framework/nuxt/src/plugins/desc/api.ts:34</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-private">
+            <a id="completedCheckTimer" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagPrivate">Private</code>
+              <span>completed<wbr />Check<wbr />Timer</span
+              ><a
+                href="#completedCheckTimer"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property"
+                >completed<wbr />Check<wbr />Timer</span
+              ><span class="tsd-signature-symbol">:</span>
+              <span class="tsd-signature-type">any</span
+              ><span class="tsd-signature-symbol"> = null</span>
+            </div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L539"
+                    >framework/nuxt/src/plugins/desc/api.ts:539</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-private">
+            <a id="cookieStorage" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagPrivate">Private</code>
+              <span>cookie<wbr />Storage</span
+              ><a
+                href="#cookieStorage"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">cookie<wbr />Storage</span
+              ><span class="tsd-signature-symbol">:</span>
+              <span class="tsd-signature-type">default</span
+              ><span class="tsd-signature-symbol"> = ...</span>
+            </div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L23"
+                    >framework/nuxt/src/plugins/desc/api.ts:23</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-private">
+            <a id="sseInstance" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagPrivate">Private</code>
+              <span>sse<wbr />Instance</span
+              ><a
+                href="#sseInstance"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">sse<wbr />Instance</span
+              ><span class="tsd-signature-symbol">:</span>
+              <span class="tsd-signature-type">Sse</span
+              ><span class="tsd-signature-symbol"> = null</span>
+            </div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L35"
+                    >framework/nuxt/src/plugins/desc/api.ts:35</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+        <section class="tsd-panel-group tsd-member-group">
+          <h2>Accessors</h2>
+          <section class="tsd-panel tsd-member tsd-is-private">
+            <a id="appProps" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagPrivate">Private</code>
+              <span>app<wbr />Props</span
+              ><a
+                href="#appProps"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures tsd-is-private">
+              <li class="tsd-signature" id="appProps.appProps-1">
+                <span class="tsd-signature-keyword">get</span> appProps<span
+                  class="tsd-signature-symbol"
+                  >(</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><a
+                  href="../interfaces/config_nuxt_app_props.NuxtAppProps.html"
+                  class="tsd-signature-type tsd-kind-interface"
+                  >NuxtAppProps</a
+                >
+              </li>
+              <li class="tsd-description">
+                <h4 class="tsd-returns-title">
+                  Returns
+                  <a
+                    href="../interfaces/config_nuxt_app_props.NuxtAppProps.html"
+                    class="tsd-signature-type tsd-kind-interface"
+                    >NuxtAppProps</a
+                  >
+                </h4>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L47"
+                        >framework/nuxt/src/plugins/desc/api.ts:47</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section class="tsd-panel-group tsd-member-group">
+          <h2>Methods</h2>
+          <section class="tsd-panel tsd-member">
+            <a id="addInterceptors" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>add<wbr />Interceptors</span
+              ><a
+                href="#addInterceptors"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="addInterceptors.addInterceptors-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature"
+                  >add<wbr />Interceptors</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Promise</span
+                ><span class="tsd-signature-symbol">&lt;</span
+                ><span class="tsd-signature-type">void</span
+                ><span class="tsd-signature-symbol">&gt;</span
+                ><a
+                  href="#addInterceptors.addInterceptors-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>기본 인터셉터 등록</p>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Promise</span
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><span class="tsd-signature-type">void</span
+                  ><span class="tsd-signature-symbol">&gt;</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L96"
+                        >framework/nuxt/src/plugins/desc/api.ts:96</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="addRequestCompletedCallback" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>add<wbr />Request<wbr />Completed<wbr />Callback</span
+              ><a
+                href="#addRequestCompletedCallback"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="addRequestCompletedCallback.addRequestCompletedCallback-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >add<wbr />Request<wbr />Completed<wbr />Callback</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">callback</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">void</span
+                ><a
+                  href="#addRequestCompletedCallback.addRequestCompletedCallback-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>서버 요청 응답 시 처리 call back 전달</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">callback</span>:
+                        <span class="tsd-signature-type">Function</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">void</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L544"
+                        >framework/nuxt/src/plugins/desc/api.ts:544</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-private">
+            <a id="applyGlobalRequestInterceptor" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagPrivate">Private</code>
+              <span>apply<wbr />Global<wbr />Request<wbr />Interceptor</span
+              ><a
+                href="#applyGlobalRequestInterceptor"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures tsd-is-private">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="applyGlobalRequestInterceptor.applyGlobalRequestInterceptor-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >apply<wbr />Global<wbr />Request<wbr />Interceptor</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Promise</span
+                ><span class="tsd-signature-symbol">&lt;</span
+                ><span class="tsd-signature-type">void</span
+                ><span class="tsd-signature-symbol">&gt;</span
+                ><a
+                  href="#applyGlobalRequestInterceptor.applyGlobalRequestInterceptor-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>global api request interceptor를 등록한다.</p>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Promise</span
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><span class="tsd-signature-type">void</span
+                  ><span class="tsd-signature-symbol">&gt;</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L212"
+                        >framework/nuxt/src/plugins/desc/api.ts:212</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-private">
+            <a id="applyResCodeCheckingInterceptor" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagPrivate">Private</code>
+              <span
+                >apply<wbr />Res<wbr />Code<wbr />Checking<wbr />Interceptor</span
+              ><a
+                href="#applyResCodeCheckingInterceptor"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures tsd-is-private">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="applyResCodeCheckingInterceptor.applyResCodeCheckingInterceptor-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >apply<wbr />Res<wbr />Code<wbr />Checking<wbr />Interceptor</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">appProp</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Promise</span
+                ><span class="tsd-signature-symbol">&lt;</span
+                ><span class="tsd-signature-type">void</span
+                ><span class="tsd-signature-symbol">&gt;</span
+                ><a
+                  href="#applyResCodeCheckingInterceptor.applyResCodeCheckingInterceptor-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>API 오류 처리 interceptor를 등록한다.</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">appProp</span>:
+                        <a
+                          href="../interfaces/config_nuxt_app_props.NuxtAppProps.html"
+                          class="tsd-signature-type tsd-kind-interface"
+                          >NuxtAppProps</a
+                        ></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Promise</span
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><span class="tsd-signature-type">void</span
+                  ><span class="tsd-signature-symbol">&gt;</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L137"
+                        >framework/nuxt/src/plugins/desc/api.ts:137</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="call" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>call</span
+              ><a href="#call" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="call.call-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature">call</span
+                ><span class="tsd-signature-symbol">&lt;</span
+                ><a
+                  class="tsd-signature-type tsd-kind-type-parameter"
+                  href="plugins_desc_api.UstraApi.html#call.call-1.T"
+                  >T</a
+                ><span class="tsd-signature-symbol">&gt;</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">option</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Promise</span
+                ><span class="tsd-signature-symbol">&lt;</span
+                ><span class="tsd-signature-type">AxiosResponse</span
+                ><span class="tsd-signature-symbol">&lt;</span
+                ><a
+                  class="tsd-signature-type tsd-kind-type-parameter"
+                  href="plugins_desc_api.UstraApi.html#call.call-1.T"
+                  >T</a
+                ><span class="tsd-signature-symbol">, </span
+                ><span class="tsd-signature-type">any</span
+                ><span class="tsd-signature-symbol">&gt;</span
+                ><span class="tsd-signature-symbol">&gt;</span
+                ><a
+                  href="#call.call-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>API를 호출한다.</p>
+                </div>
+                <section class="tsd-panel">
+                  <h4>Type Parameters</h4>
+                  <ul class="tsd-type-parameter-list">
+                    <li>
+                      <span
+                        ><a id="call.call-1.T" class="tsd-anchor"></a
+                        ><span class="tsd-kind-type-parameter">T</span> =
+                        <span class="tsd-signature-type">any</span></span
+                      >
+                    </li>
+                  </ul>
+                </section>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">option</span>:
+                        <span class="tsd-signature-type">string</span
+                        ><span class="tsd-signature-symbol"> | </span
+                        ><a
+                          href="../interfaces/config_props_api.ApiOriginOptions.html"
+                          class="tsd-signature-type tsd-kind-interface"
+                          >ApiOriginOptions</a
+                        ></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Promise</span
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><span class="tsd-signature-type">AxiosResponse</span
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><a
+                    class="tsd-signature-type tsd-kind-type-parameter"
+                    href="plugins_desc_api.UstraApi.html#call.call-1.T"
+                    >T</a
+                  ><span class="tsd-signature-symbol">, </span
+                  ><span class="tsd-signature-type">any</span
+                  ><span class="tsd-signature-symbol">&gt;</span
+                  ><span class="tsd-signature-symbol">&gt;</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L321"
+                        >framework/nuxt/src/plugins/desc/api.ts:321</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-private">
+            <a id="callNext" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagPrivate">Private</code>
+              <span>call<wbr />Next</span
+              ><a
+                href="#callNext"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures tsd-is-private">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="callNext.callNext-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature">call<wbr />Next</span
+                ><span class="tsd-signature-symbol">&lt;</span
+                ><a
+                  class="tsd-signature-type tsd-kind-type-parameter"
+                  href="plugins_desc_api.UstraApi.html#callNext.callNext-1.T-1"
+                  >T</a
+                ><span class="tsd-signature-symbol">&gt;</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">requestOption</span>,
+                <span class="tsd-kind-parameter">requestId</span>,
+                <span class="tsd-kind-parameter">resolve</span>,
+                <span class="tsd-kind-parameter">reject</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Promise</span
+                ><span class="tsd-signature-symbol">&lt;</span
+                ><span class="tsd-signature-type">void</span
+                ><span class="tsd-signature-symbol">&gt;</span
+                ><a
+                  href="#callNext.callNext-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <section class="tsd-panel">
+                  <h4>Type Parameters</h4>
+                  <ul class="tsd-type-parameter-list">
+                    <li>
+                      <span
+                        ><a id="callNext.callNext-1.T-1" class="tsd-anchor"></a
+                        ><span class="tsd-kind-type-parameter">T</span> =
+                        <span class="tsd-signature-type">any</span></span
+                      >
+                    </li>
+                  </ul>
+                </section>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">requestOption</span>:
+                        <a
+                          href="../interfaces/config_props_api.ApiOriginOptions.html"
+                          class="tsd-signature-type tsd-kind-interface"
+                          >ApiOriginOptions</a
+                        ></span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">requestId</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">resolve</span>:
+                        <span class="tsd-signature-symbol">(</span
+                        ><span class="tsd-signature-symbol">(</span
+                        ><span class="tsd-kind-parameter">data</span
+                        ><span class="tsd-signature-symbol">)</span
+                        ><span class="tsd-signature-symbol"> =&gt; </span
+                        ><span class="tsd-signature-type">void</span
+                        ><span class="tsd-signature-symbol">)</span></span
+                      >
+                      <ul class="tsd-parameters">
+                        <li class="tsd-parameter-signature">
+                          <ul class="tsd-signatures">
+                            <li class="tsd-signature">
+                              <span class="tsd-signature-symbol">(</span
+                              ><span class="tsd-kind-parameter">data</span
+                              ><span class="tsd-signature-symbol">)</span
+                              ><span class="tsd-signature-symbol">: </span
+                              ><span class="tsd-signature-type">void</span>
+                            </li>
+                            <li class="tsd-description">
+                              <div class="tsd-parameters">
+                                <h4 class="tsd-parameters-title">Parameters</h4>
+                                <ul class="tsd-parameter-list">
+                                  <li>
+                                    <span
+                                      ><span class="tsd-kind-parameter"
+                                        >data</span
+                                      >:
+                                      <span class="tsd-signature-type"
+                                        >AxiosResponse</span
+                                      ><span class="tsd-signature-symbol"
+                                        >&lt;</span
+                                      ><a
+                                        class="tsd-signature-type tsd-kind-type-parameter"
+                                        href="plugins_desc_api.UstraApi.html#callNext.callNext-1.T-1"
+                                        >T</a
+                                      ><span class="tsd-signature-symbol"
+                                        >, </span
+                                      ><span class="tsd-signature-type"
+                                        >any</span
+                                      ><span class="tsd-signature-symbol"
+                                        >&gt;</span
+                                      ></span
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                              <h4 class="tsd-returns-title">
+                                Returns
+                                <span class="tsd-signature-type">void</span>
+                              </h4>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">reject</span>:
+                        <span class="tsd-signature-symbol">(</span
+                        ><span class="tsd-signature-symbol">(</span
+                        ><span class="tsd-kind-parameter">err</span
+                        ><span class="tsd-signature-symbol">)</span
+                        ><span class="tsd-signature-symbol"> =&gt; </span
+                        ><span class="tsd-signature-type">void</span
+                        ><span class="tsd-signature-symbol">)</span></span
+                      >
+                      <ul class="tsd-parameters">
+                        <li class="tsd-parameter-signature">
+                          <ul class="tsd-signatures">
+                            <li class="tsd-signature">
+                              <span class="tsd-signature-symbol">(</span
+                              ><span class="tsd-kind-parameter">err</span
+                              ><span class="tsd-signature-symbol">)</span
+                              ><span class="tsd-signature-symbol">: </span
+                              ><span class="tsd-signature-type">void</span>
+                            </li>
+                            <li class="tsd-description">
+                              <div class="tsd-parameters">
+                                <h4 class="tsd-parameters-title">Parameters</h4>
+                                <ul class="tsd-parameter-list">
+                                  <li>
+                                    <span
+                                      ><span class="tsd-kind-parameter"
+                                        >err</span
+                                      >:
+                                      <span class="tsd-signature-type"
+                                        >Error</span
+                                      ></span
+                                    >
+                                  </li>
+                                </ul>
+                              </div>
+                              <h4 class="tsd-returns-title">
+                                Returns
+                                <span class="tsd-signature-type">void</span>
+                              </h4>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Promise</span
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><span class="tsd-signature-type">void</span
+                  ><span class="tsd-signature-symbol">&gt;</span>
+                </h4>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L334"
+                        >framework/nuxt/src/plugins/desc/api.ts:334</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="cancel" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>cancel</span
+              ><a href="#cancel" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="cancel.cancel-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature">cancel</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">tranTypeId</span
+                ><span class="tsd-signature-symbol">?</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Promise</span
+                ><span class="tsd-signature-symbol">&lt;</span
+                ><span class="tsd-signature-type">void</span
+                ><span class="tsd-signature-symbol">&gt;</span
+                ><a
+                  href="#cancel.cancel-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>API 호출을 취소한다.</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><code class="tsd-tag ts-flagOptional">Optional</code>
+                        <span class="tsd-kind-parameter">tranTypeId</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>취소할 트랜잭션 유형 아이디</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Promise</span
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><span class="tsd-signature-type">void</span
+                  ><span class="tsd-signature-symbol">&gt;</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L401"
+                        >framework/nuxt/src/plugins/desc/api.ts:401</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="createCancelToken" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>create<wbr />Cancel<wbr />Token</span
+              ><a
+                href="#createCancelToken"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="createCancelToken.createCancelToken-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >create<wbr />Cancel<wbr />Token</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">CancelTokenSource</span
+                ><a
+                  href="#createCancelToken.createCancelToken-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>cancel token 생성</p>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns
+                  <span class="tsd-signature-type">CancelTokenSource</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L409"
+                        >framework/nuxt/src/plugins/desc/api.ts:409</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="createUrlEncodedParameter" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>create<wbr />Url<wbr />Encoded<wbr />Parameter</span
+              ><a
+                href="#createUrlEncodedParameter"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="createUrlEncodedParameter.createUrlEncodedParameter-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >create<wbr />Url<wbr />Encoded<wbr />Parameter</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">params</span>,
+                <span class="tsd-kind-parameter">encodeBase64</span
+                ><span class="tsd-signature-symbol">?</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">string</span
+                ><a
+                  href="#createUrlEncodedParameter.createUrlEncodedParameter-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>URL encoded parameter를 생성한다.</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">params</span>:
+                        <span class="tsd-signature-type">Record</span
+                        ><span class="tsd-signature-symbol">&lt;</span
+                        ><span class="tsd-signature-type">string</span
+                        ><span class="tsd-signature-symbol">, </span
+                        ><span class="tsd-signature-type">string</span
+                        ><span class="tsd-signature-symbol">&gt;</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>파라메터</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">encodeBase64</span>:
+                        <span class="tsd-signature-type">boolean</span
+                        ><span class="tsd-signature-symbol">
+                          = false</span
+                        ></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>base64 인코딩 여부</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">string</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L577"
+                        >framework/nuxt/src/plugins/desc/api.ts:577</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="defaultRetryCondition" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>default<wbr />Retry<wbr />Condition</span
+              ><a
+                href="#defaultRetryCondition"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="defaultRetryCondition.defaultRetryCondition-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >default<wbr />Retry<wbr />Condition</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">err</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">boolean</span
+                ><a
+                  href="#defaultRetryCondition.defaultRetryCondition-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>기본 retry 조건 조회</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">err</span>:
+                        <span class="tsd-signature-type">Error</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">boolean</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L109"
+                        >framework/nuxt/src/plugins/desc/api.ts:109</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="downloadFile" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>download<wbr />File</span
+              ><a
+                href="#downloadFile"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="downloadFile.downloadFile-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature">download<wbr />File</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">option</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Promise</span
+                ><span class="tsd-signature-symbol">&lt;</span
+                ><span class="tsd-signature-type">void</span
+                ><span class="tsd-signature-symbol">&gt;</span
+                ><a
+                  href="#downloadFile.downloadFile-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>파일을 다운로드 한다.</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">option</span>:
+                        <span class="tsd-signature-symbol">{ </span><br /><span
+                          >    </span
+                        ><span class="tsd-kind-property">data</span
+                        ><span class="tsd-signature-symbol">?: </span
+                        ><span class="tsd-signature-type">any</span
+                        ><span class="tsd-signature-symbol">; </span><br /><span
+                          >    </span
+                        ><span class="tsd-kind-property"
+                          >excludeAuthValidation</span
+                        ><span class="tsd-signature-symbol">?: </span
+                        ><span class="tsd-signature-type">boolean</span
+                        ><span class="tsd-signature-symbol">; </span><br /><span
+                          >    </span
+                        ><span class="tsd-kind-property">failMessage</span
+                        ><span class="tsd-signature-symbol">?: </span
+                        ><span class="tsd-signature-type">string</span
+                        ><span class="tsd-signature-symbol">; </span><br /><span
+                          >    </span
+                        ><span class="tsd-kind-property">fileName</span
+                        ><span class="tsd-signature-symbol">: </span
+                        ><span class="tsd-signature-type">string</span
+                        ><span class="tsd-signature-symbol">; </span><br /><span
+                          >    </span
+                        ><span class="tsd-kind-property">method</span
+                        ><span class="tsd-signature-symbol">?: </span
+                        ><span class="tsd-signature-type">Method</span
+                        ><span class="tsd-signature-symbol">; </span><br /><span
+                          >    </span
+                        ><span class="tsd-kind-property">params</span
+                        ><span class="tsd-signature-symbol">?: </span
+                        ><span class="tsd-signature-type">Record</span
+                        ><span class="tsd-signature-symbol">&lt;</span
+                        ><span class="tsd-signature-type">string</span
+                        ><span class="tsd-signature-symbol">, </span
+                        ><span class="tsd-signature-type">any</span
+                        ><span class="tsd-signature-symbol">&gt;</span
+                        ><span class="tsd-signature-symbol">; </span><br /><span
+                          >    </span
+                        ><span class="tsd-kind-property">showLoadingBar</span
+                        ><span class="tsd-signature-symbol">?: </span
+                        ><span class="tsd-signature-type">boolean</span
+                        ><span class="tsd-signature-symbol">; </span><br /><span
+                          >    </span
+                        ><span class="tsd-kind-property">timeout</span
+                        ><span class="tsd-signature-symbol">?: </span
+                        ><span class="tsd-signature-type">number</span
+                        ><span class="tsd-signature-symbol">; </span><br /><span
+                          >    </span
+                        ><span class="tsd-kind-property">url</span
+                        ><span class="tsd-signature-symbol">: </span
+                        ><span class="tsd-signature-type">string</span
+                        ><span class="tsd-signature-symbol">; </span><br /><span
+                          class="tsd-signature-symbol"
+                          >}</span
+                        ></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>옵션</p>
+                        <ul>
+                          <li>url : 호출 URL</li>
+                          <li>fileName : 다운로드 파일 명</li>
+                          <li>method : 호출 HTTP 메소드</li>
+                          <li>showLoadingBar : 로딩바 표시 여부</li>
+                          <li>data : 호출 데이터</li>
+                          <li>params : 파라메터</li>
+                          <li>timeout : 다운로드 timeout</li>
+                          <li>excludeAuthValidation : 인증 검증 제외 여부</li>
+                          <li>failMessage : 다운로드 실패 시 메시지</li>
+                        </ul>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                      <ul class="tsd-parameters">
+                        <li class="tsd-parameter">
+                          <h5>
+                            <code class="tsd-tag ts-flagOptional"
+                              >Optional</code
+                            >
+                            <span class="tsd-kind-property">data</span
+                            ><span class="tsd-signature-symbol">?: </span
+                            ><span class="tsd-signature-type">any</span>
+                          </h5>
+                          <div class="tsd-comment tsd-typography">
+                            <p>데이터</p>
+                          </div>
+                          <div class="tsd-comment tsd-typography"></div>
+                        </li>
+                        <li class="tsd-parameter">
+                          <h5>
+                            <code class="tsd-tag ts-flagOptional"
+                              >Optional</code
+                            >
+                            <span class="tsd-kind-property"
+                              >exclude<wbr />Auth<wbr />Validation</span
+                            ><span class="tsd-signature-symbol">?: </span
+                            ><span class="tsd-signature-type">boolean</span>
+                          </h5>
+                          <div class="tsd-comment tsd-typography">
+                            <p>인증 검증 제외 여부</p>
+                          </div>
+                          <div class="tsd-comment tsd-typography"></div>
+                        </li>
+                        <li class="tsd-parameter">
+                          <h5>
+                            <code class="tsd-tag ts-flagOptional"
+                              >Optional</code
+                            >
+                            <span class="tsd-kind-property"
+                              >fail<wbr />Message</span
+                            ><span class="tsd-signature-symbol">?: </span
+                            ><span class="tsd-signature-type">string</span>
+                          </h5>
+                          <div class="tsd-comment tsd-typography">
+                            <p>다운로드 실패 시 메시지</p>
+                          </div>
+                          <div class="tsd-comment tsd-typography">
+                            <h4>Default</h4>
+                            <pre><code class="language-ts"><span class="hl-4">ustra</span><span class="hl-3">.</span><span class="hl-4">file</span><span class="hl-3">.</span><span class="hl-4">errorOnDownloadFile</span>
 </code><button>Copy</button></pre>
-</div></li><li class="tsd-parameter"><h5><span class="tsd-kind-property">file<wbr/>Name</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5><div class="tsd-comment tsd-typography"><p>다운로드 파일 명</p>
-</div><div class="tsd-comment tsd-typography"></div></li><li class="tsd-parameter"><h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-property">method</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Method</span></h5><div class="tsd-comment tsd-typography"><p>호출 HTTP 메소드</p>
-</div><div class="tsd-comment tsd-typography"></div></li><li class="tsd-parameter"><h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-property">params</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5><div class="tsd-comment tsd-typography"><p>쿼리 파라미터</p>
-</div><div class="tsd-comment tsd-typography"></div></li><li class="tsd-parameter"><h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-property">show<wbr/>Loading<wbr/>Bar</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span></h5><div class="tsd-comment tsd-typography"><p>로딩바 표시 여부</p>
-</div><div class="tsd-comment tsd-typography"></div></li><li class="tsd-parameter"><h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-property">timeout</span><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5><div class="tsd-comment tsd-typography"><p>다운로드 timeout</p>
-</div><div class="tsd-comment tsd-typography"><h4>Default</h4><pre><code class="language-ts"><span class="hl-1">60000</span>
+                          </div>
+                        </li>
+                        <li class="tsd-parameter">
+                          <h5>
+                            <span class="tsd-kind-property"
+                              >file<wbr />Name</span
+                            ><span class="tsd-signature-symbol">: </span
+                            ><span class="tsd-signature-type">string</span>
+                          </h5>
+                          <div class="tsd-comment tsd-typography">
+                            <p>다운로드 파일 명</p>
+                          </div>
+                          <div class="tsd-comment tsd-typography"></div>
+                        </li>
+                        <li class="tsd-parameter">
+                          <h5>
+                            <code class="tsd-tag ts-flagOptional"
+                              >Optional</code
+                            >
+                            <span class="tsd-kind-property">method</span
+                            ><span class="tsd-signature-symbol">?: </span
+                            ><span class="tsd-signature-type">Method</span>
+                          </h5>
+                          <div class="tsd-comment tsd-typography">
+                            <p>호출 HTTP 메소드</p>
+                          </div>
+                          <div class="tsd-comment tsd-typography"></div>
+                        </li>
+                        <li class="tsd-parameter">
+                          <h5>
+                            <code class="tsd-tag ts-flagOptional"
+                              >Optional</code
+                            >
+                            <span class="tsd-kind-property">params</span
+                            ><span class="tsd-signature-symbol">?: </span
+                            ><span class="tsd-signature-type">Record</span
+                            ><span class="tsd-signature-symbol">&lt;</span
+                            ><span class="tsd-signature-type">string</span
+                            ><span class="tsd-signature-symbol">, </span
+                            ><span class="tsd-signature-type">any</span
+                            ><span class="tsd-signature-symbol">&gt;</span>
+                          </h5>
+                          <div class="tsd-comment tsd-typography">
+                            <p>쿼리 파라미터</p>
+                          </div>
+                          <div class="tsd-comment tsd-typography"></div>
+                        </li>
+                        <li class="tsd-parameter">
+                          <h5>
+                            <code class="tsd-tag ts-flagOptional"
+                              >Optional</code
+                            >
+                            <span class="tsd-kind-property"
+                              >show<wbr />Loading<wbr />Bar</span
+                            ><span class="tsd-signature-symbol">?: </span
+                            ><span class="tsd-signature-type">boolean</span>
+                          </h5>
+                          <div class="tsd-comment tsd-typography">
+                            <p>로딩바 표시 여부</p>
+                          </div>
+                          <div class="tsd-comment tsd-typography"></div>
+                        </li>
+                        <li class="tsd-parameter">
+                          <h5>
+                            <code class="tsd-tag ts-flagOptional"
+                              >Optional</code
+                            >
+                            <span class="tsd-kind-property">timeout</span
+                            ><span class="tsd-signature-symbol">?: </span
+                            ><span class="tsd-signature-type">number</span>
+                          </h5>
+                          <div class="tsd-comment tsd-typography">
+                            <p>다운로드 timeout</p>
+                          </div>
+                          <div class="tsd-comment tsd-typography">
+                            <h4>Default</h4>
+                            <pre><code class="language-ts"><span class="hl-1">60000</span>
 </code><button>Copy</button></pre>
-</div></li><li class="tsd-parameter"><h5><span class="tsd-kind-property">url</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5><div class="tsd-comment tsd-typography"><p>호출 URL</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L434">framework/nuxt/src/plugins/desc/api.ts:434</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="getAxiosInstance" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>get<wbr/>Axios<wbr/>Instance</span><a href="#getAxiosInstance" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="getAxiosInstance.getAxiosInstance-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">get<wbr/>Axios<wbr/>Instance</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosInstance</span><span class="tsd-signature-symbol">&gt;</span><a href="#getAxiosInstance.getAxiosInstance-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>axios instance 생성</p>
-</div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">AxiosInstance</span><span class="tsd-signature-symbol">&gt;</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L59">framework/nuxt/src/plugins/desc/api.ts:59</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="getSseInstance" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>get<wbr/>Sse<wbr/>Instance</span><a href="#getSseInstance" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="getSseInstance.getSseInstance-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">get<wbr/>Sse<wbr/>Instance</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Sse</span><a href="#getSseInstance.getSseInstance-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Sse</span></h4><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L125">framework/nuxt/src/plugins/desc/api.ts:125</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="isCancel" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>is<wbr/>Cancel</span><a href="#isCancel" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="isCancel.isCancel-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">is<wbr/>Cancel</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">err</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#isCancel.isCancel-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>API의 취소 여부 확인</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">err</span>: <span class="tsd-signature-type">Error</span></span><div class="tsd-comment tsd-typography"><p>에러 객체</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L417">framework/nuxt/src/plugins/desc/api.ts:417</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member tsd-is-private"><a id="isInactivatedAuthResponse" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>is<wbr/>Inactivated<wbr/>Auth<wbr/>Response</span><a href="#isInactivatedAuthResponse" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures tsd-is-private"><li class="tsd-signature tsd-anchor-link"><a id="isInactivatedAuthResponse.isInactivatedAuthResponse-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">is<wbr/>Inactivated<wbr/>Auth<wbr/>Response</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">res</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#isInactivatedAuthResponse.isInactivatedAuthResponse-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>인증 해제 처리된 API 응답 여부를 판단</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">res</span>: <span class="tsd-signature-type">AxiosResponse</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></span></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L312">framework/nuxt/src/plugins/desc/api.ts:312</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member tsd-is-private"><a id="normalizeRequestConfig" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>normalize<wbr/>Request<wbr/>Config</span><a href="#normalizeRequestConfig" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures tsd-is-private"><li class="tsd-signature tsd-anchor-link"><a id="normalizeRequestConfig.normalizeRequestConfig-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">normalize<wbr/>Request<wbr/>Config</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">option</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/config_props_api.ApiOriginOptions.html" class="tsd-signature-type tsd-kind-interface">ApiOriginOptions</a><span class="tsd-signature-symbol">&gt;</span><a href="#normalizeRequestConfig.normalizeRequestConfig-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">option</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/config_props_api.ApiOriginOptions.html" class="tsd-signature-type tsd-kind-interface">ApiOriginOptions</a></span></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/config_props_api.ApiOriginOptions.html" class="tsd-signature-type tsd-kind-interface">ApiOriginOptions</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L235">framework/nuxt/src/plugins/desc/api.ts:235</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="sse" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>sse</span><a href="#sse" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="sse.sse-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">sse</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">option</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventSource</span><a href="#sse.sse-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>ssemitter 연결을 수행한다.</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">option</span>: <span class="tsd-signature-type">SseEmitterOption</span></span><div class="tsd-comment tsd-typography"><p>{SseEmitterOption} 연결 옵션</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">EventSource</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L596">framework/nuxt/src/plugins/desc/api.ts:596</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="urlBuilder" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>url<wbr/>Builder</span><a href="#urlBuilder" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="urlBuilder.urlBuilder-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">url<wbr/>Builder</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">baseUrl</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">UrlBuilder</span><a href="#urlBuilder.urlBuilder-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>UrlBuilder를 생성한다.</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">baseUrl</span>: <span class="tsd-signature-type">string</span></span><div class="tsd-comment tsd-typography"><p>base URL</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">UrlBuilder</span></h4><p>UrlBuilder</p>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L568">framework/nuxt/src/plugins/desc/api.ts:568</a></li></ul></aside></li></ul></section></section></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-index-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><h4 class="uppercase">Member Visibility</h4><form><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div><div class="tsd-theme-toggle"><h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-index-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#constructor" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a><a href="#_ustra" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>$ustra</span></a><a href="#apiQueue" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>api<wbr/>Queue</span></a><a href="#axiosConfig" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>axios<wbr/>Config</span></a><a href="#axiosInstance" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>axios<wbr/>Instance</span></a><a href="#completedCheckTimer" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>completed<wbr/>Check<wbr/>Timer</span></a><a href="#cookieStorage" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>cookie<wbr/>Storage</span></a><a href="#sseInstance" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>sse<wbr/>Instance</span></a><a href="#appProps" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-262144"></use></svg><span>app<wbr/>Props</span></a><a href="#addInterceptors" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Interceptors</span></a><a href="#addRequestCompletedCallback" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>add<wbr/>Request<wbr/>Completed<wbr/>Callback</span></a><a href="#applyGlobalRequestInterceptor" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>apply<wbr/>Global<wbr/>Request<wbr/>Interceptor</span></a><a href="#applyResCodeCheckingInterceptor" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>apply<wbr/>Res<wbr/>Code<wbr/>Checking<wbr/>Interceptor</span></a><a href="#call" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>call</span></a><a href="#callNext" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>call<wbr/>Next</span></a><a href="#cancel" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>cancel</span></a><a href="#createCancelToken" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create<wbr/>Cancel<wbr/>Token</span></a><a href="#createUrlEncodedParameter" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>create<wbr/>Url<wbr/>Encoded<wbr/>Parameter</span></a><a href="#defaultRetryCondition" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>default<wbr/>Retry<wbr/>Condition</span></a><a href="#downloadFile" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>download<wbr/>File</span></a><a href="#getAxiosInstance" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Axios<wbr/>Instance</span></a><a href="#getSseInstance" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Sse<wbr/>Instance</span></a><a href="#isCancel" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Cancel</span></a><a href="#isInactivatedAuthResponse" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>is<wbr/>Inactivated<wbr/>Auth<wbr/>Response</span></a><a href="#normalizeRequestConfig" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>normalize<wbr/>Request<wbr/>Config</span></a><a href="#sse" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>sse</span></a><a href="#urlBuilder" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>url<wbr/>Builder</span></a></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1"></use></svg><span>@ustra/nuxt</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base=".."><li>Loading...</li></ul></nav></div></div></div><div class="tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div></body></html>
+                          </div>
+                        </li>
+                        <li class="tsd-parameter">
+                          <h5>
+                            <span class="tsd-kind-property">url</span
+                            ><span class="tsd-signature-symbol">: </span
+                            ><span class="tsd-signature-type">string</span>
+                          </h5>
+                          <div class="tsd-comment tsd-typography">
+                            <p>호출 URL</p>
+                          </div>
+                          <div class="tsd-comment tsd-typography"></div>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Promise</span
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><span class="tsd-signature-type">void</span
+                  ><span class="tsd-signature-symbol">&gt;</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L434"
+                        >framework/nuxt/src/plugins/desc/api.ts:434</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="getAxiosInstance" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>get<wbr />Axios<wbr />Instance</span
+              ><a
+                href="#getAxiosInstance"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="getAxiosInstance.getAxiosInstance-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >get<wbr />Axios<wbr />Instance</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Promise</span
+                ><span class="tsd-signature-symbol">&lt;</span
+                ><span class="tsd-signature-type">AxiosInstance</span
+                ><span class="tsd-signature-symbol">&gt;</span
+                ><a
+                  href="#getAxiosInstance.getAxiosInstance-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>axios instance 생성</p>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Promise</span
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><span class="tsd-signature-type">AxiosInstance</span
+                  ><span class="tsd-signature-symbol">&gt;</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L59"
+                        >framework/nuxt/src/plugins/desc/api.ts:59</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="getSseInstance" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>get<wbr />Sse<wbr />Instance</span
+              ><a
+                href="#getSseInstance"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="getSseInstance.getSseInstance-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature"
+                  >get<wbr />Sse<wbr />Instance</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Sse</span
+                ><a
+                  href="#getSseInstance.getSseInstance-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Sse</span>
+                </h4>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L125"
+                        >framework/nuxt/src/plugins/desc/api.ts:125</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="isCancel" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>is<wbr />Cancel</span
+              ><a
+                href="#isCancel"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="isCancel.isCancel-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature">is<wbr />Cancel</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">err</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">boolean</span
+                ><a
+                  href="#isCancel.isCancel-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>API의 취소 여부 확인</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">err</span>:
+                        <span class="tsd-signature-type">Error</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>에러 객체</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">boolean</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L417"
+                        >framework/nuxt/src/plugins/desc/api.ts:417</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-private">
+            <a id="isInactivatedAuthResponse" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagPrivate">Private</code>
+              <span>is<wbr />Inactivated<wbr />Auth<wbr />Response</span
+              ><a
+                href="#isInactivatedAuthResponse"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures tsd-is-private">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="isInactivatedAuthResponse.isInactivatedAuthResponse-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >is<wbr />Inactivated<wbr />Auth<wbr />Response</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">res</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">boolean</span
+                ><a
+                  href="#isInactivatedAuthResponse.isInactivatedAuthResponse-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>인증 해제 처리된 API 응답 여부를 판단</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">res</span>:
+                        <span class="tsd-signature-type">AxiosResponse</span
+                        ><span class="tsd-signature-symbol">&lt;</span
+                        ><span class="tsd-signature-type">any</span
+                        ><span class="tsd-signature-symbol">, </span
+                        ><span class="tsd-signature-type">any</span
+                        ><span class="tsd-signature-symbol">&gt;</span></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">boolean</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L312"
+                        >framework/nuxt/src/plugins/desc/api.ts:312</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-private">
+            <a id="normalizeRequestConfig" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagPrivate">Private</code>
+              <span>normalize<wbr />Request<wbr />Config</span
+              ><a
+                href="#normalizeRequestConfig"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures tsd-is-private">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="normalizeRequestConfig.normalizeRequestConfig-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >normalize<wbr />Request<wbr />Config</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">option</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Promise</span
+                ><span class="tsd-signature-symbol">&lt;</span
+                ><a
+                  href="../interfaces/config_props_api.ApiOriginOptions.html"
+                  class="tsd-signature-type tsd-kind-interface"
+                  >ApiOriginOptions</a
+                ><span class="tsd-signature-symbol">&gt;</span
+                ><a
+                  href="#normalizeRequestConfig.normalizeRequestConfig-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">option</span>:
+                        <span class="tsd-signature-type">string</span
+                        ><span class="tsd-signature-symbol"> | </span
+                        ><a
+                          href="../interfaces/config_props_api.ApiOriginOptions.html"
+                          class="tsd-signature-type tsd-kind-interface"
+                          >ApiOriginOptions</a
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Promise</span
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><a
+                    href="../interfaces/config_props_api.ApiOriginOptions.html"
+                    class="tsd-signature-type tsd-kind-interface"
+                    >ApiOriginOptions</a
+                  ><span class="tsd-signature-symbol">&gt;</span>
+                </h4>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L235"
+                        >framework/nuxt/src/plugins/desc/api.ts:235</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="sse" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>sse</span
+              ><a href="#sse" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="sse.sse-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature">sse</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">option</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">EventSource</span
+                ><a
+                  href="#sse.sse-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>ssemitter 연결을 수행한다.</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">option</span>:
+                        <span class="tsd-signature-type"
+                          >SseEmitterOption</span
+                        ></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>{SseEmitterOption} 연결 옵션</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">EventSource</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L596"
+                        >framework/nuxt/src/plugins/desc/api.ts:596</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="urlBuilder" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>url<wbr />Builder</span
+              ><a
+                href="#urlBuilder"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="urlBuilder.urlBuilder-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature">url<wbr />Builder</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">baseUrl</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">UrlBuilder</span
+                ><a
+                  href="#urlBuilder.urlBuilder-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>UrlBuilder를 생성한다.</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">baseUrl</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>base URL</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">UrlBuilder</span>
+                </h4>
+                <p>UrlBuilder</p>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/plugins/desc/api.ts#L568"
+                        >framework/nuxt/src/plugins/desc/api.ts:568</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </div>
+      <div class="col-sidebar">
+        <div class="page-menu">
+          <div class="tsd-navigation settings">
+            <details class="tsd-index-accordion">
+              <summary class="tsd-accordion-summary">
+                <h3>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <use href="../assets/icons.svg#icon-chevronDown"></use></svg
+                  >Settings
+                </h3>
+              </summary>
+              <div class="tsd-accordion-details">
+                <div class="tsd-filter-visibility">
+                  <h4 class="uppercase">Member Visibility</h4>
+                  <form>
+                    <ul id="tsd-filter-options">
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-protected"
+                            name="protected"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Protected</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-private"
+                            name="private"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Private</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-inherited"
+                            name="inherited"
+                            checked
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Inherited</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-external"
+                            name="external"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>External</span></label
+                        >
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+                <div class="tsd-theme-toggle">
+                  <h4 class="uppercase">Theme</h4>
+                  <select id="tsd-theme">
+                    <option value="os">OS</option>
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                  </select>
+                </div>
+              </div>
+            </details>
+          </div>
+          <details open class="tsd-index-accordion tsd-page-navigation">
+            <summary class="tsd-accordion-summary">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <use href="../assets/icons.svg#icon-chevronDown"></use></svg
+                >On This Page
+              </h3>
+            </summary>
+            <div class="tsd-accordion-details">
+              <a href="#constructor" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-512"></use></svg
+                ><span>constructor</span></a
+              ><a href="#_ustra" class="tsd-is-private"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>$ustra</span></a
+              ><a href="#apiQueue" class="tsd-is-private"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>api<wbr />Queue</span></a
+              ><a href="#axiosConfig" class="tsd-is-private"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>axios<wbr />Config</span></a
+              ><a href="#axiosInstance" class="tsd-is-private"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>axios<wbr />Instance</span></a
+              ><a href="#completedCheckTimer" class="tsd-is-private"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>completed<wbr />Check<wbr />Timer</span></a
+              ><a href="#cookieStorage" class="tsd-is-private"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>cookie<wbr />Storage</span></a
+              ><a href="#sseInstance" class="tsd-is-private"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>sse<wbr />Instance</span></a
+              ><a href="#appProps" class="tsd-is-private"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-262144"></use></svg
+                ><span>app<wbr />Props</span></a
+              ><a href="#addInterceptors" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>add<wbr />Interceptors</span></a
+              ><a href="#addRequestCompletedCallback" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span
+                  >add<wbr />Request<wbr />Completed<wbr />Callback</span
+                ></a
+              ><a href="#applyGlobalRequestInterceptor" class="tsd-is-private"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span
+                  >apply<wbr />Global<wbr />Request<wbr />Interceptor</span
+                ></a
+              ><a href="#applyResCodeCheckingInterceptor" class="tsd-is-private"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span
+                  >apply<wbr />Res<wbr />Code<wbr />Checking<wbr />Interceptor</span
+                ></a
+              ><a href="#call" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>call</span></a
+              ><a href="#callNext" class="tsd-is-private"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>call<wbr />Next</span></a
+              ><a href="#cancel" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>cancel</span></a
+              ><a href="#createCancelToken" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>create<wbr />Cancel<wbr />Token</span></a
+              ><a href="#createUrlEncodedParameter" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>create<wbr />Url<wbr />Encoded<wbr />Parameter</span></a
+              ><a href="#defaultRetryCondition" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>default<wbr />Retry<wbr />Condition</span></a
+              ><a href="#downloadFile" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>download<wbr />File</span></a
+              ><a href="#getAxiosInstance" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>get<wbr />Axios<wbr />Instance</span></a
+              ><a href="#getSseInstance" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>get<wbr />Sse<wbr />Instance</span></a
+              ><a href="#isCancel" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>is<wbr />Cancel</span></a
+              ><a href="#isInactivatedAuthResponse" class="tsd-is-private"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>is<wbr />Inactivated<wbr />Auth<wbr />Response</span></a
+              ><a href="#normalizeRequestConfig" class="tsd-is-private"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>normalize<wbr />Request<wbr />Config</span></a
+              ><a href="#sse" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>sse</span></a
+              ><a href="#urlBuilder" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>url<wbr />Builder</span></a
+              >
+            </div>
+          </details>
+        </div>
+        <div class="site-menu">
+          <nav class="tsd-navigation">
+            <a href="../index.html"
+              ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                <use href="../assets/icons.svg#icon-1"></use></svg
+              ><span>@moong/nuxt</span></a
+            >
+            <ul
+              class="tsd-small-nested-navigation"
+              id="tsd-nav-container"
+              data-base=".."
+            >
+              <li>Loading...</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="tsd-generator">
+      <p>
+        Generated using
+        <a href="https://typedoc.org/" target="_blank">TypeDoc</a>
+      </p>
+    </div>
+    <div class="overlay"></div>
+  </body>
+</html>

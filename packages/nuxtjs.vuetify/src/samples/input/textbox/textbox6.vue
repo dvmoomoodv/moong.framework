@@ -3,7 +3,11 @@
     <template #text>
       <h3>MDI 아이콘 활용 (비활성화)</h3>
 
-      iconType에 mdi 아이콘 이름 작성 <NuxtLink to="https://materialdesignicons.com/" target="_blank"> Material Design Icons</NuxtLink> <br /><br />
+      iconType에 mdi 아이콘 이름 작성
+      <NuxtLink to="https://materialdesignicons.com/" target="_blank">
+        Material Design Icons</NuxtLink
+      >
+      <br /><br />
 
       color 활용시에는 slot 활용하여 color props로 수정한다. textbox2에 수정.
 
@@ -17,10 +21,10 @@
 </template>
 
 <script setup lang="ts">
-import { UMarkdownViewer } from '#ustra/nuxt/components'
+import { UMarkdownViewer } from "#moong/nuxt/components";
 
 // @ts-ignore
-import textBox6 from './md/textbox6.md'
+import textBox6 from "./md/textbox6.md";
 </script>
 
 <style scoped></style>

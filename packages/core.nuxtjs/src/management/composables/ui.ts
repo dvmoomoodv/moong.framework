@@ -1,17 +1,26 @@
-import { useState } from '#app'
-import { shallowRef } from 'vue'
-import { createEventHook } from '@vueuse/core'
-// import type PasswordEditPopup from '#ustra/nuxt-wijmo/management/pages/common/password-edit-popup.vue'
+import { useState } from "#app";
+import { shallowRef } from "vue";
+import { createEventHook } from "@vueuse/core";
+// import type PasswordEditPopup from '#moong/nuxt-wijmo/management/pages/common/password-edit-popup.vue'
 
 /**
  * 관리자 app 사용
  * @returns
  */
 export const useUstraManagementApp = () => {
-  const showConfigPopup = useState('ustra-management-config-popup-opend', () => false)
-  const showPasswordPopup = useState('ustra-management-password-popup-opend', () => false)
+  const showConfigPopup = useState(
+    "ustra-management-config-popup-opend",
+    () => false
+  );
+  const showPasswordPopup = useState(
+    "ustra-management-password-popup-opend",
+    () => false
+  );
 
-  const passwordPopupOnHidden = useState('ustra-management-password-popup-hidden-hook', () => createEventHook())
+  const passwordPopupOnHidden = useState(
+    "ustra-management-password-popup-hidden-hook",
+    () => createEventHook()
+  );
 
   const passwordPopup = {
     /**
@@ -23,7 +32,7 @@ export const useUstraManagementApp = () => {
      * 팝업 창 인스턴 스
      */
     componentInstance: shallowRef<any>(),
-  }
+  };
 
   return {
     /**
@@ -40,5 +49,5 @@ export const useUstraManagementApp = () => {
     },
 
     passwordPopup,
-  }
-}
+  };
+};

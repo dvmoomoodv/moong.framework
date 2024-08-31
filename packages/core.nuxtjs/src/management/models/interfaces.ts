@@ -4,7 +4,7 @@
  * @packageDocumentation
  */
 
-import { baseModels, apiModels } from '#ustra/core/data'
+import { baseModels, apiModels } from "#moong/core/data";
 
 /**
  * 인터페이스 채널
@@ -13,17 +13,17 @@ export interface IfsChnl extends baseModels.StateBaseModel {
   /**
    * 인터페이스 아이디
    */
-  ifId: string
+  ifId: string;
 
   /**
    * 인터페이스 버전
    */
-  ifVer: string
+  ifVer: string;
 
   /**
    * 인터페이스 채널코드
    */
-  chnlCd: string
+  chnlCd: string;
 }
 
 //#region 인터페이스 이력
@@ -36,55 +36,55 @@ export interface IfsHistCriteria extends apiModels.ApiRequest {
     /**
      * 인터페이스 이력 아이디
      */
-    ifHistId?: number
+    ifHistId?: number;
     /**
      * 프로세스 아이디
      */
-    procId?: string
+    procId?: string;
     /**
      * 요청 아이디
      */
-    reqId?: string
+    reqId?: string;
     /**
      * 인터페이스 아이디
      */
-    ifId?: string
+    ifId?: string;
     /**
      * 시스템 코드
      */
-    sysCd?: string
+    sysCd?: string;
     /**
      * 채널 코드
      */
-    chnlCd?: any
+    chnlCd?: any;
     /**
      * url
      */
-    url?: string
+    url?: string;
     /**
      * 성공 여부
      */
-    succYn?: string
+    succYn?: string;
     /**
      * 응답 코드 값
      */
-    resCdVal?: string
+    resCdVal?: string;
     /**
      * 검색 기간 시작 일자
      */
-    searchSrtDttm?: Date
+    searchSrtDttm?: Date;
     /**
      * 검색 기간 종료 일자
      */
-    searchEndDttm?: Date
+    searchEndDttm?: Date;
 
-    [propName: string]: any
-  }
+    [propName: string]: any;
+  };
 
-  [propName: string]: any
+  [propName: string]: any;
 }
 
-type IfsHistBase = baseModels.BaseModel & IfsHistCriteria
+type IfsHistBase = baseModels.BaseModel & IfsHistCriteria;
 
 /**
  * 인터페이스 이력
@@ -93,95 +93,95 @@ export interface IfsHist extends IfsHistBase {
   /**
    * 인터페이스 이력 아이디
    */
-  ifHistId?: number
+  ifHistId?: number;
   /**
    * 프로세스 아이디
    */
-  procId?: string
+  procId?: string;
   /**
    * 요청 아이디
    */
-  reqId?: string
+  reqId?: string;
   /**
    * 요청 번호
    */
-  reqNo?: number
+  reqNo?: number;
   /**
    * 인터페이스 아이디
    */
-  ifId?: string
+  ifId?: string;
   /**
    * 인터페이스 버전
    */
-  ifVer?: string
+  ifVer?: string;
   /**
    * 인터페이스 명
    */
-  ifNm?: string
+  ifNm?: string;
   /**
    * 시스템 코드
    */
-  sysCd?: string
+  sysCd?: string;
   /**
    * 채널 코드
    */
-  chnlCd?: any
+  chnlCd?: any;
   /**
    * 비고
    */
-  rmk?: string
+  rmk?: string;
   /**
    * url
    */
-  url?: string
+  url?: string;
   /**
    * http 메소드 코드
    */
-  httpMethCd?: string
+  httpMethCd?: string;
   /**
    * 성공 여부
    */
-  succYn?: string
+  succYn?: string;
   /**
    * 응답 코드 값
    */
-  resCdVal?: string
+  resCdVal?: string;
   /**
    * http 상태 코드 값
    */
-  httpSttCdVal?: string
+  httpSttCdVal?: string;
   /**
    * 요청 메시지 내용
    */
-  reqMsgCont?: string
+  reqMsgCont?: string;
   /**
    * 응답 메시지 내용
    */
-  resMsgCont?: string
+  resMsgCont?: string;
   /**
    * 사용자 아이디
    */
-  usrId?: string
+  usrId?: string;
   /**
    * 사용자 키
    */
-  usrKey?: string
+  usrKey?: string;
   /**
    * 프로세스 시간
    */
-  procMs?: number
+  procMs?: number;
   /**
    * 요청 헤더 내용
    */
-  reqHedCont?: string
+  reqHedCont?: string;
   /**
    * 요청 파파라메터 내용
    */
-  reqPrmCont?: string
+  reqPrmCont?: string;
   /**
    * 응답 헤더 내용
    */
-  resHedCont?: string
+  resHedCont?: string;
 }
 
 //#endregion
@@ -193,27 +193,27 @@ export interface IfsKey extends baseModels.StateBaseModel {
   /**
    * 인터페이스 아이디
    */
-  ifId: string
+  ifId: string;
 
   /**
    * 인터페이스 버전
    */
-  ifVer: string
+  ifVer: string;
 
   /**
    * 인터페이스 키
    */
-  ifKey: string
+  ifKey: string;
 
   /**
    * 인터페이스 값
    */
-  ifVal: string
+  ifVal: string;
 
   /**
    * 비고
    */
-  rmk?: string
+  rmk?: string;
 }
 
 /**
@@ -223,40 +223,40 @@ export interface IfsCriteria {
   /**
    * 시스템 코드
    */
-  sysCd?: string
+  sysCd?: string;
   /**
    * 채널 코드
    */
-  chnlCd?: any
+  chnlCd?: any;
   /**
    * 인터페이스 아이디
    */
-  ifId?: string
+  ifId?: string;
   /**
    * 인터페이스 버전
    */
-  ifVer?: string
+  ifVer?: string;
   /**
    * 인터페이스 명
    */
-  ifNm?: string
+  ifNm?: string;
   /**
    * 사용 여부
    */
-  useYn?: string
+  useYn?: string;
   /**
    * url
    */
-  url?: string
+  url?: string;
   /**
    * 인터페이스 방향 코드
    */
-  ifDirCd?: string
+  ifDirCd?: string;
 
-  [propName: string]: any
+  [propName: string]: any;
 }
 
-type IfsBase = baseModels.BaseModel & IfsCriteria
+type IfsBase = baseModels.BaseModel & IfsCriteria;
 
 /**
  * 인터페이스
@@ -265,83 +265,83 @@ export interface Ifs extends IfsBase {
   /**
    * 인터페이스 아이디
    */
-  ifId?: string
+  ifId?: string;
   /**
    * 인터페이스 버전
    */
-  ifVer?: string
+  ifVer?: string;
   /**
    * 인터페이스 명
    */
-  ifNm?: string
+  ifNm?: string;
   /**
    * 시스템 코드
    */
-  sysCd?: string
+  sysCd?: string;
   /**
    * 사용 여부
    */
-  useYn?: string
+  useYn?: string;
   /**
    * 제한 여부
    */
-  lmtYn?: string
+  lmtYn?: string;
   /**
    * 비고
    */
-  rmk?: string
+  rmk?: string;
   /**
    * 아이피 제한 여부
    */
-  ipLmtYn?: string
+  ipLmtYn?: string;
   /**
    * 아이피 목록
    */
-  ipList?: string
+  ipList?: string;
   /**
    * url
    */
-  url?: string
+  url?: string;
   /**
    * http 메소드 코드
    */
-  httpMethCd?: string
+  httpMethCd?: string;
   /**
    * 권한 제어 여부
    */
-  authCtrlYn?: string
+  authCtrlYn?: string;
   /**
    * 인터페이스 유형 코드
    */
-  ifTyCd?: string
+  ifTyCd?: string;
   /**
    * 인터페이스 로깅 유형 코드
    */
-  ifLogTyCd?: string
+  ifLogTyCd?: string;
   /**
    * 인터페이스 방향 코드
    */
-  ifDirCd?: string
+  ifDirCd?: string;
   /**
    * 채널 제한 여부
    */
-  chnlLmtYn?: string
+  chnlLmtYn?: string;
   /**
    * 인증 필요 여부
    */
-  certNecYn?: string
+  certNecYn?: string;
   /**
    * 채널 코드
    */
-  chnlCd?: any
+  chnlCd?: any;
 
   /**
    * 인터페이스 채널 목록
    */
-  channels?: IfsChnl[]
+  channels?: IfsChnl[];
 
   /**
    * 인터페이스 키 목록
    */
-  keys?: IfsKey[]
+  keys?: IfsKey[];
 }

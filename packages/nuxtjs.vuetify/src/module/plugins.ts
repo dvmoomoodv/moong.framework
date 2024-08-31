@@ -1,53 +1,61 @@
-import defu from 'defu'
-import { resolve } from 'pathe'
-import { isAbsolute } from 'pathe'
-import { Nuxt } from '@nuxt/schema'
-import { addPluginTemplate, createResolver } from '@nuxt/kit'
-import { logger } from '#ustra/nuxt/utils/logger'
-import { NuxtAppProps, VuetifyOptions } from '#ustra/nuxt/config'
-import { VuetifyOptions as OriginVuetifyOptions } from 'vuetify'
+import defu from "defu";
+import { resolve } from "pathe";
+import { isAbsolute } from "pathe";
+import { Nuxt } from "@nuxt/schema";
+import { addPluginTemplate, createResolver } from "@nuxt/kit";
+import { logger } from "#moong/nuxt/utils/logger";
+import { NuxtAppProps, VuetifyOptions } from "#moong/nuxt/config";
+import { VuetifyOptions as OriginVuetifyOptions } from "vuetify";
 // import vuetify from 'vite-plugin-vuetify'
-import { addPluginProperty, addScript } from '#ustra/nuxt/kit'
+import { addPluginProperty, addScript } from "#moong/nuxt/kit";
 
 export const plugins = async (options: NuxtAppProps, nuxt: Nuxt) => {
-  logger.info('$ustra vuetify plugin to nuxt app')
+  logger.info("$ustra vuetify plugin to nuxt app");
 
-  const vuetifyOption = options.nuxt.vuetify
-  const originVuetifyOption = <OriginVuetifyOptions>vuetifyOption.vuetifyOptions
+  const vuetifyOption = options.nuxt.vuetify;
+  const originVuetifyOption = <OriginVuetifyOptions>(
+    vuetifyOption.vuetifyOptions
+  );
   let stylePath =
     vuetifyOption.styles === true
-      ? 'vuetify/styles'
-      : vuetifyOption.styles === 'sass' || vuetifyOption.styles === 'expose'
-      ? 'vuetify/styles/main.sass'
-      : typeof vuetifyOption.styles === 'object'
-      ? vuetifyOption.styles.configFile
-      : ''
+      ? "vuetify/styles"
+      : vuetifyOption.styles === "sass" || vuetifyOption.styles === "expose"
+        ? "vuetify/styles/main.sass"
+        : typeof vuetifyOption.styles === "object"
+          ? vuetifyOption.styles.configFile
+          : "";
 
-  originVuetifyOption.ssr = nuxt.options.ssr
+  originVuetifyOption.ssr = nuxt.options.ssr;
 
   const iconCdnMap = new Map<string, string>([
-    ['fa', 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css'],
-    ['mdi', 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css'],
-  ])
+    [
+      "fa",
+      "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css",
+    ],
+    [
+      "mdi",
+      "https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css",
+    ],
+  ]);
 
   // cdn
   if (vuetifyOption?.icons?.useCdn) {
-    nuxt.options.app.head.link ||= []
+    nuxt.options.app.head.link ||= [];
 
     if (vuetifyOption.icons.mdi) {
       nuxt.options.app.head.link.push({
-        rel: 'stylesheet',
-        type: 'text/css',
-        href: iconCdnMap.get('mdi'),
-      })
+        rel: "stylesheet",
+        type: "text/css",
+        href: iconCdnMap.get("mdi"),
+      });
     }
 
     if (vuetifyOption.icons.fa) {
       nuxt.options.app.head.link.push({
-        rel: 'stylesheet',
-        type: 'text/css',
-        href: iconCdnMap.get('fa'),
-      })
+        rel: "stylesheet",
+        type: "text/css",
+        href: iconCdnMap.get("fa"),
+      });
     }
   }
 
@@ -81,35 +89,43 @@ export const plugins = async (options: NuxtAppProps, nuxt: Nuxt) => {
   addPluginTemplate({
     // src: path.resolve(__dirname, '../../templates/ustra-vuetify.js'),
     getContents() {
-      return getPluginContent(stylePath, vuetifyOption, originVuetifyOption)
+      return getPluginContent(stylePath, vuetifyOption, originVuetifyOption);
     },
-    filename: 'ustra/ustra-vuetify.ts',
+    filename: "ustra/ustra-vuetify.ts",
     options: options.nuxt.vuetify,
     write: false,
-  })
+  });
 
   // add management plugin props
   if (options.nuxt.management.enabled) {
-    if (options.nuxt.management.ui.componentType === 'vuetify') {
-      addPluginProperty('vuetify', resolve('../plugins/vuetify.ts'), '#ustra/nuxt-vuetify/plugins/vuetify')
+    if (options.nuxt.management.ui.componentType === "vuetify") {
+      addPluginProperty(
+        "vuetify",
+        resolve("../plugins/vuetify.ts"),
+        "#moong/nuxt-vuetify/plugins/vuetify"
+      );
     }
   }
-}
+};
 
-function getPluginContent(stylePath: string, vuetifyOption: VuetifyOptions, originVuetifyOption: OriginVuetifyOptions) {
+function getPluginContent(
+  stylePath: string,
+  vuetifyOption: VuetifyOptions,
+  originVuetifyOption: OriginVuetifyOptions
+) {
   let content = `
-${!stylePath ? '' : `import '${stylePath}'\n`}
+${!stylePath ? "" : `import '${stylePath}'\n`}
 
 // material icons
-${vuetifyOption.icons?.mdi === true && !vuetifyOption.icons?.useCdn ? `import '@mdi/font/css/materialdesignicons.min.css'\n` : ''}
+${vuetifyOption.icons?.mdi === true && !vuetifyOption.icons?.useCdn ? `import '@mdi/font/css/materialdesignicons.min.css'\n` : ""}
 
 // TODO: fa icon 추가 처리 필요함.
 
 // date picker
-${vuetifyOption.datepicker.enabled === true ? `import '@vuepic/vue-datepicker/dist/main.css'\n` : ''}
+${vuetifyOption.datepicker.enabled === true ? `import '@vuepic/vue-datepicker/dist/main.css'\n` : ""}
 
 
-import { logger } from '#ustra/nuxt/utils/logger'
+import { logger } from '#moong/nuxt/utils/logger'
 import { createVuetify } from 'vuetify'
 import { defineNuxtPlugin, NuxtApp } from '#app'
 
@@ -119,18 +135,18 @@ export default defineNuxtPlugin(async nuxtApp => {
   const vuetifyProps = useUstra().env.appProps.nuxt.vuetify
   const vuetifyOptions = { ...vuetifyProps.options }
 
-`
+`;
 
   // set default components
   if (!vuetifyOption.treeshaking && !originVuetifyOption.components) {
     content += `vuetifyOptions.components = await import('vuetify/components')
-    `
+    `;
   }
 
   // set default directives
   if (!vuetifyOption.treeshaking && !originVuetifyOption.directives) {
     content += `vuetifyOptions.directives = await import('vuetify/directives')
-    `
+    `;
   }
 
   // set default locale
@@ -143,7 +159,7 @@ vuetifyOptions.locale = {
   fallback: 'ko',
   messages: { ko, en },
 }
-    `
+    `;
   }
 
   content += `
@@ -158,6 +174,6 @@ vuetifyOptions.locale = {
       vuetify,
     },
   }
-})`
-  return content
+})`;
+  return content;
 }

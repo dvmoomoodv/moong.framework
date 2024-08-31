@@ -6,10 +6,10 @@
   </VCard>
 </template>
 <script lang="ts" setup>
-import { computed } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
-import { useMediaQueryState } from '#ustra/nuxt/composables'
+import { computed } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
+import { useMediaQueryState } from "#moong/nuxt/composables";
 
 // @ts-ignore
-import doc1 from './md/responsive-setting1.md'
+import doc1 from "./md/responsive-setting1.md";
 </script>

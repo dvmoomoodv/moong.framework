@@ -1,25 +1,28 @@
-import { useLogger } from '#ustra/nuxt/utils/logger'
-import { UstraAuthDuplicationChecker, UstraAuthDuplicationCheckerOptions } from './base'
+import { useLogger } from "#moong/nuxt/utils/logger";
+import {
+  UstraAuthDuplicationChecker,
+  UstraAuthDuplicationCheckerOptions,
+} from "./base";
 // import SockJS from 'sockjs-client'
 // import { io, Socket } from 'socket.io-client'
-import { Ustra } from '../../ustra'
+import { Ustra } from "../../ustra";
 
-const logger = useLogger('ustra:auth')
+const logger = useLogger("ustra:auth");
 
 export class UstraAuthWebsocketDuplicationChecker extends UstraAuthDuplicationChecker {
   // private ws: Socket = null
 
   constructor($ustra: Ustra, option: UstraAuthDuplicationCheckerOptions) {
-    super($ustra, option)
+    super($ustra, option);
   }
 
   start() {
     if (!this.$ustra.auth.isAuthenticated) {
-      return
+      return;
     }
 
-    logger.warn('websocket duplication checker is not supported.')
-    return
+    logger.warn("websocket duplication checker is not supported.");
+    return;
 
     // if (this.ws && (this.ws.readyState === WebSocket.OPEN || this.ws.readyState === WebSocket.CONNECTING)) {
 

@@ -4,7 +4,7 @@
       <h3>useWjTreeSelectedItemData</h3>
       <WjTreeView
         :itemsSource="treeData"
-        :initialized="ctl => (treeView = ctl)"
+        :initialized="(ctl) => (treeView = ctl)"
         displayMemberPath="text"
         childItemsPath="items"
         :autoCollapse="false"
@@ -19,25 +19,25 @@
   </VCard>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-import { TreeView } from '@grapecity/wijmo.nav'
-import { WjTreeView } from '#ustra/nuxt-wijmo/components'
-import { useWjTreeSelectedItemData } from '#ustra/nuxt-wijmo/composables'
+import { ref } from "#moong/nuxt";
+import { TreeView } from "@grapecity/wijmo.nav";
+import { WjTreeView } from "#moong/nuxt-wijmo/components";
+import { useWjTreeSelectedItemData } from "#moong/nuxt-wijmo/composables";
 
-import { UMarkdownViewer } from '#ustra/nuxt/components'
+import { UMarkdownViewer } from "#moong/nuxt/components";
 
 // @ts-ignore
-import doc1 from './md/tree2.md'
+import doc1 from "./md/tree2.md";
 
 type TreeData = {
-  text: string
-  items?: TreeData[]
-}
-const treeView = ref<TreeView>()
-const treeViewSelection = useWjTreeSelectedItemData<TreeData>(treeView)
+  text: string;
+  items?: TreeData[];
+};
+const treeView = ref<TreeView>();
+const treeViewSelection = useWjTreeSelectedItemData<TreeData>(treeView);
 
 const treeData: TreeData[] = [
-  { text: 'Root', items: [{ text: 'Child1' }, { text: 'Child2' }] },
-  { text: 'Root2', items: [{ text: 'Child1' }, { text: 'Child2' }] },
-]
+  { text: "Root", items: [{ text: "Child1" }, { text: "Child2" }] },
+  { text: "Root2", items: [{ text: "Child1" }, { text: "Child2" }] },
+];
 </script>

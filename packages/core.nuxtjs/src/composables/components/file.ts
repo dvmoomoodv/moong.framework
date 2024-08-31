@@ -1,9 +1,16 @@
-import { reactive, ref, watch, watchEffect, nextTick, useDeepMerge } from '#ustra/nuxt'
-import { useVModel } from '@vueuse/core'
-import { FileOutput, FileMetaData, FileGrp } from '#ustra/nuxt/management'
-import { apiModels } from '#ustra/core/data'
-import toString from 'lodash/toString'
-import type { I18nMessage } from '#ustra/core/config/props/i18n'
+import {
+  reactive,
+  ref,
+  watch,
+  watchEffect,
+  nextTick,
+  useDeepMerge,
+} from "#moong/nuxt";
+import { useVModel } from "@vueuse/core";
+import { FileOutput, FileMetaData, FileGrp } from "#moong/nuxt/management";
+import { apiModels } from "#moong/core/data";
+import toString from "lodash/toString";
+import type { I18nMessage } from "#moong/core/config/props/i18n";
 
 /**
  * 연계 API URL
@@ -12,28 +19,28 @@ export const definedApiUrl = {
   /**
    * 목록 조회
    */
-  list: '/api/file/list',
+  list: "/api/file/list",
 
   /**
    * 리소스 변환
    */
-  convert: '/api/file/convert/resource',
+  convert: "/api/file/convert/resource",
 
   /**
    * 리소스 메타 데이터
    */
-  convertFromMetaData: '/api/file/convert/metaData',
+  convertFromMetaData: "/api/file/convert/metaData",
 
   /**
    * 업로드
    */
-  upload: '/api/file/upload',
+  upload: "/api/file/upload",
 
   /**
    * 삭제
    */
-  remove: '/api/file/remove',
-}
+  remove: "/api/file/remove",
+};
 
 /**
  * 메시지 유형
@@ -42,33 +49,33 @@ export type CustomMessage = {
   /**
    * 파일 그룹 조회 실패 메시지
    */
-  'ustra.file.notFoundFileGroup'?: string
+  "ustra.file.notFoundFileGroup"?: string;
 
   /**
    * 파일 용량 초과 메시지
    */
-  'ustra.file.fileLimitExceeded'?: string
+  "ustra.file.fileLimitExceeded"?: string;
 
   /**
    * 파일 조회 실패 메시지
    */
-  'ustra.file.errorOnRetrievingFile'?: string
+  "ustra.file.errorOnRetrievingFile"?: string;
 
   /**
    * 파일 Resource Not Found 실패 메시지
    */
-  'ustra.file.cannotFoundFile'?: string
+  "ustra.file.cannotFoundFile"?: string;
 
   /**
    * 업로드 오류 메시지
    */
-  'ustra.file.errorOnUploadFile'?: string
+  "ustra.file.errorOnUploadFile"?: string;
 
   /**
    * 다운로드 오류 메시지
    */
-  'ustra.file.errorOnDownloadFile'?: string
-}
+  "ustra.file.errorOnDownloadFile"?: string;
+};
 
 /**
  * File 컴포넌트 기본 Props 정의
@@ -77,39 +84,42 @@ export interface FileUploadComponentProps {
   /**
    * 파일 그룹 아이디 (필수 값)
    */
-  fileGroupId: string
+  fileGroupId: string;
 
   /**
    * 편집 불가능 여부
    */
-  readonly?: boolean
+  readonly?: boolean;
 
   /**
    * 파일 아이디
    */
-  fileId: string | null
+  fileId: string | null;
 
   /**
    * 저장할 하위 디렉토리 경로
    */
-  subDir?: string
+  subDir?: string;
 
   /**
    * 업로드 전 발생 이벤트
    * cancel 값을  true로 리턴할 경우, 제외 가능
    */
-  beforeUpload?: (args: { formData: FormData; cancel: boolean }) => void | Promise<void>
+  beforeUpload?: (args: {
+    formData: FormData;
+    cancel: boolean;
+  }) => void | Promise<void>;
 
   /**
    * api URL 설정
    */
-  apiUrls?: Partial<typeof definedApiUrl>
+  apiUrls?: Partial<typeof definedApiUrl>;
 
   /**
    * 파일 아이디 변경 시 정보 자동 조회 여부
    * @default true
    */
-  autoLoadFileInfo?: boolean
+  autoLoadFileInfo?: boolean;
 }
 
 /**
@@ -124,68 +134,77 @@ export const defineUstraFileUploaderComponent = (
     /**
      * 파일 리로드 시 처리 핸들러
      */
-    reloadHandler?: Function
+    reloadHandler?: Function;
 
     /**
      * 파일 그룹 조회 핸들러
      */
-    findFileGroup: (fileGrpId: string) => FileGrp | null
+    findFileGroup: (fileGrpId: string) => FileGrp | null;
 
     /**
      * custom 메시지
      */
-    messages?: CustomMessage
-  },
+    messages?: CustomMessage;
+  }
 ) => {
-  const apiUrls = $ustra.utils.core.deepMerge({}, definedApiUrl, props.apiUrls || {})
-  const messages = $ustra.message.mergeMessageObject(options.messages)
+  const apiUrls = $ustra.utils.core.deepMerge(
+    {},
+    definedApiUrl,
+    props.apiUrls || {}
+  );
+  const messages = $ustra.message.mergeMessageObject(options.messages);
 
   //#region 조회 조건 영역
   const fileGroupCondition = reactive({
     maxFileSize: 0,
-    accept: '*/*',
-  })
+    accept: "*/*",
+  });
 
-  const disabled = ref(true)
+  const disabled = ref(true);
 
   watchEffect(() => {
     if (props.fileGroupId) {
-      const fileGroup = options.findFileGroup(props.fileGroupId)
+      const fileGroup = options.findFileGroup(props.fileGroupId);
 
       if (!fileGroup) {
-        disabled.value = true
-        throw new Error($ustra.utils.string.format(messages['ustra.file.notFoundFileGroup'], props.fileGroupId))
+        disabled.value = true;
+        throw new Error(
+          $ustra.utils.string.format(
+            messages["ustra.file.notFoundFileGroup"],
+            props.fileGroupId
+          )
+        );
         // throw new Error('존재하지 않는 파일 그룹입니다. : ' + props.fileGroupId)
       }
 
-      fileGroupCondition.maxFileSize = fileGroup.maxSz
-      fileGroupCondition.accept = fileGroup.extenLmt || '*/*'
-      disabled.value = false
+      fileGroupCondition.maxFileSize = fileGroup.maxSz;
+      fileGroupCondition.accept = fileGroup.extenLmt || "*/*";
+      disabled.value = false;
     }
-  })
+  });
   //#endregion
 
-  const fileId = useVModel(props, 'fileId')
-  const selectedFiles = ref<File[]>([])
-  const uploadedFiles = ref<FileMetaData[]>([])
+  const fileId = useVModel(props, "fileId");
+  const selectedFiles = ref<File[]>([]);
+  const uploadedFiles = ref<FileMetaData[]>([]);
 
   watch(
     fileId,
     () => {
       if (fileId.value) {
         if (props.autoLoadFileInfo) {
-          nextTick().then(() => load())
+          nextTick().then(() => load());
         } else {
-          nextTick().then(() => init())
+          nextTick().then(() => init());
         }
       } else {
-        nextTick().then(() => init())
+        nextTick().then(() => init());
       }
     },
     {
       immediate: true,
-    },
-  )
+    }
+  );
 
   /**
    * 파일 추가
@@ -196,14 +215,17 @@ export const defineUstraFileUploaderComponent = (
   function addFile(files: File[], init = false) {
     // validate
     for (const file of files) {
-      if (fileGroupCondition.maxFileSize > 0 && fileGroupCondition.maxFileSize < file.size) {
+      if (
+        fileGroupCondition.maxFileSize > 0 &&
+        fileGroupCondition.maxFileSize < file.size
+      ) {
         alert(
           $ustra.utils.string.format(
-            messages['ustra.file.fileLimitExceeded'],
+            messages["ustra.file.fileLimitExceeded"],
             file.name,
-            $ustra.utils.formatting.fileSize(fileGroupCondition.maxFileSize),
-          ),
-        )
+            $ustra.utils.formatting.fileSize(fileGroupCondition.maxFileSize)
+          )
+        );
         // alert(
         //   '파일 허용 용량을 초과하였습니다 : ' +
         //     file.name +
@@ -212,17 +234,17 @@ export const defineUstraFileUploaderComponent = (
         //     $ustra.utils.formatting.fileSize(fileGroupCondition.maxFileSize) +
         //     '" 입니다.',
         // )
-        return
+        return;
       }
     }
 
     if (init) {
-      selectedFiles.value = []
+      selectedFiles.value = [];
     }
 
-    selectedFiles.value.push(...files)
+    selectedFiles.value.push(...files);
     if (options.reloadHandler) {
-      options.reloadHandler()
+      options.reloadHandler();
     }
   }
 
@@ -230,11 +252,11 @@ export const defineUstraFileUploaderComponent = (
    * 초기화
    */
   function init() {
-    selectedFiles.value = []
-    uploadedFiles.value = []
+    selectedFiles.value = [];
+    uploadedFiles.value = [];
 
     if (options.reloadHandler) {
-      options.reloadHandler()
+      options.reloadHandler();
     }
   }
 
@@ -243,28 +265,30 @@ export const defineUstraFileUploaderComponent = (
    */
   async function load() {
     if (!fileId.value) {
-      init()
-      return
+      init();
+      return;
     }
 
     try {
-      selectedFiles.value = []
+      selectedFiles.value = [];
       const res = await $ustra.api.call<apiModels.ApiResponse<FileOutput>>({
         url: apiUrls.list,
-        method: 'POST',
+        method: "POST",
         data: {
           fileGrpId: props.fileGroupId,
           fileId: fileId.value,
         },
-      })
+      });
 
-      uploadedFiles.value = res.data.body.fileMetaDatas
+      uploadedFiles.value = res.data.body.fileMetaDatas;
       if (options.reloadHandler) {
-        options.reloadHandler()
+        options.reloadHandler();
       }
     } catch (err) {
-      alert($ustra.utils.string.format(messages['ustra.file.errorOnRetrievingFile']))
-      throw err
+      alert(
+        $ustra.utils.string.format(messages["ustra.file.errorOnRetrievingFile"])
+      );
+      throw err;
     }
   }
 
@@ -273,142 +297,152 @@ export const defineUstraFileUploaderComponent = (
    * @param fileNo 파일 번호
    */
   function download(fileNo: number = undefined) {
-    const fileNos = []
+    const fileNos = [];
     if (fileNo) {
-      fileNos.push(fileNo)
+      fileNos.push(fileNo);
     } else {
-      fileNos.push(...uploadedFiles.value.map(r => r.fileNo))
+      fileNos.push(...uploadedFiles.value.map((r) => r.fileNo));
     }
 
-    fileNos.forEach(fileNo => {
-      const fileInfo = uploadedFiles.value.find(f => f.fileNo === fileNo)
+    fileNos.forEach((fileNo) => {
+      const fileInfo = uploadedFiles.value.find((f) => f.fileNo === fileNo);
 
       if (!fileInfo) {
-        alert($ustra.utils.string.format(messages['ustra.file.cannotFoundFile']))
-        return
+        alert(
+          $ustra.utils.string.format(messages["ustra.file.cannotFoundFile"])
+        );
+        return;
       }
 
       try {
         const url = $ustra.api
-          .urlBuilder('/api/file/attach')
-          .add('fileGrpId', props.fileGroupId)
-          .add('fileId', fileId.value)
-          .add('fileNo', fileNo)
-          .add('attachmentFileName', fileInfo.orgName)
+          .urlBuilder("/api/file/attach")
+          .add("fileGrpId", props.fileGroupId)
+          .add("fileId", fileId.value)
+          .add("fileNo", fileNo)
+          .add("attachmentFileName", fileInfo.orgName)
           // .add('attachmentFileName', '1')
-          .add('attach', '1')
-          .build()
+          .add("attach", "1")
+          .build();
 
         $ustra.api.downloadFile({
           url,
-          method: 'GET',
+          method: "GET",
           fileName: fileInfo.orgName,
-          failMessage: messages['ustra.file.errorOnDownloadFile'],
-        })
+          failMessage: messages["ustra.file.errorOnDownloadFile"],
+        });
       } catch (e) {
-        alert($ustra.utils.string.format(messages['ustra.file.errorOnDownloadFile']))
+        alert(
+          $ustra.utils.string.format(messages["ustra.file.errorOnDownloadFile"])
+        );
       }
-    })
+    });
   }
 
   /**
    * form data를 생성한다.
    */
   function createFormData() {
-    const formData: FormData = new FormData()
-    formData.append('fileGrpId', props.fileGroupId)
-    formData.append('fileId', fileId.value || '')
+    const formData: FormData = new FormData();
+    formData.append("fileGrpId", props.fileGroupId);
+    formData.append("fileId", fileId.value || "");
 
     if (props.subDir) {
-      formData.append('subDir', props.subDir)
+      formData.append("subDir", props.subDir);
     }
 
-    let index = 1
-    uploadedFiles.value.forEach(f => {
-      formData.append(`file-${index}`, f.fileNo.toString())
-      index++
-    })
+    let index = 1;
+    uploadedFiles.value.forEach((f) => {
+      formData.append(`file-${index}`, f.fileNo.toString());
+      index++;
+    });
 
-    selectedFiles.value.forEach(f => {
-      formData.append(`file-${index}`, f)
-      index++
-    })
+    selectedFiles.value.forEach((f) => {
+      formData.append(`file-${index}`, f);
+      index++;
+    });
 
-    return formData
+    return formData;
   }
 
   /**
    * 파일 업로드
    */
   async function upload() {
-    const formData = createFormData()
+    const formData = createFormData();
 
     if (props.beforeUpload) {
       const arg = {
         formData,
         cancel: false,
-      }
-      await props.beforeUpload(arg)
+      };
+      await props.beforeUpload(arg);
 
       if (arg.cancel === true) {
-        return
+        return;
       }
     }
 
     try {
       const result = await $ustra.api.call<apiModels.ApiResponse<FileOutput>>({
         url: apiUrls.upload,
-        method: 'POST',
-        headers: { contentType: false, processData: false, enctype: 'multipart/form-data' },
+        method: "POST",
+        headers: {
+          contentType: false,
+          processData: false,
+          enctype: "multipart/form-data",
+        },
         data: formData,
         timeout: 0,
         showLoadingBar: false,
 
         onUploadProgress(event) {
-          $ustra.hooks.callHook('ui:progress', {
-            type: 'progress',
+          $ustra.hooks.callHook("ui:progress", {
+            type: "progress",
             show: true,
             progressRate: Math.round(event.progress * 100),
-          })
+          });
 
           if (event.progress === 1) {
             setTimeout(() => {
-              $ustra.hooks.callHook('ui:progress', {
-                type: 'progress',
+              $ustra.hooks.callHook("ui:progress", {
+                type: "progress",
                 show: false,
                 progressRate: 100,
-              })
-            }, 1000)
-            return
+              });
+            }, 1000);
+            return;
           }
         },
-      })
+      });
 
       if (result.data.body.fileId) {
-        fileId.value = result.data.body.fileId
+        fileId.value = result.data.body.fileId;
       }
 
-      init()
-      uploadedFiles.value = result.data.body.fileMetaDatas
+      init();
+      uploadedFiles.value = result.data.body.fileMetaDatas;
       if (options.reloadHandler) {
-        options.reloadHandler()
+        options.reloadHandler();
       }
 
       return {
         fileId: result.data.body.fileId,
         fileMetaDatas: result.data.body.fileMetaDatas,
-        success: result.data.resultCode === '0000',
+        success: result.data.resultCode === "0000",
         convertData: null,
-      }
+      };
     } catch (err) {
-      $ustra.hooks.callHook('ui:progress', {
-        type: 'progress',
+      $ustra.hooks.callHook("ui:progress", {
+        type: "progress",
         show: false,
         progressRate: 0,
-      })
+      });
 
-      alert($ustra.utils.string.format(messages['ustra.file.errorOnUploadFile']))
-      throw err
+      alert(
+        $ustra.utils.string.format(messages["ustra.file.errorOnUploadFile"])
+      );
+      throw err;
     }
   }
 
@@ -419,33 +453,43 @@ export const defineUstraFileUploaderComponent = (
    * @param passOnResponseError 오류 발생 시, 통과 여부
    * @returns
    */
-  async function convert(fileType: 'excel' | 'image' | 'text', formDataConverter?: (formData: FormData) => void, passOnResponseError?: boolean) {
+  async function convert(
+    fileType: "excel" | "image" | "text",
+    formDataConverter?: (formData: FormData) => void,
+    passOnResponseError?: boolean
+  ) {
     try {
-      let formData = createFormData()
-      formData.append('convertedFileType', fileType)
+      let formData = createFormData();
+      formData.append("convertedFileType", fileType);
 
       if (formDataConverter) {
-        formDataConverter(formData)
+        formDataConverter(formData);
       }
 
       const result = await $ustra.api.call<apiModels.ApiResponse<any>>({
         url: apiUrls.convert,
-        method: 'POST',
-        headers: { contentType: false, processData: false, enctype: 'multipart/form-data' },
+        method: "POST",
+        headers: {
+          contentType: false,
+          processData: false,
+          enctype: "multipart/form-data",
+        },
         data: formData,
         timeout: 0,
         passOnResponseError,
-      })
+      });
 
       return {
         fileId: fileId.value,
         fileMetaDatas: uploadedFiles.value,
-        success: result.data.resultCode === '0000',
+        success: result.data.resultCode === "0000",
         convertData: result.data.body,
-      }
+      };
     } catch (err) {
-      alert($ustra.utils.string.format(messages['ustra.file.errorOnUploadFile']))
-      throw err
+      alert(
+        $ustra.utils.string.format(messages["ustra.file.errorOnUploadFile"])
+      );
+      throw err;
     }
   }
 
@@ -455,32 +499,38 @@ export const defineUstraFileUploaderComponent = (
    * @param data 전송 데이터 객체
    * @param passOnResponseError 오류 발생 시, 통과 여부
    */
-  async function convertFormMetaData(convertedFileType: 'excel' | 'image' | 'text', data?: Record<string, any>, passOnResponseError?: boolean) {
+  async function convertFormMetaData(
+    convertedFileType: "excel" | "image" | "text",
+    data?: Record<string, any>,
+    passOnResponseError?: boolean
+  ) {
     try {
       const defaultData = {
         convertedFileType,
         fileGrpId: props.fileGroupId,
         fileId: fileId.value,
         fileMetaDatas: uploadedFiles.value,
-      }
+      };
 
       const result = await $ustra.api.call<apiModels.ApiResponse<FileOutput>>({
         url: apiUrls.convertFromMetaData,
-        method: 'POST',
+        method: "POST",
         data: $ustra.utils.core.deepMerge(defaultData, data || {}),
         timeout: 0,
         passOnResponseError,
-      })
+      });
 
       return {
         fileId: fileId.value,
         fileMetaDatas: uploadedFiles.value,
-        success: result.data.resultCode === '0000',
+        success: result.data.resultCode === "0000",
         convertData: result.data.body,
-      }
+      };
     } catch (err) {
-      alert($ustra.utils.string.format(messages['ustra.file.errorOnUploadFile']))
-      throw err
+      alert(
+        $ustra.utils.string.format(messages["ustra.file.errorOnUploadFile"])
+      );
+      throw err;
     }
   }
 
@@ -495,45 +545,45 @@ export const defineUstraFileUploaderComponent = (
        * resource 저장 필요 여부
        * @default false
        */
-      storeResource?: boolean
+      storeResource?: boolean;
 
       /**
        * 오류 발생 시 중지 여부
        * @default false
        */
-      stopOnError?: boolean
+      stopOnError?: boolean;
 
       /**
        * 모델로 변환 시 Java 클래스 명
        */
-      modelClassName?: string
+      modelClassName?: string;
 
       /**
        * header row의 index
        * @default 0
        */
-      headerRowIndex?: number
+      headerRowIndex?: number;
 
       /**
        * 엑셀 업로드 후처리 Bean 명
        */
-      excelDataPostProcessorBeanName?: string
+      excelDataPostProcessorBeanName?: string;
 
       /**
        * 엑셀 데이터 후처리기 전송 파라메터
        */
-      excelDataPostProcessorParameter?: string | object
+      excelDataPostProcessorParameter?: string | object;
 
       /**
        * 다중 sheet 리딩 시 index 또는 sheet 명
        */
-      sheetNamesOrIndexes?: (string | number)[]
+      sheetNamesOrIndexes?: (string | number)[];
 
       /**
        * 엑셀 조회 시, 비밀번호
        */
-      password?: string
-    } = {},
+      password?: string;
+    } = {}
   ) {
     options = useDeepMerge(
       {
@@ -541,76 +591,92 @@ export const defineUstraFileUploaderComponent = (
         stopOnError: false,
         headerRowIndex: 0,
       },
-      options,
-    )
+      options
+    );
 
     if (!options.storeResource) {
       return convert(
-        'excel',
-        formData => {
-          const excelDataPostProcessorParameter = options.excelDataPostProcessorParameter || {}
+        "excel",
+        (formData) => {
+          const excelDataPostProcessorParameter =
+            options.excelDataPostProcessorParameter || {};
 
-          if (typeof excelDataPostProcessorParameter === 'object') {
-            excelDataPostProcessorParameter['fileId'] = props.fileId
-            excelDataPostProcessorParameter['fileMetaDatas'] = uploadedFiles.value
+          if (typeof excelDataPostProcessorParameter === "object") {
+            excelDataPostProcessorParameter["fileId"] = props.fileId;
+            excelDataPostProcessorParameter["fileMetaDatas"] =
+              uploadedFiles.value;
           }
 
-          formData.append('stopOnError', options.stopOnError.toString())
+          formData.append("stopOnError", options.stopOnError.toString());
 
           if (options.modelClassName) {
-            formData.append('modelClassName', options.modelClassName)
+            formData.append("modelClassName", options.modelClassName);
           }
 
           if (options.excelDataPostProcessorBeanName) {
-            formData.append('excelDataPostProcessorBeanName', options.excelDataPostProcessorBeanName)
+            formData.append(
+              "excelDataPostProcessorBeanName",
+              options.excelDataPostProcessorBeanName
+            );
           }
 
           if (options.excelDataPostProcessorParameter) {
-            formData.append('excelDataPostProcessorParameter', JSON.stringify(excelDataPostProcessorParameter))
+            formData.append(
+              "excelDataPostProcessorParameter",
+              JSON.stringify(excelDataPostProcessorParameter)
+            );
           }
 
           if (options.sheetNamesOrIndexes) {
-            formData.append('sheetNamesOrIndexes', JSON.stringify(options.sheetNamesOrIndexes))
+            formData.append(
+              "sheetNamesOrIndexes",
+              JSON.stringify(options.sheetNamesOrIndexes)
+            );
           } else {
-            formData.append('sheetNamesOrIndexes', '[]')
+            formData.append("sheetNamesOrIndexes", "[]");
           }
 
           if (!$ustra.utils.core.isEmpty(options.headerRowIndex)) {
-            formData.append('headerRowIndex', toString(options.headerRowIndex))
+            formData.append("headerRowIndex", toString(options.headerRowIndex));
           }
 
           if (!$ustra.utils.core.isEmpty(options.password)) {
-            formData.append('password', options.password)
+            formData.append("password", options.password);
           }
         },
-        passOnResponseError,
-      )
+        passOnResponseError
+      );
     } else {
       if (selectedFiles.value.length > 0) {
-        await upload()
+        await upload();
       }
 
       if (uploadedFiles.value.length > 0) {
-        const excelDataPostProcessorParameter = options.excelDataPostProcessorParameter || {}
+        const excelDataPostProcessorParameter =
+          options.excelDataPostProcessorParameter || {};
 
-        if (typeof excelDataPostProcessorParameter === 'object') {
-          excelDataPostProcessorParameter['fileId'] = props.fileId
-          excelDataPostProcessorParameter['fileMetaDatas'] = uploadedFiles.value
+        if (typeof excelDataPostProcessorParameter === "object") {
+          excelDataPostProcessorParameter["fileId"] = props.fileId;
+          excelDataPostProcessorParameter["fileMetaDatas"] =
+            uploadedFiles.value;
         }
 
         return convertFormMetaData(
-          'excel',
+          "excel",
           {
             stopOnError: options.stopOnError,
             modelClassName: options.modelClassName,
             sheetNamesOrIndexes: options.sheetNamesOrIndexes,
             headerRowIndex: options.headerRowIndex,
             password: options.password,
-            excelDataPostProcessorBeanName: options.excelDataPostProcessorBeanName,
-            excelDataPostProcessorParameter: JSON.stringify(excelDataPostProcessorParameter),
+            excelDataPostProcessorBeanName:
+              options.excelDataPostProcessorBeanName,
+            excelDataPostProcessorParameter: JSON.stringify(
+              excelDataPostProcessorParameter
+            ),
           },
-          passOnResponseError,
-        )
+          passOnResponseError
+        );
       }
     }
   }
@@ -690,5 +756,5 @@ export const defineUstraFileUploaderComponent = (
      * 메타데이터 파일 변환
      */
     convertFormMetaData,
-  }
-}
+  };
+};

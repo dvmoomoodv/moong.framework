@@ -3,7 +3,7 @@ export interface Ckeditor5Options extends Record<string, any> {
    * 활성화 여부
    * @default false
    */
-  enabled?: boolean
+  enabled?: boolean;
 
   /**
    * 에디터 설정
@@ -13,27 +13,27 @@ export interface Ckeditor5Options extends Record<string, any> {
     {
       /**
        * 빌드 파일 경로
-       * @default ['@ustra/nuxt-ckeditor5/src/builtin/classic-basic3/ckeditor.js']
+       * @default ['@moong/nuxt-ckeditor5/src/builtin/classic-basic3/ckeditor.js']
        */
-      buildPath: string
+      buildPath: string;
 
       /**
        * map 파일 경로
-       * @default ['@ustra/nuxt-ckeditor5/src/builtin/classic-basic3/ckeditor.js.map']
+       * @default ['@moong/nuxt-ckeditor5/src/builtin/classic-basic3/ckeditor.js.map']
        */
-      mapPath?: string
+      mapPath?: string;
 
       /**
        * 언어 파일 경로
        * @default []
        */
-      languagePath?: string
+      languagePath?: string;
 
       /**
        * 언어 명
        * @default 'ko'
        */
-      language?: string
+      language?: string;
     }
-  >
+  >;
 }

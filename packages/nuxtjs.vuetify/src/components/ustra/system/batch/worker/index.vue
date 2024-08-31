@@ -11,8 +11,16 @@
           </UField>
           <UField blank>
             <UButtonBox right>
-              <UButton class="gray ico_reset" @click="searchAction.clearSearchParam"><span class="blind">초기화</span></UButton>
-              <UButton text="조회" class="primary ico_search" @click="searchAction.loadSearchedData" />
+              <UButton
+                class="gray ico_reset"
+                @click="searchAction.clearSearchParam"
+                ><span class="blind">초기화</span></UButton
+              >
+              <UButton
+                text="조회"
+                class="primary ico_search"
+                @click="searchAction.loadSearchedData"
+              />
               <UButton text="신규" @click="formAction.newForm" />
             </UButtonBox>
           </UField>
@@ -53,14 +61,21 @@
               </UField>
             </UFieldRow>
             <UFieldRow>
-              <UField label="엔드포인트" required><VTextField v-model="formAction.inputData.endpoint" /> </UField>
+              <UField label="엔드포인트" required
+                ><VTextField v-model="formAction.inputData.endpoint" />
+              </UField>
             </UFieldRow>
             <UFieldRow>
-              <UField label="수용량" required><VTextField v-model="formAction.inputData.capacity" /> </UField>
+              <UField label="수용량" required
+                ><VTextField v-model="formAction.inputData.capacity" />
+              </UField>
             </UFieldRow>
             <UFieldRow>
               <UField label="사용 여부" required
-                ><UVRadioGroupBox v-model="formAction.inputData.enabled" :itemsSource="searchAction.enabledList" />
+                ><UVRadioGroupBox
+                  v-model="formAction.inputData.enabled"
+                  :itemsSource="searchAction.enabledList"
+                />
               </UField>
             </UFieldRow>
 
@@ -88,7 +103,11 @@
               <UField direction="col">
                 <UButtonBox :right="true">
                   <UButton text="저장" @click="formAction.saveForm" />
-                  <UButton text="삭제" :disabled="formAction.mode.value === 'new'" @click="formAction.deleteForm" />
+                  <UButton
+                    text="삭제"
+                    :disabled="formAction.mode.value === 'new'"
+                    @click="formAction.deleteForm"
+                  />
                 </UButtonBox>
               </UField>
             </UFieldRow>
@@ -99,143 +118,173 @@
   </UBox>
 </template>
 <script lang="ts" setup>
-import { ref, reactive, watch, onMounted, useOnError, provide, inject, shallowRef, computed, nextTick } from '#ustra/nuxt'
-import { baseModels } from '#ustra/core/data'
-import { BatchWorker, BatchWorkerCriteria, useUstraBatchWorkerService } from '#ustra/nuxt/management'
-import UButton from '#ustra/nuxt-vuetify/components/button/u-button.vue'
-import UMessage from '#ustra/nuxt-vuetify/components/message/u-message.vue'
+import {
+  ref,
+  reactive,
+  watch,
+  onMounted,
+  useOnError,
+  provide,
+  inject,
+  shallowRef,
+  computed,
+  nextTick,
+} from "#moong/nuxt";
+import { baseModels } from "#moong/core/data";
+import {
+  BatchWorker,
+  BatchWorkerCriteria,
+  useUstraBatchWorkerService,
+} from "#moong/nuxt/management";
+import UButton from "#moong/nuxt-vuetify/components/button/u-button.vue";
+import UMessage from "#moong/nuxt-vuetify/components/message/u-message.vue";
 
-import UVCodeComboBox from '#ustra/nuxt-vuetify/management/components/combo-box/u-v-code-combo-box.vue'
-import UVRadioGroupBox from '#ustra/nuxt-vuetify/components/radio/u-v-radio-group-box.vue'
-const service = useUstraBatchWorkerService()
+import UVCodeComboBox from "#moong/nuxt-vuetify/management/components/combo-box/u-v-code-combo-box.vue";
+import UVRadioGroupBox from "#moong/nuxt-vuetify/components/radio/u-v-radio-group-box.vue";
+const service = useUstraBatchWorkerService();
 
 onMounted(async () => {
-  await nextTick()
-  formAction.saved()
-})
+  await nextTick();
+  formAction.saved();
+});
 
 const searchAction = (function () {
   const searchParam: BatchWorkerCriteria = reactive({
     workerId: null,
     endpoint: null,
-  })
+  });
 
   function clearSearchParam() {
-    searchParam.workerId = null
-    searchParam.endpoint = null
+    searchParam.workerId = null;
+    searchParam.endpoint = null;
   }
 
   async function loadSearchedData() {
-    formAction.saved()
+    formAction.saved();
   }
 
   const enabledList = reactive([
-    { value: true, text: '사용' },
-    { value: false, text: '미사용' },
-  ])
+    { value: true, text: "사용" },
+    { value: false, text: "미사용" },
+  ]);
 
   return {
     searchParam,
     clearSearchParam,
     loadSearchedData,
     enabledList,
-  }
-})()
+  };
+})();
 
-const data = ref([])
+const data = ref([]);
 const gridAction = (function () {
   async function loadData() {
     const result = await service.getWorkerList({
       ...searchAction.searchParam,
-    })
-    data.value = result.body
+    });
+    data.value = result.body;
   }
 
   return {
     loadData,
-  }
-})()
+  };
+})();
 
 const formAction = (function () {
-  const mode = ref<baseModels.FormMode>('new')
-  const formDisabled = ref(true)
+  const mode = ref<baseModels.FormMode>("new");
+  const formDisabled = ref(true);
 
   const inputData: BatchWorker = reactive({
     workerId: null,
     endpoint: null,
     capacity: 1,
     enabled: false,
-  })
+  });
 
   async function init() {
-    mode.value = 'new'
+    mode.value = "new";
 
     Object.assign(inputData, {
       workerId: null,
       endpoint: null,
       capacity: 1,
       enabled: false,
-    })
+    });
   }
 
   async function updateForm(BatchWorker: BatchWorker) {
-    mode.value = 'update'
-    Object.assign(inputData, BatchWorker)
-    formDisabled.value = false
+    mode.value = "update";
+    Object.assign(inputData, BatchWorker);
+    formDisabled.value = false;
   }
 
   function newForm() {
-    formDisabled.value = false
-    init()
-    gridAction.grid.selection.clear()
+    formDisabled.value = false;
+    init();
+    gridAction.grid.selection.clear();
   }
 
   const saveForm = useOnError(
     async () => {
-      const realInputData = $ustra.utils.core.deepMerge({}, inputData)
+      const realInputData = $ustra.utils.core.deepMerge({}, inputData);
 
-      if (mode.value === 'new') {
-        await service.createWorker({ header: {}, batchWorker: { ...realInputData } })
+      if (mode.value === "new") {
+        await service.createWorker({
+          header: {},
+          batchWorker: { ...realInputData },
+        });
       } else {
-        await service.modifyWorker({ header: {}, batchWorker: { ...realInputData } })
+        await service.modifyWorker({
+          header: {},
+          batchWorker: { ...realInputData },
+        });
       }
 
-      saved()
+      saved();
     },
     {
       // message: Error.message,
-    },
-  )
+    }
+  );
 
   async function deleteForm() {
-    const realInputData = $ustra.utils.core.deepMerge({}, inputData)
+    const realInputData = $ustra.utils.core.deepMerge({}, inputData);
 
-    if (await confirm('삭제하시겠습니까?')) {
-      await service.deleteWorker({ header: {}, workerId: realInputData.workerId })
-      saved()
+    if (await confirm("삭제하시겠습니까?")) {
+      await service.deleteWorker({
+        header: {},
+        workerId: realInputData.workerId,
+      });
+      saved();
     }
   }
 
   async function enable() {
-    const realInputData = $ustra.utils.core.deepMerge({}, inputData)
-    await service.enableWorker({ header: {}, batchWorker: { ...realInputData } })
-    saved()
+    const realInputData = $ustra.utils.core.deepMerge({}, inputData);
+    await service.enableWorker({
+      header: {},
+      batchWorker: { ...realInputData },
+    });
+    saved();
   }
 
   async function disable() {
-    const realInputData = $ustra.utils.core.deepMerge({}, inputData)
-    await service.disableWorker({ header: {}, batchWorker: { ...realInputData } })
-    saved()
+    const realInputData = $ustra.utils.core.deepMerge({}, inputData);
+    await service.disableWorker({
+      header: {},
+      batchWorker: { ...realInputData },
+    });
+    saved();
   }
 
   async function saved() {
-    formDisabled.value = true
-    init()
-    gridAction.loadData()
+    formDisabled.value = true;
+    init();
+    gridAction.loadData();
   }
 
   async function validateId(workerId: string) {
-    return true
+    return true;
   }
 
   return {
@@ -251,12 +300,12 @@ const formAction = (function () {
     saved,
     enable,
     disable,
-  }
-})()
+  };
+})();
 </script>
 <script lang="ts">
 export default {
-  name: 'UstraManagementSystemBatchWorker',
-}
+  name: "UstraManagementSystemBatchWorker",
+};
 </script>
 <style scoped></style>

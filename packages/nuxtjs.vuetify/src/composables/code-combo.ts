@@ -1,61 +1,61 @@
-import { ExtractPropTypes } from 'vue'
-import { computed, useUstraUtils } from '#ustra/nuxt'
-import { useUstraCodeList } from '#ustra/nuxt/management/composables'
-import { Code } from '#ustra/nuxt/management'
-import { useVModel } from '@vueuse/core'
+import { ExtractPropTypes } from "vue";
+import { computed, useUstraUtils } from "#moong/nuxt";
+import { useUstraCodeList } from "#moong/nuxt/management/composables";
+import { Code } from "#moong/nuxt/management";
+import { useVModel } from "@vueuse/core";
 
 export interface CodeItem extends Code {
   /**
    * value 값
    */
-  value?: string
+  value?: string;
 
   /**
    * display 값
    */
-  display?: string
+  display?: string;
 }
 
 export interface CodeComboBoxProps {
   /**
    * 그룹 코드
    */
-  grpCd: string
+  grpCd: string;
 
   /**
    * 사용 중인 코드 값만 조회 여부
    */
-  onlyUse?: boolean
+  onlyUse?: boolean;
 
   /**
    * 코드 디스플레이 여부
    */
-  displayCode?: boolean
+  displayCode?: boolean;
 
   /**
    * 목록 커스토마이징 function
    */
-  customizeItems?: (codes: CodeItem[]) => CodeItem[]
+  customizeItems?: (codes: CodeItem[]) => CodeItem[];
 
   /**
    * 이름 순 정렬 여부
    */
-  sortByName?: boolean
+  sortByName?: boolean;
 
   /**
    * 코드 순 정렬 여부
    */
-  sortByCode?: boolean
+  sortByCode?: boolean;
 
   /**
    * null value text
    */
-  displayNullText?: string
+  displayNullText?: string;
 
   /**
    * object value
    */
-  objectValue?: CodeItem
+  objectValue?: CodeItem;
 }
 
 export const useComboVuetifyComponent = (
@@ -64,68 +64,96 @@ export const useComboVuetifyComponent = (
     /**
      * comboValue값 setting 시 후처리 핸들러
      */
-    afterSetComboValue: (value: any) => void
-  },
+    afterSetComboValue: (value: any) => void;
+  }
 ) => {
-  const objectValue = useVModel(props, 'objectValue')
+  const objectValue = useVModel(props, "objectValue");
 
   // @ts-ignore
-  const vmodelValue = useVModel(props, 'modelValue')
+  const vmodelValue = useVModel(props, "modelValue");
   const comboValue = computed({
     get() {
-      return vmodelValue.value
+      return vmodelValue.value;
     },
     set(v: any) {
-      vmodelValue.value = v
+      vmodelValue.value = v;
 
       if (options?.afterSetComboValue) {
-        options.afterSetComboValue(v)
+        options.afterSetComboValue(v);
       } else {
-        objectValue.value = !v ? null : itemsSource.value.find(s => s.value === v)
+        objectValue.value = !v
+          ? null
+          : itemsSource.value.find((s) => s.value === v);
       }
     },
-  })
+  });
 
   const itemsSource = computed(() => {
     let codes: CodeItem[] = useUstraUtils()
       .core.deepMerge([], useUstraCodeList(props.grpCd))
-      .filter(code => !props.onlyUse || code.useYn === 'Y')
-      .map(code => {
-        code.value = code.dtlCd
-        code.display = code.cdNm
-        code.checked = false
+      .filter((code) => !props.onlyUse || code.useYn === "Y")
+      .map((code) => {
+        code.value = code.dtlCd;
+        code.display = code.cdNm;
+        code.checked = false;
 
         if (props.displayCode) {
-          code.display = `${code.dtlCd} : ${code.cdNm}`
+          code.display = `${code.dtlCd} : ${code.cdNm}`;
         }
 
-        return code
-      })
+        return code;
+      });
 
     if (props.sortByName) {
-      codes = codes.sort((a, b) => (!a.dtlCd ? -1 : !b.dtlCd ? 1 : !a.cdNm ? -1 : !b.cdNm ? 1 : a.cdNm > b.cdNm ? 1 : a.cdNm === b.cdNm ? 0 : -1))
+      codes = codes.sort((a, b) =>
+        !a.dtlCd
+          ? -1
+          : !b.dtlCd
+            ? 1
+            : !a.cdNm
+              ? -1
+              : !b.cdNm
+                ? 1
+                : a.cdNm > b.cdNm
+                  ? 1
+                  : a.cdNm === b.cdNm
+                    ? 0
+                    : -1
+      );
     } else if (props.sortByCode) {
       codes = codes.sort((a, b) =>
-        !a.dtlCd ? -1 : !b.dtlCd ? 1 : !a.dtlCd ? -1 : !b.dtlCd ? 1 : a.dtlCd > b.dtlCd ? 1 : a.dtlCd === b.dtlCd ? 0 : -1,
-      )
+        !a.dtlCd
+          ? -1
+          : !b.dtlCd
+            ? 1
+            : !a.dtlCd
+              ? -1
+              : !b.dtlCd
+                ? 1
+                : a.dtlCd > b.dtlCd
+                  ? 1
+                  : a.dtlCd === b.dtlCd
+                    ? 0
+                    : -1
+      );
     }
 
     if (props.displayNullText) {
       codes.unshift({
         value: null,
         display: props.displayNullText,
-      })
+      });
     }
 
     if (props.customizeItems) {
-      codes = props.customizeItems(codes)
+      codes = props.customizeItems(codes);
     }
 
-    return codes
-  })
+    return codes;
+  });
 
-  return { vmodelValue, comboValue, itemsSource, objectValue }
-}
+  return { vmodelValue, comboValue, itemsSource, objectValue };
+};
 
 export const useComboComponent = (
   props: Readonly<ExtractPropTypes<CodeComboBoxProps>>,
@@ -133,65 +161,93 @@ export const useComboComponent = (
     /**
      * comboValue값 setting 시 후처리 핸들러
      */
-    afterSetComboValue: (value: any) => void
-  },
+    afterSetComboValue: (value: any) => void;
+  }
 ) => {
-  const objectValue = useVModel(props, 'objectValue')
+  const objectValue = useVModel(props, "objectValue");
 
   // @ts-ignore
-  const vmodelValue = useVModel(props, 'modelValue')
+  const vmodelValue = useVModel(props, "modelValue");
   const comboValue = computed({
     get() {
-      return vmodelValue.value
+      return vmodelValue.value;
     },
     set(v: any) {
-      vmodelValue.value = v
+      vmodelValue.value = v;
 
       if (options?.afterSetComboValue) {
-        options.afterSetComboValue(v)
+        options.afterSetComboValue(v);
       } else {
-        objectValue.value = !v ? null : itemsSource.value.find(s => s.value === v)
+        objectValue.value = !v
+          ? null
+          : itemsSource.value.find((s) => s.value === v);
       }
     },
-  })
+  });
 
   const itemsSource = computed(() => {
     let codes: CodeItem[] = useUstraUtils()
       .core.deepMerge([], useUstraCodeList(props.grpCd))
-      .filter(code => !props.onlyUse || code.useYn === 'Y')
-      .map(code => {
-        code.value = code.dtlCd
-        code.display = code.cdNm
-        code.checked = false
+      .filter((code) => !props.onlyUse || code.useYn === "Y")
+      .map((code) => {
+        code.value = code.dtlCd;
+        code.display = code.cdNm;
+        code.checked = false;
 
         if (props.displayCode) {
-          code.display = `${code.dtlCd} : ${code.cdNm}`
+          code.display = `${code.dtlCd} : ${code.cdNm}`;
         }
 
-        return code
-      })
+        return code;
+      });
 
     if (props.sortByName) {
-      codes = codes.sort((a, b) => (!a.dtlCd ? -1 : !b.dtlCd ? 1 : !a.cdNm ? -1 : !b.cdNm ? 1 : a.cdNm > b.cdNm ? 1 : a.cdNm === b.cdNm ? 0 : -1))
+      codes = codes.sort((a, b) =>
+        !a.dtlCd
+          ? -1
+          : !b.dtlCd
+            ? 1
+            : !a.cdNm
+              ? -1
+              : !b.cdNm
+                ? 1
+                : a.cdNm > b.cdNm
+                  ? 1
+                  : a.cdNm === b.cdNm
+                    ? 0
+                    : -1
+      );
     } else if (props.sortByCode) {
       codes = codes.sort((a, b) =>
-        !a.dtlCd ? -1 : !b.dtlCd ? 1 : !a.dtlCd ? -1 : !b.dtlCd ? 1 : a.dtlCd > b.dtlCd ? 1 : a.dtlCd === b.dtlCd ? 0 : -1,
-      )
+        !a.dtlCd
+          ? -1
+          : !b.dtlCd
+            ? 1
+            : !a.dtlCd
+              ? -1
+              : !b.dtlCd
+                ? 1
+                : a.dtlCd > b.dtlCd
+                  ? 1
+                  : a.dtlCd === b.dtlCd
+                    ? 0
+                    : -1
+      );
     }
 
     if (props.displayNullText) {
       codes.unshift({
         value: null,
         display: props.displayNullText,
-      })
+      });
     }
 
     if (props.customizeItems) {
-      codes = props.customizeItems(codes)
+      codes = props.customizeItems(codes);
     }
 
-    return codes
-  })
+    return codes;
+  });
 
-  return { vmodelValue, comboValue, itemsSource, objectValue }
-}
+  return { vmodelValue, comboValue, itemsSource, objectValue };
+};

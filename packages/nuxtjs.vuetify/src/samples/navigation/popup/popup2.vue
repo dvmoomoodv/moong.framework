@@ -1,6 +1,8 @@
 <template>
   <v-card>
-    <template #subtitle> buttons slot을 사용하여 하단 버튼을 추가할 수 있다.</template>
+    <template #subtitle>
+      buttons slot을 사용하여 하단 버튼을 추가할 수 있다.</template
+    >
     <template #text>
       <VBtn @click="() => (showPopup = true)">팝업 열기</VBtn>
 
@@ -14,7 +16,7 @@
               () => {
                 useGlobal()
                   .alert('저장되었습니다.')
-                  .then(() => (showPopup = false))
+                  .then(() => (showPopup = false));
               }
             "
           />
@@ -24,9 +26,9 @@
               () => {
                 useGlobal()
                   .confirm('창을 닫으시겠습니까?')
-                  .then(r => {
-                    if (r) showPopup = false
-                  })
+                  .then((r) => {
+                    if (r) showPopup = false;
+                  });
               }
             "
           />
@@ -37,12 +39,12 @@
   </v-card>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
-import { useGlobal } from '#ustra/nuxt/composables'
+import { ref } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
+import { useGlobal } from "#moong/nuxt/composables";
 
 // @ts-ignore
-import popup3 from './md/popup3.md'
+import popup3 from "./md/popup3.md";
 
-const showPopup = ref(false)
+const showPopup = ref(false);
 </script>

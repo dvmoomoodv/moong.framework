@@ -9,7 +9,9 @@
         <UDatepicker v-model="value" :required="true" />
       </UValidationGroup>
 
-      <VBtn class="mt-2" @click="() => validationGroup.validate()">Validate</VBtn>
+      <VBtn class="mt-2" @click="() => validationGroup.validate()"
+        >Validate</VBtn
+      >
       <VBtn class="mt-2" @click="() => validationGroup.init()">Init</VBtn>
 
       <br /><br />
@@ -23,13 +25,13 @@
   </VCard>
 </template>
 <script lang="ts" setup>
-import { ref, shallowRef } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
-import UDatepicker from '#ustra/nuxt-vuetify/components/datepicker/u-datepicker.vue'
+import { ref, shallowRef } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
+import UDatepicker from "#moong/nuxt-vuetify/components/datepicker/u-datepicker.vue";
 
 // @ts-ignore
-import doc1 from './md/datepicker4.md'
+import doc1 from "./md/datepicker4.md";
 
-const value = ref(null)
-const validationGroup = shallowRef<InstanceType<typeof UValidationGroup>>()
+const value = ref(null);
+const validationGroup = shallowRef<InstanceType<typeof UValidationGroup>>();
 </script>

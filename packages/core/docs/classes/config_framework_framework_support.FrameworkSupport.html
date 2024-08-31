@@ -1,30 +1,1157 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>FrameworkSupport | @ustra/core</title><meta name="description" content="Documentation for @ustra/core"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base=".."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">@ustra/core</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb"><li><a href="../index.html">@ustra/core</a></li><li><a href="../modules/config_framework_framework_support.html">config/framework/framework-support</a></li><li><a href="config_framework_framework_support.FrameworkSupport.html">FrameworkSupport</a></li></ul><h1>Class FrameworkSupport</h1></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L14">framework/core/src/config/framework/framework-support.ts:14</a></li></ul></aside><section class="tsd-panel-group tsd-index-group"><section class="tsd-panel tsd-index-panel"><details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><h5 class="tsd-index-heading uppercase" role="button" aria-expanded="false" tabIndex="0"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-chevronSmall"></use></svg> Index</h5></summary><div class="tsd-accordion-details"><section class="tsd-index-section"><h3 class="tsd-index-heading">Constructors</h3><div class="tsd-index-list"><a href="config_framework_framework_support.FrameworkSupport.html#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a>
-</div></section><section class="tsd-index-section"><h3 class="tsd-index-heading">Methods</h3><div class="tsd-index-list"><a href="config_framework_framework_support.FrameworkSupport.html#getAllDevDependencies" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>All<wbr/>Dev<wbr/>Dependencies</span></a>
-<a href="config_framework_framework_support.FrameworkSupport.html#getModuleAlias" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Module<wbr/>Alias</span></a>
-<a href="config_framework_framework_support.FrameworkSupport.html#getModuleInfo" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Module<wbr/>Info</span></a>
-<a href="config_framework_framework_support.FrameworkSupport.html#getModulePathFromFrameworkPath" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Module<wbr/>Path<wbr/>From<wbr/>Framework<wbr/>Path</span></a>
-<a href="config_framework_framework_support.FrameworkSupport.html#getTemplateList" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Template<wbr/>List</span></a>
-<a href="config_framework_framework_support.FrameworkSupport.html#getUseFrameworkModules" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Use<wbr/>Framework<wbr/>Modules</span></a>
-<a href="config_framework_framework_support.FrameworkSupport.html#parsePackageJson" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>parse<wbr/>Package<wbr/>Json</span></a>
-<a href="config_framework_framework_support.FrameworkSupport.html#writePackageJson" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>write<wbr/>Package<wbr/>Json</span></a>
-</div></section></div></details></section></section><section class="tsd-panel-group tsd-member-group"><h2>Constructors</h2><section class="tsd-panel tsd-member"><a id="constructor" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>constructor</span><a href="#constructor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="constructor.new_FrameworkSupport" class="tsd-anchor"></a><span class="tsd-kind-constructor-signature">new <wbr/>Framework<wbr/>Support</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="config_framework_framework_support.FrameworkSupport.html" class="tsd-signature-type tsd-kind-class">FrameworkSupport</a><a href="#constructor.new_FrameworkSupport" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><h4 class="tsd-returns-title">Returns <a href="config_framework_framework_support.FrameworkSupport.html" class="tsd-signature-type tsd-kind-class">FrameworkSupport</a></h4></li></ul></section></section><section class="tsd-panel-group tsd-member-group"><h2>Methods</h2><section class="tsd-panel tsd-member"><a id="getAllDevDependencies" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>get<wbr/>All<wbr/>Dev<wbr/>Dependencies</span><a href="#getAllDevDependencies" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="getAllDevDependencies.getAllDevDependencies-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">get<wbr/>All<wbr/>Dev<wbr/>Dependencies</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">baseDir</span>, <span class="tsd-kind-parameter">frameworkDir</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><a href="#getAllDevDependencies.getAllDevDependencies-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>설치가 필요한 dev dependencies 목록을 추출한다.</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">baseDir</span>: <span class="tsd-signature-type">string</span></span><div class="tsd-comment tsd-typography"><p>기준 디렉토리</p>
-</div><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">frameworkDir</span>: <span class="tsd-signature-type">string</span></span><div class="tsd-comment tsd-typography"><p>프레임워크 경로</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L104">framework/core/src/config/framework/framework-support.ts:104</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="getModuleAlias" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>get<wbr/>Module<wbr/>Alias</span><a href="#getModuleAlias" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="getModuleAlias.getModuleAlias-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">get<wbr/>Module<wbr/>Alias</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">baseDir</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span><a href="#getModuleAlias.getModuleAlias-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>프레임워크 모듈의 alias를 조회</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">baseDir</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = undefined</span></span><div class="tsd-comment tsd-typography"><p>기준 directory 경로</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{}</span></h4><ul class="tsd-parameters"></ul><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L19">framework/core/src/config/framework/framework-support.ts:19</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="getModuleInfo" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>get<wbr/>Module<wbr/>Info</span><a href="#getModuleInfo" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="getModuleInfo.getModuleInfo-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">get<wbr/>Module<wbr/>Info</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">moduleName</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/config_framework_modules.FrameworkModuleDefinition.html" class="tsd-signature-type tsd-kind-interface">FrameworkModuleDefinition</a><span class="tsd-signature-symbol">&gt;</span><a href="#getModuleInfo.getModuleInfo-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>프레임워크 모듈 정보 조회</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">moduleName</span>: <span class="tsd-signature-type">string</span></span><div class="tsd-comment tsd-typography"><p>모듈 명</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Readonly</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/config_framework_modules.FrameworkModuleDefinition.html" class="tsd-signature-type tsd-kind-interface">FrameworkModuleDefinition</a><span class="tsd-signature-symbol">&gt;</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L45">framework/core/src/config/framework/framework-support.ts:45</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="getModulePathFromFrameworkPath" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>get<wbr/>Module<wbr/>Path<wbr/>From<wbr/>Framework<wbr/>Path</span><a href="#getModulePathFromFrameworkPath" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="getModulePathFromFrameworkPath.getModulePathFromFrameworkPath-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">get<wbr/>Module<wbr/>Path<wbr/>From<wbr/>Framework<wbr/>Path</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">frameworkDir</span>, <span class="tsd-kind-parameter">moduleName</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><a href="#getModulePathFromFrameworkPath.getModulePathFromFrameworkPath-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>프레임워크 경로로 부터 모듈 경로를 조회</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">frameworkDir</span>: <span class="tsd-signature-type">string</span></span><div class="tsd-comment tsd-typography"><p>프레임워크 디렉토리</p>
-</div><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">moduleName</span>: <span class="tsd-signature-type">string</span></span><div class="tsd-comment tsd-typography"><p>모듈 명</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L91">framework/core/src/config/framework/framework-support.ts:91</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="getTemplateList" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>get<wbr/>Template<wbr/>List</span><a href="#getTemplateList" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="getTemplateList.getTemplateList-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">get<wbr/>Template<wbr/>List</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">baseDir</span>, <span class="tsd-kind-parameter">frameworkDir</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">dirPath</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">packageInfo</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">templateMessage</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">templateName</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">templatePostScript</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[]</span><a href="#getTemplateList.getTemplateList-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>모든 템플릿 목록을 조회</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">baseDir</span>: <span class="tsd-signature-type">string</span></span></li><li><span><span class="tsd-kind-parameter">frameworkDir</span>: <span class="tsd-signature-type">string</span></span><div class="tsd-comment tsd-typography"><p>프레임워크가 위치하는 디렉토리</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">dirPath</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">packageInfo</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">templateMessage</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">templateName</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">templatePostScript</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span><span class="tsd-signature-symbol">[]</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L132">framework/core/src/config/framework/framework-support.ts:132</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="getUseFrameworkModules" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>get<wbr/>Use<wbr/>Framework<wbr/>Modules</span><a href="#getUseFrameworkModules" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="getUseFrameworkModules.getUseFrameworkModules-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">get<wbr/>Use<wbr/>Framework<wbr/>Modules</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">baseDir</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><a href="#getUseFrameworkModules.getUseFrameworkModules-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>사용 중인 프레임워크 모듈 목록을 조회</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">baseDir</span>: <span class="tsd-signature-type">string</span></span><div class="tsd-comment tsd-typography"><p>기준 디렉토리</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Set</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L71">framework/core/src/config/framework/framework-support.ts:71</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="parsePackageJson" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>parse<wbr/>Package<wbr/>Json</span><a href="#parsePackageJson" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="parsePackageJson.parsePackageJson-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">parse<wbr/>Package<wbr/>Json</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">baseDir</span>, <span class="tsd-kind-parameter">thrown</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#parsePackageJson.parsePackageJson-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>package.json 정보 조회</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">baseDir</span>: <span class="tsd-signature-type">string</span></span><div class="tsd-comment tsd-typography"><p>기준 디렉토리</p>
-</div><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">thrown</span>: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> = true</span></span><div class="tsd-comment tsd-typography"><p>파일이 없을 경우, 예외 발생여부</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L54">framework/core/src/config/framework/framework-support.ts:54</a></li></ul></aside></li></ul></section><section class="tsd-panel tsd-member"><a id="writePackageJson" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><span>write<wbr/>Package<wbr/>Json</span><a href="#writePackageJson" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><ul class="tsd-signatures"><li class="tsd-signature tsd-anchor-link"><a id="writePackageJson.writePackageJson-1" class="tsd-anchor"></a><span class="tsd-kind-call-signature">write<wbr/>Package<wbr/>Json</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">baseDir</span>, <span class="tsd-kind-parameter">content</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#writePackageJson.writePackageJson-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></li><li class="tsd-description"><div class="tsd-comment tsd-typography"><p>package.json write</p>
-</div><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">baseDir</span>: <span class="tsd-signature-type">string</span></span><div class="tsd-comment tsd-typography"><p>기준 디렉토리</p>
-</div><div class="tsd-comment tsd-typography"></div></li><li><span><span class="tsd-kind-parameter">content</span>: <span class="tsd-signature-type">any</span></span><div class="tsd-comment tsd-typography"><p>내용</p>
-</div><div class="tsd-comment tsd-typography"></div></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L63">framework/core/src/config/framework/framework-support.ts:63</a></li></ul></aside></li></ul></section></section></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-index-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><h4 class="uppercase">Member Visibility</h4><form><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div><div class="tsd-theme-toggle"><h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-index-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#constructor" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-512"></use></svg><span>constructor</span></a><a href="#getAllDevDependencies" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>All<wbr/>Dev<wbr/>Dependencies</span></a><a href="#getModuleAlias" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Module<wbr/>Alias</span></a><a href="#getModuleInfo" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Module<wbr/>Info</span></a><a href="#getModulePathFromFrameworkPath" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Module<wbr/>Path<wbr/>From<wbr/>Framework<wbr/>Path</span></a><a href="#getTemplateList" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Template<wbr/>List</span></a><a href="#getUseFrameworkModules" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>get<wbr/>Use<wbr/>Framework<wbr/>Modules</span></a><a href="#parsePackageJson" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>parse<wbr/>Package<wbr/>Json</span></a><a href="#writePackageJson" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-2048"></use></svg><span>write<wbr/>Package<wbr/>Json</span></a></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1"></use></svg><span>@ustra/core</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base=".."><li>Loading...</li></ul></nav></div></div></div><div class="tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div></body></html>
+<!doctype html>
+<html class="default" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <title>FrameworkSupport | @moong/core</title>
+    <meta name="description" content="Documentation for @moong/core" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/highlight.css" />
+    <script defer src="../assets/main.js"></script>
+    <script async src="../assets/icons.js" id="tsd-icons-script"></script>
+    <script async src="../assets/search.js" id="tsd-search-script"></script>
+    <script async src="../assets/navigation.js" id="tsd-nav-script"></script>
+  </head>
+  <body>
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("tsd-theme") || "os";
+      document.body.style.display = "none";
+      setTimeout(
+        () =>
+          app ? app.showPage() : document.body.style.removeProperty("display"),
+        500
+      );
+    </script>
+    <header class="tsd-page-toolbar">
+      <div class="tsd-toolbar-contents container">
+        <div class="table-cell" id="tsd-search" data-base="..">
+          <div class="field">
+            <label
+              for="tsd-search-field"
+              class="tsd-widget tsd-toolbar-icon search no-caption"
+              ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use href="../assets/icons.svg#icon-search"></use></svg></label
+            ><input type="text" id="tsd-search-field" aria-label="Search" />
+          </div>
+          <div class="field"><div id="tsd-toolbar-links"></div></div>
+          <ul class="results">
+            <li class="state loading">Preparing search index...</li>
+            <li class="state failure">The search index is not available</li>
+          </ul>
+          <a href="../index.html" class="title">@moong/core</a>
+        </div>
+        <div class="table-cell" id="tsd-widgets">
+          <a
+            href="#"
+            class="tsd-widget tsd-toolbar-icon menu no-caption"
+            data-toggle="menu"
+            aria-label="Menu"
+            ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use href="../assets/icons.svg#icon-menu"></use></svg
+          ></a>
+        </div>
+      </div>
+    </header>
+    <div class="container container-main">
+      <div class="col-content">
+        <div class="tsd-page-title">
+          <ul class="tsd-breadcrumb">
+            <li><a href="../index.html">@moong/core</a></li>
+            <li>
+              <a href="../modules/config_framework_framework_support.html"
+                >config/framework/framework-support</a
+              >
+            </li>
+            <li>
+              <a href="config_framework_framework_support.FrameworkSupport.html"
+                >FrameworkSupport</a
+              >
+            </li>
+          </ul>
+          <h1>Class FrameworkSupport</h1>
+        </div>
+        <aside class="tsd-sources">
+          <ul>
+            <li>
+              Defined in
+              <a
+                href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L14"
+                >framework/core/src/config/framework/framework-support.ts:14</a
+              >
+            </li>
+          </ul>
+        </aside>
+        <section class="tsd-panel-group tsd-index-group">
+          <section class="tsd-panel tsd-index-panel">
+            <details class="tsd-index-content tsd-index-accordion" open>
+              <summary class="tsd-accordion-summary tsd-index-summary">
+                <h5
+                  class="tsd-index-heading uppercase"
+                  role="button"
+                  aria-expanded="false"
+                  tabindex="0"
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <use href="../assets/icons.svg#icon-chevronSmall"></use>
+                  </svg>
+                  Index
+                </h5>
+              </summary>
+              <div class="tsd-accordion-details">
+                <section class="tsd-index-section">
+                  <h3 class="tsd-index-heading">Constructors</h3>
+                  <div class="tsd-index-list">
+                    <a
+                      href="config_framework_framework_support.FrameworkSupport.html#constructor"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-512"></use></svg
+                      ><span>constructor</span></a
+                    >
+                  </div>
+                </section>
+                <section class="tsd-index-section">
+                  <h3 class="tsd-index-heading">Methods</h3>
+                  <div class="tsd-index-list">
+                    <a
+                      href="config_framework_framework_support.FrameworkSupport.html#getAllDevDependencies"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span
+                        >get<wbr />All<wbr />Dev<wbr />Dependencies</span
+                      ></a
+                    >
+                    <a
+                      href="config_framework_framework_support.FrameworkSupport.html#getModuleAlias"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>get<wbr />Module<wbr />Alias</span></a
+                    >
+                    <a
+                      href="config_framework_framework_support.FrameworkSupport.html#getModuleInfo"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>get<wbr />Module<wbr />Info</span></a
+                    >
+                    <a
+                      href="config_framework_framework_support.FrameworkSupport.html#getModulePathFromFrameworkPath"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span
+                        >get<wbr />Module<wbr />Path<wbr />From<wbr />Framework<wbr />Path</span
+                      ></a
+                    >
+                    <a
+                      href="config_framework_framework_support.FrameworkSupport.html#getTemplateList"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>get<wbr />Template<wbr />List</span></a
+                    >
+                    <a
+                      href="config_framework_framework_support.FrameworkSupport.html#getUseFrameworkModules"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span
+                        >get<wbr />Use<wbr />Framework<wbr />Modules</span
+                      ></a
+                    >
+                    <a
+                      href="config_framework_framework_support.FrameworkSupport.html#parsePackageJson"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>parse<wbr />Package<wbr />Json</span></a
+                    >
+                    <a
+                      href="config_framework_framework_support.FrameworkSupport.html#writePackageJson"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-2048"></use></svg
+                      ><span>write<wbr />Package<wbr />Json</span></a
+                    >
+                  </div>
+                </section>
+              </div>
+            </details>
+          </section>
+        </section>
+        <section class="tsd-panel-group tsd-member-group">
+          <h2>Constructors</h2>
+          <section class="tsd-panel tsd-member">
+            <a id="constructor" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>constructor</span
+              ><a
+                href="#constructor"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="constructor.new_FrameworkSupport" class="tsd-anchor"></a
+                ><span class="tsd-kind-constructor-signature"
+                  >new <wbr />Framework<wbr />Support</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><a
+                  href="config_framework_framework_support.FrameworkSupport.html"
+                  class="tsd-signature-type tsd-kind-class"
+                  >FrameworkSupport</a
+                ><a
+                  href="#constructor.new_FrameworkSupport"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <h4 class="tsd-returns-title">
+                  Returns
+                  <a
+                    href="config_framework_framework_support.FrameworkSupport.html"
+                    class="tsd-signature-type tsd-kind-class"
+                    >FrameworkSupport</a
+                  >
+                </h4>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section class="tsd-panel-group tsd-member-group">
+          <h2>Methods</h2>
+          <section class="tsd-panel tsd-member">
+            <a id="getAllDevDependencies" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>get<wbr />All<wbr />Dev<wbr />Dependencies</span
+              ><a
+                href="#getAllDevDependencies"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="getAllDevDependencies.getAllDevDependencies-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >get<wbr />All<wbr />Dev<wbr />Dependencies</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">baseDir</span>,
+                <span class="tsd-kind-parameter">frameworkDir</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">string</span
+                ><span class="tsd-signature-symbol">[]</span
+                ><a
+                  href="#getAllDevDependencies.getAllDevDependencies-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>설치가 필요한 dev dependencies 목록을 추출한다.</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">baseDir</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>기준 디렉토리</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">frameworkDir</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>프레임워크 경로</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">string</span
+                  ><span class="tsd-signature-symbol">[]</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L104"
+                        >framework/core/src/config/framework/framework-support.ts:104</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="getModuleAlias" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>get<wbr />Module<wbr />Alias</span
+              ><a
+                href="#getModuleAlias"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="getModuleAlias.getModuleAlias-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature"
+                  >get<wbr />Module<wbr />Alias</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">baseDir</span
+                ><span class="tsd-signature-symbol">?</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-symbol">{}</span
+                ><a
+                  href="#getModuleAlias.getModuleAlias-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>프레임워크 모듈의 alias를 조회</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">baseDir</span>:
+                        <span class="tsd-signature-type">string</span
+                        ><span class="tsd-signature-symbol">
+                          = undefined</span
+                        ></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>기준 directory 경로</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-symbol">{}</span>
+                </h4>
+                <ul class="tsd-parameters"></ul>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L19"
+                        >framework/core/src/config/framework/framework-support.ts:19</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="getModuleInfo" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>get<wbr />Module<wbr />Info</span
+              ><a
+                href="#getModuleInfo"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="getModuleInfo.getModuleInfo-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature"
+                  >get<wbr />Module<wbr />Info</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">moduleName</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Readonly</span
+                ><span class="tsd-signature-symbol">&lt;</span
+                ><a
+                  href="../interfaces/config_framework_modules.FrameworkModuleDefinition.html"
+                  class="tsd-signature-type tsd-kind-interface"
+                  >FrameworkModuleDefinition</a
+                ><span class="tsd-signature-symbol">&gt;</span
+                ><a
+                  href="#getModuleInfo.getModuleInfo-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>프레임워크 모듈 정보 조회</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">moduleName</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>모듈 명</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Readonly</span
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><a
+                    href="../interfaces/config_framework_modules.FrameworkModuleDefinition.html"
+                    class="tsd-signature-type tsd-kind-interface"
+                    >FrameworkModuleDefinition</a
+                  ><span class="tsd-signature-symbol">&gt;</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L45"
+                        >framework/core/src/config/framework/framework-support.ts:45</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="getModulePathFromFrameworkPath" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span
+                >get<wbr />Module<wbr />Path<wbr />From<wbr />Framework<wbr />Path</span
+              ><a
+                href="#getModulePathFromFrameworkPath"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="getModulePathFromFrameworkPath.getModulePathFromFrameworkPath-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >get<wbr />Module<wbr />Path<wbr />From<wbr />Framework<wbr />Path</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">frameworkDir</span>,
+                <span class="tsd-kind-parameter">moduleName</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">string</span
+                ><a
+                  href="#getModulePathFromFrameworkPath.getModulePathFromFrameworkPath-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>프레임워크 경로로 부터 모듈 경로를 조회</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">frameworkDir</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>프레임워크 디렉토리</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">moduleName</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>모듈 명</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">string</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L91"
+                        >framework/core/src/config/framework/framework-support.ts:91</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="getTemplateList" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>get<wbr />Template<wbr />List</span
+              ><a
+                href="#getTemplateList"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a id="getTemplateList.getTemplateList-1" class="tsd-anchor"></a
+                ><span class="tsd-kind-call-signature"
+                  >get<wbr />Template<wbr />List</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">baseDir</span>,
+                <span class="tsd-kind-parameter">frameworkDir</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-symbol">{ </span><br /><span
+                  >    </span
+                ><span class="tsd-kind-property">dirPath</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">string</span
+                ><span class="tsd-signature-symbol">; </span><br /><span
+                  >    </span
+                ><span class="tsd-kind-property">packageInfo</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">any</span
+                ><span class="tsd-signature-symbol">; </span><br /><span
+                  >    </span
+                ><span class="tsd-kind-property">templateMessage</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">string</span
+                ><span class="tsd-signature-symbol">; </span><br /><span
+                  >    </span
+                ><span class="tsd-kind-property">templateName</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">string</span
+                ><span class="tsd-signature-symbol">; </span><br /><span
+                  >    </span
+                ><span class="tsd-kind-property">templatePostScript</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">string</span
+                ><span class="tsd-signature-symbol">; </span><br /><span
+                  class="tsd-signature-symbol"
+                  >}</span
+                ><span class="tsd-signature-symbol">[]</span
+                ><a
+                  href="#getTemplateList.getTemplateList-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>모든 템플릿 목록을 조회</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">baseDir</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">frameworkDir</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>프레임워크가 위치하는 디렉토리</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-symbol">{ </span
+                  ><br /><span>    </span
+                  ><span class="tsd-kind-property">dirPath</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">string</span
+                  ><span class="tsd-signature-symbol">; </span><br /><span
+                    >    </span
+                  ><span class="tsd-kind-property">packageInfo</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">any</span
+                  ><span class="tsd-signature-symbol">; </span><br /><span
+                    >    </span
+                  ><span class="tsd-kind-property">templateMessage</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">string</span
+                  ><span class="tsd-signature-symbol">; </span><br /><span
+                    >    </span
+                  ><span class="tsd-kind-property">templateName</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">string</span
+                  ><span class="tsd-signature-symbol">; </span><br /><span
+                    >    </span
+                  ><span class="tsd-kind-property">templatePostScript</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">string</span
+                  ><span class="tsd-signature-symbol">; </span><br /><span
+                    class="tsd-signature-symbol"
+                    >}</span
+                  ><span class="tsd-signature-symbol">[]</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L132"
+                        >framework/core/src/config/framework/framework-support.ts:132</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="getUseFrameworkModules" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>get<wbr />Use<wbr />Framework<wbr />Modules</span
+              ><a
+                href="#getUseFrameworkModules"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="getUseFrameworkModules.getUseFrameworkModules-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >get<wbr />Use<wbr />Framework<wbr />Modules</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">baseDir</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">Set</span
+                ><span class="tsd-signature-symbol">&lt;</span
+                ><span class="tsd-signature-type">string</span
+                ><span class="tsd-signature-symbol">&gt;</span
+                ><a
+                  href="#getUseFrameworkModules.getUseFrameworkModules-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>사용 중인 프레임워크 모듈 목록을 조회</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">baseDir</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>기준 디렉토리</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">Set</span
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><span class="tsd-signature-type">string</span
+                  ><span class="tsd-signature-symbol">&gt;</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L71"
+                        >framework/core/src/config/framework/framework-support.ts:71</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="parsePackageJson" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>parse<wbr />Package<wbr />Json</span
+              ><a
+                href="#parsePackageJson"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="parsePackageJson.parsePackageJson-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >parse<wbr />Package<wbr />Json</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">baseDir</span>,
+                <span class="tsd-kind-parameter">thrown</span
+                ><span class="tsd-signature-symbol">?</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">any</span
+                ><a
+                  href="#parsePackageJson.parsePackageJson-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>package.json 정보 조회</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">baseDir</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>기준 디렉토리</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">thrown</span>:
+                        <span class="tsd-signature-type">boolean</span
+                        ><span class="tsd-signature-symbol"> = true</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>파일이 없을 경우, 예외 발생여부</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">any</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L54"
+                        >framework/core/src/config/framework/framework-support.ts:54</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="writePackageJson" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <span>write<wbr />Package<wbr />Json</span
+              ><a
+                href="#writePackageJson"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <ul class="tsd-signatures">
+              <li class="tsd-signature tsd-anchor-link">
+                <a
+                  id="writePackageJson.writePackageJson-1"
+                  class="tsd-anchor"
+                ></a
+                ><span class="tsd-kind-call-signature"
+                  >write<wbr />Package<wbr />Json</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">baseDir</span>,
+                <span class="tsd-kind-parameter">content</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">void</span
+                ><a
+                  href="#writePackageJson.writePackageJson-1"
+                  aria-label="Permalink"
+                  class="tsd-anchor-icon"
+                  ><svg viewBox="0 0 24 24">
+                    <use href="../assets/icons.svg#icon-anchor"></use></svg
+                ></a>
+              </li>
+              <li class="tsd-description">
+                <div class="tsd-comment tsd-typography">
+                  <p>package.json write</p>
+                </div>
+                <div class="tsd-parameters">
+                  <h4 class="tsd-parameters-title">Parameters</h4>
+                  <ul class="tsd-parameter-list">
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">baseDir</span>:
+                        <span class="tsd-signature-type">string</span></span
+                      >
+                      <div class="tsd-comment tsd-typography">
+                        <p>기준 디렉토리</p>
+                      </div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                    <li>
+                      <span
+                        ><span class="tsd-kind-parameter">content</span>:
+                        <span class="tsd-signature-type">any</span></span
+                      >
+                      <div class="tsd-comment tsd-typography"><p>내용</p></div>
+                      <div class="tsd-comment tsd-typography"></div>
+                    </li>
+                  </ul>
+                </div>
+                <h4 class="tsd-returns-title">
+                  Returns <span class="tsd-signature-type">void</span>
+                </h4>
+                <div class="tsd-comment tsd-typography"></div>
+                <aside class="tsd-sources">
+                  <ul>
+                    <li>
+                      Defined in
+                      <a
+                        href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/config/framework/framework-support.ts#L63"
+                        >framework/core/src/config/framework/framework-support.ts:63</a
+                      >
+                    </li>
+                  </ul>
+                </aside>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </div>
+      <div class="col-sidebar">
+        <div class="page-menu">
+          <div class="tsd-navigation settings">
+            <details class="tsd-index-accordion">
+              <summary class="tsd-accordion-summary">
+                <h3>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <use href="../assets/icons.svg#icon-chevronDown"></use></svg
+                  >Settings
+                </h3>
+              </summary>
+              <div class="tsd-accordion-details">
+                <div class="tsd-filter-visibility">
+                  <h4 class="uppercase">Member Visibility</h4>
+                  <form>
+                    <ul id="tsd-filter-options">
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-protected"
+                            name="protected"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Protected</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-private"
+                            name="private"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Private</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-inherited"
+                            name="inherited"
+                            checked
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Inherited</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-external"
+                            name="external"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>External</span></label
+                        >
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+                <div class="tsd-theme-toggle">
+                  <h4 class="uppercase">Theme</h4>
+                  <select id="tsd-theme">
+                    <option value="os">OS</option>
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                  </select>
+                </div>
+              </div>
+            </details>
+          </div>
+          <details open class="tsd-index-accordion tsd-page-navigation">
+            <summary class="tsd-accordion-summary">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <use href="../assets/icons.svg#icon-chevronDown"></use></svg
+                >On This Page
+              </h3>
+            </summary>
+            <div class="tsd-accordion-details">
+              <a href="#constructor" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-512"></use></svg
+                ><span>constructor</span></a
+              ><a href="#getAllDevDependencies" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>get<wbr />All<wbr />Dev<wbr />Dependencies</span></a
+              ><a href="#getModuleAlias" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>get<wbr />Module<wbr />Alias</span></a
+              ><a href="#getModuleInfo" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>get<wbr />Module<wbr />Info</span></a
+              ><a href="#getModulePathFromFrameworkPath" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span
+                  >get<wbr />Module<wbr />Path<wbr />From<wbr />Framework<wbr />Path</span
+                ></a
+              ><a href="#getTemplateList" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>get<wbr />Template<wbr />List</span></a
+              ><a href="#getUseFrameworkModules" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>get<wbr />Use<wbr />Framework<wbr />Modules</span></a
+              ><a href="#parsePackageJson" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>parse<wbr />Package<wbr />Json</span></a
+              ><a href="#writePackageJson" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-2048"></use></svg
+                ><span>write<wbr />Package<wbr />Json</span></a
+              >
+            </div>
+          </details>
+        </div>
+        <div class="site-menu">
+          <nav class="tsd-navigation">
+            <a href="../index.html"
+              ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                <use href="../assets/icons.svg#icon-1"></use></svg
+              ><span>@moong/core</span></a
+            >
+            <ul
+              class="tsd-small-nested-navigation"
+              id="tsd-nav-container"
+              data-base=".."
+            >
+              <li>Loading...</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="tsd-generator">
+      <p>
+        Generated using
+        <a href="https://typedoc.org/" target="_blank">TypeDoc</a>
+      </p>
+    </div>
+    <div class="overlay"></div>
+  </body>
+</html>

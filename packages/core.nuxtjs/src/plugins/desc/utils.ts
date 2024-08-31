@@ -2,7 +2,7 @@
  * $ustra utils 정의
  * @packageDocumentation
  */
-import { NuxtApp } from '#app'
+import { NuxtApp } from "#app";
 import {
   core,
   hooks,
@@ -21,157 +21,163 @@ import {
   string,
   file,
   random,
-} from '#ustra/core/utils'
-import { browser, dom, message, mobile, event } from '#ustra/core/utils/browser'
+} from "#moong/core/utils";
+import {
+  browser,
+  dom,
+  message,
+  mobile,
+  event,
+} from "#moong/core/utils/browser";
 
-import { Crypto } from './utils/crypto'
-import nuxt from '../../utils/nuxt'
-import component from '../../utils/component'
-import router from '../../utils/router'
-import { KeepAlive } from '../../utils/keep-alive'
-// import { PdfCreator, PdfUtilsOptions } from '#ustra/core/utils/browser/pdf'
+import { Crypto } from "./utils/crypto";
+import nuxt from "../../utils/nuxt";
+import component from "../../utils/component";
+import router from "../../utils/router";
+import { KeepAlive } from "../../utils/keep-alive";
+// import { PdfCreator, PdfUtilsOptions } from '#moong/core/utils/browser/pdf'
 
 export class UstraUtils {
   /**
    * core utility
    */
-  public core = core
+  public core = core;
 
   /**
    * hook utility
    */
-  public hooks = hooks
+  public hooks = hooks;
 
   /**
    * object utility
    */
-  public objects = objects
+  public objects = objects;
 
   /**
    * path utility
    */
-  public path = path
+  public path = path;
 
   /**
    * script utility
    */
-  public script = script
+  public script = script;
 
   /**
    * system utility
    */
-  public system = system
+  public system = system;
 
   /**
    * system utility
    */
-  public web = web
+  public web = web;
 
   /**
    * function utility
    */
-  public functions = functions
+  public functions = functions;
 
   /**
    * 암호화 모듈
    */
-  public crypto: Crypto = null
+  public crypto: Crypto = null;
 
   /**
    * masking 모듈
    */
-  public masking = masking
+  public masking = masking;
 
   /**
    * date utility
    */
-  public date = date
+  public date = date;
 
   /**
    * encoding utility
    */
-  public encoding = encoding
+  public encoding = encoding;
 
   /**
    * random utility
    */
-  public random = random
+  public random = random;
 
   /**
    * nuxt utility
    */
-  public nuxt = nuxt
+  public nuxt = nuxt;
 
   /**
    * component utility
    */
-  public component = component
+  public component = component;
 
   /**
    * router utility
    */
-  public router = router
+  public router = router;
 
   /**
    * formatting
    */
-  public formatting = formatting
+  public formatting = formatting;
 
   /**
    * 문자열 관련
    */
-  public string = string
+  public string = string;
 
   /**
    * validation
    */
-  public validation = validation
+  public validation = validation;
 
   /**
    * model
    */
-  public model = model
+  public model = model;
 
   /**
    * keep alive 관련 컴포넌트
    */
-  public keepAlive: KeepAlive
+  public keepAlive: KeepAlive;
 
   /**
    * file 유틸리티
    * @browser
    */
-  public file = file
+  public file = file;
 
   /**
    * browser 유틸리티
    * @browser
    */
-  public browser: typeof browser
+  public browser: typeof browser;
 
   /**
    * dom 유틸리티
    * @browser
    */
-  public dom: typeof dom
+  public dom: typeof dom;
 
   /**
    * message 유틸리티
    * @browser
    */
-  public message: typeof message
+  public message: typeof message;
 
   /**
    * mobile 유틸리티
    * @browser
    */
-  public mobile: typeof mobile
+  public mobile: typeof mobile;
 
   /**
    * 이벤트 관련 유틸리티
    * @browser
    */
-  public event: typeof event
+  public event: typeof event;
 
   /**
    * PDF 유틸리티
@@ -188,15 +194,15 @@ export class UstraUtils {
   // }
 
   constructor(private app: NuxtApp) {
-    this.crypto = new Crypto(app)
+    this.crypto = new Crypto(app);
 
     if (process.client) {
-      this.browser = browser
-      this.dom = dom
-      this.message = message
-      this.mobile = mobile
-      this.event = event
-      this.keepAlive = new KeepAlive(app.$ustra)
+      this.browser = browser;
+      this.dom = dom;
+      this.message = message;
+      this.mobile = mobile;
+      this.event = event;
+      this.keepAlive = new KeepAlive(app.$ustra);
     }
   }
 }

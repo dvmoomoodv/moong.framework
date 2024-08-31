@@ -38,17 +38,27 @@
             <UFieldSet>
               <UFieldRow>
                 <UField label="left">
-                  <VBtn :type="left ? 'primary' : ' '" @click="setAlign('left')">Click</VBtn>
+                  <VBtn :type="left ? 'primary' : ' '" @click="setAlign('left')"
+                    >Click</VBtn
+                  >
                 </UField>
               </UFieldRow>
               <UFieldRow>
                 <UField label="right">
-                  <VBtn :type="right ? 'primary' : ' '" @click="setAlign('right')">Click</VBtn>
+                  <VBtn
+                    :type="right ? 'primary' : ' '"
+                    @click="setAlign('right')"
+                    >Click</VBtn
+                  >
                 </UField>
               </UFieldRow>
               <UFieldRow>
                 <UField label="center">
-                  <VBtn :type="center ? 'primary' : ' '" @click="setAlign('center')">Click</VBtn>
+                  <VBtn
+                    :type="center ? 'primary' : ' '"
+                    @click="setAlign('center')"
+                    >Click</VBtn
+                  >
                 </UField>
               </UFieldRow>
             </UFieldSet>
@@ -60,29 +70,29 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from '#ustra/nuxt'
-import './style/form.scss'
+import { ref } from "#moong/nuxt";
+import "./style/form.scss";
 
-const title = ref(null)
-const background = ref('#f8f8f8')
-const left = ref(true)
-const right = ref(false)
-const center = ref(false)
-const setAlign = align => {
-  if (align === 'left') {
-    left.value = true
-    right.value = false
-    center.value = false
-  } else if (align === 'right') {
-    left.value = false
-    right.value = true
-    center.value = false
-  } else if (align === 'center') {
-    left.value = false
-    right.value = false
-    center.value = true
+const title = ref(null);
+const background = ref("#f8f8f8");
+const left = ref(true);
+const right = ref(false);
+const center = ref(false);
+const setAlign = (align) => {
+  if (align === "left") {
+    left.value = true;
+    right.value = false;
+    center.value = false;
+  } else if (align === "right") {
+    left.value = false;
+    right.value = true;
+    center.value = false;
+  } else if (align === "center") {
+    left.value = false;
+    right.value = false;
+    center.value = true;
   }
-}
+};
 </script>
 
 <style scoped lang="scss"></style>

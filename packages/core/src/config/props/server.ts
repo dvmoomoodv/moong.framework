@@ -8,12 +8,15 @@
 /**
  * 인증 관련 설정
  */
-import { ServerLoggingOption } from '#ustra/core/server/http/middlewares/loggings'
-import { JsonBodyParserOption, UrlEncodedBodyParserOption } from '#ustra/core/server/http/middlewares/body-parser'
-import { MultipartOption } from '#ustra/core/server/http/middlewares/multipart'
-import { CompressionOption } from '#ustra/core/server/http/middlewares/compression'
-import { ProxyModuleOptions } from '#ustra/core/server/http/middlewares/proxy'
-import { StaticServeModuleOptions } from '#ustra/core/server/http/middlewares/static-serve'
+import { ServerLoggingOption } from "#moong/core/server/http/middlewares/loggings";
+import {
+  JsonBodyParserOption,
+  UrlEncodedBodyParserOption,
+} from "#moong/core/server/http/middlewares/body-parser";
+import { MultipartOption } from "#moong/core/server/http/middlewares/multipart";
+import { CompressionOption } from "#moong/core/server/http/middlewares/compression";
+import { ProxyModuleOptions } from "#moong/core/server/http/middlewares/proxy";
+import { StaticServeModuleOptions } from "#moong/core/server/http/middlewares/static-serve";
 
 /**
  * 미들웨어 옵션
@@ -22,71 +25,71 @@ interface Middleware extends Record<string, any> {
   /**
    * 서버 압축 설정
    */
-  compression?: CompressionOption
+  compression?: CompressionOption;
 
   /**
    * bodyParser 설정 (json)
    */
-  jsonBodyParser?: JsonBodyParserOption
+  jsonBodyParser?: JsonBodyParserOption;
 
   /**
    * bodyParser 설정 (url encoded)
    */
-  urlEncodedBodyParser?: UrlEncodedBodyParserOption
+  urlEncodedBodyParser?: UrlEncodedBodyParserOption;
 
   /**
    * multipart 사용 설정
    */
-  multipart?: MultipartOption
+  multipart?: MultipartOption;
 
   /**
    * 서버 로깅 사용설정
    */
-  logging?: ServerLoggingOption
+  logging?: ServerLoggingOption;
 
   /**
    * 프록시 설정
    */
-  proxy?: ProxyModuleOptions
+  proxy?: ProxyModuleOptions;
 
   /**
    * static directory options
    */
-  static?: StaticServeModuleOptions
+  static?: StaticServeModuleOptions;
 }
 
 interface Server extends Record<string, any> {
   /**
    * Node 서버 활성화 여부
    */
-  enabled?: boolean
+  enabled?: boolean;
 
   /**
    * 로컬 개발용 서버 여부
    */
-  dev?: boolean
+  dev?: boolean;
 
   /**
    * server port
    * @default process.env.PORT
    */
-  port?: number
+  port?: number;
 
   /**
    * server host
    * @default process.env.HOST
    */
-  host?: string
+  host?: string;
 
   /**
    * 미들웨어 설정
    */
-  middleware?: Middleware
+  middleware?: Middleware;
 
   /**
    * API URL
    */
-  apiServerBaseUrl?: string
+  apiServerBaseUrl?: string;
 }
 
-export type { Middleware, Server }
+export type { Middleware, Server };

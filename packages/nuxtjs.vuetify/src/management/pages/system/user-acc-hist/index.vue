@@ -17,7 +17,7 @@
         <VWindowItem value="tab2">
           <UBox direction="row" height="100%">
             <UItem ratio="1">
-            <AccCnt v-if="tab === 'tab2'" />
+              <AccCnt v-if="tab === 'tab2'" />
             </UItem>
           </UBox>
         </VWindowItem>
@@ -26,19 +26,19 @@
   </UBox>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-import LoginHist from './login-hist/index.vue'
-import AccCnt from './acc-cnt/index.vue'
+import { ref } from "#moong/nuxt";
+import LoginHist from "./login-hist/index.vue";
+import AccCnt from "./acc-cnt/index.vue";
 
-const tab = ref('tab1')
+const tab = ref("tab1");
 definePageMeta({
-  layout: 'ustra'
-})
+  layout: "ustra",
+});
 </script>
 <script lang="ts">
 export default {
-  name: 'UstraManagementSystemUserAccHist',
-}
+  name: "UstraManagementSystemUserAccHist",
+};
 </script>
 <style lang="scss">
 .menu-tab-panel {

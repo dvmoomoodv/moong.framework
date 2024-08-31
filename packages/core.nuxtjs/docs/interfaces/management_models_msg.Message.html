@@ -1,48 +1,1494 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>Message | @ustra/nuxt</title><meta name="description" content="Documentation for @ustra/nuxt"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base=".."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">@ustra/nuxt</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb"><li><a href="../index.html">@ustra/nuxt</a></li><li><a href="../modules/management_models_msg.html">management/models/msg</a></li><li><a href="management_models_msg.Message.html">Message</a></li></ul><h1>Interface Message</h1></div><section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography"><p>메시지</p>
-</div><div class="tsd-comment tsd-typography"></div></section><div class="tsd-signature"><span class="tsd-signature-keyword">interface </span><span class="tsd-kind-interface">Message</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#bcc">bcc</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#cancelCpDttm">cancelCpDttm</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#cancelRqDttm">cancelRqDttm</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#cc">cc</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#content">content</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#endSendRqDt">endSendRqDt</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#fileId">fileId</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#msgId">msgId</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#msgSttCd">msgSttCd</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#msgTypeId">msgTypeId</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#regDttm">regDttm</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#regUsrId">regUsrId</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#regUsrIp">regUsrIp</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#resendRqNum">resendRqNum</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#sendCpDttm">sendCpDttm</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#sendRqDttm">sendRqDttm</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#source">source</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#startSendRqDt">startSendRqDt</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#target">target</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#title">title</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#updDttm">updDttm</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#updUsrId">updUsrId</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><a class="tsd-kind-property" href="management_models_msg.Message.html#updUsrIp">updUsrIp</a><span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span>[<span class="tsd-kind-index-signature">propName</span>: <span class="tsd-signature-type">string</span>]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div><section class="tsd-panel tsd-hierarchy"><h4>Hierarchy</h4><ul class="tsd-hierarchy"><li><span class="tsd-signature-type">MessageBase</span><ul class="tsd-hierarchy"><li><span class="target">Message</span></li></ul></li></ul></section><section class="tsd-panel"><h4 class="tsd-before-signature">Indexable</h4><div class="tsd-signature"><span class="tsd-signature-symbol">[</span>propName: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></div></section><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L60">framework/nuxt/src/management/models/msg.ts:60</a></li></ul></aside><section class="tsd-panel-group tsd-index-group"><section class="tsd-panel tsd-index-panel"><details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><h5 class="tsd-index-heading uppercase" role="button" aria-expanded="false" tabIndex="0"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-chevronSmall"></use></svg> Index</h5></summary><div class="tsd-accordion-details"><section class="tsd-index-section"><h3 class="tsd-index-heading">Properties</h3><div class="tsd-index-list"><a href="management_models_msg.Message.html#bcc" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>bcc?</span></a>
-<a href="management_models_msg.Message.html#cancelCpDttm" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>cancel<wbr/>Cp<wbr/>Dttm?</span></a>
-<a href="management_models_msg.Message.html#cancelRqDttm" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>cancel<wbr/>Rq<wbr/>Dttm?</span></a>
-<a href="management_models_msg.Message.html#cc" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>cc?</span></a>
-<a href="management_models_msg.Message.html#content" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>content?</span></a>
-<a href="management_models_msg.Message.html#endSendRqDt" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>end<wbr/>Send<wbr/>Rq<wbr/>Dt?</span></a>
-<a href="management_models_msg.Message.html#fileId" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>file<wbr/>Id?</span></a>
-<a href="management_models_msg.Message.html#msgId" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>msg<wbr/>Id?</span></a>
-<a href="management_models_msg.Message.html#msgSttCd" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>msg<wbr/>Stt<wbr/>Cd?</span></a>
-<a href="management_models_msg.Message.html#msgTypeId" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>msg<wbr/>Type<wbr/>Id?</span></a>
-<a href="management_models_msg.Message.html#regDttm" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>reg<wbr/>Dttm?</span></a>
-<a href="management_models_msg.Message.html#regUsrId" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>reg<wbr/>Usr<wbr/>Id?</span></a>
-<a href="management_models_msg.Message.html#regUsrIp" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>reg<wbr/>Usr<wbr/>Ip?</span></a>
-<a href="management_models_msg.Message.html#resendRqNum" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>resend<wbr/>Rq<wbr/>Num?</span></a>
-<a href="management_models_msg.Message.html#sendCpDttm" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>send<wbr/>Cp<wbr/>Dttm?</span></a>
-<a href="management_models_msg.Message.html#sendRqDttm" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>send<wbr/>Rq<wbr/>Dttm?</span></a>
-<a href="management_models_msg.Message.html#source" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>source?</span></a>
-<a href="management_models_msg.Message.html#startSendRqDt" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>start<wbr/>Send<wbr/>Rq<wbr/>Dt?</span></a>
-<a href="management_models_msg.Message.html#target" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>target?</span></a>
-<a href="management_models_msg.Message.html#title" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>title?</span></a>
-<a href="management_models_msg.Message.html#updDttm" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>upd<wbr/>Dttm?</span></a>
-<a href="management_models_msg.Message.html#updUsrId" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>upd<wbr/>Usr<wbr/>Id?</span></a>
-<a href="management_models_msg.Message.html#updUsrIp" class="tsd-index-link tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>upd<wbr/>Usr<wbr/>Ip?</span></a>
-</div></section></div></details></section></section><section class="tsd-panel-group tsd-member-group"><h2>Properties</h2><section class="tsd-panel tsd-member"><a id="bcc" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>bcc</span><a href="#bcc" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">bcc</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>숨은 참조</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L124">framework/nuxt/src/management/models/msg.ts:124</a></li></ul></aside></section><section class="tsd-panel tsd-member"><a id="cancelCpDttm" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>cancel<wbr/>Cp<wbr/>Dttm</span><a href="#cancelCpDttm" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">cancel<wbr/>Cp<wbr/>Dttm</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Date</span></div><div class="tsd-comment tsd-typography"><p>취소 완료 일시</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L94">framework/nuxt/src/management/models/msg.ts:94</a></li></ul></aside></section><section class="tsd-panel tsd-member"><a id="cancelRqDttm" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>cancel<wbr/>Rq<wbr/>Dttm</span><a href="#cancelRqDttm" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">cancel<wbr/>Rq<wbr/>Dttm</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Date</span></div><div class="tsd-comment tsd-typography"><p>취소 요청 일시</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L89">framework/nuxt/src/management/models/msg.ts:89</a></li></ul></aside></section><section class="tsd-panel tsd-member"><a id="cc" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>cc</span><a href="#cc" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">cc</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>참조</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L119">framework/nuxt/src/management/models/msg.ts:119</a></li></ul></aside></section><section class="tsd-panel tsd-member"><a id="content" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>content</span><a href="#content" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">content</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>내용</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L109">framework/nuxt/src/management/models/msg.ts:109</a></li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-inherited"><a id="endSendRqDt" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>end<wbr/>Send<wbr/>Rq<wbr/>Dt</span><a href="#endSendRqDt" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">end<wbr/>Send<wbr/>Rq<wbr/>Dt</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>발송 요청 일시 종료일</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Inherited from MessageBase.endSendRqDt</p><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L50">framework/nuxt/src/management/models/msg.ts:50</a></li></ul></aside></section><section class="tsd-panel tsd-member"><a id="fileId" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>file<wbr/>Id</span><a href="#fileId" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">file<wbr/>Id</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>첨부 파일 아이디</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L129">framework/nuxt/src/management/models/msg.ts:129</a></li></ul></aside></section><section class="tsd-panel tsd-member"><a id="msgId" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>msg<wbr/>Id</span><a href="#msgId" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">msg<wbr/>Id</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div><div class="tsd-comment tsd-typography"><p>메시지 ID</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Overrides MessageBase.msgId</p><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L64">framework/nuxt/src/management/models/msg.ts:64</a></li></ul></aside></section><section class="tsd-panel tsd-member"><a id="msgSttCd" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>msg<wbr/>Stt<wbr/>Cd</span><a href="#msgSttCd" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">msg<wbr/>Stt<wbr/>Cd</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>상태</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Overrides MessageBase.msgSttCd</p><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L74">framework/nuxt/src/management/models/msg.ts:74</a></li></ul></aside></section><section class="tsd-panel tsd-member"><a id="msgTypeId" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>msg<wbr/>Type<wbr/>Id</span><a href="#msgTypeId" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">msg<wbr/>Type<wbr/>Id</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>메시지 타입 ID</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Overrides MessageBase.msgTypeId</p><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L69">framework/nuxt/src/management/models/msg.ts:69</a></li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-inherited"><a id="regDttm" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>reg<wbr/>Dttm</span><a href="#regDttm" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">reg<wbr/>Dttm</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>등록일자</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Inherited from MessageBase.regDttm</p><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/data/models/base.ts#L28">framework/core/src/data/models/base.ts:28</a></li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-inherited"><a id="regUsrId" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>reg<wbr/>Usr<wbr/>Id</span><a href="#regUsrId" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">reg<wbr/>Usr<wbr/>Id</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>등록 사용자 아이디</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Inherited from MessageBase.regUsrId</p><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/data/models/base.ts#L33">framework/core/src/data/models/base.ts:33</a></li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-inherited"><a id="regUsrIp" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>reg<wbr/>Usr<wbr/>Ip</span><a href="#regUsrIp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">reg<wbr/>Usr<wbr/>Ip</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>등록자 아이피</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Inherited from MessageBase.regUsrIp</p><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/data/models/base.ts#L38">framework/core/src/data/models/base.ts:38</a></li></ul></aside></section><section class="tsd-panel tsd-member"><a id="resendRqNum" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>resend<wbr/>Rq<wbr/>Num</span><a href="#resendRqNum" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">resend<wbr/>Rq<wbr/>Num</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div><div class="tsd-comment tsd-typography"><p>재발송 요청 횟수</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L99">framework/nuxt/src/management/models/msg.ts:99</a></li></ul></aside></section><section class="tsd-panel tsd-member"><a id="sendCpDttm" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>send<wbr/>Cp<wbr/>Dttm</span><a href="#sendCpDttm" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">send<wbr/>Cp<wbr/>Dttm</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Date</span></div><div class="tsd-comment tsd-typography"><p>발송 완료 일시</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L84">framework/nuxt/src/management/models/msg.ts:84</a></li></ul></aside></section><section class="tsd-panel tsd-member"><a id="sendRqDttm" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>send<wbr/>Rq<wbr/>Dttm</span><a href="#sendRqDttm" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">send<wbr/>Rq<wbr/>Dttm</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">Date</span></div><div class="tsd-comment tsd-typography"><p>발송 요청 일시</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L79">framework/nuxt/src/management/models/msg.ts:79</a></li></ul></aside></section><section class="tsd-panel tsd-member"><a id="source" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>source</span><a href="#source" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">source</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>발신자</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Overrides MessageBase.source</p><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L114">framework/nuxt/src/management/models/msg.ts:114</a></li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-inherited"><a id="startSendRqDt" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>start<wbr/>Send<wbr/>Rq<wbr/>Dt</span><a href="#startSendRqDt" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">start<wbr/>Send<wbr/>Rq<wbr/>Dt</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>발송 요청 일시 시작일</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Inherited from MessageBase.startSendRqDt</p><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L45">framework/nuxt/src/management/models/msg.ts:45</a></li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-inherited"><a id="target" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>target</span><a href="#target" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">target</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>수신자</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Inherited from MessageBase.target</p><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L40">framework/nuxt/src/management/models/msg.ts:40</a></li></ul></aside></section><section class="tsd-panel tsd-member"><a id="title" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>title</span><a href="#title" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">title</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>제목</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Overrides MessageBase.title</p><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L104">framework/nuxt/src/management/models/msg.ts:104</a></li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-inherited"><a id="updDttm" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>upd<wbr/>Dttm</span><a href="#updDttm" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">upd<wbr/>Dttm</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>수정일자</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Inherited from MessageBase.updDttm</p><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/data/models/base.ts#L43">framework/core/src/data/models/base.ts:43</a></li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-inherited"><a id="updUsrId" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>upd<wbr/>Usr<wbr/>Id</span><a href="#updUsrId" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">upd<wbr/>Usr<wbr/>Id</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>수정자 아이디</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Inherited from MessageBase.updUsrId</p><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/data/models/base.ts#L48">framework/core/src/data/models/base.ts:48</a></li></ul></aside></section><section class="tsd-panel tsd-member tsd-is-inherited"><a id="updUsrIp" class="tsd-anchor"></a><h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>upd<wbr/>Usr<wbr/>Ip</span><a href="#updUsrIp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3><div class="tsd-signature"><span class="tsd-kind-property">upd<wbr/>Usr<wbr/>Ip</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">string</span></div><div class="tsd-comment tsd-typography"><p>수정자 아이피</p>
-</div><div class="tsd-comment tsd-typography"></div><aside class="tsd-sources"><p>Inherited from MessageBase.updUsrIp</p><ul><li>Defined in <a href="https://github.com/ustraframework/ustra-framework3-node/blob/5307b6688/framework/core/src/data/models/base.ts#L53">framework/core/src/data/models/base.ts:53</a></li></ul></aside></section></section></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-index-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><h4 class="uppercase">Member Visibility</h4><form><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div><div class="tsd-theme-toggle"><h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-index-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#bcc" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>bcc</span></a><a href="#cancelCpDttm" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>cancel<wbr/>Cp<wbr/>Dttm</span></a><a href="#cancelRqDttm" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>cancel<wbr/>Rq<wbr/>Dttm</span></a><a href="#cc" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>cc</span></a><a href="#content" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>content</span></a><a href="#endSendRqDt" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>end<wbr/>Send<wbr/>Rq<wbr/>Dt</span></a><a href="#fileId" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>file<wbr/>Id</span></a><a href="#msgId" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>msg<wbr/>Id</span></a><a href="#msgSttCd" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>msg<wbr/>Stt<wbr/>Cd</span></a><a href="#msgTypeId" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>msg<wbr/>Type<wbr/>Id</span></a><a href="#regDttm" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>reg<wbr/>Dttm</span></a><a href="#regUsrId" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>reg<wbr/>Usr<wbr/>Id</span></a><a href="#regUsrIp" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>reg<wbr/>Usr<wbr/>Ip</span></a><a href="#resendRqNum" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>resend<wbr/>Rq<wbr/>Num</span></a><a href="#sendCpDttm" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>send<wbr/>Cp<wbr/>Dttm</span></a><a href="#sendRqDttm" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>send<wbr/>Rq<wbr/>Dttm</span></a><a href="#source" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>source</span></a><a href="#startSendRqDt" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>start<wbr/>Send<wbr/>Rq<wbr/>Dt</span></a><a href="#target" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>target</span></a><a href="#title" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>title</span></a><a href="#updDttm" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>upd<wbr/>Dttm</span></a><a href="#updUsrId" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>upd<wbr/>Usr<wbr/>Id</span></a><a href="#updUsrIp" class="tsd-is-inherited"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1024"></use></svg><span>upd<wbr/>Usr<wbr/>Ip</span></a></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1"></use></svg><span>@ustra/nuxt</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base=".."><li>Loading...</li></ul></nav></div></div></div><div class="tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div></body></html>
+<!doctype html>
+<html class="default" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <title>Message | @moong/nuxt</title>
+    <meta name="description" content="Documentation for @moong/nuxt" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/highlight.css" />
+    <script defer src="../assets/main.js"></script>
+    <script async src="../assets/icons.js" id="tsd-icons-script"></script>
+    <script async src="../assets/search.js" id="tsd-search-script"></script>
+    <script async src="../assets/navigation.js" id="tsd-nav-script"></script>
+  </head>
+  <body>
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("tsd-theme") || "os";
+      document.body.style.display = "none";
+      setTimeout(
+        () =>
+          app ? app.showPage() : document.body.style.removeProperty("display"),
+        500
+      );
+    </script>
+    <header class="tsd-page-toolbar">
+      <div class="tsd-toolbar-contents container">
+        <div class="table-cell" id="tsd-search" data-base="..">
+          <div class="field">
+            <label
+              for="tsd-search-field"
+              class="tsd-widget tsd-toolbar-icon search no-caption"
+              ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use href="../assets/icons.svg#icon-search"></use></svg></label
+            ><input type="text" id="tsd-search-field" aria-label="Search" />
+          </div>
+          <div class="field"><div id="tsd-toolbar-links"></div></div>
+          <ul class="results">
+            <li class="state loading">Preparing search index...</li>
+            <li class="state failure">The search index is not available</li>
+          </ul>
+          <a href="../index.html" class="title">@moong/nuxt</a>
+        </div>
+        <div class="table-cell" id="tsd-widgets">
+          <a
+            href="#"
+            class="tsd-widget tsd-toolbar-icon menu no-caption"
+            data-toggle="menu"
+            aria-label="Menu"
+            ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use href="../assets/icons.svg#icon-menu"></use></svg
+          ></a>
+        </div>
+      </div>
+    </header>
+    <div class="container container-main">
+      <div class="col-content">
+        <div class="tsd-page-title">
+          <ul class="tsd-breadcrumb">
+            <li><a href="../index.html">@moong/nuxt</a></li>
+            <li>
+              <a href="../modules/management_models_msg.html"
+                >management/models/msg</a
+              >
+            </li>
+            <li><a href="management_models_msg.Message.html">Message</a></li>
+          </ul>
+          <h1>Interface Message</h1>
+        </div>
+        <section class="tsd-panel tsd-comment">
+          <div class="tsd-comment tsd-typography"><p>메시지</p></div>
+          <div class="tsd-comment tsd-typography"></div>
+        </section>
+        <div class="tsd-signature">
+          <span class="tsd-signature-keyword">interface </span
+          ><span class="tsd-kind-interface">Message</span>
+          <span class="tsd-signature-symbol">{ </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#bcc"
+            >bcc</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#cancelCpDttm"
+            >cancelCpDttm</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">Date</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#cancelRqDttm"
+            >cancelRqDttm</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">Date</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#cc"
+            >cc</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#content"
+            >content</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#endSendRqDt"
+            >endSendRqDt</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#fileId"
+            >fileId</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#msgId"
+            >msgId</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">number</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#msgSttCd"
+            >msgSttCd</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#msgTypeId"
+            >msgTypeId</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#regDttm"
+            >regDttm</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#regUsrId"
+            >regUsrId</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#regUsrIp"
+            >regUsrIp</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#resendRqNum"
+            >resendRqNum</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">number</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#sendCpDttm"
+            >sendCpDttm</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">Date</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#sendRqDttm"
+            >sendRqDttm</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">Date</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#source"
+            >source</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#startSendRqDt"
+            >startSendRqDt</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#target"
+            >target</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#title"
+            >title</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#updDttm"
+            >updDttm</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#updUsrId"
+            >updUsrId</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><a
+            class="tsd-kind-property"
+            href="management_models_msg.Message.html#updUsrIp"
+            >updUsrIp</a
+          ><span class="tsd-signature-symbol">?: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          >[<span class="tsd-kind-index-signature">propName</span>:
+          <span class="tsd-signature-type">string</span>]<span
+            class="tsd-signature-symbol"
+            >: </span
+          ><span class="tsd-signature-type">any</span
+          ><span class="tsd-signature-symbol">; </span><br /><span
+            class="tsd-signature-symbol"
+            >}</span
+          >
+        </div>
+        <section class="tsd-panel tsd-hierarchy">
+          <h4>Hierarchy</h4>
+          <ul class="tsd-hierarchy">
+            <li>
+              <span class="tsd-signature-type">MessageBase</span>
+              <ul class="tsd-hierarchy">
+                <li><span class="target">Message</span></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section class="tsd-panel">
+          <h4 class="tsd-before-signature">Indexable</h4>
+          <div class="tsd-signature">
+            <span class="tsd-signature-symbol">[</span>propName:
+            <span class="tsd-signature-type">string</span
+            ><span class="tsd-signature-symbol">]: </span
+            ><span class="tsd-signature-type">any</span>
+          </div>
+        </section>
+        <aside class="tsd-sources">
+          <ul>
+            <li>
+              Defined in
+              <a
+                href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L60"
+                >framework/nuxt/src/management/models/msg.ts:60</a
+              >
+            </li>
+          </ul>
+        </aside>
+        <section class="tsd-panel-group tsd-index-group">
+          <section class="tsd-panel tsd-index-panel">
+            <details class="tsd-index-content tsd-index-accordion" open>
+              <summary class="tsd-accordion-summary tsd-index-summary">
+                <h5
+                  class="tsd-index-heading uppercase"
+                  role="button"
+                  aria-expanded="false"
+                  tabindex="0"
+                >
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <use href="../assets/icons.svg#icon-chevronSmall"></use>
+                  </svg>
+                  Index
+                </h5>
+              </summary>
+              <div class="tsd-accordion-details">
+                <section class="tsd-index-section">
+                  <h3 class="tsd-index-heading">Properties</h3>
+                  <div class="tsd-index-list">
+                    <a
+                      href="management_models_msg.Message.html#bcc"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>bcc?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#cancelCpDttm"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>cancel<wbr />Cp<wbr />Dttm?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#cancelRqDttm"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>cancel<wbr />Rq<wbr />Dttm?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#cc"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>cc?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#content"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>content?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#endSendRqDt"
+                      class="tsd-index-link tsd-is-inherited"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>end<wbr />Send<wbr />Rq<wbr />Dt?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#fileId"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>file<wbr />Id?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#msgId"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>msg<wbr />Id?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#msgSttCd"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>msg<wbr />Stt<wbr />Cd?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#msgTypeId"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>msg<wbr />Type<wbr />Id?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#regDttm"
+                      class="tsd-index-link tsd-is-inherited"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>reg<wbr />Dttm?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#regUsrId"
+                      class="tsd-index-link tsd-is-inherited"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>reg<wbr />Usr<wbr />Id?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#regUsrIp"
+                      class="tsd-index-link tsd-is-inherited"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>reg<wbr />Usr<wbr />Ip?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#resendRqNum"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>resend<wbr />Rq<wbr />Num?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#sendCpDttm"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>send<wbr />Cp<wbr />Dttm?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#sendRqDttm"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>send<wbr />Rq<wbr />Dttm?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#source"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>source?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#startSendRqDt"
+                      class="tsd-index-link tsd-is-inherited"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>start<wbr />Send<wbr />Rq<wbr />Dt?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#target"
+                      class="tsd-index-link tsd-is-inherited"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>target?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#title"
+                      class="tsd-index-link"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>title?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#updDttm"
+                      class="tsd-index-link tsd-is-inherited"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>upd<wbr />Dttm?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#updUsrId"
+                      class="tsd-index-link tsd-is-inherited"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>upd<wbr />Usr<wbr />Id?</span></a
+                    >
+                    <a
+                      href="management_models_msg.Message.html#updUsrIp"
+                      class="tsd-index-link tsd-is-inherited"
+                      ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                        <use href="../assets/icons.svg#icon-1024"></use></svg
+                      ><span>upd<wbr />Usr<wbr />Ip?</span></a
+                    >
+                  </div>
+                </section>
+              </div>
+            </details>
+          </section>
+        </section>
+        <section class="tsd-panel-group tsd-member-group">
+          <h2>Properties</h2>
+          <section class="tsd-panel tsd-member">
+            <a id="bcc" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>bcc</span
+              ><a href="#bcc" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">bcc</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>숨은 참조</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L124"
+                    >framework/nuxt/src/management/models/msg.ts:124</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="cancelCpDttm" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>cancel<wbr />Cp<wbr />Dttm</span
+              ><a
+                href="#cancelCpDttm"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">cancel<wbr />Cp<wbr />Dttm</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">Date</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>취소 완료 일시</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L94"
+                    >framework/nuxt/src/management/models/msg.ts:94</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="cancelRqDttm" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>cancel<wbr />Rq<wbr />Dttm</span
+              ><a
+                href="#cancelRqDttm"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">cancel<wbr />Rq<wbr />Dttm</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">Date</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>취소 요청 일시</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L89"
+                    >framework/nuxt/src/management/models/msg.ts:89</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="cc" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>cc</span
+              ><a href="#cc" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">cc</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>참조</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L119"
+                    >framework/nuxt/src/management/models/msg.ts:119</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="content" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>content</span
+              ><a href="#content" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">content</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>내용</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L109"
+                    >framework/nuxt/src/management/models/msg.ts:109</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-inherited">
+            <a id="endSendRqDt" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>end<wbr />Send<wbr />Rq<wbr />Dt</span
+              ><a
+                href="#endSendRqDt"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property"
+                >end<wbr />Send<wbr />Rq<wbr />Dt</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography">
+              <p>발송 요청 일시 종료일</p>
+            </div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <p>Inherited from MessageBase.endSendRqDt</p>
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L50"
+                    >framework/nuxt/src/management/models/msg.ts:50</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="fileId" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>file<wbr />Id</span
+              ><a href="#fileId" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">file<wbr />Id</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography">
+              <p>첨부 파일 아이디</p>
+            </div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L129"
+                    >framework/nuxt/src/management/models/msg.ts:129</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="msgId" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>msg<wbr />Id</span
+              ><a href="#msgId" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">msg<wbr />Id</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">number</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>메시지 ID</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <p>Overrides MessageBase.msgId</p>
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L64"
+                    >framework/nuxt/src/management/models/msg.ts:64</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="msgSttCd" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>msg<wbr />Stt<wbr />Cd</span
+              ><a
+                href="#msgSttCd"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">msg<wbr />Stt<wbr />Cd</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>상태</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <p>Overrides MessageBase.msgSttCd</p>
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L74"
+                    >framework/nuxt/src/management/models/msg.ts:74</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="msgTypeId" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>msg<wbr />Type<wbr />Id</span
+              ><a
+                href="#msgTypeId"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">msg<wbr />Type<wbr />Id</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>메시지 타입 ID</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <p>Overrides MessageBase.msgTypeId</p>
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L69"
+                    >framework/nuxt/src/management/models/msg.ts:69</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-inherited">
+            <a id="regDttm" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>reg<wbr />Dttm</span
+              ><a href="#regDttm" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">reg<wbr />Dttm</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>등록일자</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <p>Inherited from MessageBase.regDttm</p>
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/data/models/base.ts#L28"
+                    >framework/core/src/data/models/base.ts:28</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-inherited">
+            <a id="regUsrId" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>reg<wbr />Usr<wbr />Id</span
+              ><a
+                href="#regUsrId"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">reg<wbr />Usr<wbr />Id</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography">
+              <p>등록 사용자 아이디</p>
+            </div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <p>Inherited from MessageBase.regUsrId</p>
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/data/models/base.ts#L33"
+                    >framework/core/src/data/models/base.ts:33</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-inherited">
+            <a id="regUsrIp" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>reg<wbr />Usr<wbr />Ip</span
+              ><a
+                href="#regUsrIp"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">reg<wbr />Usr<wbr />Ip</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>등록자 아이피</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <p>Inherited from MessageBase.regUsrIp</p>
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/data/models/base.ts#L38"
+                    >framework/core/src/data/models/base.ts:38</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="resendRqNum" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>resend<wbr />Rq<wbr />Num</span
+              ><a
+                href="#resendRqNum"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">resend<wbr />Rq<wbr />Num</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">number</span>
+            </div>
+            <div class="tsd-comment tsd-typography">
+              <p>재발송 요청 횟수</p>
+            </div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L99"
+                    >framework/nuxt/src/management/models/msg.ts:99</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="sendCpDttm" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>send<wbr />Cp<wbr />Dttm</span
+              ><a
+                href="#sendCpDttm"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">send<wbr />Cp<wbr />Dttm</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">Date</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>발송 완료 일시</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L84"
+                    >framework/nuxt/src/management/models/msg.ts:84</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="sendRqDttm" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>send<wbr />Rq<wbr />Dttm</span
+              ><a
+                href="#sendRqDttm"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">send<wbr />Rq<wbr />Dttm</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">Date</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>발송 요청 일시</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L79"
+                    >framework/nuxt/src/management/models/msg.ts:79</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="source" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>source</span
+              ><a href="#source" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">source</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>발신자</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <p>Overrides MessageBase.source</p>
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L114"
+                    >framework/nuxt/src/management/models/msg.ts:114</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-inherited">
+            <a id="startSendRqDt" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>start<wbr />Send<wbr />Rq<wbr />Dt</span
+              ><a
+                href="#startSendRqDt"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property"
+                >start<wbr />Send<wbr />Rq<wbr />Dt</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography">
+              <p>발송 요청 일시 시작일</p>
+            </div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <p>Inherited from MessageBase.startSendRqDt</p>
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L45"
+                    >framework/nuxt/src/management/models/msg.ts:45</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-inherited">
+            <a id="target" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>target</span
+              ><a href="#target" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">target</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>수신자</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <p>Inherited from MessageBase.target</p>
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L40"
+                    >framework/nuxt/src/management/models/msg.ts:40</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member">
+            <a id="title" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>title</span
+              ><a href="#title" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">title</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>제목</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <p>Overrides MessageBase.title</p>
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/nuxt/src/management/models/msg.ts#L104"
+                    >framework/nuxt/src/management/models/msg.ts:104</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-inherited">
+            <a id="updDttm" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>upd<wbr />Dttm</span
+              ><a href="#updDttm" aria-label="Permalink" class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">upd<wbr />Dttm</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>수정일자</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <p>Inherited from MessageBase.updDttm</p>
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/data/models/base.ts#L43"
+                    >framework/core/src/data/models/base.ts:43</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-inherited">
+            <a id="updUsrId" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>upd<wbr />Usr<wbr />Id</span
+              ><a
+                href="#updUsrId"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">upd<wbr />Usr<wbr />Id</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>수정자 아이디</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <p>Inherited from MessageBase.updUsrId</p>
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/data/models/base.ts#L48"
+                    >framework/core/src/data/models/base.ts:48</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+          <section class="tsd-panel tsd-member tsd-is-inherited">
+            <a id="updUsrIp" class="tsd-anchor"></a>
+            <h3 class="tsd-anchor-link">
+              <code class="tsd-tag ts-flagOptional">Optional</code>
+              <span>upd<wbr />Usr<wbr />Ip</span
+              ><a
+                href="#updUsrIp"
+                aria-label="Permalink"
+                class="tsd-anchor-icon"
+                ><svg viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-anchor"></use></svg
+              ></a>
+            </h3>
+            <div class="tsd-signature">
+              <span class="tsd-kind-property">upd<wbr />Usr<wbr />Ip</span
+              ><span class="tsd-signature-symbol">?:</span>
+              <span class="tsd-signature-type">string</span>
+            </div>
+            <div class="tsd-comment tsd-typography"><p>수정자 아이피</p></div>
+            <div class="tsd-comment tsd-typography"></div>
+            <aside class="tsd-sources">
+              <p>Inherited from MessageBase.updUsrIp</p>
+              <ul>
+                <li>
+                  Defined in
+                  <a
+                    href="https://github.com/dvmoomoodv/moong.framework/blob/5307b6688/framework/core/src/data/models/base.ts#L53"
+                    >framework/core/src/data/models/base.ts:53</a
+                  >
+                </li>
+              </ul>
+            </aside>
+          </section>
+        </section>
+      </div>
+      <div class="col-sidebar">
+        <div class="page-menu">
+          <div class="tsd-navigation settings">
+            <details class="tsd-index-accordion">
+              <summary class="tsd-accordion-summary">
+                <h3>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <use href="../assets/icons.svg#icon-chevronDown"></use></svg
+                  >Settings
+                </h3>
+              </summary>
+              <div class="tsd-accordion-details">
+                <div class="tsd-filter-visibility">
+                  <h4 class="uppercase">Member Visibility</h4>
+                  <form>
+                    <ul id="tsd-filter-options">
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-protected"
+                            name="protected"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Protected</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-private"
+                            name="private"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Private</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-inherited"
+                            name="inherited"
+                            checked
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Inherited</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-external"
+                            name="external"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>External</span></label
+                        >
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+                <div class="tsd-theme-toggle">
+                  <h4 class="uppercase">Theme</h4>
+                  <select id="tsd-theme">
+                    <option value="os">OS</option>
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                  </select>
+                </div>
+              </div>
+            </details>
+          </div>
+          <details open class="tsd-index-accordion tsd-page-navigation">
+            <summary class="tsd-accordion-summary">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <use href="../assets/icons.svg#icon-chevronDown"></use></svg
+                >On This Page
+              </h3>
+            </summary>
+            <div class="tsd-accordion-details">
+              <a href="#bcc" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>bcc</span></a
+              ><a href="#cancelCpDttm" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>cancel<wbr />Cp<wbr />Dttm</span></a
+              ><a href="#cancelRqDttm" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>cancel<wbr />Rq<wbr />Dttm</span></a
+              ><a href="#cc" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>cc</span></a
+              ><a href="#content" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>content</span></a
+              ><a href="#endSendRqDt" class="tsd-is-inherited"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>end<wbr />Send<wbr />Rq<wbr />Dt</span></a
+              ><a href="#fileId" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>file<wbr />Id</span></a
+              ><a href="#msgId" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>msg<wbr />Id</span></a
+              ><a href="#msgSttCd" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>msg<wbr />Stt<wbr />Cd</span></a
+              ><a href="#msgTypeId" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>msg<wbr />Type<wbr />Id</span></a
+              ><a href="#regDttm" class="tsd-is-inherited"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>reg<wbr />Dttm</span></a
+              ><a href="#regUsrId" class="tsd-is-inherited"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>reg<wbr />Usr<wbr />Id</span></a
+              ><a href="#regUsrIp" class="tsd-is-inherited"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>reg<wbr />Usr<wbr />Ip</span></a
+              ><a href="#resendRqNum" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>resend<wbr />Rq<wbr />Num</span></a
+              ><a href="#sendCpDttm" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>send<wbr />Cp<wbr />Dttm</span></a
+              ><a href="#sendRqDttm" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>send<wbr />Rq<wbr />Dttm</span></a
+              ><a href="#source" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>source</span></a
+              ><a href="#startSendRqDt" class="tsd-is-inherited"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>start<wbr />Send<wbr />Rq<wbr />Dt</span></a
+              ><a href="#target" class="tsd-is-inherited"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>target</span></a
+              ><a href="#title" class=""
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>title</span></a
+              ><a href="#updDttm" class="tsd-is-inherited"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>upd<wbr />Dttm</span></a
+              ><a href="#updUsrId" class="tsd-is-inherited"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>upd<wbr />Usr<wbr />Id</span></a
+              ><a href="#updUsrIp" class="tsd-is-inherited"
+                ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                  <use href="../assets/icons.svg#icon-1024"></use></svg
+                ><span>upd<wbr />Usr<wbr />Ip</span></a
+              >
+            </div>
+          </details>
+        </div>
+        <div class="site-menu">
+          <nav class="tsd-navigation">
+            <a href="../index.html"
+              ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                <use href="../assets/icons.svg#icon-1"></use></svg
+              ><span>@moong/nuxt</span></a
+            >
+            <ul
+              class="tsd-small-nested-navigation"
+              id="tsd-nav-container"
+              data-base=".."
+            >
+              <li>Loading...</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="tsd-generator">
+      <p>
+        Generated using
+        <a href="https://typedoc.org/" target="_blank">TypeDoc</a>
+      </p>
+    </div>
+    <div class="overlay"></div>
+  </body>
+</html>

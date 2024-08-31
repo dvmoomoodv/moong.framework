@@ -1,7 +1,7 @@
-import { Nuxt } from '@nuxt/schema'
-import { logger } from '#ustra/nuxt/utils/logger'
-import { NuxtAppProps } from '../../config/nuxt-app-props'
-import { installModuleIfNotExists } from '#ustra/nuxt/kit'
+import { Nuxt } from "@nuxt/schema";
+import { logger } from "#moong/nuxt/utils/logger";
+import { NuxtAppProps } from "../../config/nuxt-app-props";
+import { installModuleIfNotExists } from "#moong/nuxt/kit";
 
 /**
  * nuxt-cache-ssr 모듈 설정
@@ -12,12 +12,19 @@ import { installModuleIfNotExists } from '#ustra/nuxt/kit'
 export const nuxtCacheSsrModule = async (options: NuxtAppProps, nuxt: Nuxt) => {
   // if (!nuxt.options.ssr || process.dev || !options.nuxt?.cache?.ssr?.enabled) {
   if (!nuxt.options.ssr || !options.nuxt?.cache?.ssr?.enabled) {
-    return
+    return;
   }
 
-  if (options.auth.enabled && options.auth.type === 'jwt' && options.auth.jwt.useCookie && !options.nuxt.cache.ssr?.key) {
-    logger.warn('$ustra : When use jwt authentication and cookie store, please set ssr cache key option.')
+  if (
+    options.auth.enabled &&
+    options.auth.type === "jwt" &&
+    options.auth.jwt.useCookie &&
+    !options.nuxt.cache.ssr?.key
+  ) {
+    logger.warn(
+      "$ustra : When use jwt authentication and cookie store, please set ssr cache key option."
+    );
   }
 
-  await installModuleIfNotExists('nuxt-cache-ssr', options.nuxt.cache.ssr)
-}
+  await installModuleIfNotExists("nuxt-cache-ssr", options.nuxt.cache.ssr);
+};

@@ -1,35 +1,33 @@
-
-
 - 하위 컴포넌트
+
 ```html
 <template>
-  <div>
-  </div>
+  <div></div>
 </template>
 <script lang="ts" setup>
+  const textValue1 = ref("");
+  const textValue2 = ref("");
 
-const textValue1 = ref('')
-const textValue2 = ref('')
+  // textValue1, textValue2 값이 변경될 경우, validation 재실행
+  watchValidationData([textValue1, textValue2]);
 
-// textValue1, textValue2 값이 변경될 경우, validation 재실행
-watchValidationData([textValue1, textValue2])
+  defineExpose({
+    validate: () => {
+      if (!textValue1.value || !textValue2.value) {
+        return "필수 입력이예요!";
+      }
 
-defineExpose({
-  validate: () => {
-    if (!textValue1.value || !textValue2.value) {
-      return '필수 입력이예요!'
-    }
-
-    if (textValue1.value !== textValue2.value) {
-      return '동일한 값을 입력하세요!'
-    }
-    return true
-  },
-})
+      if (textValue1.value !== textValue2.value) {
+        return "동일한 값을 입력하세요!";
+      }
+      return true;
+    },
+  });
 </script>
 ```
 
 - 상위 컴포넌트
+
 ```html
 <template>
   <UValidationGroup ref="validationGroup">
@@ -37,12 +35,16 @@ defineExpose({
   </UValidationGroup>
 
   <div class="mt-2">
-    <UButton text="Validate" @validate="() => {}" @click="() => validationGroup.validate()" />
+    <UButton
+      text="Validate"
+      @validate="() => {}"
+      @click="() => validationGroup.validate()"
+    />
   </div>
 </template>
 <script lang="ts" setup>
-import { UValidationGroup } from '#ustra/nuxt-wijmo/components'
+  import { UValidationGroup } from "#moong/nuxt-wijmo/components";
 
-const validationGroup = ref<InstanceType<typeof UValidationGroup>>()
+  const validationGroup = ref<InstanceType<typeof UValidationGroup>>();
 </script>
 ```

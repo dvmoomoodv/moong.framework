@@ -1,18 +1,18 @@
-import { logger, useLogger } from '#ustra/core'
+import { logger, useLogger } from "#moong/core";
 
-let nuxtLogger = logger
+let nuxtLogger = logger;
 if (process.server) {
   // @ts-ignore
-  nuxtLogger = console
+  nuxtLogger = console;
 }
 
 // @ts-ignore
 const useNuxtLogger = (name?: string) => {
   if (process.server) {
-    return nuxtLogger
+    return nuxtLogger;
   }
 
-  return useLogger(name)
-}
+  return useLogger(name);
+};
 
-export { nuxtLogger as logger, useNuxtLogger as useLogger }
+export { nuxtLogger as logger, useNuxtLogger as useLogger };

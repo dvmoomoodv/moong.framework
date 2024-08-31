@@ -1,69 +1,76 @@
-import { HttpHeaders } from '#ustra/core/data'
-import { Ustra } from '#ustra/nuxt'
-import { useRouter, useRoute } from '#app'
-import { RouteLocation } from 'vue-router'
-import { useUstraMenuService } from '../../../management/services/menu'
-import { useCurrentPageMeta } from '../../../composables/utils'
-import type { Navigation, ProgramMenu } from '../../../management/store/models/navigation'
+import { HttpHeaders } from "#moong/core/data";
+import { Ustra } from "#moong/nuxt";
+import { useRouter, useRoute } from "#app";
+import { RouteLocation } from "vue-router";
+import { useUstraMenuService } from "../../../management/services/menu";
+import { useCurrentPageMeta } from "../../../composables/utils";
+import type {
+  Navigation,
+  ProgramMenu,
+} from "../../../management/store/models/navigation";
 
 // @ts-ignore
-import { LayoutKey } from '#build/types/layouts'
+import { LayoutKey } from "#build/types/layouts";
 
 /**
  * management navigation 관련 기능
  */
 export class UstraManagementNavigation {
   constructor(private $ustra: Ustra) {
-    this.init()
+    this.init();
   }
 
   get store() {
-    return this.$ustra.management.store.navigation
+    return this.$ustra.management.store.navigation;
   }
 
   get currentProgramMenu() {
-    return this.store?.currentProgramMenu
+    return this.store?.currentProgramMenu;
   }
 
   private init() {
     // navigation 변경
-    this.$ustra.hooks.hook('management:navigation:updated', async (nav, route) => {
-      if (nav?.id && this.store.currentProgramMenu?.mnuId === nav?.id) {
-        return
-      }
-
-      await this.store.setCurrentProgramMenu(nav?.id)
-      await this.store.activateCurrentMenu(false, route)
-
-      // add access history
-      if (nav) {
-        if (isNaN(parseInt(nav.id))) {
-          return
+    this.$ustra.hooks.hook(
+      "management:navigation:updated",
+      async (nav, route) => {
+        if (nav?.id && this.store.currentProgramMenu?.mnuId === nav?.id) {
+          return;
         }
 
-        const menuService = useUstraMenuService()
-        menuService.addAccessHistory(nav.id, nav.path || route.path)
+        await this.store.setCurrentProgramMenu(nav?.id);
+        await this.store.activateCurrentMenu(false, route);
+
+        // add access history
+        if (nav) {
+          if (isNaN(parseInt(nav.id))) {
+            return;
+          }
+
+          const menuService = useUstraMenuService();
+          menuService.addAccessHistory(nav.id, nav.path || route.path);
+        }
       }
-    })
+    );
 
     // add api interceptor
-    this.$ustra.api.getAxiosInstance().then(axios => {
-      axios.interceptors.request.use(config => {
-        const currentProgramMenu = this.currentProgramMenu
+    this.$ustra.api.getAxiosInstance().then((axios) => {
+      axios.interceptors.request.use((config) => {
+        const currentProgramMenu = this.currentProgramMenu;
 
         if (currentProgramMenu) {
           if (currentProgramMenu.mnuId) {
-            config.headers[HttpHeaders.MENU_ID] = currentProgramMenu.mnuId
+            config.headers[HttpHeaders.MENU_ID] = currentProgramMenu.mnuId;
           }
 
           if (currentProgramMenu.proIdVal) {
-            config.headers[HttpHeaders.PROGRAM_ID] = currentProgramMenu.proIdVal
+            config.headers[HttpHeaders.PROGRAM_ID] =
+              currentProgramMenu.proIdVal;
           }
         }
 
-        return config
-      })
-    })
+        return config;
+      });
+    });
   }
 
   /**
@@ -71,7 +78,7 @@ export class UstraManagementNavigation {
    * @param path 경로
    */
   async setCurrentProgramMenuByPath(path: string) {
-    return this.store.setCurrentProgramMenuByPath(path)
+    return this.store.setCurrentProgramMenuByPath(path);
   }
 
   /**
@@ -81,11 +88,11 @@ export class UstraManagementNavigation {
   findNavByPath(path: string) {
     for (const m of this.$ustra.management.store.initData.programMenus) {
       if (m.sysCd !== this.$ustra.management.currentSystemCode) {
-        continue
+        continue;
       }
 
       if (this.$ustra.utils.router.equalPath(m.mnuUrl, path)) {
-        return this.store.findNavigationByMenuId(m.mnuId)
+        return this.store.findNavigationByMenuId(m.mnuId);
       }
     }
   }
@@ -95,7 +102,7 @@ export class UstraManagementNavigation {
    * @param id
    */
   findNav(id: string) {
-    return this.store.findNavigationByMenuId(id)
+    return this.store.findNavigationByMenuId(id);
   }
 
   /**
@@ -106,7 +113,7 @@ export class UstraManagementNavigation {
   findMenuById(id: string) {
     for (const m of this.$ustra.management.store.initData.programMenus) {
       if (m.mnuId === id) {
-        return m
+        return m;
       }
     }
   }
@@ -116,10 +123,12 @@ export class UstraManagementNavigation {
    * @param nav
    */
   findMenuByNav(nav: Navigation) {
-    const initDataStore = this.$ustra.management.store.initData
+    const initDataStore = this.$ustra.management.store.initData;
     return initDataStore.programMenus.find(
-      m => m.sysCd === initDataStore.currentSystemCode && (m.mnuId === nav.id || m.mnuId === nav.originId),
-    ) as ProgramMenu
+      (m) =>
+        m.sysCd === initDataStore.currentSystemCode &&
+        (m.mnuId === nav.id || m.mnuId === nav.originId)
+    ) as ProgramMenu;
   }
 
   /**
@@ -129,29 +138,35 @@ export class UstraManagementNavigation {
    */
   getCurrentRouteLayoutName(route: RouteLocation) {
     if (!route) {
-      route = useRoute()
+      route = useRoute();
     }
 
-    const useTabUi = $ustra.env.appProps.nuxt?.management?.ui?.tabMenu?.enabled
-    const mainPagePath = $ustra.env.appProps.nuxt?.management?.ui?.defaultPage?.main?.path
-    const layoutProp = $ustra.env.appProps.nuxt?.management?.ui?.defaultPage?.layout
-    const metaLayout = useCurrentPageMeta(route)?.layout
+    const useTabUi = $ustra.env.appProps.nuxt?.management?.ui?.tabMenu?.enabled;
+    const mainPagePath =
+      $ustra.env.appProps.nuxt?.management?.ui?.defaultPage?.main?.path;
+    const layoutProp =
+      $ustra.env.appProps.nuxt?.management?.ui?.defaultPage?.layout;
+    const metaLayout = useCurrentPageMeta(route)?.layout;
 
     if (metaLayout !== null && metaLayout !== undefined) {
-      return metaLayout as LayoutKey
+      return metaLayout as LayoutKey;
     }
 
-    if (mainPagePath === route?.matched?.[0]?.path && useTabUi && layoutProp?.layoutName) {
-      return layoutProp.layoutName as LayoutKey
+    if (
+      mainPagePath === route?.matched?.[0]?.path &&
+      useTabUi &&
+      layoutProp?.layoutName
+    ) {
+      return layoutProp.layoutName as LayoutKey;
     }
 
     if (useTabUi && layoutProp?.layoutName) {
-      return false
+      return false;
     }
 
     if (layoutProp?.include && layoutProp?.layoutName) {
-      return layoutProp.layoutName as LayoutKey
+      return layoutProp.layoutName as LayoutKey;
     }
-    return 'default' as LayoutKey
+    return "default" as LayoutKey;
   }
 }

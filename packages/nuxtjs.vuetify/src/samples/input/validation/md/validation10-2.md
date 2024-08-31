@@ -1,6 +1,9 @@
 ```html
 <template>
-  <UValidationGroup ref="validationGroup" cssClassName="custom-validation-group">
+  <UValidationGroup
+    ref="validationGroup"
+    cssClassName="custom-validation-group"
+  >
     <VTextField
       v-model="inputData.value1"
       :errorMessages="inputData.validationMessage1"
@@ -13,23 +16,25 @@
       :onValidationChanged="(isValid, message) => (inputData.validationMessage2 = message)"
       :validation="{ rules: ['required', 'email'] }"
     />
-    <div v-if="inputData.validationMessage3">{{ inputData.validationMessage3 }}</div>
+    <div v-if="inputData.validationMessage3">
+      {{ inputData.validationMessage3 }}
+    </div>
   </UValidationGroup>
   <UButton text="Validate" @click="() => validationGroup.validate()"></UButton>
 </template>
 <script lang="ts" setup>
-import { UValidationGroup } from '#ustra/nuxt-wijmo/components'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
+  import { UValidationGroup } from "#moong/nuxt-wijmo/components";
+  import { UMarkdownViewer } from "#moong/nuxt/components";
 
-const validationGroup = ref<InstanceType<typeof UValidationGroup>>()
+  const validationGroup = ref<InstanceType<typeof UValidationGroup>>();
 
-const inputData = reactive({
-  value1: null,
-  value2: null,
-  value3: null,
-  validationMessage1: '',
-  validationMessage2: '',
-  validationMessage3: '',
-})
+  const inputData = reactive({
+    value1: null,
+    value2: null,
+    value3: null,
+    validationMessage1: "",
+    validationMessage2: "",
+    validationMessage3: "",
+  });
 </script>
 ```

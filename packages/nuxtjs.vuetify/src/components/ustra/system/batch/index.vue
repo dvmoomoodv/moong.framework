@@ -44,18 +44,18 @@
   </UBox>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-import BatchTask from './task/index.vue'
-import BatchHist from './hist/index.vue'
-import BatchManager from './manager/index.vue'
-import BatchWorker from './worker/index.vue'
+import { ref } from "#moong/nuxt";
+import BatchTask from "./task/index.vue";
+import BatchHist from "./hist/index.vue";
+import BatchManager from "./manager/index.vue";
+import BatchWorker from "./worker/index.vue";
 
-const tab = ref('tab1')
+const tab = ref("tab1");
 </script>
 <script lang="ts">
 export default {
-  name: 'UstraManagementSystemBatch',
-}
+  name: "UstraManagementSystemBatch",
+};
 </script>
 <style lang="scss">
 .menu-tab-panel {

@@ -1,9 +1,1383 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>CompatVue | @ustra/nuxt</title><meta name="description" content="Documentation for @ustra/nuxt"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search" data-base=".."><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="../index.html" class="title">@ustra/nuxt</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><ul class="tsd-breadcrumb"><li><a href="../index.html">@ustra/nuxt</a></li><li><a href="../modules/index.html">index</a></li><li><a href="index.CompatVue.html">CompatVue</a></li></ul><h1 class="deprecated">Type alias CompatVue</h1></div><div class="tsd-signature"><span class="tsd-kind-type-alias">Compat<wbr/>Vue</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/index.App.html" class="tsd-signature-type tsd-kind-interface">App</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;version&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;component&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;directive&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">config</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/index.AppConfig.html" class="tsd-signature-type tsd-kind-interface">AppConfig</a><span class="tsd-signature-symbol"> &amp; </span><a href="index.LegacyConfig.html" class="tsd-signature-type tsd-kind-type-alias">LegacyConfig</a><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">configureCompat</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-keyword">typeof </span><span class="tsd-signature-type">configureCompat</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">extend</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="index.CompatVue.html" class="tsd-signature-type tsd-kind-type-alias">CompatVue</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">nextTick</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-keyword">typeof </span><a href="../functions/index.nextTick.html" class="tsd-signature-type tsd-kind-function">nextTick</a><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">observable</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-keyword">typeof </span><a href="../functions/index.reactive.html" class="tsd-signature-type tsd-kind-function">reactive</a><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">version</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-call-signature">compile</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">template</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="index.RenderFunction.html" class="tsd-signature-type tsd-kind-type-alias">RenderFunction</a><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-call-signature">component</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="index.Component.html" class="tsd-signature-type tsd-kind-type-alias">Component</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><a href="index.ComputedOptions.html" class="tsd-signature-type tsd-kind-type-alias">ComputedOptions</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/index.MethodOptions.html" class="tsd-signature-type tsd-kind-interface">MethodOptions</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-call-signature">component</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span>, <span class="tsd-kind-parameter">component</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="index.CompatVue.html" class="tsd-signature-type tsd-kind-type-alias">CompatVue</a><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-call-signature">delete</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">target</span>, <span class="tsd-kind-parameter">key</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-call-signature">directive</span><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="">T</a><span class="tsd-signature-symbol">, </span><a class="tsd-signature-type tsd-kind-type-parameter" href="">V</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="index.Directive.html" class="tsd-signature-type tsd-kind-type-alias">Directive</a><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="">T</a><span class="tsd-signature-symbol">, </span><a class="tsd-signature-type tsd-kind-type-parameter" href="">V</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-call-signature">directive</span><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="">T</a><span class="tsd-signature-symbol">, </span><a class="tsd-signature-type tsd-kind-type-parameter" href="">V</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span>, <span class="tsd-kind-parameter">directive</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="index.CompatVue.html" class="tsd-signature-type tsd-kind-type-alias">CompatVue</a><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-call-signature">filter</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span>, <span class="tsd-kind-parameter">arg</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-call-signature">mixin</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">mixin</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="index.CompatVue.html" class="tsd-signature-type tsd-kind-type-alias">CompatVue</a><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-call-signature">set</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">target</span>, <span class="tsd-kind-parameter">key</span>, <span class="tsd-kind-parameter">value</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-call-signature">use</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">plugin</span>, <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="index.CompatVue.html" class="tsd-signature-type tsd-kind-type-alias">CompatVue</a><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-signature-keyword">new </span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LegacyPublicInstance</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div><div class="tsd-type-declaration"><h4>Type declaration</h4><ul class="tsd-parameters"><li class="tsd-parameter-signature"><ul class="tsd-signatures tsd-is-external"><li class="tsd-signature"><span class="tsd-signature-keyword">new </span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LegacyPublicInstance</span></li><li class="tsd-description"><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">options</span>: <a href="index.ComponentOptions.html" class="tsd-signature-type tsd-kind-type-alias">ComponentOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></span></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">LegacyPublicInstance</span></h4></li></ul></li><li class="tsd-parameter"><h5><span class="tsd-kind-property">config</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/index.AppConfig.html" class="tsd-signature-type tsd-kind-interface">AppConfig</a><span class="tsd-signature-symbol"> &amp; </span><a href="index.LegacyConfig.html" class="tsd-signature-type tsd-kind-type-alias">LegacyConfig</a></h5></li><li class="tsd-parameter"><h5><span class="tsd-kind-property">configure<wbr/>Compat</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-keyword">typeof </span><span class="tsd-signature-type">configureCompat</span></h5></li><li class="tsd-parameter"><h5><span class="tsd-kind-property">extend</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><a href="index.CompatVue.html" class="tsd-signature-type tsd-kind-type-alias">CompatVue</a><span class="tsd-signature-symbol">)</span></h5><div class="tsd-comment tsd-typography"><h4>Deprecated</h4><p>Vue 3 no longer supports extending constructors.</p>
-</div><ul class="tsd-parameters"><li class="tsd-parameter-signature"><ul class="tsd-signatures tsd-is-external"><li class="tsd-signature"><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="index.CompatVue.html" class="tsd-signature-type tsd-kind-type-alias">CompatVue</a></li><li class="tsd-description"><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">options</span>: <a href="index.ComponentOptions.html" class="tsd-signature-type tsd-kind-type-alias">ComponentOptions</a></span></li></ul></div><h4 class="tsd-returns-title">Returns <a href="index.CompatVue.html" class="tsd-signature-type tsd-kind-type-alias">CompatVue</a></h4></li></ul></li></ul></li><li class="tsd-parameter"><h5><span class="tsd-kind-property">next<wbr/>Tick</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-keyword">typeof </span><a href="../functions/index.nextTick.html" class="tsd-signature-type tsd-kind-function">nextTick</a></h5></li><li class="tsd-parameter"><h5><span class="tsd-kind-property">observable</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-keyword">typeof </span><a href="../functions/index.reactive.html" class="tsd-signature-type tsd-kind-function">reactive</a></h5><div class="tsd-comment tsd-typography"><h4>Deprecated</h4><p>use <code>reactive</code> instead.</p>
-</div></li><li class="tsd-parameter"><h5><span class="tsd-kind-property">version</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5></li><li class="tsd-parameter"><h5><span class="tsd-kind-method">compile</span><span class="tsd-signature-symbol">:</span>function</h5><ul class="tsd-signatures tsd-is-external"><li class="tsd-signature tsd-anchor-link"><a class="tsd-anchor"></a><span class="tsd-kind-call-signature">compile</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">template</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="index.RenderFunction.html" class="tsd-signature-type tsd-kind-type-alias">RenderFunction</a></li><li class="tsd-description"><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">template</span>: <span class="tsd-signature-type">string</span></span></li></ul></div><h4 class="tsd-returns-title">Returns <a href="index.RenderFunction.html" class="tsd-signature-type tsd-kind-type-alias">RenderFunction</a></h4><aside class="tsd-sources"><ul><li>Defined in node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1609</li></ul></aside></li></ul></li><li class="tsd-parameter"><h5><span class="tsd-kind-method">component</span><span class="tsd-signature-symbol">:</span>function</h5><ul class="tsd-signatures tsd-is-external"><li class="tsd-signature tsd-anchor-link"><a class="tsd-anchor"></a><span class="tsd-kind-call-signature">component</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="index.Component.html" class="tsd-signature-type tsd-kind-type-alias">Component</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><a href="index.ComputedOptions.html" class="tsd-signature-type tsd-kind-type-alias">ComputedOptions</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/index.MethodOptions.html" class="tsd-signature-type tsd-kind-interface">MethodOptions</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li><li class="tsd-description"><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></span></li></ul></div><h4 class="tsd-returns-title">Returns <a href="index.Component.html" class="tsd-signature-type tsd-kind-type-alias">Component</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><a href="index.ComputedOptions.html" class="tsd-signature-type tsd-kind-type-alias">ComputedOptions</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/index.MethodOptions.html" class="tsd-signature-type tsd-kind-interface">MethodOptions</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources"><ul><li>Defined in node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1605</li></ul></aside></li><li class="tsd-signature tsd-anchor-link"><a class="tsd-anchor"></a><span class="tsd-kind-call-signature">component</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span>, <span class="tsd-kind-parameter">component</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="index.CompatVue.html" class="tsd-signature-type tsd-kind-type-alias">CompatVue</a></li><li class="tsd-description"><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></span></li><li><span><span class="tsd-kind-parameter">component</span>: <a href="index.Component.html" class="tsd-signature-type tsd-kind-type-alias">Component</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><a href="index.ComputedOptions.html" class="tsd-signature-type tsd-kind-type-alias">ComputedOptions</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/index.MethodOptions.html" class="tsd-signature-type tsd-kind-interface">MethodOptions</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></span></li></ul></div><h4 class="tsd-returns-title">Returns <a href="index.CompatVue.html" class="tsd-signature-type tsd-kind-type-alias">CompatVue</a></h4><aside class="tsd-sources"><ul><li>Defined in node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1606</li></ul></aside></li></ul></li><li class="tsd-parameter"><h5><span class="tsd-kind-method">delete</span><span class="tsd-signature-symbol">:</span>function</h5><ul class="tsd-signatures tsd-is-external"><li class="tsd-signature tsd-anchor-link"><a class="tsd-anchor"></a><span class="tsd-kind-call-signature">delete</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">target</span>, <span class="tsd-kind-parameter">key</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li><li class="tsd-description"><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">target</span>: <span class="tsd-signature-type">any</span></span></li><li><span><span class="tsd-kind-parameter">key</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></span></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><div class="tsd-comment tsd-typography"><h4>Deprecated</h4><p>Vue 3 no longer needs delete() for property deletions.</p>
-</div><aside class="tsd-sources"><ul><li>Defined in node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1621</li></ul></aside></li></ul></li><li class="tsd-parameter"><h5><span class="tsd-kind-method">directive</span><span class="tsd-signature-symbol">:</span>function</h5><ul class="tsd-signatures tsd-is-external"><li class="tsd-signature tsd-anchor-link"><a class="tsd-anchor"></a><span class="tsd-kind-call-signature">directive</span><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="">T</a><span class="tsd-signature-symbol">, </span><a class="tsd-signature-type tsd-kind-type-parameter" href="">V</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="index.Directive.html" class="tsd-signature-type tsd-kind-type-alias">Directive</a><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="">T</a><span class="tsd-signature-symbol">, </span><a class="tsd-signature-type tsd-kind-type-parameter" href="">V</a><span class="tsd-signature-symbol">&gt;</span></li><li class="tsd-description"><section class="tsd-panel"><h4>Type Parameters</h4><ul class="tsd-type-parameter-list"><li><span><a class="tsd-anchor"></a><span class="tsd-kind-type-parameter">T</span> = <span class="tsd-signature-type">any</span></span></li><li><span><a class="tsd-anchor"></a><span class="tsd-kind-type-parameter">V</span> = <span class="tsd-signature-type">any</span></span></li></ul></section><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></span></li></ul></div><h4 class="tsd-returns-title">Returns <a href="index.Directive.html" class="tsd-signature-type tsd-kind-type-alias">Directive</a><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="">T</a><span class="tsd-signature-symbol">, </span><a class="tsd-signature-type tsd-kind-type-parameter" href="">V</a><span class="tsd-signature-symbol">&gt;</span></h4><aside class="tsd-sources"><ul><li>Defined in node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1607</li></ul></aside></li><li class="tsd-signature tsd-anchor-link"><a class="tsd-anchor"></a><span class="tsd-kind-call-signature">directive</span><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="">T</a><span class="tsd-signature-symbol">, </span><a class="tsd-signature-type tsd-kind-type-parameter" href="">V</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span>, <span class="tsd-kind-parameter">directive</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="index.CompatVue.html" class="tsd-signature-type tsd-kind-type-alias">CompatVue</a></li><li class="tsd-description"><section class="tsd-panel"><h4>Type Parameters</h4><ul class="tsd-type-parameter-list"><li><span><a class="tsd-anchor"></a><span class="tsd-kind-type-parameter">T</span> = <span class="tsd-signature-type">any</span></span></li><li><span><a class="tsd-anchor"></a><span class="tsd-kind-type-parameter">V</span> = <span class="tsd-signature-type">any</span></span></li></ul></section><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></span></li><li><span><span class="tsd-kind-parameter">directive</span>: <a href="index.Directive.html" class="tsd-signature-type tsd-kind-type-alias">Directive</a><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="">T</a><span class="tsd-signature-symbol">, </span><a class="tsd-signature-type tsd-kind-type-parameter" href="">V</a><span class="tsd-signature-symbol">&gt;</span></span></li></ul></div><h4 class="tsd-returns-title">Returns <a href="index.CompatVue.html" class="tsd-signature-type tsd-kind-type-alias">CompatVue</a></h4><aside class="tsd-sources"><ul><li>Defined in node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1608</li></ul></aside></li></ul></li><li class="tsd-parameter"><h5><span class="tsd-kind-method">filter</span><span class="tsd-signature-symbol">:</span>function</h5><ul class="tsd-signatures tsd-is-external"><li class="tsd-signature tsd-anchor-link"><a class="tsd-anchor"></a><span class="tsd-kind-call-signature">filter</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span>, <span class="tsd-kind-parameter">arg</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span></li><li class="tsd-description"><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></span></li><li><span><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">arg</span>: <span class="tsd-signature-type">any</span></span></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">null</span></h4><div class="tsd-comment tsd-typography"><h4>Deprecated</h4><p>filters have been removed from Vue 3.</p>
-</div><aside class="tsd-sources"><ul><li>Defined in node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1629</li></ul></aside></li></ul></li><li class="tsd-parameter"><h5><span class="tsd-kind-method">mixin</span><span class="tsd-signature-symbol">:</span>function</h5><ul class="tsd-signatures tsd-is-external"><li class="tsd-signature tsd-anchor-link"><a class="tsd-anchor"></a><span class="tsd-kind-call-signature">mixin</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">mixin</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="index.CompatVue.html" class="tsd-signature-type tsd-kind-type-alias">CompatVue</a></li><li class="tsd-description"><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">mixin</span>: <a href="index.ComponentOptions.html" class="tsd-signature-type tsd-kind-type-alias">ComponentOptions</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">{}</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></span></li></ul></div><h4 class="tsd-returns-title">Returns <a href="index.CompatVue.html" class="tsd-signature-type tsd-kind-type-alias">CompatVue</a></h4><aside class="tsd-sources"><ul><li>Defined in node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1604</li></ul></aside></li></ul></li><li class="tsd-parameter"><h5><span class="tsd-kind-method">set</span><span class="tsd-signature-symbol">:</span>function</h5><ul class="tsd-signatures tsd-is-external"><li class="tsd-signature tsd-anchor-link"><a class="tsd-anchor"></a><span class="tsd-kind-call-signature">set</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">target</span>, <span class="tsd-kind-parameter">key</span>, <span class="tsd-kind-parameter">value</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li><li class="tsd-description"><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">target</span>: <span class="tsd-signature-type">any</span></span></li><li><span><span class="tsd-kind-parameter">key</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></span></li><li><span><span class="tsd-kind-parameter">value</span>: <span class="tsd-signature-type">any</span></span></li></ul></div><h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><div class="tsd-comment tsd-typography"><h4>Deprecated</h4><p>Vue 3 no longer needs set() for adding new properties.</p>
-</div><aside class="tsd-sources"><ul><li>Defined in node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1617</li></ul></aside></li></ul></li><li class="tsd-parameter"><h5><span class="tsd-kind-method">use</span><span class="tsd-signature-symbol">:</span>function</h5><ul class="tsd-signatures tsd-is-external"><li class="tsd-signature tsd-anchor-link"><a class="tsd-anchor"></a><span class="tsd-kind-call-signature">use</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">plugin</span>, <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">options</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="index.CompatVue.html" class="tsd-signature-type tsd-kind-type-alias">CompatVue</a></li><li class="tsd-description"><div class="tsd-parameters"><h4 class="tsd-parameters-title">Parameters</h4><ul class="tsd-parameter-list"><li><span><span class="tsd-kind-parameter">plugin</span>: <a href="index.Plugin.html" class="tsd-signature-type tsd-kind-type-alias">Plugin</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></span></li><li><span><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">options</span>: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></span></li></ul></div><h4 class="tsd-returns-title">Returns <a href="index.CompatVue.html" class="tsd-signature-type tsd-kind-type-alias">CompatVue</a></h4><aside class="tsd-sources"><ul><li>Defined in node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1603</li></ul></aside></li></ul></li></ul></div><div class="tsd-comment tsd-typography"><h4>Deprecated</h4><p>the default <code>Vue</code> export has been removed in Vue 3. The type for
-the default export is provided only for migration purposes. Please use
-named imports instead - e.g. <code>import { createApp } from &#39;vue&#39;</code>.</p>
-</div><aside class="tsd-sources"><ul><li>Defined in node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1597</li></ul></aside></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-index-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><h4 class="uppercase">Member Visibility</h4><form><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div><div class="tsd-theme-toggle"><h4 class="uppercase">Theme</h4><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div></div><div class="site-menu"><nav class="tsd-navigation"><a href="../index.html"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="../assets/icons.svg#icon-1"></use></svg><span>@ustra/nuxt</span></a><ul class="tsd-small-nested-navigation" id="tsd-nav-container" data-base=".."><li>Loading...</li></ul></nav></div></div></div><div class="tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div></body></html>
+<!doctype html>
+<html class="default" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <title>CompatVue | @moong/nuxt</title>
+    <meta name="description" content="Documentation for @moong/nuxt" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/highlight.css" />
+    <script defer src="../assets/main.js"></script>
+    <script async src="../assets/icons.js" id="tsd-icons-script"></script>
+    <script async src="../assets/search.js" id="tsd-search-script"></script>
+    <script async src="../assets/navigation.js" id="tsd-nav-script"></script>
+  </head>
+  <body>
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("tsd-theme") || "os";
+      document.body.style.display = "none";
+      setTimeout(
+        () =>
+          app ? app.showPage() : document.body.style.removeProperty("display"),
+        500
+      );
+    </script>
+    <header class="tsd-page-toolbar">
+      <div class="tsd-toolbar-contents container">
+        <div class="table-cell" id="tsd-search" data-base="..">
+          <div class="field">
+            <label
+              for="tsd-search-field"
+              class="tsd-widget tsd-toolbar-icon search no-caption"
+              ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <use href="../assets/icons.svg#icon-search"></use></svg></label
+            ><input type="text" id="tsd-search-field" aria-label="Search" />
+          </div>
+          <div class="field"><div id="tsd-toolbar-links"></div></div>
+          <ul class="results">
+            <li class="state loading">Preparing search index...</li>
+            <li class="state failure">The search index is not available</li>
+          </ul>
+          <a href="../index.html" class="title">@moong/nuxt</a>
+        </div>
+        <div class="table-cell" id="tsd-widgets">
+          <a
+            href="#"
+            class="tsd-widget tsd-toolbar-icon menu no-caption"
+            data-toggle="menu"
+            aria-label="Menu"
+            ><svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <use href="../assets/icons.svg#icon-menu"></use></svg
+          ></a>
+        </div>
+      </div>
+    </header>
+    <div class="container container-main">
+      <div class="col-content">
+        <div class="tsd-page-title">
+          <ul class="tsd-breadcrumb">
+            <li><a href="../index.html">@moong/nuxt</a></li>
+            <li><a href="../modules/index.html">index</a></li>
+            <li><a href="index.CompatVue.html">CompatVue</a></li>
+          </ul>
+          <h1 class="deprecated">Type alias CompatVue</h1>
+        </div>
+        <div class="tsd-signature">
+          <span class="tsd-kind-type-alias">Compat<wbr />Vue</span
+          ><span class="tsd-signature-symbol">:</span>
+          <span class="tsd-signature-type">Pick</span
+          ><span class="tsd-signature-symbol">&lt;</span
+          ><a
+            href="../interfaces/index.App.html"
+            class="tsd-signature-type tsd-kind-interface"
+            >App</a
+          ><span class="tsd-signature-symbol">, </span
+          ><span class="tsd-signature-type">&quot;version&quot;</span
+          ><span class="tsd-signature-symbol"> | </span
+          ><span class="tsd-signature-type">&quot;component&quot;</span
+          ><span class="tsd-signature-symbol"> | </span
+          ><span class="tsd-signature-type">&quot;directive&quot;</span
+          ><span class="tsd-signature-symbol">&gt;</span
+          ><span class="tsd-signature-symbol"> &amp; </span
+          ><span class="tsd-signature-symbol">{ </span><br /><span>    </span
+          ><span class="tsd-kind-property">config</span
+          ><span class="tsd-signature-symbol">: </span
+          ><a
+            href="../interfaces/index.AppConfig.html"
+            class="tsd-signature-type tsd-kind-interface"
+            >AppConfig</a
+          ><span class="tsd-signature-symbol"> &amp; </span
+          ><a
+            href="index.LegacyConfig.html"
+            class="tsd-signature-type tsd-kind-type-alias"
+            >LegacyConfig</a
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><span class="tsd-kind-property">configureCompat</span
+          ><span class="tsd-signature-symbol">: </span
+          ><span class="tsd-signature-keyword">typeof </span
+          ><span class="tsd-signature-type">configureCompat</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><span class="tsd-kind-property">extend</span
+          ><span class="tsd-signature-symbol">: </span
+          ><span class="tsd-signature-symbol">(</span
+          ><span class="tsd-signature-symbol">(</span
+          ><span class="tsd-kind-parameter">options</span
+          ><span class="tsd-signature-symbol">?</span
+          ><span class="tsd-signature-symbol">)</span
+          ><span class="tsd-signature-symbol"> =&gt; </span
+          ><a
+            href="index.CompatVue.html"
+            class="tsd-signature-type tsd-kind-type-alias"
+            >CompatVue</a
+          ><span class="tsd-signature-symbol">)</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><span class="tsd-kind-property">nextTick</span
+          ><span class="tsd-signature-symbol">: </span
+          ><span class="tsd-signature-keyword">typeof </span
+          ><a
+            href="../functions/index.nextTick.html"
+            class="tsd-signature-type tsd-kind-function"
+            >nextTick</a
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><span class="tsd-kind-property">observable</span
+          ><span class="tsd-signature-symbol">: </span
+          ><span class="tsd-signature-keyword">typeof </span
+          ><a
+            href="../functions/index.reactive.html"
+            class="tsd-signature-type tsd-kind-function"
+            >reactive</a
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><span class="tsd-kind-property">version</span
+          ><span class="tsd-signature-symbol">: </span
+          ><span class="tsd-signature-type">string</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><span class="tsd-kind-call-signature">compile</span
+          ><span class="tsd-signature-symbol">(</span
+          ><span class="tsd-kind-parameter">template</span
+          ><span class="tsd-signature-symbol">)</span
+          ><span class="tsd-signature-symbol">: </span
+          ><a
+            href="index.RenderFunction.html"
+            class="tsd-signature-type tsd-kind-type-alias"
+            >RenderFunction</a
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><span class="tsd-kind-call-signature">component</span
+          ><span class="tsd-signature-symbol">(</span
+          ><span class="tsd-kind-parameter">name</span
+          ><span class="tsd-signature-symbol">)</span
+          ><span class="tsd-signature-symbol">: </span
+          ><a
+            href="index.Component.html"
+            class="tsd-signature-type tsd-kind-type-alias"
+            >Component</a
+          ><span class="tsd-signature-symbol">&lt;</span
+          ><span class="tsd-signature-type">any</span
+          ><span class="tsd-signature-symbol">, </span
+          ><span class="tsd-signature-type">any</span
+          ><span class="tsd-signature-symbol">, </span
+          ><span class="tsd-signature-type">any</span
+          ><span class="tsd-signature-symbol">, </span
+          ><a
+            href="index.ComputedOptions.html"
+            class="tsd-signature-type tsd-kind-type-alias"
+            >ComputedOptions</a
+          ><span class="tsd-signature-symbol">, </span
+          ><a
+            href="../interfaces/index.MethodOptions.html"
+            class="tsd-signature-type tsd-kind-interface"
+            >MethodOptions</a
+          ><span class="tsd-signature-symbol">, </span
+          ><span class="tsd-signature-symbol">{}</span
+          ><span class="tsd-signature-symbol">, </span
+          ><span class="tsd-signature-type">any</span
+          ><span class="tsd-signature-symbol">&gt;</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><span class="tsd-kind-call-signature">component</span
+          ><span class="tsd-signature-symbol">(</span
+          ><span class="tsd-kind-parameter">name</span>,
+          <span class="tsd-kind-parameter">component</span
+          ><span class="tsd-signature-symbol">)</span
+          ><span class="tsd-signature-symbol">: </span
+          ><a
+            href="index.CompatVue.html"
+            class="tsd-signature-type tsd-kind-type-alias"
+            >CompatVue</a
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><span class="tsd-kind-call-signature">delete</span
+          ><span class="tsd-signature-symbol">(</span
+          ><span class="tsd-kind-parameter">target</span>,
+          <span class="tsd-kind-parameter">key</span
+          ><span class="tsd-signature-symbol">)</span
+          ><span class="tsd-signature-symbol">: </span
+          ><span class="tsd-signature-type">void</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><span class="tsd-kind-call-signature">directive</span
+          ><span class="tsd-signature-symbol">&lt;</span
+          ><a class="tsd-signature-type tsd-kind-type-parameter" href="">T</a
+          ><span class="tsd-signature-symbol">, </span
+          ><a class="tsd-signature-type tsd-kind-type-parameter" href="">V</a
+          ><span class="tsd-signature-symbol">&gt;</span
+          ><span class="tsd-signature-symbol">(</span
+          ><span class="tsd-kind-parameter">name</span
+          ><span class="tsd-signature-symbol">)</span
+          ><span class="tsd-signature-symbol">: </span
+          ><a
+            href="index.Directive.html"
+            class="tsd-signature-type tsd-kind-type-alias"
+            >Directive</a
+          ><span class="tsd-signature-symbol">&lt;</span
+          ><a class="tsd-signature-type tsd-kind-type-parameter" href="">T</a
+          ><span class="tsd-signature-symbol">, </span
+          ><a class="tsd-signature-type tsd-kind-type-parameter" href="">V</a
+          ><span class="tsd-signature-symbol">&gt;</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><span class="tsd-kind-call-signature">directive</span
+          ><span class="tsd-signature-symbol">&lt;</span
+          ><a class="tsd-signature-type tsd-kind-type-parameter" href="">T</a
+          ><span class="tsd-signature-symbol">, </span
+          ><a class="tsd-signature-type tsd-kind-type-parameter" href="">V</a
+          ><span class="tsd-signature-symbol">&gt;</span
+          ><span class="tsd-signature-symbol">(</span
+          ><span class="tsd-kind-parameter">name</span>,
+          <span class="tsd-kind-parameter">directive</span
+          ><span class="tsd-signature-symbol">)</span
+          ><span class="tsd-signature-symbol">: </span
+          ><a
+            href="index.CompatVue.html"
+            class="tsd-signature-type tsd-kind-type-alias"
+            >CompatVue</a
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><span class="tsd-kind-call-signature">filter</span
+          ><span class="tsd-signature-symbol">(</span
+          ><span class="tsd-kind-parameter">name</span>,
+          <span class="tsd-kind-parameter">arg</span
+          ><span class="tsd-signature-symbol">?</span
+          ><span class="tsd-signature-symbol">)</span
+          ><span class="tsd-signature-symbol">: </span
+          ><span class="tsd-signature-type">null</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><span class="tsd-kind-call-signature">mixin</span
+          ><span class="tsd-signature-symbol">(</span
+          ><span class="tsd-kind-parameter">mixin</span
+          ><span class="tsd-signature-symbol">)</span
+          ><span class="tsd-signature-symbol">: </span
+          ><a
+            href="index.CompatVue.html"
+            class="tsd-signature-type tsd-kind-type-alias"
+            >CompatVue</a
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><span class="tsd-kind-call-signature">set</span
+          ><span class="tsd-signature-symbol">(</span
+          ><span class="tsd-kind-parameter">target</span>,
+          <span class="tsd-kind-parameter">key</span>,
+          <span class="tsd-kind-parameter">value</span
+          ><span class="tsd-signature-symbol">)</span
+          ><span class="tsd-signature-symbol">: </span
+          ><span class="tsd-signature-type">void</span
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><span class="tsd-kind-call-signature">use</span
+          ><span class="tsd-signature-symbol">(</span
+          ><span class="tsd-kind-parameter">plugin</span>,
+          <span class="tsd-signature-symbol">...</span
+          ><span class="tsd-kind-parameter">options</span
+          ><span class="tsd-signature-symbol">)</span
+          ><span class="tsd-signature-symbol">: </span
+          ><a
+            href="index.CompatVue.html"
+            class="tsd-signature-type tsd-kind-type-alias"
+            >CompatVue</a
+          ><span class="tsd-signature-symbol">; </span><br /><span>    </span
+          ><span class="tsd-signature-keyword">new </span
+          ><span class="tsd-signature-symbol">(</span
+          ><span class="tsd-kind-parameter">options</span
+          ><span class="tsd-signature-symbol">?</span
+          ><span class="tsd-signature-symbol">)</span
+          ><span class="tsd-signature-symbol">: </span
+          ><span class="tsd-signature-type">LegacyPublicInstance</span
+          ><span class="tsd-signature-symbol">; </span><br /><span
+            class="tsd-signature-symbol"
+            >}</span
+          >
+        </div>
+        <div class="tsd-type-declaration">
+          <h4>Type declaration</h4>
+          <ul class="tsd-parameters">
+            <li class="tsd-parameter-signature">
+              <ul class="tsd-signatures tsd-is-external">
+                <li class="tsd-signature">
+                  <span class="tsd-signature-keyword">new </span
+                  ><span class="tsd-signature-symbol">(</span
+                  ><span class="tsd-kind-parameter">options</span
+                  ><span class="tsd-signature-symbol">?</span
+                  ><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">LegacyPublicInstance</span>
+                </li>
+                <li class="tsd-description">
+                  <div class="tsd-parameters">
+                    <h4 class="tsd-parameters-title">Parameters</h4>
+                    <ul class="tsd-parameter-list">
+                      <li>
+                        <span
+                          ><code class="tsd-tag ts-flagOptional">Optional</code>
+                          <span class="tsd-kind-parameter">options</span>:
+                          <a
+                            href="index.ComponentOptions.html"
+                            class="tsd-signature-type tsd-kind-type-alias"
+                            >ComponentOptions</a
+                          ><span class="tsd-signature-symbol">&lt;</span
+                          ><span class="tsd-signature-symbol">{}</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">&gt;</span></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <h4 class="tsd-returns-title">
+                    Returns
+                    <span class="tsd-signature-type">LegacyPublicInstance</span>
+                  </h4>
+                </li>
+              </ul>
+            </li>
+            <li class="tsd-parameter">
+              <h5>
+                <span class="tsd-kind-property">config</span
+                ><span class="tsd-signature-symbol">: </span
+                ><a
+                  href="../interfaces/index.AppConfig.html"
+                  class="tsd-signature-type tsd-kind-interface"
+                  >AppConfig</a
+                ><span class="tsd-signature-symbol"> &amp; </span
+                ><a
+                  href="index.LegacyConfig.html"
+                  class="tsd-signature-type tsd-kind-type-alias"
+                  >LegacyConfig</a
+                >
+              </h5>
+            </li>
+            <li class="tsd-parameter">
+              <h5>
+                <span class="tsd-kind-property">configure<wbr />Compat</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-keyword">typeof </span
+                ><span class="tsd-signature-type">configureCompat</span>
+              </h5>
+            </li>
+            <li class="tsd-parameter">
+              <h5>
+                <span class="tsd-kind-property">extend</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-signature-symbol">(</span
+                ><span class="tsd-kind-parameter">options</span
+                ><span class="tsd-signature-symbol">?</span
+                ><span class="tsd-signature-symbol">)</span
+                ><span class="tsd-signature-symbol"> =&gt; </span
+                ><a
+                  href="index.CompatVue.html"
+                  class="tsd-signature-type tsd-kind-type-alias"
+                  >CompatVue</a
+                ><span class="tsd-signature-symbol">)</span>
+              </h5>
+              <div class="tsd-comment tsd-typography">
+                <h4>Deprecated</h4>
+                <p>Vue 3 no longer supports extending constructors.</p>
+              </div>
+              <ul class="tsd-parameters">
+                <li class="tsd-parameter-signature">
+                  <ul class="tsd-signatures tsd-is-external">
+                    <li class="tsd-signature">
+                      <span class="tsd-signature-symbol">(</span
+                      ><span class="tsd-kind-parameter">options</span
+                      ><span class="tsd-signature-symbol">?</span
+                      ><span class="tsd-signature-symbol">)</span
+                      ><span class="tsd-signature-symbol">: </span
+                      ><a
+                        href="index.CompatVue.html"
+                        class="tsd-signature-type tsd-kind-type-alias"
+                        >CompatVue</a
+                      >
+                    </li>
+                    <li class="tsd-description">
+                      <div class="tsd-parameters">
+                        <h4 class="tsd-parameters-title">Parameters</h4>
+                        <ul class="tsd-parameter-list">
+                          <li>
+                            <span
+                              ><code class="tsd-tag ts-flagOptional"
+                                >Optional</code
+                              >
+                              <span class="tsd-kind-parameter">options</span>:
+                              <a
+                                href="index.ComponentOptions.html"
+                                class="tsd-signature-type tsd-kind-type-alias"
+                                >ComponentOptions</a
+                              ></span
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                      <h4 class="tsd-returns-title">
+                        Returns
+                        <a
+                          href="index.CompatVue.html"
+                          class="tsd-signature-type tsd-kind-type-alias"
+                          >CompatVue</a
+                        >
+                      </h4>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="tsd-parameter">
+              <h5>
+                <span class="tsd-kind-property">next<wbr />Tick</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-keyword">typeof </span
+                ><a
+                  href="../functions/index.nextTick.html"
+                  class="tsd-signature-type tsd-kind-function"
+                  >nextTick</a
+                >
+              </h5>
+            </li>
+            <li class="tsd-parameter">
+              <h5>
+                <span class="tsd-kind-property">observable</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-keyword">typeof </span
+                ><a
+                  href="../functions/index.reactive.html"
+                  class="tsd-signature-type tsd-kind-function"
+                  >reactive</a
+                >
+              </h5>
+              <div class="tsd-comment tsd-typography">
+                <h4>Deprecated</h4>
+                <p>use <code>reactive</code> instead.</p>
+              </div>
+            </li>
+            <li class="tsd-parameter">
+              <h5>
+                <span class="tsd-kind-property">version</span
+                ><span class="tsd-signature-symbol">: </span
+                ><span class="tsd-signature-type">string</span>
+              </h5>
+            </li>
+            <li class="tsd-parameter">
+              <h5>
+                <span class="tsd-kind-method">compile</span
+                ><span class="tsd-signature-symbol">:</span>function
+              </h5>
+              <ul class="tsd-signatures tsd-is-external">
+                <li class="tsd-signature tsd-anchor-link">
+                  <a class="tsd-anchor"></a
+                  ><span class="tsd-kind-call-signature">compile</span
+                  ><span class="tsd-signature-symbol">(</span
+                  ><span class="tsd-kind-parameter">template</span
+                  ><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><a
+                    href="index.RenderFunction.html"
+                    class="tsd-signature-type tsd-kind-type-alias"
+                    >RenderFunction</a
+                  >
+                </li>
+                <li class="tsd-description">
+                  <div class="tsd-parameters">
+                    <h4 class="tsd-parameters-title">Parameters</h4>
+                    <ul class="tsd-parameter-list">
+                      <li>
+                        <span
+                          ><span class="tsd-kind-parameter">template</span>:
+                          <span class="tsd-signature-type">string</span></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <h4 class="tsd-returns-title">
+                    Returns
+                    <a
+                      href="index.RenderFunction.html"
+                      class="tsd-signature-type tsd-kind-type-alias"
+                      >RenderFunction</a
+                    >
+                  </h4>
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1609
+                      </li>
+                    </ul>
+                  </aside>
+                </li>
+              </ul>
+            </li>
+            <li class="tsd-parameter">
+              <h5>
+                <span class="tsd-kind-method">component</span
+                ><span class="tsd-signature-symbol">:</span>function
+              </h5>
+              <ul class="tsd-signatures tsd-is-external">
+                <li class="tsd-signature tsd-anchor-link">
+                  <a class="tsd-anchor"></a
+                  ><span class="tsd-kind-call-signature">component</span
+                  ><span class="tsd-signature-symbol">(</span
+                  ><span class="tsd-kind-parameter">name</span
+                  ><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><a
+                    href="index.Component.html"
+                    class="tsd-signature-type tsd-kind-type-alias"
+                    >Component</a
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><span class="tsd-signature-type">any</span
+                  ><span class="tsd-signature-symbol">, </span
+                  ><span class="tsd-signature-type">any</span
+                  ><span class="tsd-signature-symbol">, </span
+                  ><span class="tsd-signature-type">any</span
+                  ><span class="tsd-signature-symbol">, </span
+                  ><a
+                    href="index.ComputedOptions.html"
+                    class="tsd-signature-type tsd-kind-type-alias"
+                    >ComputedOptions</a
+                  ><span class="tsd-signature-symbol">, </span
+                  ><a
+                    href="../interfaces/index.MethodOptions.html"
+                    class="tsd-signature-type tsd-kind-interface"
+                    >MethodOptions</a
+                  ><span class="tsd-signature-symbol">, </span
+                  ><span class="tsd-signature-symbol">{}</span
+                  ><span class="tsd-signature-symbol">, </span
+                  ><span class="tsd-signature-type">any</span
+                  ><span class="tsd-signature-symbol">&gt;</span>
+                </li>
+                <li class="tsd-description">
+                  <div class="tsd-parameters">
+                    <h4 class="tsd-parameters-title">Parameters</h4>
+                    <ul class="tsd-parameter-list">
+                      <li>
+                        <span
+                          ><span class="tsd-kind-parameter">name</span>:
+                          <span class="tsd-signature-type">string</span></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <h4 class="tsd-returns-title">
+                    Returns
+                    <a
+                      href="index.Component.html"
+                      class="tsd-signature-type tsd-kind-type-alias"
+                      >Component</a
+                    ><span class="tsd-signature-symbol">&lt;</span
+                    ><span class="tsd-signature-type">any</span
+                    ><span class="tsd-signature-symbol">, </span
+                    ><span class="tsd-signature-type">any</span
+                    ><span class="tsd-signature-symbol">, </span
+                    ><span class="tsd-signature-type">any</span
+                    ><span class="tsd-signature-symbol">, </span
+                    ><a
+                      href="index.ComputedOptions.html"
+                      class="tsd-signature-type tsd-kind-type-alias"
+                      >ComputedOptions</a
+                    ><span class="tsd-signature-symbol">, </span
+                    ><a
+                      href="../interfaces/index.MethodOptions.html"
+                      class="tsd-signature-type tsd-kind-interface"
+                      >MethodOptions</a
+                    ><span class="tsd-signature-symbol">, </span
+                    ><span class="tsd-signature-symbol">{}</span
+                    ><span class="tsd-signature-symbol">, </span
+                    ><span class="tsd-signature-type">any</span
+                    ><span class="tsd-signature-symbol">&gt;</span>
+                  </h4>
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1605
+                      </li>
+                    </ul>
+                  </aside>
+                </li>
+                <li class="tsd-signature tsd-anchor-link">
+                  <a class="tsd-anchor"></a
+                  ><span class="tsd-kind-call-signature">component</span
+                  ><span class="tsd-signature-symbol">(</span
+                  ><span class="tsd-kind-parameter">name</span>,
+                  <span class="tsd-kind-parameter">component</span
+                  ><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><a
+                    href="index.CompatVue.html"
+                    class="tsd-signature-type tsd-kind-type-alias"
+                    >CompatVue</a
+                  >
+                </li>
+                <li class="tsd-description">
+                  <div class="tsd-parameters">
+                    <h4 class="tsd-parameters-title">Parameters</h4>
+                    <ul class="tsd-parameter-list">
+                      <li>
+                        <span
+                          ><span class="tsd-kind-parameter">name</span>:
+                          <span class="tsd-signature-type">string</span></span
+                        >
+                      </li>
+                      <li>
+                        <span
+                          ><span class="tsd-kind-parameter">component</span>:
+                          <a
+                            href="index.Component.html"
+                            class="tsd-signature-type tsd-kind-type-alias"
+                            >Component</a
+                          ><span class="tsd-signature-symbol">&lt;</span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><a
+                            href="index.ComputedOptions.html"
+                            class="tsd-signature-type tsd-kind-type-alias"
+                            >ComputedOptions</a
+                          ><span class="tsd-signature-symbol">, </span
+                          ><a
+                            href="../interfaces/index.MethodOptions.html"
+                            class="tsd-signature-type tsd-kind-interface"
+                            >MethodOptions</a
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-symbol">{}</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">&gt;</span></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <h4 class="tsd-returns-title">
+                    Returns
+                    <a
+                      href="index.CompatVue.html"
+                      class="tsd-signature-type tsd-kind-type-alias"
+                      >CompatVue</a
+                    >
+                  </h4>
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1606
+                      </li>
+                    </ul>
+                  </aside>
+                </li>
+              </ul>
+            </li>
+            <li class="tsd-parameter">
+              <h5>
+                <span class="tsd-kind-method">delete</span
+                ><span class="tsd-signature-symbol">:</span>function
+              </h5>
+              <ul class="tsd-signatures tsd-is-external">
+                <li class="tsd-signature tsd-anchor-link">
+                  <a class="tsd-anchor"></a
+                  ><span class="tsd-kind-call-signature">delete</span
+                  ><span class="tsd-signature-symbol">(</span
+                  ><span class="tsd-kind-parameter">target</span>,
+                  <span class="tsd-kind-parameter">key</span
+                  ><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">void</span>
+                </li>
+                <li class="tsd-description">
+                  <div class="tsd-parameters">
+                    <h4 class="tsd-parameters-title">Parameters</h4>
+                    <ul class="tsd-parameter-list">
+                      <li>
+                        <span
+                          ><span class="tsd-kind-parameter">target</span>:
+                          <span class="tsd-signature-type">any</span></span
+                        >
+                      </li>
+                      <li>
+                        <span
+                          ><span class="tsd-kind-parameter">key</span>:
+                          <span class="tsd-signature-type">string</span
+                          ><span class="tsd-signature-symbol"> | </span
+                          ><span class="tsd-signature-type">number</span
+                          ><span class="tsd-signature-symbol"> | </span
+                          ><span class="tsd-signature-type">symbol</span></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <h4 class="tsd-returns-title">
+                    Returns <span class="tsd-signature-type">void</span>
+                  </h4>
+                  <div class="tsd-comment tsd-typography">
+                    <h4>Deprecated</h4>
+                    <p>
+                      Vue 3 no longer needs delete() for property deletions.
+                    </p>
+                  </div>
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1621
+                      </li>
+                    </ul>
+                  </aside>
+                </li>
+              </ul>
+            </li>
+            <li class="tsd-parameter">
+              <h5>
+                <span class="tsd-kind-method">directive</span
+                ><span class="tsd-signature-symbol">:</span>function
+              </h5>
+              <ul class="tsd-signatures tsd-is-external">
+                <li class="tsd-signature tsd-anchor-link">
+                  <a class="tsd-anchor"></a
+                  ><span class="tsd-kind-call-signature">directive</span
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><a class="tsd-signature-type tsd-kind-type-parameter" href=""
+                    >T</a
+                  ><span class="tsd-signature-symbol">, </span
+                  ><a class="tsd-signature-type tsd-kind-type-parameter" href=""
+                    >V</a
+                  ><span class="tsd-signature-symbol">&gt;</span
+                  ><span class="tsd-signature-symbol">(</span
+                  ><span class="tsd-kind-parameter">name</span
+                  ><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><a
+                    href="index.Directive.html"
+                    class="tsd-signature-type tsd-kind-type-alias"
+                    >Directive</a
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><a class="tsd-signature-type tsd-kind-type-parameter" href=""
+                    >T</a
+                  ><span class="tsd-signature-symbol">, </span
+                  ><a class="tsd-signature-type tsd-kind-type-parameter" href=""
+                    >V</a
+                  ><span class="tsd-signature-symbol">&gt;</span>
+                </li>
+                <li class="tsd-description">
+                  <section class="tsd-panel">
+                    <h4>Type Parameters</h4>
+                    <ul class="tsd-type-parameter-list">
+                      <li>
+                        <span
+                          ><a class="tsd-anchor"></a
+                          ><span class="tsd-kind-type-parameter">T</span> =
+                          <span class="tsd-signature-type">any</span></span
+                        >
+                      </li>
+                      <li>
+                        <span
+                          ><a class="tsd-anchor"></a
+                          ><span class="tsd-kind-type-parameter">V</span> =
+                          <span class="tsd-signature-type">any</span></span
+                        >
+                      </li>
+                    </ul>
+                  </section>
+                  <div class="tsd-parameters">
+                    <h4 class="tsd-parameters-title">Parameters</h4>
+                    <ul class="tsd-parameter-list">
+                      <li>
+                        <span
+                          ><span class="tsd-kind-parameter">name</span>:
+                          <span class="tsd-signature-type">string</span></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <h4 class="tsd-returns-title">
+                    Returns
+                    <a
+                      href="index.Directive.html"
+                      class="tsd-signature-type tsd-kind-type-alias"
+                      >Directive</a
+                    ><span class="tsd-signature-symbol">&lt;</span
+                    ><a
+                      class="tsd-signature-type tsd-kind-type-parameter"
+                      href=""
+                      >T</a
+                    ><span class="tsd-signature-symbol">, </span
+                    ><a
+                      class="tsd-signature-type tsd-kind-type-parameter"
+                      href=""
+                      >V</a
+                    ><span class="tsd-signature-symbol">&gt;</span>
+                  </h4>
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1607
+                      </li>
+                    </ul>
+                  </aside>
+                </li>
+                <li class="tsd-signature tsd-anchor-link">
+                  <a class="tsd-anchor"></a
+                  ><span class="tsd-kind-call-signature">directive</span
+                  ><span class="tsd-signature-symbol">&lt;</span
+                  ><a class="tsd-signature-type tsd-kind-type-parameter" href=""
+                    >T</a
+                  ><span class="tsd-signature-symbol">, </span
+                  ><a class="tsd-signature-type tsd-kind-type-parameter" href=""
+                    >V</a
+                  ><span class="tsd-signature-symbol">&gt;</span
+                  ><span class="tsd-signature-symbol">(</span
+                  ><span class="tsd-kind-parameter">name</span>,
+                  <span class="tsd-kind-parameter">directive</span
+                  ><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><a
+                    href="index.CompatVue.html"
+                    class="tsd-signature-type tsd-kind-type-alias"
+                    >CompatVue</a
+                  >
+                </li>
+                <li class="tsd-description">
+                  <section class="tsd-panel">
+                    <h4>Type Parameters</h4>
+                    <ul class="tsd-type-parameter-list">
+                      <li>
+                        <span
+                          ><a class="tsd-anchor"></a
+                          ><span class="tsd-kind-type-parameter">T</span> =
+                          <span class="tsd-signature-type">any</span></span
+                        >
+                      </li>
+                      <li>
+                        <span
+                          ><a class="tsd-anchor"></a
+                          ><span class="tsd-kind-type-parameter">V</span> =
+                          <span class="tsd-signature-type">any</span></span
+                        >
+                      </li>
+                    </ul>
+                  </section>
+                  <div class="tsd-parameters">
+                    <h4 class="tsd-parameters-title">Parameters</h4>
+                    <ul class="tsd-parameter-list">
+                      <li>
+                        <span
+                          ><span class="tsd-kind-parameter">name</span>:
+                          <span class="tsd-signature-type">string</span></span
+                        >
+                      </li>
+                      <li>
+                        <span
+                          ><span class="tsd-kind-parameter">directive</span>:
+                          <a
+                            href="index.Directive.html"
+                            class="tsd-signature-type tsd-kind-type-alias"
+                            >Directive</a
+                          ><span class="tsd-signature-symbol">&lt;</span
+                          ><a
+                            class="tsd-signature-type tsd-kind-type-parameter"
+                            href=""
+                            >T</a
+                          ><span class="tsd-signature-symbol">, </span
+                          ><a
+                            class="tsd-signature-type tsd-kind-type-parameter"
+                            href=""
+                            >V</a
+                          ><span class="tsd-signature-symbol">&gt;</span></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <h4 class="tsd-returns-title">
+                    Returns
+                    <a
+                      href="index.CompatVue.html"
+                      class="tsd-signature-type tsd-kind-type-alias"
+                      >CompatVue</a
+                    >
+                  </h4>
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1608
+                      </li>
+                    </ul>
+                  </aside>
+                </li>
+              </ul>
+            </li>
+            <li class="tsd-parameter">
+              <h5>
+                <span class="tsd-kind-method">filter</span
+                ><span class="tsd-signature-symbol">:</span>function
+              </h5>
+              <ul class="tsd-signatures tsd-is-external">
+                <li class="tsd-signature tsd-anchor-link">
+                  <a class="tsd-anchor"></a
+                  ><span class="tsd-kind-call-signature">filter</span
+                  ><span class="tsd-signature-symbol">(</span
+                  ><span class="tsd-kind-parameter">name</span>,
+                  <span class="tsd-kind-parameter">arg</span
+                  ><span class="tsd-signature-symbol">?</span
+                  ><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">null</span>
+                </li>
+                <li class="tsd-description">
+                  <div class="tsd-parameters">
+                    <h4 class="tsd-parameters-title">Parameters</h4>
+                    <ul class="tsd-parameter-list">
+                      <li>
+                        <span
+                          ><span class="tsd-kind-parameter">name</span>:
+                          <span class="tsd-signature-type">string</span></span
+                        >
+                      </li>
+                      <li>
+                        <span
+                          ><code class="tsd-tag ts-flagOptional">Optional</code>
+                          <span class="tsd-kind-parameter">arg</span>:
+                          <span class="tsd-signature-type">any</span></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <h4 class="tsd-returns-title">
+                    Returns <span class="tsd-signature-type">null</span>
+                  </h4>
+                  <div class="tsd-comment tsd-typography">
+                    <h4>Deprecated</h4>
+                    <p>filters have been removed from Vue 3.</p>
+                  </div>
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1629
+                      </li>
+                    </ul>
+                  </aside>
+                </li>
+              </ul>
+            </li>
+            <li class="tsd-parameter">
+              <h5>
+                <span class="tsd-kind-method">mixin</span
+                ><span class="tsd-signature-symbol">:</span>function
+              </h5>
+              <ul class="tsd-signatures tsd-is-external">
+                <li class="tsd-signature tsd-anchor-link">
+                  <a class="tsd-anchor"></a
+                  ><span class="tsd-kind-call-signature">mixin</span
+                  ><span class="tsd-signature-symbol">(</span
+                  ><span class="tsd-kind-parameter">mixin</span
+                  ><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><a
+                    href="index.CompatVue.html"
+                    class="tsd-signature-type tsd-kind-type-alias"
+                    >CompatVue</a
+                  >
+                </li>
+                <li class="tsd-description">
+                  <div class="tsd-parameters">
+                    <h4 class="tsd-parameters-title">Parameters</h4>
+                    <ul class="tsd-parameter-list">
+                      <li>
+                        <span
+                          ><span class="tsd-kind-parameter">mixin</span>:
+                          <a
+                            href="index.ComponentOptions.html"
+                            class="tsd-signature-type tsd-kind-type-alias"
+                            >ComponentOptions</a
+                          ><span class="tsd-signature-symbol">&lt;</span
+                          ><span class="tsd-signature-symbol">{}</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">, </span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">&gt;</span></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <h4 class="tsd-returns-title">
+                    Returns
+                    <a
+                      href="index.CompatVue.html"
+                      class="tsd-signature-type tsd-kind-type-alias"
+                      >CompatVue</a
+                    >
+                  </h4>
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1604
+                      </li>
+                    </ul>
+                  </aside>
+                </li>
+              </ul>
+            </li>
+            <li class="tsd-parameter">
+              <h5>
+                <span class="tsd-kind-method">set</span
+                ><span class="tsd-signature-symbol">:</span>function
+              </h5>
+              <ul class="tsd-signatures tsd-is-external">
+                <li class="tsd-signature tsd-anchor-link">
+                  <a class="tsd-anchor"></a
+                  ><span class="tsd-kind-call-signature">set</span
+                  ><span class="tsd-signature-symbol">(</span
+                  ><span class="tsd-kind-parameter">target</span>,
+                  <span class="tsd-kind-parameter">key</span>,
+                  <span class="tsd-kind-parameter">value</span
+                  ><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><span class="tsd-signature-type">void</span>
+                </li>
+                <li class="tsd-description">
+                  <div class="tsd-parameters">
+                    <h4 class="tsd-parameters-title">Parameters</h4>
+                    <ul class="tsd-parameter-list">
+                      <li>
+                        <span
+                          ><span class="tsd-kind-parameter">target</span>:
+                          <span class="tsd-signature-type">any</span></span
+                        >
+                      </li>
+                      <li>
+                        <span
+                          ><span class="tsd-kind-parameter">key</span>:
+                          <span class="tsd-signature-type">string</span
+                          ><span class="tsd-signature-symbol"> | </span
+                          ><span class="tsd-signature-type">number</span
+                          ><span class="tsd-signature-symbol"> | </span
+                          ><span class="tsd-signature-type">symbol</span></span
+                        >
+                      </li>
+                      <li>
+                        <span
+                          ><span class="tsd-kind-parameter">value</span>:
+                          <span class="tsd-signature-type">any</span></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <h4 class="tsd-returns-title">
+                    Returns <span class="tsd-signature-type">void</span>
+                  </h4>
+                  <div class="tsd-comment tsd-typography">
+                    <h4>Deprecated</h4>
+                    <p>
+                      Vue 3 no longer needs set() for adding new properties.
+                    </p>
+                  </div>
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1617
+                      </li>
+                    </ul>
+                  </aside>
+                </li>
+              </ul>
+            </li>
+            <li class="tsd-parameter">
+              <h5>
+                <span class="tsd-kind-method">use</span
+                ><span class="tsd-signature-symbol">:</span>function
+              </h5>
+              <ul class="tsd-signatures tsd-is-external">
+                <li class="tsd-signature tsd-anchor-link">
+                  <a class="tsd-anchor"></a
+                  ><span class="tsd-kind-call-signature">use</span
+                  ><span class="tsd-signature-symbol">(</span
+                  ><span class="tsd-kind-parameter">plugin</span>,
+                  <span class="tsd-signature-symbol">...</span
+                  ><span class="tsd-kind-parameter">options</span
+                  ><span class="tsd-signature-symbol">)</span
+                  ><span class="tsd-signature-symbol">: </span
+                  ><a
+                    href="index.CompatVue.html"
+                    class="tsd-signature-type tsd-kind-type-alias"
+                    >CompatVue</a
+                  >
+                </li>
+                <li class="tsd-description">
+                  <div class="tsd-parameters">
+                    <h4 class="tsd-parameters-title">Parameters</h4>
+                    <ul class="tsd-parameter-list">
+                      <li>
+                        <span
+                          ><span class="tsd-kind-parameter">plugin</span>:
+                          <a
+                            href="index.Plugin.html"
+                            class="tsd-signature-type tsd-kind-type-alias"
+                            >Plugin</a
+                          ><span class="tsd-signature-symbol">&lt;</span
+                          ><span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">[]</span
+                          ><span class="tsd-signature-symbol">&gt;</span></span
+                        >
+                      </li>
+                      <li>
+                        <span
+                          ><code class="tsd-tag ts-flagRest">Rest</code>
+                          <span class="tsd-signature-symbol">...</span
+                          ><span class="tsd-kind-parameter">options</span>:
+                          <span class="tsd-signature-type">any</span
+                          ><span class="tsd-signature-symbol">[]</span></span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                  <h4 class="tsd-returns-title">
+                    Returns
+                    <a
+                      href="index.CompatVue.html"
+                      class="tsd-signature-type tsd-kind-type-alias"
+                      >CompatVue</a
+                    >
+                  </h4>
+                  <aside class="tsd-sources">
+                    <ul>
+                      <li>
+                        Defined in
+                        node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1603
+                      </li>
+                    </ul>
+                  </aside>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="tsd-comment tsd-typography">
+          <h4>Deprecated</h4>
+          <p>
+            the default <code>Vue</code> export has been removed in Vue 3. The
+            type for the default export is provided only for migration purposes.
+            Please use named imports instead - e.g.
+            <code>import { createApp } from &#39;vue&#39;</code>.
+          </p>
+        </div>
+        <aside class="tsd-sources">
+          <ul>
+            <li>
+              Defined in
+              node_modules/@vue/runtime-core/dist/runtime-core.d.ts:1597
+            </li>
+          </ul>
+        </aside>
+      </div>
+      <div class="col-sidebar">
+        <div class="page-menu">
+          <div class="tsd-navigation settings">
+            <details class="tsd-index-accordion">
+              <summary class="tsd-accordion-summary">
+                <h3>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <use href="../assets/icons.svg#icon-chevronDown"></use></svg
+                  >Settings
+                </h3>
+              </summary>
+              <div class="tsd-accordion-details">
+                <div class="tsd-filter-visibility">
+                  <h4 class="uppercase">Member Visibility</h4>
+                  <form>
+                    <ul id="tsd-filter-options">
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-protected"
+                            name="protected"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Protected</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-private"
+                            name="private"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Private</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-inherited"
+                            name="inherited"
+                            checked
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>Inherited</span></label
+                        >
+                      </li>
+                      <li class="tsd-filter-item">
+                        <label class="tsd-filter-input"
+                          ><input
+                            type="checkbox"
+                            id="tsd-filter-external"
+                            name="external"
+                          /><svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 32 32"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              class="tsd-checkbox-background"
+                              width="30"
+                              height="30"
+                              x="1"
+                              y="1"
+                              rx="6"
+                              fill="none"
+                            ></rect>
+                            <path
+                              class="tsd-checkbox-checkmark"
+                              d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25"
+                              stroke="none"
+                              stroke-width="3.5"
+                              stroke-linejoin="round"
+                              fill="none"
+                            ></path></svg
+                          ><span>External</span></label
+                        >
+                      </li>
+                    </ul>
+                  </form>
+                </div>
+                <div class="tsd-theme-toggle">
+                  <h4 class="uppercase">Theme</h4>
+                  <select id="tsd-theme">
+                    <option value="os">OS</option>
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                  </select>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+        <div class="site-menu">
+          <nav class="tsd-navigation">
+            <a href="../index.html"
+              ><svg class="tsd-kind-icon" viewBox="0 0 24 24">
+                <use href="../assets/icons.svg#icon-1"></use></svg
+              ><span>@moong/nuxt</span></a
+            >
+            <ul
+              class="tsd-small-nested-navigation"
+              id="tsd-nav-container"
+              data-base=".."
+            >
+              <li>Loading...</li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="tsd-generator">
+      <p>
+        Generated using
+        <a href="https://typedoc.org/" target="_blank">TypeDoc</a>
+      </p>
+    </div>
+    <div class="overlay"></div>
+  </body>
+</html>

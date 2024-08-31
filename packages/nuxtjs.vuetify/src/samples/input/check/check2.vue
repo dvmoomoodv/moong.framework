@@ -8,7 +8,7 @@
         text="Change Value"
         @click="
           () => {
-            checked2 = ['Y', 'N']
+            checked2 = ['Y', 'N'];
           }
         "
       ></UButton>
@@ -37,11 +37,11 @@
   </v-card>
 </template>
 <script lang="ts" setup>
-import { ref, reactive } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
+import { ref, reactive } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
 
 // @ts-ignore
-import check2 from './md/check2.md'
+import check2 from "./md/check2.md";
 
-const checked2 = ref(['N', 'N'])
+const checked2 = ref(["N", "N"]);
 </script>

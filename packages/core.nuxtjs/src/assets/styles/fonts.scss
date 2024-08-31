@@ -2,119 +2,138 @@
 //   font-family: NotoSansKR;
 //   font-weight: 100;
 //   font-style: normal;
-//   src: url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Thin.woff') format('woff'),
-//     url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Thin.woff2') format('woff2'),
-//     url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Thin.otf') format('opentype');
+//   src: url('@moong/nuxt/src/assets/fonts/NotoSansKR-Thin.woff') format('woff'),
+//     url('@moong/nuxt/src/assets/fonts/NotoSansKR-Thin.woff2') format('woff2'),
+//     url('@moong/nuxt/src/assets/fonts/NotoSansKR-Thin.otf') format('opentype');
 // }
 
 // @font-face {
 //   font-family: NotoSansKR;
 //   font-weight: 300;
 //   font-style: normal;
-//   src: url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Light.woff') format('woff'),
-//     url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Light.woff2') format('woff2'),
-//     url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Light.otf') format('opentype');
+//   src: url('@moong/nuxt/src/assets/fonts/NotoSansKR-Light.woff') format('woff'),
+//     url('@moong/nuxt/src/assets/fonts/NotoSansKR-Light.woff2') format('woff2'),
+//     url('@moong/nuxt/src/assets/fonts/NotoSansKR-Light.otf') format('opentype');
 // }
 
 // @font-face {
 //   font-family: NotoSansKR;
 //   font-weight: 400;
 //   font-style: normal;
-//   src: url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Regular.woff') format('woff'),
-//     url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Regular.woff2') format('woff2'),
-//     url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Regular.otf') format('opentype');
+//   src: url('@moong/nuxt/src/assets/fonts/NotoSansKR-Regular.woff') format('woff'),
+//     url('@moong/nuxt/src/assets/fonts/NotoSansKR-Regular.woff2') format('woff2'),
+//     url('@moong/nuxt/src/assets/fonts/NotoSansKR-Regular.otf') format('opentype');
 // }
 
 // @font-face {
 //   font-family: NotoSansKR;
 //   font-weight: 500;
 //   font-style: normal;
-//   src: url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Medium.woff') format('woff'),
-//     url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Medium.woff2') format('woff2'),
-//     url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Medium.otf') format('opentype');
+//   src: url('@moong/nuxt/src/assets/fonts/NotoSansKR-Medium.woff') format('woff'),
+//     url('@moong/nuxt/src/assets/fonts/NotoSansKR-Medium.woff2') format('woff2'),
+//     url('@moong/nuxt/src/assets/fonts/NotoSansKR-Medium.otf') format('opentype');
 // }
 
 // @font-face {
 //   font-family: NotoSansKR;
 //   font-weight: 700;
 //   font-style: normal;
-//   src: url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Bold.woff') format('woff'),
-//     url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Bold.woff2') format('woff2'),
-//     url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Bold.otf') format('opentype');
+//   src: url('@moong/nuxt/src/assets/fonts/NotoSansKR-Bold.woff') format('woff'),
+//     url('@moong/nuxt/src/assets/fonts/NotoSansKR-Bold.woff2') format('woff2'),
+//     url('@moong/nuxt/src/assets/fonts/NotoSansKR-Bold.otf') format('opentype');
 // }
 
 // @font-face {
 //   font-family: NotoSansKR;
 //   font-weight: 900;
 //   font-style: normal;
-//   src: url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Black.woff') format('woff'),
-//     url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Black.woff2') format('woff2'),
-//     url('@ustra/nuxt/src/assets/fonts/NotoSansKR-Black.otf') format('opentype');
+//   src: url('@moong/nuxt/src/assets/fonts/NotoSansKR-Black.woff') format('woff'),
+//     url('@moong/nuxt/src/assets/fonts/NotoSansKR-Black.woff2') format('woff2'),
+//     url('@moong/nuxt/src/assets/fonts/NotoSansKR-Black.otf') format('opentype');
 // }
 
 @font-face {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 400;
-  src: local('Pretendard Regular'), url('pretendard/dist/web/static/woff2/Pretendard-Regular.woff2') format('woff2'),
-    url('pretendard/dist/web/static/woff/Pretendard-Regular.woff') format('woff');
+  src:
+    local("Pretendard Regular"),
+    url("pretendard/dist/web/static/woff2/Pretendard-Regular.woff2")
+      format("woff2"),
+    url("pretendard/dist/web/static/woff/Pretendard-Regular.woff")
+      format("woff");
 }
 
 @font-face {
-  font-family: 'Pretendard Medium';
+  font-family: "Pretendard Medium";
   font-style: normal;
   font-weight: 500;
-  src: local('Pretendard Medium'), url('pretendard/dist/web/static/woff2/Pretendard-Medium.woff2') format('woff2'),
-    url('pretendard/dist/web/static/woff/Pretendard-Medium.woff') format('woff');
+  src:
+    local("Pretendard Medium"),
+    url("pretendard/dist/web/static/woff2/Pretendard-Medium.woff2")
+      format("woff2"),
+    url("pretendard/dist/web/static/woff/Pretendard-Medium.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 600;
-  src: local('Pretendard SemiBold'), url('pretendard/dist/web/static/woff2/Pretendard-SemiBold.woff2') format('woff2'),
-    url('pretendard/dist/web/static/woff/Pretendard-SemiBold.woff') format('woff');
+  src:
+    local("Pretendard SemiBold"),
+    url("pretendard/dist/web/static/woff2/Pretendard-SemiBold.woff2")
+      format("woff2"),
+    url("pretendard/dist/web/static/woff/Pretendard-SemiBold.woff")
+      format("woff");
 }
 
 @font-face {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: 700;
-  src: local('Pretendard Bold'), url('pretendard/dist/web/static/woff2/Pretendard-Bold.woff2') format('woff2'),
-    url('pretendard/dist/web/static/woff/Pretendard-Bold.woff') format('woff');
+  src:
+    local("Pretendard Bold"),
+    url("pretendard/dist/web/static/woff2/Pretendard-Bold.woff2")
+      format("woff2"),
+    url("pretendard/dist/web/static/woff/Pretendard-Bold.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Fira Code';
-  src: url('@fontsource/fira-code/files/fira-code-all-300-normal.woff') format('woff');
+  font-family: "Fira Code";
+  src: url("@fontsource/fira-code/files/fira-code-all-300-normal.woff")
+    format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Fira Code';
-  src: url('@fontsource/fira-code/files/fira-code-all-400-normal.woff') format('woff');
+  font-family: "Fira Code";
+  src: url("@fontsource/fira-code/files/fira-code-all-400-normal.woff")
+    format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Fira Code';
-  src: url('@fontsource/fira-code/files/fira-code-all-500-normal.woff') format('woff');
+  font-family: "Fira Code";
+  src: url("@fontsource/fira-code/files/fira-code-all-500-normal.woff")
+    format("woff");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Fira Code';
-  src: url('@fontsource/fira-code/files/fira-code-all-600-normal.woff') format('woff');
+  font-family: "Fira Code";
+  src: url("@fontsource/fira-code/files/fira-code-all-600-normal.woff")
+    format("woff");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Fira Code';
-  src: url('@fontsource/fira-code/files/fira-code-all-700-normal.woff') format('woff');
+  font-family: "Fira Code";
+  src: url("@fontsource/fira-code/files/fira-code-all-700-normal.woff")
+    format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -132,16 +151,40 @@ code,
 code span,
 .markdown-body code,
 .markdown-body code span {
-  font-family: 'Fira Code', ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace !important;
+  font-family:
+    "Fira Code",
+    ui-monospace,
+    SFMono-Regular,
+    SF Mono,
+    Menlo,
+    Consolas,
+    Liberation Mono,
+    monospace !important;
   font-size: 12px;
 }
 
 .monaco-editor {
-  font-family: 'Fira Code', ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace !important;
+  font-family:
+    "Fira Code",
+    ui-monospace,
+    SFMono-Regular,
+    SF Mono,
+    Menlo,
+    Consolas,
+    Liberation Mono,
+    monospace !important;
   font-size: 12px;
 }
 
 .monaco-editor * {
-  font-family: 'Fira Code', ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace !important;
+  font-family:
+    "Fira Code",
+    ui-monospace,
+    SFMono-Regular,
+    SF Mono,
+    Menlo,
+    Consolas,
+    Liberation Mono,
+    monospace !important;
   font-size: 12px;
 }

@@ -103,6 +103,9 @@ importers:
       '@howiefh/ant-path-matcher':
         specifier: ^0.0.4
         version: 0.0.4
+      '@moong/types':
+        specifier: 0.0.1
+        version: link:../type
       '@refactorjs/http-proxy':
         specifier: ^0.1.0
         version: 0.1.9
@@ -118,9 +121,6 @@ importers:
       '@types/shelljs':
         specifier: ^0.8.11
         version: 0.8.15
-      '@ustra/types':
-        specifier: 3.2.0-stable
-        version: link:../types
       ant-path-matcher:
         specifier: ^0.0.5
         version: 0.0.5
@@ -285,40 +285,9 @@ importers:
         specifier: ^5.0.1
         version: 5.0.2
 
-  packages/eslint-config:
-    devDependencies:
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^7.1.0
-        version: 7.18.0(@typescript-eslint/parser@7.18.0)(eslint@8.57.0)(typescript@5.5.4)
-      '@typescript-eslint/parser':
-        specifier: ^7.1.0
-        version: 7.18.0(eslint@8.57.0)(typescript@5.5.4)
-      '@vercel/style-guide':
-        specifier: ^5.2.0
-        version: 5.2.0(eslint@8.57.0)(prettier@3.3.3)(typescript@5.5.4)
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@8.57.0)
-      eslint-config-turbo:
-        specifier: ^2.0.0
-        version: 2.1.0(eslint@8.57.0)
-      eslint-plugin-only-warn:
-        specifier: ^1.1.0
-        version: 1.1.0
-      typescript:
-        specifier: ^5.3.3
-        version: 5.5.4
+  packages/core.nextjs: {}
 
-  packages/h3:
-    dependencies:
-      '@ustra/core':
-        specifier: 3.2.0-stable
-        version: link:../core
-      h3:
-        specifier: ^1.6.4
-        version: 1.12.0
-
-  packages/nuxt:
+  packages/core.nuxtjs:
     dependencies:
       '@esbuild-plugins/node-globals-polyfill':
         specifier: ^0.1.1
@@ -329,6 +298,9 @@ importers:
       '@fontsource/fira-code':
         specifier: ^4.5.12
         version: 4.5.13
+      '@moong/core':
+        specifier: 0.0.1
+        version: link:../core
       '@nuxt/devtools':
         specifier: latest
         version: 1.4.1(rollup@4.21.2)(vite@5.0.11)
@@ -350,9 +322,6 @@ importers:
       '@pinia/nuxt':
         specifier: 0.5.1
         version: 0.5.1(rollup@4.21.2)(typescript@5.5.4)(vue@3.4.38)
-      '@ustra/core':
-        specifier: 3.2.0-stable
-        version: link:../core
       '@vueuse/core':
         specifier: 10.7.2
         version: 10.7.2(vue@3.4.38)
@@ -415,7 +384,54 @@ importers:
         specifier: ^1.8.19
         version: 1.8.27(typescript@5.5.4)
 
-  packages/nuxt-vuetify:
+  packages/design.base: {}
+
+  packages/design.core: {}
+
+  packages/design.extend: {}
+
+  packages/eslint-config:
+    devDependencies:
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^7.1.0
+        version: 7.18.0(@typescript-eslint/parser@7.18.0)(eslint@8.57.0)(typescript@5.5.4)
+      '@typescript-eslint/parser':
+        specifier: ^7.1.0
+        version: 7.18.0(eslint@8.57.0)(typescript@5.5.4)
+      '@vercel/style-guide':
+        specifier: ^5.2.0
+        version: 5.2.0(eslint@8.57.0)(prettier@3.3.3)(typescript@5.5.4)
+      eslint-config-prettier:
+        specifier: ^9.1.0
+        version: 9.1.0(eslint@8.57.0)
+      eslint-config-turbo:
+        specifier: ^2.0.0
+        version: 2.1.0(eslint@8.57.0)
+      eslint-plugin-only-warn:
+        specifier: ^1.1.0
+        version: 1.1.0
+      typescript:
+        specifier: ^5.3.3
+        version: 5.5.4
+
+  packages/h3:
+    dependencies:
+      '@moong/core':
+        specifier: 0.0.1
+        version: link:../core
+      h3:
+        specifier: ^1.6.4
+        version: 1.12.0
+
+  packages/introverse.core: {}
+
+  packages/introverse.home: {}
+
+  packages/introverse.post: {}
+
+  packages/introverse.profile: {}
+
+  packages/nuxtjs.vuetify:
     dependencies:
       '@fortawesome/fontawesome-free':
         specifier: ^6.5.1
@@ -423,9 +439,9 @@ importers:
       '@mdi/font':
         specifier: ^7.4.47
         version: 7.4.47
-      '@ustra/nuxt':
-        specifier: 3.2.0-stable
-        version: link:../nuxt
+      '@moong/nuxt':
+        specifier: 0.0.1
+        version: link:../core.nuxtjs
       '@vuepic/vue-datepicker':
         specifier: 7.2.0
         version: 7.2.0(vue@3.4.38)
@@ -448,7 +464,7 @@ importers:
         specifier: ^0.9.1
         version: 0.9.1(typescript@5.5.4)(vue@3.4.38)
 
-  packages/types: {}
+  packages/type: {}
 
   packages/typescript-config: {}
 

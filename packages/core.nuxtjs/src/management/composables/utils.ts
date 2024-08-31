@@ -1,17 +1,17 @@
-import { useUstra } from '#ustra/nuxt/composables'
-import { core } from '#ustra/core/utils'
+import { useUstra } from "#moong/nuxt/composables";
+import { core } from "#moong/core/utils";
 
 function getMappedGrpCode(grpCd: string) {
-  const $ustra = useUstra()
-  const store = $ustra.management.store.initData
+  const $ustra = useUstra();
+  const store = $ustra.management.store.initData;
 
-  grpCd = grpCd.toUpperCase()
+  grpCd = grpCd.toUpperCase();
 
   if (store.codeMappingRules.has(grpCd)) {
-    return store.codeMappingRules.get(grpCd)
+    return store.codeMappingRules.get(grpCd);
   }
 
-  return grpCd
+  return grpCd;
 }
 
 /**
@@ -22,16 +22,18 @@ function getMappedGrpCode(grpCd: string) {
  */
 export const useUstraCodeList = (grpCd: string, onlyUseable = false) => {
   if (!grpCd) {
-    return []
+    return [];
   }
 
-  const $ustra = useUstra()
-  grpCd = getMappedGrpCode(grpCd)
+  const $ustra = useUstra();
+  grpCd = getMappedGrpCode(grpCd);
 
-  const codes = ($ustra.management.store.initData.commonCodes.get(grpCd) || []).map(code => core.deepMerge({}, code))
+  const codes = (
+    $ustra.management.store.initData.commonCodes.get(grpCd) || []
+  ).map((code) => core.deepMerge({}, code));
 
-  return !onlyUseable ? codes : codes.filter(code => code.useYn === 'Y')
-}
+  return !onlyUseable ? codes : codes.filter((code) => code.useYn === "Y");
+};
 
 /**
  * 코드 value 값 조회
@@ -40,13 +42,13 @@ export const useUstraCodeList = (grpCd: string, onlyUseable = false) => {
  * @returns 코드 value
  */
 export const useUstraCodeValue = (grpCd: string, dtlCd: string) => {
-  const codes = useUstraCodeList(grpCd)
+  const codes = useUstraCodeList(grpCd);
 
-  const code = codes.find(code => code.dtlCd === dtlCd)
+  const code = codes.find((code) => code.dtlCd === dtlCd);
 
   if (!code) {
-    return null
+    return null;
   }
 
-  return code.cdNm
-}
+  return code.cdNm;
+};

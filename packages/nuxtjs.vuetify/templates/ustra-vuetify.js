@@ -1,4 +1,4 @@
-import plugin from '#ustra/nuxt-vuetify/plugins/ustra-vuetify'
+import plugin from '#moong/nuxt-vuetify/plugins/ustra-vuetify'
 
 import 'vuetify/styles'
 

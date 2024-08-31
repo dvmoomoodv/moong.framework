@@ -3,7 +3,8 @@
     <template #text>
       <h3>Vuetify</h3>
       <br />
-      Wijmo 모듈을 참조하지 않을 경우, UBizNoBox와 UCorpNoBox는 VTextField 기반의 Vuetify 전용 컴포넌트로 변경된다.
+      Wijmo 모듈을 참조하지 않을 경우, UBizNoBox와 UCorpNoBox는 VTextField
+      기반의 Vuetify 전용 컴포넌트로 변경된다.
 
       <br /><br />
       <UValidationGroup ref="validationGroup">
@@ -30,14 +31,18 @@
   </v-card>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
-import { UBizNoBox, UCorpNoBox, UValidationGroup } from '#ustra/nuxt-vuetify/components'
+import { ref } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
+import {
+  UBizNoBox,
+  UCorpNoBox,
+  UValidationGroup,
+} from "#moong/nuxt-vuetify/components";
 
 // @ts-ignore
-import doc1 from './md/biz-no5.md'
+import doc1 from "./md/biz-no5.md";
 
-const value = ref(null)
-const value2 = ref(null)
-const validationGroup = ref<InstanceType<typeof UValidationGroup>>()
+const value = ref(null);
+const value2 = ref(null);
+const validationGroup = ref<InstanceType<typeof UValidationGroup>>();
 </script>

@@ -3,7 +3,7 @@
  * @exports {@link File} {@link FileGrp}
  * @packageDocumentation
  */
-import { baseModels } from '#ustra/core/data'
+import { baseModels } from "#moong/core/data";
 
 /**
  * 파일 그룹
@@ -12,49 +12,49 @@ export interface FileGrp extends baseModels.BaseModel {
   /**
    * 파일 그룹 아이디
    */
-  fileGrpId?: string
+  fileGrpId?: string;
   /**
    * 파일 그룹 명
    */
-  fileGrpNm?: string
+  fileGrpNm?: string;
   /**
    * 저장 경로
    */
-  svPath?: string
+  svPath?: string;
   /**
    * 최대 용량
    */
-  maxSz?: number
+  maxSz?: number;
   /**
    * 확장자 제한
    */
-  extenLmt?: string
+  extenLmt?: string;
   /**
    * 파일 구조 코드
    */
-  dirStructCd?: string
+  dirStructCd?: string;
   /**
    * 사용 여부
    */
-  useYn?: string
+  useYn?: string;
   /**
    * 삭제 여부
    */
-  delYn?: string
+  delYn?: string;
   /**
    * 파일 명 저장 방식 코드
    */
-  fileNmSvMethCd?: string
+  fileNmSvMethCd?: string;
 
   /**
    * 웹 기본 url
    */
-  webDefUrl?: string
+  webDefUrl?: string;
 
   /**
    * 파일 암호화 방식
    */
-  fileCrytMethCd?: string
+  fileCrytMethCd?: string;
 }
 
 /**
@@ -64,51 +64,51 @@ export interface File extends baseModels.BaseModel {
   /**
    * 파일 아이디
    */
-  fileId?: string
+  fileId?: string;
   /**
    * 파일 그룹 아이디
    */
-  fileGrpId?: string
+  fileGrpId?: string;
   /**
    * 메뉴 아이디
    */
-  mnuId?: string
+  mnuId?: string;
   /**
    * 파일 번호
    */
-  fileNo?: number
+  fileNo?: number;
   /**
    * 파일 명
    */
-  fileNm?: string
+  fileNm?: string;
   /**
    * 기존 파일 명
    */
-  orgFileNm?: string
+  orgFileNm?: string;
   /**
    * 파일 설명
    */
-  fileDesc?: string
+  fileDesc?: string;
   /**
    * 파일 형식 내용
    */
-  fileFmtCont?: string
+  fileFmtCont?: string;
   /**
    * 저장 경로
    */
-  svPath?: string
+  svPath?: string;
   /**
    * 파일 사이즈
    */
-  fileSz?: number
+  fileSz?: number;
 
   /**
    * 파일 암호화 방식
    */
-  fileCrytMethCd?: string
+  fileCrytMethCd?: string;
 
   /**
    * 파일 암호화 키 값
    */
-  fileCrytKeyVal?: string
+  fileCrytKeyVal?: string;
 }

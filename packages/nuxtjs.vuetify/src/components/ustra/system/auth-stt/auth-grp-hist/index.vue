@@ -1,37 +1,51 @@
 <template>
   <UBox direction="col" height="100%">
-      <UItem ratio="1">
-          <UFieldSet>
-              <UFieldRow :ratio="[1, 1]">
-                  <UField direction="row" label="기간">
-                    <UBaseDatepicker v-model="searchAction.searchParam.searchSrtDttm" />
-                    ~
-                    <UBaseDatepicker v-model="searchAction.searchParam.searchEndDttm" />
-                  </UField>
-              </UFieldRow>
-          </UFieldSet>
-          <UButtonBox :center="true">
-              <VBtn text="초기화" class="gray ico_reset" @click="searchAction.clearSearchParam" />
-              <VBtn text="조회" class="primary" @click="searchAction.loadSearchedData" />
-              <VBtn text="엑셀다운로드" class="primary" type="default" @click="gridAction.excelDownload" />
-          </UButtonBox>
-      </UItem>
-      <UItem :ratio="1">
-          <URealGrid :columns="gridAction.columns.value"
-                     :fields="gridAction.fields.value"
-                     :ready="gridAction.ready.value"
-                     :dataProvider="gridAction.dataProvider.value"
-                     ref="grid"
+    <UItem ratio="1">
+      <UFieldSet>
+        <UFieldRow :ratio="[1, 1]">
+          <UField direction="row" label="기간">
+            <UBaseDatepicker v-model="searchAction.searchParam.searchSrtDttm" />
+            ~
+            <UBaseDatepicker v-model="searchAction.searchParam.searchEndDttm" />
+          </UField>
+        </UFieldRow>
+      </UFieldSet>
+      <UButtonBox :center="true">
+        <VBtn
+          text="초기화"
+          class="gray ico_reset"
+          @click="searchAction.clearSearchParam"
         />
-      </UItem>
+        <VBtn
+          text="조회"
+          class="primary"
+          @click="searchAction.loadSearchedData"
+        />
+        <VBtn
+          text="엑셀다운로드"
+          class="primary"
+          type="default"
+          @click="gridAction.excelDownload"
+        />
+      </UButtonBox>
+    </UItem>
+    <UItem :ratio="1">
+      <URealGrid
+        :columns="gridAction.columns.value"
+        :fields="gridAction.fields.value"
+        :ready="gridAction.ready.value"
+        :dataProvider="gridAction.dataProvider.value"
+        ref="grid"
+      />
+    </UItem>
   </UBox>
 </template>
 <script setup type="ts">
-import { useUstraAuthSttService, useUstraCodeList } from '#ustra/nuxt/management'
-import URealGrid from '#ustra/nuxt-vuetify/components/real-grid/u-real-grid.vue'
-import UFieldSet from '@ustra/nuxt-vuetify/src/components/form/u-field-set.vue'
+import { useUstraAuthSttService, useUstraCodeList } from '#moong/nuxt/management'
+import URealGrid from '#moong/nuxt-vuetify/components/real-grid/u-real-grid.vue'
+import UFieldSet from '@moong/nuxt-vuetify/src/components/form/u-field-set.vue'
 import { LocalDataProvider } from 'realgrid'
-import UBaseDatepicker from '#ustra/nuxt-vuetify/components/datepicker/u-base-datepicker.vue'
+import UBaseDatepicker from '#moong/nuxt-vuetify/components/datepicker/u-base-datepicker.vue'
 const service = useUstraAuthSttService()
 const sysCodeList = useUstraCodeList('SYS_CD')
 const grid = ref(null)

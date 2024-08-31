@@ -4,7 +4,7 @@
  * @packageDocumentation
  */
 
-import { baseModels } from '#ustra/core/data'
+import { baseModels } from "#moong/core/data";
 
 /**
  * 권한 그룹 검색 조건
@@ -18,92 +18,92 @@ export interface AuthGroup extends baseModels.BaseModel {
   /**
    * 권한 그룹 아이디
    */
-  authGrpId?: number
+  authGrpId?: number;
 
   /**
    * 상위 권한 그룹 아이디
    */
-  uprAuthGrpId?: number
+  uprAuthGrpId?: number;
 
   /**
    * 권한 그룹 구분
    */
-  authGrpDvVal?: string
+  authGrpDvVal?: string;
 
   /**
    * 권한 그룹 명
    */
-  authGrpNm?: string
+  authGrpNm?: string;
 
   /**
    * 권한 그룹 설명
    */
-  authGrpDesc?: string
+  authGrpDesc?: string;
 
   /**
    * 정렬 순번
    */
-  srtNo?: number
+  srtNo?: number;
 
   /**
    * 사용 여부
    */
-  useYn?: string
+  useYn?: string;
 
   /**
    * 삭제 여부
    */
-  delYn?: string
+  delYn?: string;
 
   /**
    * 개인 정보 접근 가능 여부
    */
-  prvTrtYn?: string
+  prvTrtYn?: string;
 
   /**
    * 시스템 코드
    */
-  sysCd?: string
+  sysCd?: string;
 
   /**
    * 승인 그룹 여부
    */
-  apvGrpYn?: string
+  apvGrpYn?: string;
 
   /**
    * 권한 변경 시, 승인 필요 여부
    */
-  apvNecYn?: string
+  apvNecYn?: string;
 
   /**
    * 권한 그룹 레벨
    */
-  authGrpStepNo?: number
+  authGrpStepNo?: number;
 
   /**
    * 추가 역할 목록 값
    */
-  addRolListVal?: string
+  addRolListVal?: string;
 
   /**
    * 사용 구분 코드 목록 값
    */
-  useDvCdListVal?: string
+  useDvCdListVal?: string;
 
   /**
    * 승인 권한 그룹 목록
    */
-  apvAuthGrps?: AuthGroup[]
+  apvAuthGrps?: AuthGroup[];
 
   /**
    * 사용자 목록
    */
-  users?: AuthGroupUser[]
+  users?: AuthGroupUser[];
 
   /**
    * 요청 대상 그룹 목록
    */
-  requetTargetGroups?: AuthGroupUserRequestTaretGroup[]
+  requetTargetGroups?: AuthGroupUserRequestTaretGroup[];
 }
 
 /**
@@ -113,28 +113,28 @@ export type AuthGroupTreeData = AuthGroup & {
   /**
    * 하위 그룹 목록
    */
-  items?: AuthGroupTreeData[]
+  items?: AuthGroupTreeData[];
 
   /**
    * 아이콘
    */
-  icon?: string
+  icon?: string;
 
   /**
    * 확장 여부
    */
-  expanded?: boolean
+  expanded?: boolean;
 
   /**
    * 선택 여부
    */
-  selected?: boolean
+  selected?: boolean;
 
   /**
    * 비활성화 여부
    */
-  disabled?: boolean
-}
+  disabled?: boolean;
+};
 
 /**
  * 권한 그룹 상위 그룹 정보
@@ -143,8 +143,8 @@ export type AuthGroupPathText = AuthGroup & {
   /**
    * 상위 그룹 정보 텍스트
    */
-  pathText?: string
-}
+  pathText?: string;
+};
 
 /**
  * 권한 그룹 사용자
@@ -153,12 +153,12 @@ export interface AuthGroupUser extends baseModels.BaseModel {
   /**
    * 권한 그룹 아이디
    */
-  authGrpId?: number
+  authGrpId?: number;
 
   /**
    * 사용자 아이디
    */
-  usrId?: string
+  usrId?: string;
 }
 
 /**
@@ -168,20 +168,20 @@ export interface AuthGroupUserRequestTaretGroup extends baseModels.BaseModel {
   /**
    * 권한 그룹 아이디
    */
-  authGrpId?: number
+  authGrpId?: number;
 
   /**
    * 요청 권한 그룹 아이디
    */
-  reqAuthGrpId?: number
+  reqAuthGrpId?: number;
 
   /**
    * 요청 권한 그룹 구분자 값
    */
-  reqAuthGrpDvVal?: string
+  reqAuthGrpDvVal?: string;
 
   /**
    * 요청 권한 그룹 명
    */
-  reqAuthGrpNm?: string
+  reqAuthGrpNm?: string;
 }

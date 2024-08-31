@@ -34,13 +34,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
+import { ref } from "vue";
+import { UMarkdownViewer } from "#moong/nuxt/components";
 
 // @ts-ignore
-import textBox4 from './md/textbox4.md'
+import textBox4 from "./md/textbox4.md";
 
-const test = ref('abcdefghijklmnopqrstuvwxyz')
+const test = ref("abcdefghijklmnopqrstuvwxyz");
 </script>
 
 <style scoped></style>

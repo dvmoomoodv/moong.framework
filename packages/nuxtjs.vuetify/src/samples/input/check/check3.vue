@@ -31,11 +31,11 @@
   </v-card>
 </template>
 <script lang="ts" setup>
-import { ref, reactive } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
+import { ref, reactive } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
 
 // @ts-ignore
-import doc from './md/check3.md'
+import doc from "./md/check3.md";
 
-const checked3 = reactive(['N', 'N', 'N', 'N'])
+const checked3 = reactive(["N", "N", "N", "N"]);
 </script>

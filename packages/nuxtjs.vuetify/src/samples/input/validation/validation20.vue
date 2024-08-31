@@ -16,14 +16,14 @@
   </v-card>
 </template>
 <script lang="ts" setup>
-import { ref, defineComponent } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
-import { UValidationGroup } from '#ustra/nuxt-vuetify/components'
+import { ref, defineComponent } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
+import { UValidationGroup } from "#moong/nuxt-vuetify/components";
 
 // @ts-ignore
-import doc1 from './md/validation20-1.md'
+import doc1 from "./md/validation20-1.md";
 // @ts-ignore
-import doc2 from './md/validation20-2.md'
+import doc2 from "./md/validation20-2.md";
 
-const validationGroup = ref<InstanceType<typeof UValidationGroup>>()
+const validationGroup = ref<InstanceType<typeof UValidationGroup>>();
 </script>

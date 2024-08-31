@@ -2,27 +2,36 @@
   <VCard>
     <template #text>
       <!-- <UMarkdownViewer :content="uploader1_1" /> -->
-      <UExcelFileUploader ref="uploader" fileGroupId="ustra-sample" v-model:fileId="fileId" @selected="() => uploadExcelFile()" :headerRowIndex="1" />
+      <UExcelFileUploader
+        ref="uploader"
+        fileGroupId="ustra-sample"
+        v-model:fileId="fileId"
+        @selected="() => uploadExcelFile()"
+        :headerRowIndex="1"
+      />
 
-      <ULink message="Download Sample Excel File" href="/ustra-sample-resources/excel/sample.xlsx" />
+      <ULink
+        message="Download Sample Excel File"
+        href="/ustra-sample-resources/excel/sample.xlsx"
+      />
       <!-- <WjFlexGrid :initialized="grid.initialize" style="height: 300px" class="mt-2"> </WjFlexGrid> -->
       <!-- <UMarkdownViewer :content="uploader1_2" /> -->
     </template>
   </VCard>
 </template>
 <script lang="ts" setup>
-import { ref, shallowRef } from '#ustra/nuxt'
+import { ref, shallowRef } from "#moong/nuxt";
 
-import { useOnError } from '#ustra/nuxt/composables'
-
-// @ts-ignore
-import uploader1_1 from './md/uploader1-1.md'
+import { useOnError } from "#moong/nuxt/composables";
 
 // @ts-ignore
-import uploader1_2 from './md/uploader1-2.md'
+import uploader1_1 from "./md/uploader1-1.md";
 
-const fileId = ref<string>(null)
-const uploader = shallowRef<InstanceType<typeof UExcelFileUploader>>()
+// @ts-ignore
+import uploader1_2 from "./md/uploader1-2.md";
+
+const fileId = ref<string>(null);
+const uploader = shallowRef<InstanceType<typeof UExcelFileUploader>>();
 // const grid = useWijmoFlexGrid()
 
 // async function uploadExcelFile() {

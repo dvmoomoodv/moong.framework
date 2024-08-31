@@ -33,8 +33,8 @@
 </template>
 
 <script lang="ts" setup>
-import { Navigation } from '#ustra/nuxt/management/store/models/navigation'
-import { useUstraUserMenuService } from '#ustra/nuxt/management'
+import { Navigation } from '#moong/nuxt/management/store/models/navigation'
+import { useUstraUserMenuService } from '#moong/nuxt/management'
 import LnbItem from './lnb-item.vue'
 
 const userMenuService = useUstraUserMenuService()

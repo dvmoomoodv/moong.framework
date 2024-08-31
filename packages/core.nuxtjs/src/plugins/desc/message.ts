@@ -1,6 +1,6 @@
-import { Ustra } from '../ustra'
-import { string as stringUtils, core } from '#ustra/core/utils'
-import type { I18nMessage } from '#ustra/core/config/props/i18n'
+import { Ustra } from "../ustra";
+import { string as stringUtils, core } from "#moong/core/utils";
+import type { I18nMessage } from "#moong/core/config/props/i18n";
 
 /**
  * 메시지 관련 기능 제공
@@ -14,11 +14,12 @@ export class UstraMessage {
    * @param args argument
    */
   getMessage<K extends keyof I18nMessage>(messageCode: K, ...args: any[]) {
-    const currentLocale = this.$ustra.env.appProps.i18n.locale
+    const currentLocale = this.$ustra.env.appProps.i18n.locale;
     const message =
-      this.$ustra.env.appProps.i18n.messages[currentLocale][messageCode] || this.$ustra.env.appProps.i18n.messages['default'][messageCode]
+      this.$ustra.env.appProps.i18n.messages[currentLocale][messageCode] ||
+      this.$ustra.env.appProps.i18n.messages["default"][messageCode];
 
-    return stringUtils.format(message, ...args)
+    return stringUtils.format(message, ...args);
   }
 
   /**
@@ -27,9 +28,13 @@ export class UstraMessage {
    * @returns
    */
   getMessageObject(locale?: string) {
-    const currentLocale = this.$ustra.env.appProps.i18n.locale
-    locale = locale || currentLocale
-    return core.deepMerge({}, this.$ustra.env.appProps.i18n.messages['default'], this.$ustra.env.appProps.i18n.messages[locale])
+    const currentLocale = this.$ustra.env.appProps.i18n.locale;
+    locale = locale || currentLocale;
+    return core.deepMerge(
+      {},
+      this.$ustra.env.appProps.i18n.messages["default"],
+      this.$ustra.env.appProps.i18n.messages[locale]
+    );
   }
 
   /**
@@ -38,7 +43,7 @@ export class UstraMessage {
    * @returns
    */
   mergeMessageObject(messageObject: I18nMessage, locale?: string) {
-    return core.deepMerge(this.getMessageObject(locale), messageObject)
+    return core.deepMerge(this.getMessageObject(locale), messageObject);
   }
 
   /**
@@ -47,7 +52,7 @@ export class UstraMessage {
    * @param args argument
    */
   throwError<K extends keyof I18nMessage>(messageCode: K, ...args: any[]) {
-    throw new Error(this.getMessage(messageCode, ...args))
+    throw new Error(this.getMessage(messageCode, ...args));
   }
 
   /**
@@ -60,6 +65,6 @@ export class UstraMessage {
       locale: this.$ustra.env.appProps.i18n.locale,
       fallbackLocale: this.$ustra.env.appProps.i18n.locale,
       messages: this.$ustra.env.appProps.i18n.messages,
-    }
+    };
   }
 }

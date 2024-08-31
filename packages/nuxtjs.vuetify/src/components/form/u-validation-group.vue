@@ -1,5 +1,12 @@
 <template>
-  <div v-if="props.wrapContainer" ref="root" :class="{ 'u-layout-state-disabled': props.disabled, [props.cssClassName]: props.wrapContainer }">
+  <div
+    v-if="props.wrapContainer"
+    ref="root"
+    :class="{
+      'u-layout-state-disabled': props.disabled,
+      [props.cssClassName]: props.wrapContainer,
+    }"
+  >
     <slot />
   </div>
   <template ref="root" v-else>
@@ -7,12 +14,26 @@
   </template>
 </template>
 <script lang="ts" setup>
-import { onMounted, onUpdated, ref, defineExpose, nextTick, defineProps, withDefaults, watch, getCurrentInstance } from '#ustra/nuxt'
-import { validation, core, system } from '#ustra/core/utils'
-import { dom } from '#ustra/core/utils/browser'
-import { component as nuxtComponent, nuxt } from '#ustra/nuxt/utils'
-import { ValidationObjectRule, ValidationRule, toObjectRule } from '#ustra/core/utils/validation/rules'
-import tippy, { Instance } from 'tippy.js'
+import {
+  onMounted,
+  onUpdated,
+  ref,
+  defineExpose,
+  nextTick,
+  defineProps,
+  withDefaults,
+  watch,
+  getCurrentInstance,
+} from "#moong/nuxt";
+import { validation, core, system } from "#moong/core/utils";
+import { dom } from "#moong/core/utils/browser";
+import { component as nuxtComponent, nuxt } from "#moong/nuxt/utils";
+import {
+  ValidationObjectRule,
+  ValidationRule,
+  toObjectRule,
+} from "#moong/core/utils/validation/rules";
+import tippy, { Instance } from "tippy.js";
 
 export interface Props {
   /**
@@ -21,101 +42,106 @@ export interface Props {
    * - exclude : 하위 Element 는 포함하지 않음.
    * - undefined : 다음 로직으로 skip
    */
-  filterTargetElement?: (el: Element) => boolean | 'exclude' | undefined
+  filterTargetElement?: (el: Element) => boolean | "exclude" | undefined;
 
   /**
    * validation 검증 전 필터링 로직 수행
    * - true : 검증 결과를 성공으로 리턴
    * - undefined : Validation 검증 수행
    */
-  beforeValidate?: (el: Element) => Promise<true | undefined>
+  beforeValidate?: (el: Element) => Promise<true | undefined>;
 
   /**
    * validation rule을 추가
    * el : element
    * rules : 현재 설정된 rules
    */
-  addElementValidationRule?: (el: Element, rules: ValidationObjectRule[]) => undefined | ValidationRule[]
+  addElementValidationRule?: (
+    el: Element,
+    rules: ValidationObjectRule[]
+  ) => undefined | ValidationRule[];
 
   /**
    * 비활성화 여부
    * @default false
    */
-  disabled?: boolean
+  disabled?: boolean;
 
   /**
    * 값 변경 시 validation 체크 여부
    * @default true
    */
-  checkValidationOnUpdate?: boolean
+  checkValidationOnUpdate?: boolean;
 
   /**
    * div container로 wrapping을 수행한다.
    * false일 경우는 slot 내에 class가 추가된다.
    * @default true
    */
-  wrapContainer?: boolean
+  wrapContainer?: boolean;
 
   /**
    * CSS 클래스 명
    * @default 'ustra-validation-group'
    */
-  cssClassName?: string
+  cssClassName?: string;
 }
 
-const id = system.uuidBase62()
+const id = system.uuidBase62();
 const props = withDefaults(defineProps<Props>(), {
   disabled: false,
   checkValidationOnUpdate: true,
   wrapContainer: true,
-  cssClassName: () => $ustra.components.getComponentsOption('UValidationGroup').cssClassName || 'ustra-validation-group',
-})
+  cssClassName: () =>
+    $ustra.components.getComponentsOption("UValidationGroup").cssClassName ||
+    "ustra-validation-group",
+});
 
-let _isInitialized = true
-let _isInitializedTimer = null
+let _isInitialized = true;
+let _isInitializedTimer = null;
 
-const root = ref<HTMLDivElement>(null)
-const instance = getCurrentInstance()
+const root = ref<HTMLDivElement>(null);
+const instance = getCurrentInstance();
 
 function getRootEls(): HTMLElement[] {
-  return nuxtComponent.getRootElements(instance)
+  return nuxtComponent.getRootElements(instance);
 }
 
 // element를 validation fail 상태로 표시
 function invalidateEl(els: Element[], messages: string[], addCss = true) {
   for (const el of els) {
     if (addCss) {
-      el.classList.add('ustra-invalidate')
+      el.classList.add("ustra-invalidate");
     }
 
     // const inputEl = getInputEl(el)
-    const inputEl = el
+    const inputEl = el;
 
     if (!inputEl) {
-      return
+      return;
     }
 
-    el['_validateMessages'] = messages
-    setAdditionalProps(el, messages ? messages.join('\n') : '')
+    el["_validateMessages"] = messages;
+    setAdditionalProps(el, messages ? messages.join("\n") : "");
 
-    if (!inputEl['_tippy']) {
+    if (!inputEl["_tippy"]) {
       tippy(inputEl, {
-        content: messages.join('\n'),
+        content: messages.join("\n"),
         // trigger: 'focus',
         onShow(instance) {
-          const messages = el['_validateMessages'] as string[]
+          const messages = el["_validateMessages"] as string[];
 
           if (!messages || messages.length < 1) {
-            return false
+            return false;
           }
 
-          instance.setContent(messages.join('\n'))
+          instance.setContent(messages.join("\n"));
         },
-      })
+      });
     } else {
-      const tpy = inputEl['_tippy'] as Instance
+      const tpy = inputEl["_tippy"] as Instance;
       if (tpy && dom.isFocus(inputEl)) {
-        tpy.show()
+        tpy.show();
       }
     }
   }
@@ -123,184 +149,189 @@ function invalidateEl(els: Element[], messages: string[], addCss = true) {
 
 function setAdditionalProps(el: Element, validationMessage: string) {
   if (!el) {
-    return
+    return;
   }
 
   nextTick(() => {
-    const props = nuxtComponent.getVNodeProps(el, true)
+    const props = nuxtComponent.getVNodeProps(el, true);
 
-    if (props['onValidationChanged'] && typeof props['onValidationChanged'] === 'function') {
-      props['onValidationChanged'](!validationMessage, validationMessage)
+    if (
+      props["onValidationChanged"] &&
+      typeof props["onValidationChanged"] === "function"
+    ) {
+      props["onValidationChanged"](!validationMessage, validationMessage);
     }
-  })
+  });
 }
 
 // element의 validation 상태를 초기화
 async function initEl(els: Element[], rootEl: Element = null) {
-  els = core.deepMerge([], els)
+  els = core.deepMerge([], els);
 
-  if (rootEl && rootEl['_validationEls']) {
-    els.push(...rootEl['_validationEls'])
+  if (rootEl && rootEl["_validationEls"]) {
+    els.push(...rootEl["_validationEls"]);
   }
 
   for (const el of els) {
-    el.classList.remove('ustra-invalidate')
-    el['_validateMessages'] = null
+    el.classList.remove("ustra-invalidate");
+    el["_validateMessages"] = null;
 
-    const inputEl = getInputEl(el)
+    const inputEl = getInputEl(el);
 
     if (!inputEl) {
-      continue
+      continue;
     }
 
-    const tpy = inputEl['_tippy'] as Instance
+    const tpy = inputEl["_tippy"] as Instance;
 
     if (!tpy) {
-      continue
+      continue;
     }
 
-    tpy.hide()
-    setAdditionalProps(el, '')
+    tpy.hide();
+    setAdditionalProps(el, "");
   }
 
-  if (rootEl && rootEl['_onValidationInit']) {
-    await rootEl['_onValidationInit']()
+  if (rootEl && rootEl["_onValidationInit"]) {
+    await rootEl["_onValidationInit"]();
   }
 
-  setAdditionalProps(rootEl, '')
+  setAdditionalProps(rootEl, "");
 }
 
 // element의 validation 상태를 검증
 async function validateEl(el: Element, rules: ValidationObjectRule[]) {
   const validate = async () => {
-    await initEl([el], el)
+    await initEl([el], el);
 
     if (_isInitialized) {
-      return true
+      return true;
     }
 
-    let value = null
-    const comp = getVueComponent(el)
+    let value = null;
+    const comp = getVueComponent(el);
 
     if (props.beforeValidate) {
-      const result = await props.beforeValidate(el)
+      const result = await props.beforeValidate(el);
 
       if (result === true) {
-        await initEl([el], el)
-        return true
+        await initEl([el], el);
+        return true;
       }
     }
 
     if (nuxtComponent.isVueComponent(el)) {
-      value = comp.modelValue === undefined ? comp.value : comp.modelValue
+      value = comp.modelValue === undefined ? comp.value : comp.modelValue;
     } else {
-      value = el['value']
+      value = el["value"];
     }
 
-    const messages: Set<string> = new Set<string>()
-    let validResult: any = false
+    const messages: Set<string> = new Set<string>();
+    let validResult: any = false;
     for (const rule of rules) {
-      if (rule.type === 'required') {
+      if (rule.type === "required") {
         if (core.isEmpty(value)) {
-          messages.add(rule.message || '필수 입력입니다.')
+          messages.add(rule.message || "필수 입력입니다.");
         }
-      } else if (rule.type === 'email') {
+      } else if (rule.type === "email") {
         if (value && !validation.email(value)) {
-          messages.add(rule.message || '유효한 이메일 주소를 입력하십시오.')
+          messages.add(rule.message || "유효한 이메일 주소를 입력하십시오.");
         }
-      } else if (rule.type === 'custom') {
+      } else if (rule.type === "custom") {
         if (rule._timer) {
-          clearTimeout(rule._timer)
-          rule._timer = null
+          clearTimeout(rule._timer);
+          rule._timer = null;
         }
 
         if (rule.delay) {
-          validResult = await new Promise<string | boolean>(resolve => {
+          validResult = await new Promise<string | boolean>((resolve) => {
             rule._timer = setTimeout(async () => {
               if (_isInitialized) {
-                return
+                return;
               }
 
-              const result = await rule.handler(value, comp || el)
-              resolve(result)
-            }, rule.delay)
-          })
+              const result = await rule.handler(value, comp || el);
+              resolve(result);
+            }, rule.delay);
+          });
         } else {
-          validResult = await rule.handler(value, comp || el)
+          validResult = await rule.handler(value, comp || el);
         }
 
-        validResult = normalizeResult(validResult)
+        validResult = normalizeResult(validResult);
 
         if (!validResult.isValid) {
-          messages.add(validResult.message || rule.message || '유효한 입력이 아닙니다.')
+          messages.add(
+            validResult.message || rule.message || "유효한 입력이 아닙니다."
+          );
         }
       }
     }
 
-    validResult = normalizeResult(validResult)
-    validResult.isValid = messages.size < 1
+    validResult = normalizeResult(validResult);
+    validResult.isValid = messages.size < 1;
 
     if (validResult.onInit) {
-      el['_onValidationInit'] = validResult.onInit
+      el["_onValidationInit"] = validResult.onInit;
     }
 
     if (validResult.els) {
-      el['_validationEls'] = validResult.els
+      el["_validationEls"] = validResult.els;
     }
 
-    if (el['_validationEls']) {
-      validResult.els = el['_validationEls']
+    if (el["_validationEls"]) {
+      validResult.els = el["_validationEls"];
     }
 
     if (messages.size > 0) {
       if (validResult.onValidated) {
-        await initEl(validResult.els || [el], el)
-        invalidateEl(validResult.els || [el], Array.from(messages), false)
-        validResult.onValidated(false)
+        await initEl(validResult.els || [el], el);
+        invalidateEl(validResult.els || [el], Array.from(messages), false);
+        validResult.onValidated(false);
       } else {
-        await initEl(validResult.els || [el], el)
-        invalidateEl(validResult.els || [el], Array.from(messages))
+        await initEl(validResult.els || [el], el);
+        invalidateEl(validResult.els || [el], Array.from(messages));
       }
 
-      return getWrappedComponent(el) || el
+      return getWrappedComponent(el) || el;
     } else {
       if (validResult.onValidated) {
-        await initEl(validResult.els || [el], el)
-        validResult.onValidated(true)
+        await initEl(validResult.els || [el], el);
+        validResult.onValidated(true);
       }
     }
-    return true
-  }
+    return true;
+  };
 
-  return await validate()
+  return await validate();
 }
 
 function normalizeResult(result) {
-  if (typeof result === 'string') {
+  if (typeof result === "string") {
     return {
       isValid: false,
       message: result,
-    }
+    };
   }
 
   if (result === false) {
     return {
       isValid: false,
-    }
+    };
   }
 
-  if (typeof result === 'object') {
-    return result
+  if (typeof result === "object") {
+    return result;
   }
 
   return {
     isValid: true,
-  }
+  };
 }
 
 // element의 input element 조회
 function getInputEl(el: Element) {
-  return el.querySelector('input, texarea, select')
+  return el.querySelector("input, texarea, select");
 }
 
 // element 내에서 validation 검증을 처리할 객체 조회
@@ -310,77 +341,81 @@ function getTargetEl(el) {
   //   return el['$WJ-CTRL']['_e']
   // }
 
-  return el
+  return el;
 }
 
 function getVueComponent(elOrComponent) {
-  const comp = nuxtComponent.getVueComponent(elOrComponent)
+  const comp = nuxtComponent.getVueComponent(elOrComponent);
 
   if (!comp) {
-    return comp
+    return comp;
   }
 
-  if (comp._?.parent?.type?.name === 'UDatepicker') {
-    return comp._.parent.proxy
+  if (comp._?.parent?.type?.name === "UDatepicker") {
+    return comp._.parent.proxy;
   }
 
-  return comp
+  return comp;
 }
 
 function getWrappedComponent(elOrComponent) {
-  const comp = nuxtComponent.getWrappedComponent(elOrComponent)
+  const comp = nuxtComponent.getWrappedComponent(elOrComponent);
 
   if (!comp) {
-    return comp
+    return comp;
   }
 
-  if (comp && comp.parent?.type?.name === 'UDatepicker') {
-    return comp.parent
+  if (comp && comp.parent?.type?.name === "UDatepicker") {
+    return comp.parent;
   }
 
-  return comp
+  return comp;
 }
 
 // validation 대상에 검증 function을 세팅
 function setTargetValidations(searchedEls) {
-  searchedEls.forEach(el => {
-    const compProps = nuxtComponent.getVNodeProps(el, true) || {}
+  searchedEls.forEach((el) => {
+    const compProps = nuxtComponent.getVNodeProps(el, true) || {};
 
     // add validate function
-    const rules: ValidationObjectRule[] = []
-    const customRules: ValidationRule[] = []
+    const rules: ValidationObjectRule[] = [];
+    const customRules: ValidationRule[] = [];
 
-    const comp = getVueComponent(el)
-    let hasValidateFunction = false
+    const comp = getVueComponent(el);
+    let hasValidateFunction = false;
 
     // 컴포넌트에서 validate function expose 되었을 경우
-    if (comp && comp._?.exposed?.validate && typeof comp._?.exposed?.validate === 'function') {
+    if (
+      comp &&
+      comp._?.exposed?.validate &&
+      typeof comp._?.exposed?.validate === "function"
+    ) {
       rules.push({
-        type: 'custom',
+        type: "custom",
         handler: comp._?.exposed?.validate,
-      })
+      });
 
-      hasValidateFunction = true
+      hasValidateFunction = true;
     } else {
       // add els
-      const els = getValidationEls(el)
-      el['_validationEls'] = els
+      const els = getValidationEls(el);
+      el["_validationEls"] = els;
 
-      customRules.push(...getValidationRules(el))
+      customRules.push(...getValidationRules(el));
 
-      customRules.forEach(rule => rules.push(toObjectRule(rule)))
+      customRules.forEach((rule) => rules.push(toObjectRule(rule)));
 
-      if (!rules.some(rule => rule.type === 'required')) {
+      if (!rules.some((rule) => rule.type === "required")) {
         if (compProps.isRequired || compProps.required) {
-          rules.push(toObjectRule('required'))
+          rules.push(toObjectRule("required"));
         }
       }
 
       if (props.addElementValidationRule) {
-        const addRules = props.addElementValidationRule(el, rules)
+        const addRules = props.addElementValidationRule(el, rules);
 
         if (addRules) {
-          addRules.forEach(r => rules.push(toObjectRule(r)))
+          addRules.forEach((r) => rules.push(toObjectRule(r)));
         }
       }
     }
@@ -388,209 +423,224 @@ function setTargetValidations(searchedEls) {
     const createValidator = (compOrEl, el, rules) => {
       return () => {
         if (!compOrEl) {
-          return
+          return;
         }
 
         // timer 체크
         if (compOrEl.__validateTimer) {
-          clearTimeout(compOrEl.__validateTimer)
+          clearTimeout(compOrEl.__validateTimer);
         }
 
-        return new Promise(async resolve => {
+        return new Promise(async (resolve) => {
           compOrEl.__validateTimer = setTimeout(async () => {
-            resolve(await validateEl(el, rules))
-          }, 0)
-        })
-      }
-    }
+            resolve(await validateEl(el, rules));
+          }, 0);
+        });
+      };
+    };
 
     if (comp) {
-      const validator = createValidator(comp, el, rules)
+      const validator = createValidator(comp, el, rules);
       if (!hasValidateFunction) {
-        nuxtComponent.getWrappedComponents(comp).forEach(comp => {
-          comp.proxy.validate = validator
-        })
+        nuxtComponent.getWrappedComponents(comp).forEach((comp) => {
+          comp.proxy.validate = validator;
+        });
       } else {
-        nuxtComponent.getWrappedComponents(comp).forEach(comp => {
-          comp.proxy._validate = validator
-        })
+        nuxtComponent.getWrappedComponents(comp).forEach((comp) => {
+          comp.proxy._validate = validator;
+        });
       }
 
       if (!props.checkValidationOnUpdate) {
-        comp._addedValidationEvent = false
+        comp._addedValidationEvent = false;
         if (comp.__validationWatch) {
-          comp.__validationWatch()
-          comp.__validationWatch = null
+          comp.__validationWatch();
+          comp.__validationWatch = null;
         }
 
         if (el.__validationWatch) {
-          el.removeEventListener('input', el.__validationWatch)
-          el.__validationWatch = null
+          el.removeEventListener("input", el.__validationWatch);
+          el.__validationWatch = null;
         }
 
-        return
+        return;
       }
 
       if (!comp._addedValidationEvent) {
-        comp.__addedValidationEvent = true
+        comp.__addedValidationEvent = true;
 
         if (comp.__validationWatch) {
-          comp.__validationWatch()
-          comp.__validationWatch = null
+          comp.__validationWatch();
+          comp.__validationWatch = null;
         }
 
-        const deps = getValidationDeps(comp)
+        const deps = getValidationDeps(comp);
 
-        if (comp._ && comp._.props && (Object.hasOwn(comp._.props, 'modelValue') || Object.hasOwn(comp._.props, 'value'))) {
+        if (
+          comp._ &&
+          comp._.props &&
+          (Object.hasOwn(comp._.props, "modelValue") ||
+            Object.hasOwn(comp._.props, "value"))
+        ) {
           comp.__validationWatch = comp.$watch(
             () => [comp._.props.modelValue, comp._.props.value, ...deps],
             () => {
               if (comp._validate) {
-                comp._validate()
+                comp._validate();
               } else {
-                comp.validate()
+                comp.validate();
               }
             },
             {
               deep: true,
-            },
-          )
-        } else if (Object.hasOwn(comp, 'modelValue') || Object.hasOwn(comp, 'value')) {
+            }
+          );
+        } else if (
+          Object.hasOwn(comp, "modelValue") ||
+          Object.hasOwn(comp, "value")
+        ) {
           comp.__validationWatch = comp.$watch(
             () => [comp.modelValue, comp.value, ...deps],
             () => {
               if (comp._validate) {
-                comp._validate()
+                comp._validate();
               } else {
-                comp.validate()
+                comp.validate();
               }
             },
             {
               deep: true,
-            },
-          )
-        } else if (comp.$attrs['onUpdate:modelValue']) {
+            }
+          );
+        } else if (comp.$attrs["onUpdate:modelValue"]) {
           comp.__validationWatch = comp.$watch(
             () => [comp.$attrs.modelValue, ...deps],
             () => {
               if (comp._validate) {
-                comp._validate()
+                comp._validate();
               } else {
-                comp.validate()
+                comp.validate();
               }
             },
             {
               deep: true,
-            },
-          )
+            }
+          );
         }
       }
     } else {
-      el.validate = createValidator(el, el, rules)
+      el.validate = createValidator(el, el, rules);
 
       if (props.checkValidationOnUpdate) {
         if (!el._addedValidationEvent) {
-          el.__addedValidationEvent = true
-          el.__validationWatch = () => el.validate()
-          el.addEventListener('input', el.__validationWatch)
+          el.__addedValidationEvent = true;
+          el.__validationWatch = () => el.validate();
+          el.addEventListener("input", el.__validationWatch);
         }
       }
     }
-  })
+  });
 }
 
 // element 내에서 validation rule을 조회
 function getValidationRules(el) {
-  const props = nuxtComponent.getVNodeProps(el, true) || {}
+  const props = nuxtComponent.getVNodeProps(el, true) || {};
 
-  return props?.validation?.rules || []
+  return props?.validation?.rules || [];
 }
 
 // element 내에서 validation els를 조회
 function getValidationEls(el) {
-  const props = nuxtComponent.getVNodeProps(el, true) || {}
+  const props = nuxtComponent.getVNodeProps(el, true) || {};
 
   if (!props.validation?.els) {
-    return null
+    return null;
   }
 
-  const els = typeof props.validation.els === 'function' ? props.validation.els() : props.validation.els
+  const els =
+    typeof props.validation.els === "function"
+      ? props.validation.els()
+      : props.validation.els;
 
-  return Array.isArray(els) ? els : [els]
+  return Array.isArray(els) ? els : [els];
 }
 
 function getValidationDeps(el) {
-  const deps = []
-  const props = nuxtComponent.getVNodeProps(el, true) || {}
+  const deps = [];
+  const props = nuxtComponent.getVNodeProps(el, true) || {};
 
   if (props.validation && props.validation.deps) {
-    return props.validation.deps
+    return props.validation.deps;
   }
 
-  return deps
+  return deps;
 }
 
 // 대상 element 조회
 function detectValidationTargetElements() {
-  const searchedEls = []
-  getRootEls().forEach(rel => {
+  const searchedEls = [];
+  getRootEls().forEach((rel) => {
     const els = dom.querySelectors(
       rel,
-      el => {
+      (el) => {
         if (dom.isHidden(el)) {
-          return false
+          return false;
         }
 
         // validation group일 경우, 더이상 하위는 탐색하지 않는다.
-        let comp = getWrappedComponent(el)
-        if (comp?.type?.name === 'UValidationGroup') {
-          return 'exclude'
+        let comp = getWrappedComponent(el);
+        if (comp?.type?.name === "UValidationGroup") {
+          return "exclude";
         }
 
         // custom validate
-        if (comp && comp.exposed?.validate && typeof comp.exposed?.validate === 'function') {
-          return true
+        if (
+          comp &&
+          comp.exposed?.validate &&
+          typeof comp.exposed?.validate === "function"
+        ) {
+          return true;
         }
 
         if (props.filterTargetElement) {
-          const result = props.filterTargetElement(el)
+          const result = props.filterTargetElement(el);
 
           if (result !== undefined) {
-            return result
+            return result;
           }
         }
 
         // validation rule을 가지고 있다면 추가
         if (getValidationRules(el).length > 0) {
-          return true
+          return true;
         }
 
         // input tag일 경우
-        if (el.tagName.toLowerCase() === 'input') {
-          const inputEl = el as HTMLInputElement
+        if (el.tagName.toLowerCase() === "input") {
+          const inputEl = el as HTMLInputElement;
 
-          if (inputEl.type === 'hidden' || inputEl.disabled) {
-            return false
+          if (inputEl.type === "hidden" || inputEl.disabled) {
+            return false;
           }
 
-          return true
+          return true;
         }
 
         // text area 태그일 경우
-        return ['textarea', 'select'].includes(el.tagName.toLowerCase())
+        return ["textarea", "select"].includes(el.tagName.toLowerCase());
       },
-      !props.wrapContainer,
-    )
-    searchedEls.push(...els)
-  })
+      !props.wrapContainer
+    );
+    searchedEls.push(...els);
+  });
 
-  setTargetValidations(searchedEls)
-  return searchedEls
+  setTargetValidations(searchedEls);
+  return searchedEls;
 }
 
 // 대상 validation group 목록 조회
 function targetChildValidationGroups() {
-  return nuxtComponent.findChildComponentsByType(instance, 'UValidationGroup')
+  return nuxtComponent.findChildComponentsByType(instance, "UValidationGroup");
   // const validationGroups = []
 
   // console.log('instance', instance)
@@ -628,41 +678,45 @@ const validate = async (includeChildGroup = false, focusFirst = true) => {
      * 실패 컴포넌트 목록
      */
     components: [],
-  }
+  };
 
   // when disabled...
   if (props.disabled) {
-    await init(includeChildGroup)
-    return validationResult
+    await init(includeChildGroup);
+    return validationResult;
   }
 
   if (_isInitialized) {
-    validationResult.isValid = false
-    return validationResult
+    validationResult.isValid = false;
+    return validationResult;
   }
 
   for (const el of detectValidationTargetElements()) {
-    const targetEl = getTargetEl(el)
+    const targetEl = getTargetEl(el);
 
-    const comp = getVueComponent(el)
-    const validateFunction = comp?._validate || comp?.validate || targetEl._validate || targetEl.validate
+    const comp = getVueComponent(el);
+    const validateFunction =
+      comp?._validate ||
+      comp?.validate ||
+      targetEl._validate ||
+      targetEl.validate;
     if (validateFunction) {
-      const result = await validateFunction()
+      const result = await validateFunction();
 
       if (result !== true) {
-        validationResult.isValid = false
-        validationResult.components.push(result)
+        validationResult.isValid = false;
+        validationResult.components.push(result);
       }
     }
   }
 
   if (includeChildGroup) {
     for (const group of targetChildValidationGroups()) {
-      const result = await group.exposed.validate()
+      const result = await group.exposed.validate();
 
       if (result?.isValid !== true) {
-        validationResult.isValid = false
-        validationResult.components.push(...result.components)
+        validationResult.isValid = false;
+        validationResult.components.push(...result.components);
       }
     }
   }
@@ -670,101 +724,103 @@ const validate = async (includeChildGroup = false, focusFirst = true) => {
   // TODO: focus 로직 변경
   if (!validationResult.isValid && focusFirst) {
     if (validationResult.components[0]?.focus) {
-      validationResult.components[0]?.focus()
+      validationResult.components[0]?.focus();
     } else if (validationResult.components[0].exposed?.focus) {
-      validationResult.components[0]?.exposed?.focus()
+      validationResult.components[0]?.exposed?.focus();
     } else if (validationResult.components[0].proxy?.focus) {
-      validationResult.components[0].proxy?.focus()
+      validationResult.components[0].proxy?.focus();
     } else if (validationResult.components[0].proxy?.control?.focus) {
-      validationResult.components[0].proxy?.control?.focus()
+      validationResult.components[0].proxy?.control?.focus();
     } else if (validationResult.components[0].querySelector) {
-      const el = validationResult.components[0].querySelector('input,select,textaera')
+      const el = validationResult.components[0].querySelector(
+        "input,select,textaera"
+      );
       if (el && el.focus) {
-        el.focus()
+        el.focus();
       }
     } else {
       const el = validationResult.components[0].$el
         ? validationResult.components[0].$el
         : validationResult.components[0].proxy?.$el
-        ? validationResult.components[0].proxy?.$el
-        : validationResult.components[0]
-      const focusableEl = $ustra.utils.dom.findFocusableEl(el)
+          ? validationResult.components[0].proxy?.$el
+          : validationResult.components[0];
+      const focusableEl = $ustra.utils.dom.findFocusableEl(el);
 
       if (focusableEl) {
-        focusableEl.focus()
+        focusableEl.focus();
       }
     }
   }
 
-  return validationResult
-}
+  return validationResult;
+};
 
 /**
  * validation 초기화
  * @param includeChildGroup 하위 UValidationGroup 포함 처리
  */
 const init = async (includeChildGroup = false) => {
-  updateLayout()
+  updateLayout();
   for (const el of detectValidationTargetElements()) {
-    initEl([el], el)
+    initEl([el], el);
   }
 
   if (includeChildGroup) {
     for (const group of targetChildValidationGroups()) {
-      await group.exposed.init()
+      await group.exposed.init();
     }
   }
 
-  _isInitialized = true
+  _isInitialized = true;
 
   if (_isInitializedTimer) {
-    clearTimeout(_isInitializedTimer)
-    _isInitializedTimer = null
+    clearTimeout(_isInitializedTimer);
+    _isInitializedTimer = null;
   }
 
   _isInitializedTimer = setTimeout(() => {
-    _isInitialized = false
-  }, 500)
-}
+    _isInitialized = false;
+  }, 500);
+};
 
 const updateLayout = () => {
   nextTick(() => {
-    getRootEls().forEach(el => {
-      el.classList.remove('u-layout-state-disabled')
+    getRootEls().forEach((el) => {
+      el.classList.remove("u-layout-state-disabled");
 
       if (props.wrapContainer) {
-        el.classList.add(props.cssClassName)
+        el.classList.add(props.cssClassName);
       }
 
       if (props.disabled) {
-        el.classList.add('u-layout-state-disabled')
+        el.classList.add("u-layout-state-disabled");
       }
-    })
+    });
 
     // Vuetify 등 일부 컴포넌트의 경우, CSS를 다시 세팅하므로 상위에 컴포넌트를 추가한다.
     if (!props.wrapContainer) {
-      instance.proxy.$el.parentElement.classList.add(props.cssClassName)
+      instance.proxy.$el.parentElement.classList.add(props.cssClassName);
     }
-  })
-}
+  });
+};
 
 watch(
   () => props.disabled,
-  v => {
+  (v) => {
     if (v === true) {
-      init(true)
+      init(true);
     }
-  },
-)
+  }
+);
 
 onMounted(async () => {
-  nextTick(() => init())
-})
+  nextTick(() => init());
+});
 
 onUpdated(async () => {
-  detectValidationTargetElements()
-  updateLayout()
-})
+  detectValidationTargetElements();
+  updateLayout();
+});
 
 defineExpose({
   validate,
@@ -772,19 +828,21 @@ defineExpose({
   initEl,
   getWrappedComponent,
   getVueComponent,
-})
+});
 </script>
 
 <script lang="ts">
 export default {
-  name: 'UValidationGroup',
-}
+  name: "UValidationGroup",
+};
 </script>
 
 <style>
 .ustra-validation-group .ustra-invalidate,
 .ustra-validation-group.ustra-invalidate {
   border: 1px solid #bd0000;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 7px rgba(255, 0, 0, 0.6);
+  box-shadow:
+    inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 7px rgba(255, 0, 0, 0.6);
 }
 </style>

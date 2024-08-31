@@ -4,7 +4,7 @@
  * @packageDocumentation
  */
 
-import { baseModels, apiModels } from '#ustra/core/data'
+import { baseModels, apiModels } from "#moong/core/data";
 
 /**
  * 배치 검색 조건
@@ -13,63 +13,63 @@ export interface BatchCriteria {
   /**
    * 배치 아이디
    */
-  batId?: string
+  batId?: string;
   /**
    * 배치 명
    */
-  batNm?: string
+  batNm?: string;
 
-  [propName: string]: any
+  [propName: string]: any;
 }
 
-type BatchBase = baseModels.BaseModel & BatchCriteria
+type BatchBase = baseModels.BaseModel & BatchCriteria;
 
 export interface Batch extends BatchBase {
   /**
    * 배치 아이디
    */
-  batId?: string
+  batId?: string;
   /**
    * 배치 명
    */
-  batNm?: string
+  batNm?: string;
   /**
    * 배치 설명
    */
-  batDesc?: string
+  batDesc?: string;
   /**
    * 사용 여부
    */
-  useYn?: string
+  useYn?: string;
   /**
    * 스케줄 구분 코드
    */
-  schdlDvCd?: string
+  schdlDvCd?: string;
   /**
    * 스케줄 값
    */
-  schdlVal?: string
+  schdlVal?: string;
   /**
    * 중복 실행 가능 여부
    */
-  dupExecAvlYn?: string
+  dupExecAvlYn?: string;
   /**
    * 지연 시간(S)
    */
-  dlyS?: number
+  dlyS?: number;
   /**
    * 배치 인스턴스 코드
    */
-  batInstCd?: string[]
+  batInstCd?: string[];
   /**
    * 배치 인스턴스
    */
-  insts?: BatchInst[]
+  insts?: BatchInst[];
 
   /**
    * 즉시 변경 여부
    */
-  immediateStartYn?: string
+  immediateStartYn?: string;
 }
 
 /**
@@ -83,14 +83,14 @@ export interface UstraBatchRqVo {
    * @type {ApiHeader}
    * @memberof UstraBatchRqVo
    */
-  header?: apiModels.ApiHeader
+  header?: apiModels.ApiHeader;
 
   /**
    *
    * @type {Batch}
    * @memberof UstraBatchRqVo
    */
-  batch?: Batch
+  batch?: Batch;
 }
 
 /**
@@ -104,14 +104,14 @@ export interface UstraBatchOneRqVo {
    * @type {ApiHeader}
    * @memberof UstraBatchOneRqVo
    */
-  header?: apiModels.ApiHeader
+  header?: apiModels.ApiHeader;
 
   /**
    *
    * @type {string}
    * @memberof UstraBatchOneRqVo
    */
-  batId?: string
+  batId?: string;
 }
 
 /**
@@ -121,7 +121,7 @@ export interface BatchManagerCriteria extends Record<string, any> {
   /**
    * 배치 매니저 아이디
    */
-  managerId?: string
+  managerId?: string;
 }
 
 /**
@@ -131,19 +131,19 @@ export interface BatchManager extends baseModels.BaseModel {
   /**
    * 매니저 아이디
    */
-  managerId?: string
+  managerId?: string;
 
-  endpoint?: string
+  endpoint?: string;
 
   /**
    * 마스터 여부
    */
-  master?: boolean
+  master?: boolean;
 
   /**
    * 활성화 여부
    */
-  enabled?: boolean
+  enabled?: boolean;
 }
 
 /**
@@ -157,14 +157,14 @@ export interface UstraBatchManagerRqVo {
    * @type {ApiHeader}
    * @memberof UstraBatchManagerRqVo
    */
-  header?: apiModels.ApiHeader
+  header?: apiModels.ApiHeader;
 
   /**
    *
    * @type {BatchManager}
    * @memberof UstraBatchManagerRqVo
    */
-  batchManager?: BatchManager
+  batchManager?: BatchManager;
 }
 
 /**
@@ -174,38 +174,38 @@ export interface BatchWorkerCriteria {
   /**
    * 배치 매니저 아이디
    */
-  workerId?: string
+  workerId?: string;
 
-  endpoint?: string
+  endpoint?: string;
 
-  [propName: string]: any
+  [propName: string]: any;
 }
 
-type BatchWorkerBase = baseModels.BaseModel & BatchWorkerCriteria
+type BatchWorkerBase = baseModels.BaseModel & BatchWorkerCriteria;
 
 export interface BatchWorker extends BatchWorkerBase {
   /**
    * 매니저 아이디
    */
-  workerId?: string
+  workerId?: string;
 
-  endpoint?: string
+  endpoint?: string;
 
-  capacity?: number
+  capacity?: number;
 
-  enabled?: boolean
+  enabled?: boolean;
 
-  createDate?: Date
+  createDate?: Date;
 
-  createUser?: string
+  createUser?: string;
 
-  createUserIp?: string
+  createUserIp?: string;
 
-  modifyDate?: Date
+  modifyDate?: Date;
 
-  modifyUser?: string
+  modifyUser?: string;
 
-  modifyUserIp?: string
+  modifyUserIp?: string;
 }
 
 /**
@@ -219,14 +219,14 @@ export interface UstraBatchWorkerRqVo {
    * @type {ApiHeader}
    * @memberof UstraBatchWorkerRqVo
    */
-  header?: apiModels.ApiHeader
+  header?: apiModels.ApiHeader;
 
   /**
    *
    * @type {BatchWorker}
    * @memberof UstraBatchWorkerRqVo
    */
-  batchWorker?: BatchWorker
+  batchWorker?: BatchWorker;
 }
 
 /**
@@ -236,27 +236,27 @@ export interface BatchInst extends baseModels.BaseModel {
   /**
    * 배치 아이디
    */
-  batId?: string
+  batId?: string;
   /**
    * 배치 인스턴스 코드
    */
-  batInstCd?: string
+  batInstCd?: string;
   /**
    * 배치 상태 코드
    */
-  batSttCd?: string
+  batSttCd?: string;
   /**
    * 최종 시작 일시
    */
-  lstSrtDttm?: string
+  lstSrtDttm?: string;
   /**
    * 최종 종료 일시
    */
-  lstEndDttm?: string
+  lstEndDttm?: string;
   /**
    * 최종 성공 여부
    */
-  lstSuccYn?: string
+  lstSuccYn?: string;
 }
 
 /**
@@ -266,28 +266,28 @@ export interface BatchHistCriteria {
   /**
    * 배치 이력 아이디
    */
-  batHistId?: string
+  batHistId?: string;
   /**
    * 배치 아이디
    */
-  batId?: string
+  batId?: string;
   /**
    * 배치 명
    */
-  batNm?: string
+  batNm?: string;
   /**
    * 기간 시작일시
    */
-  periodSrtDttm?: string
+  periodSrtDttm?: string;
   /**
    * 기간 종료일시
    */
-  periodEndDttm?: string
+  periodEndDttm?: string;
 
-  [propName: string]: any
+  [propName: string]: any;
 }
 
-type BatchHistBase = baseModels.BaseModel & BatchHistCriteria
+type BatchHistBase = baseModels.BaseModel & BatchHistCriteria;
 
 /**
  * 배치 이력
@@ -296,39 +296,39 @@ export interface BatchHist extends BatchHistBase {
   /**
    * 배치 이력 아이디
    */
-  batHistId?: string
+  batHistId?: string;
   /**
    * 배치 아이디
    */
-  batId?: string
+  batId?: string;
   /**
    * 배치 명
    */
-  batNm?: string
+  batNm?: string;
   /**
    * 시작 일시
    */
-  srtDttm?: Date
+  srtDttm?: Date;
   /**
    * 종료 일시
    */
-  endDttm?: Date
+  endDttm?: Date;
   /**
    * 성공 여부
    */
-  succYn?: string
+  succYn?: string;
   /**
    * 오류 메시지
    */
-  errMsg?: string
+  errMsg?: string;
   /**
    * 배치 인스턴스 코드
    */
-  batInstCd?: string
+  batInstCd?: string;
   /**
    * 로깅 파일 경로
    */
-  logFilePath?: string
+  logFilePath?: string;
 }
 
 /**
@@ -342,12 +342,12 @@ export interface UstraBatchHistOneRqVo {
    * @type {ApiHeader}
    * @memberof UstraBatchHistOneRqVo
    */
-  header?: apiModels.ApiHeader
+  header?: apiModels.ApiHeader;
 
   /**
    *
    * @type {string}
    * @memberof UstraBatchHistOneRqVo
    */
-  batHistId?: string
+  batHistId?: string;
 }

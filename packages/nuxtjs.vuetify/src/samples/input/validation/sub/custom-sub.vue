@@ -6,24 +6,24 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { ref, defineExpose } from '#ustra/nuxt'
+import { ref, defineExpose } from "#moong/nuxt";
 
-const textValue1 = ref('')
-const textValue2 = ref('')
+const textValue1 = ref("");
+const textValue2 = ref("");
 
 // textValue1, textValue2 값이 변경될 경우, validation 재실행
-watchValidationData([textValue1, textValue2])
+watchValidationData([textValue1, textValue2]);
 
 defineExpose({
   validate: () => {
     if (!textValue1.value || !textValue2.value) {
-      return '필수 입력이예요!'
+      return "필수 입력이예요!";
     }
 
     if (textValue1.value !== textValue2.value) {
-      return '동일한 값을 입력하세요!'
+      return "동일한 값을 입력하세요!";
     }
-    return true
+    return true;
   },
-})
+});
 </script>

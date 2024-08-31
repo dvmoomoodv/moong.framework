@@ -2,8 +2,19 @@
   "extends": "../types/dev/tsconfig.json",
   "compilerOptions": {
     "outDir": "./dist",
-    "types": ["@types/node", "@types/jest", "@ustra/nuxt/types", "vuetify", "./types"]
+    "types": [
+      "@types/node",
+      "@types/jest",
+      "@moong/nuxt/types",
+      "vuetify",
+      "./types"
+    ]
   },
   "include": ["./src/**/*.ts"],
-  "exclude": ["./templates/**/*", "./dist/**/*", "./dist-cjs/**/*", "./__templates__/**/*"]
+  "exclude": [
+    "./templates/**/*",
+    "./dist/**/*",
+    "./dist-cjs/**/*",
+    "./__templates__/**/*"
+  ]
 }

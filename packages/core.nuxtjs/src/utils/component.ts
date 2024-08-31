@@ -3,26 +3,42 @@
  * @exports {@link Component}
  * @packageDocumentation
  */
-import { ComponentInternalInstance, VNode, createVNode, render, createApp, h, shallowRef, onBeforeUnmount, getCurrentInstance } from '#ustra/nuxt'
-import type { VNodeChild, VNodeProps, Component as VueComponent } from '#ustra/nuxt'
-import { nextTick } from '#ustra/nuxt'
-import { useRoute, useRouter } from '#app'
-import { core } from '#ustra/core/utils'
+import {
+  ComponentInternalInstance,
+  VNode,
+  createVNode,
+  render,
+  createApp,
+  h,
+  shallowRef,
+  onBeforeUnmount,
+  getCurrentInstance,
+} from "#moong/nuxt";
+import type {
+  VNodeChild,
+  VNodeProps,
+  Component as VueComponent,
+} from "#moong/nuxt";
+import { nextTick } from "#moong/nuxt";
+import { useRoute, useRouter } from "#app";
+import { core } from "#moong/core/utils";
 
 export interface AppMountOption {
   /**
    * 컴포넌트 children
    */
-  children?: VNodeChild
+  children?: VNodeChild;
 
   /**
    * target HTMLElement for mount
    */
-  renderEl?: HTMLElement
+  renderEl?: HTMLElement;
 }
 
-export interface ExtendedVNodeProps extends VNodeProps, Record<string, unknown> {}
-export { VNodeChild, VueComponent }
+export interface ExtendedVNodeProps
+  extends VNodeProps,
+    Record<string, unknown> {}
+export { VNodeChild, VueComponent };
 
 export class Component {
   /**
@@ -32,19 +48,19 @@ export class Component {
    */
   isVueComponent(elOrInstance: any) {
     if (!elOrInstance) {
-      return false
+      return false;
     }
 
     if (elOrInstance.ctx || elOrInstance.$options) {
-      return true
+      return true;
     }
 
     // for customized mixins...
     if (elOrInstance.__vueComponent) {
-      return true
+      return true;
     }
 
-    return elOrInstance.__vueParentComponent?.vnode?.el === elOrInstance
+    return elOrInstance.__vueParentComponent?.vnode?.el === elOrInstance;
   }
 
   /**
@@ -55,23 +71,23 @@ export class Component {
    */
   getVNodeProps(elOrInstance: any, addAttrs: boolean = false) {
     if (!elOrInstance) {
-      return null
+      return null;
     }
 
-    const components = this.getWrappedComponents(elOrInstance)
+    const components = this.getWrappedComponents(elOrInstance);
 
     if (components.length < 1) {
-      return elOrInstance?.__vnode?.props || {}
+      return elOrInstance?.__vnode?.props || {};
     }
 
-    let props = {}
+    let props = {};
     for (const component of components) {
       if (addAttrs) {
-        props = core.deepMergeArrayConcat(props, component.attrs || {})
+        props = core.deepMergeArrayConcat(props, component.attrs || {});
       }
-      props = core.deepMergeArrayConcat(props, component.props || {})
+      props = core.deepMergeArrayConcat(props, component.props || {});
     }
-    return props
+    return props;
   }
 
   /**
@@ -80,14 +96,14 @@ export class Component {
    */
   getVNode(elOrInstance: any) {
     if (!elOrInstance) {
-      return null
+      return null;
     }
 
     if (elOrInstance.__vueComponent) {
-      elOrInstance = elOrInstance.__vueComponent
+      elOrInstance = elOrInstance.__vueComponent;
     }
 
-    return elOrInstance?.__vnode || elOrInstance?.vnode
+    return elOrInstance?.__vnode || elOrInstance?.vnode;
   }
 
   /**
@@ -96,26 +112,26 @@ export class Component {
    */
   getVueComponent(elOrInstance: any) {
     if (!this.isVueComponent(elOrInstance)) {
-      return null
+      return null;
     }
 
     // mixins
     if (elOrInstance.__vueComponent) {
-      return elOrInstance.__vueComponent._.proxy
+      return elOrInstance.__vueComponent._.proxy;
     }
 
     if (elOrInstance.__vueParentComponent) {
-      elOrInstance = elOrInstance.__vueParentComponent
+      elOrInstance = elOrInstance.__vueParentComponent;
     }
 
     // vue3 component
     if (elOrInstance.vnode && elOrInstance.proxy) {
-      return elOrInstance.proxy
+      return elOrInstance.proxy;
     }
 
     // vue2 component
     if (elOrInstance.$options) {
-      return elOrInstance
+      return elOrInstance;
     }
   }
 
@@ -125,24 +141,24 @@ export class Component {
    */
   getWrappedComponent(elOrInstance: any) {
     if (!this.isVueComponent(elOrInstance)) {
-      return null
+      return null;
     }
 
     if (elOrInstance.__vueParentComponent) {
-      elOrInstance = elOrInstance.__vueParentComponent
+      elOrInstance = elOrInstance.__vueParentComponent;
     }
 
     // for mixins
     if (elOrInstance.__vueComponent) {
-      return elOrInstance.__vueComponent._
+      return elOrInstance.__vueComponent._;
     }
 
     // for proxy
     if (elOrInstance.$) {
-      return elOrInstance.$
+      return elOrInstance.$;
     }
 
-    return elOrInstance
+    return elOrInstance;
   }
 
   /**
@@ -151,20 +167,20 @@ export class Component {
    */
   getWrappedComponents(elOrInstance: any) {
     if (!this.isVueComponent(elOrInstance)) {
-      return []
+      return [];
     }
 
     if (elOrInstance.__vueComponentInstances) {
-      return elOrInstance.__vueComponentInstances.map(c => c.$)
+      return elOrInstance.__vueComponentInstances.map((c) => c.$);
     }
 
-    const component = this.getWrappedComponent(elOrInstance)
+    const component = this.getWrappedComponent(elOrInstance);
 
     if (component) {
-      return [component]
+      return [component];
     }
 
-    return []
+    return [];
   }
 
   /**
@@ -172,21 +188,21 @@ export class Component {
    * @param component
    */
   isPageComponent(component: ComponentInternalInstance) {
-    const route = useRoute()
+    const route = useRoute();
 
     if (!route) {
-      return false
+      return false;
     }
 
     for (const match of route.matched) {
-      const matchedComponent = match.components.default
+      const matchedComponent = match.components.default;
 
       if (matchedComponent === component.type) {
-        return true
+        return true;
       }
     }
 
-    return false
+    return false;
   }
 
   /**
@@ -194,26 +210,31 @@ export class Component {
    * @param nodes VNode 목록
    * @param filterFn 필터링 function
    */
-  queryChildNodes(nodes: VNode | VNode[], filterFn: (node: VNode) => boolean = node => true) {
-    nodes = Array.isArray(nodes) ? nodes : [nodes]
+  queryChildNodes(
+    nodes: VNode | VNode[],
+    filterFn: (node: VNode) => boolean = (node) => true
+  ) {
+    nodes = Array.isArray(nodes) ? nodes : [nodes];
 
     function findChild(nodes: VNode[]) {
-      let foundNodes: VNode[] = []
+      let foundNodes: VNode[] = [];
 
       for (const node of nodes) {
         if (filterFn(node)) {
-          foundNodes.push(node)
+          foundNodes.push(node);
         }
 
-        if (node.children?.['default']) {
-          foundNodes = foundNodes.concat(findChild(node.children?.['default']()))
+        if (node.children?.["default"]) {
+          foundNodes = foundNodes.concat(
+            findChild(node.children?.["default"]())
+          );
         }
       }
 
-      return foundNodes
+      return foundNodes;
     }
 
-    return findChild(nodes)
+    return findChild(nodes);
   }
 
   /**
@@ -240,32 +261,36 @@ export class Component {
   mount(
     component,
     instance: ComponentInternalInstance,
-    { props, children, element }: { props?: any; children?: any; element?: any } = {
+    {
+      props,
+      children,
+      element,
+    }: { props?: any; children?: any; element?: any } = {
       props: undefined,
       children: undefined,
       element: undefined,
-    },
+    }
   ) {
-    let el = element
+    let el = element;
 
-    let vNode = createVNode(component, props, children)
-    vNode.appContext = instance.appContext
+    let vNode = createVNode(component, props, children);
+    vNode.appContext = instance.appContext;
 
     if (!el) {
-      el = document.createElement('div')
+      el = document.createElement("div");
     }
 
     const destroy = () => {
-      if (el) render(null, el)
-      el = null
-      vNode = null
-    }
+      if (el) render(null, el);
+      el = null;
+      vNode = null;
+    };
 
-    render(vNode, el)
+    render(vNode, el);
 
-    onBeforeUnmount(() => destroy(), instance)
+    onBeforeUnmount(() => destroy(), instance);
 
-    return { vNode, destroy, el }
+    return { vNode, destroy, el };
   }
 
   /**
@@ -275,17 +300,21 @@ export class Component {
    * @param options 상세 옵션
    * @returns
    */
-  mountApp<T extends VueComponent>(rootComponent: T, rootProps: ExtendedVNodeProps = {}, options: AppMountOption = {}) {
-    const componentInstance = shallowRef<T>()
+  mountApp<T extends VueComponent>(
+    rootComponent: T,
+    rootProps: ExtendedVNodeProps = {},
+    options: AppMountOption = {}
+  ) {
+    const componentInstance = shallowRef<T>();
 
     if (!rootProps?.ref) {
       // @ts-ignore
-      rootProps.ref = instance => (componentInstance.value = instance)
+      rootProps.ref = (instance) => (componentInstance.value = instance);
     }
 
     function render() {
       // @ts-ignore
-      return () => h(rootComponent, rootProps, options.children || [])
+      return () => h(rootComponent, rootProps, options.children || []);
     }
 
     /**
@@ -293,22 +322,22 @@ export class Component {
      * @param el HTMLElement
      */
     function mount(el: HTMLElement) {
-      const wrapper = document.createElement('div')
-      app.mount(wrapper)
-      el.appendChild(wrapper)
+      const wrapper = document.createElement("div");
+      app.mount(wrapper);
+      el.appendChild(wrapper);
     }
 
     const app = createApp({
       setup() {
-        return render()
+        return render();
       },
-    })
+    });
 
     if (options?.renderEl) {
-      mount(options?.renderEl)
+      mount(options?.renderEl);
     }
 
-    return { app, render, componentInstance, mount }
+    return { app, render, componentInstance, mount };
   }
 
   /**
@@ -317,41 +346,41 @@ export class Component {
    * @returns
    */
   getRootElements(component: ComponentInternalInstance): HTMLElement[] {
-    const elements: HTMLElement[] = []
+    const elements: HTMLElement[] = [];
 
     if (!component) {
-      return elements
+      return elements;
     }
 
     if (component.vnode?.el && component.vnode.el.nodeType === 1) {
-      return [component.vnode.el as HTMLElement]
+      return [component.vnode.el as HTMLElement];
     }
 
-    const addChildren = children => {
+    const addChildren = (children) => {
       for (let i = 0; i < children.length; i++) {
-        const child = children[i]
+        const child = children[i];
 
         if (child.el && child.el.nodeType === 1) {
-          elements.push(child.el)
+          elements.push(child.el);
         }
         // fragments
         else if (child.el && child.el.nodeType === 3) {
-          elements.push(...this.getRootElements(child.component))
+          elements.push(...this.getRootElements(child.component));
 
           if (child.children) {
-            addChildren(child.children)
+            addChildren(child.children);
           }
         }
       }
-    }
+    };
 
-    const children = component.subTree?.children
+    const children = component.subTree?.children;
 
     if (children) {
-      addChildren(children)
+      addChildren(children);
     }
 
-    return elements
+    return elements;
   }
 
   /**
@@ -359,8 +388,14 @@ export class Component {
    * @param component
    * @param type
    */
-  findChildComponentsByType(component: ComponentInternalInstance, type: string) {
-    return this.findChildComponents(component, child => child.type?.name === type)
+  findChildComponentsByType(
+    component: ComponentInternalInstance,
+    type: string
+  ) {
+    return this.findChildComponents(
+      component,
+      (child) => child.type?.name === type
+    );
   }
 
   /**
@@ -368,29 +403,32 @@ export class Component {
    * @param component 컴포넌트 인스턴스
    * @param predicator 비교 function
    */
-  findChildComponents(component: ComponentInternalInstance, predicator: (component: ComponentInternalInstance) => boolean | void) {
-    const foundComponents: ComponentInternalInstance[] = []
+  findChildComponents(
+    component: ComponentInternalInstance,
+    predicator: (component: ComponentInternalInstance) => boolean | void
+  ) {
+    const foundComponents: ComponentInternalInstance[] = [];
 
-    const findChildren = children => {
+    const findChildren = (children) => {
       for (let i = 0; i < children.length; i++) {
-        const child = children[i]
-        const result = predicator(child)
+        const child = children[i];
+        const result = predicator(child);
 
         if (result === true) {
           if (child.component) {
-            foundComponents.push(child.component)
+            foundComponents.push(child.component);
           } else if (child.subTree) {
-            foundComponents.push(child)
+            foundComponents.push(child);
           }
         }
 
-        findChildren(this.findComponentChildren(child))
+        findChildren(this.findComponentChildren(child));
       }
-    }
+    };
 
-    findChildren(this.findComponentChildren(component))
+    findChildren(this.findComponentChildren(component));
 
-    return foundComponents
+    return foundComponents;
   }
 
   /**
@@ -400,44 +438,44 @@ export class Component {
    */
   findComponentChildren(component: ComponentInternalInstance) {
     if (!component) {
-      return []
+      return [];
     }
 
-    if (Array.isArray(component['children'])) {
-      return component['children']
+    if (Array.isArray(component["children"])) {
+      return component["children"];
     }
 
-    if (Array.isArray(component['component']?.subTree?.children)) {
-      return component['component']?.subTree?.children
+    if (Array.isArray(component["component"]?.subTree?.children)) {
+      return component["component"]?.subTree?.children;
     }
 
     if (Array.isArray(component.subTree?.children)) {
-      return component.subTree?.children
+      return component.subTree?.children;
     }
 
-    if (component.subTree?.['ssContent']?.['component']) {
-      return [component.subTree?.['ssContent']?.['component']]
+    if (component.subTree?.["ssContent"]?.["component"]) {
+      return [component.subTree?.["ssContent"]?.["component"]];
     }
 
-    if (component['component']?.subTree?.['ssContent']?.['component']) {
-      return [component['component']?.subTree?.['ssContent']?.['component']]
+    if (component["component"]?.subTree?.["ssContent"]?.["component"]) {
+      return [component["component"]?.subTree?.["ssContent"]?.["component"]];
     }
 
-    if (component['ssContent']) {
-      return [component['ssContent']]
+    if (component["ssContent"]) {
+      return [component["ssContent"]];
     }
 
-    if (component['component']?.subTree?.['component']) {
-      return [component['component']?.subTree?.['component']]
+    if (component["component"]?.subTree?.["component"]) {
+      return [component["component"]?.subTree?.["component"]];
     }
 
-    if (component.subTree?.['component']) {
-      return [component.subTree?.['component']]
+    if (component.subTree?.["component"]) {
+      return [component.subTree?.["component"]];
     }
 
-    return []
+    return [];
   }
 }
 
-const instance = new Component()
-export default instance
+const instance = new Component();
+export default instance;

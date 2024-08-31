@@ -7,10 +7,20 @@
       <br /><br />
       <VBtn @click="() => (showPopup = true)">팝업오픈</VBtn>
       <br />
-      <UVUserPopup v-model="showPopup" :multiple="true" @selected="data => (selectedItem = data)" />
+      <UVUserPopup
+        v-model="showPopup"
+        :multiple="true"
+        @selected="(data) => (selectedItem = data)"
+      />
 
       <br />
-      <v-chip class="ma-2" color="pink" label text-color="white" style="height: auto; overflow: auto; white-space: normal">
+      <v-chip
+        class="ma-2"
+        color="pink"
+        label
+        text-color="white"
+        style="height: auto; overflow: auto; white-space: normal"
+      >
         <v-icon start icon="mdi-label"></v-icon>
         selectedItem : {{ selectedItem }}
       </v-chip>
@@ -18,12 +28,12 @@
   </VCard>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-import UVUserPopup from '#ustra/nuxt-vuetify/management/components/popup/u-v-user-popup.vue'
+import { ref } from "#moong/nuxt";
+import UVUserPopup from "#moong/nuxt-vuetify/management/components/popup/u-v-user-popup.vue";
 
 // @ts-ignore
-import userPopup2 from './md/user-popup2.md'
+import userPopup2 from "./md/user-popup2.md";
 
-const showPopup = ref(false)
-const selectedItem = ref(null)
+const showPopup = ref(false);
+const selectedItem = ref(null);
 </script>

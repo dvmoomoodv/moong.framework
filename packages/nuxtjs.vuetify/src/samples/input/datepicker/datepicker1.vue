@@ -60,34 +60,34 @@
   </VCard>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
-import UDatepicker from '#ustra/nuxt-vuetify/components/datepicker/u-datepicker.vue'
+import { ref } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
+import UDatepicker from "#moong/nuxt-vuetify/components/datepicker/u-datepicker.vue";
 // import Datepicker from '@vuepic/vue-datepicker'
-import { ko } from 'date-fns/locale'
+import { ko } from "date-fns/locale";
 
 // @ts-ignore
-import doc1 from './md/datepicker1-1.md'
+import doc1 from "./md/datepicker1-1.md";
 
 // @ts-ignore
-import doc2 from './md/datepicker1-2.md'
-import UBaseDatepicker from '#ustra/nuxt-vuetify/components/datepicker/u-base-datepicker.vue'
+import doc2 from "./md/datepicker1-2.md";
+import UBaseDatepicker from "#moong/nuxt-vuetify/components/datepicker/u-base-datepicker.vue";
 
-const value = ref('2023-01-01')
-const datetimeValue = ref('2018-06-12T19:30')
-const monthValue = ref('2021-02')
-const weekValue = ref('2018-W18')
-const timeValue = ref('13:30')
+const value = ref("2023-01-01");
+const datetimeValue = ref("2018-06-12T19:30");
+const monthValue = ref("2021-02");
+const weekValue = ref("2018-W18");
+const timeValue = ref("13:30");
 
-const rangeValue = ref(null)
+const rangeValue = ref(null);
 
-const setDate = date => {
-  if (date === 'now') {
-    value.value = new Date()
-    return
+const setDate = (date) => {
+  if (date === "now") {
+    value.value = new Date();
+    return;
   }
-  value.value = date
-}
+  value.value = date;
+};
 
 // const utcDate = ref()
 

@@ -3,13 +3,13 @@
  * @exports {@link HttpServerUtils}
  * @packageDocumentation
  */
-import { IncomingMessage } from 'http'
-import { objects, script as scriptUtils } from '#ustra/core/utils'
+import { IncomingMessage } from "http";
+import { objects, script as scriptUtils } from "#moong/core/utils";
 
 /**
  * 서버 데이터 설정 키
  */
-const MIDDLEWARE_SERVER_DATA_KEY = 'SERVER_DATA'
+const MIDDLEWARE_SERVER_DATA_KEY = "SERVER_DATA";
 
 /**
  * View 관련 유틸리티
@@ -21,7 +21,7 @@ export class ViewUtils {
    * @param data 데이터
    */
   serverData(req: IncomingMessage, data: any) {
-    objects.setProperty(req, MIDDLEWARE_SERVER_DATA_KEY, data)
+    objects.setProperty(req, MIDDLEWARE_SERVER_DATA_KEY, data);
   }
 
   /**
@@ -30,7 +30,7 @@ export class ViewUtils {
    * @param content
    */
   generateHtmlDoc(head: string = null, content: string = null) {
-    return `<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">${head}</head><body>${content}</body></html>`
+    return `<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge">${head}</head><body>${content}</body></html>`;
   }
 
   /**
@@ -38,8 +38,8 @@ export class ViewUtils {
    * @param content
    * @param type
    */
-  generateScript(content: string = null, type: string = 'text/javascript') {
-    return `<script type="${type}">${content}</script>`
+  generateScript(content: string = null, type: string = "text/javascript") {
+    return `<script type="${type}">${content}</script>`;
   }
 
   /**
@@ -47,8 +47,8 @@ export class ViewUtils {
    * @param content
    * @param type
    */
-  generateScriptDoc(content: string = null, type: string = 'text/javascript') {
-    return this.generateHtmlDoc('', this.generateScript(content, type))
+  generateScriptDoc(content: string = null, type: string = "text/javascript") {
+    return this.generateHtmlDoc("", this.generateScript(content, type));
   }
 
   /**
@@ -56,7 +56,10 @@ export class ViewUtils {
    * @param contents
    */
   generateScriptsDoc(...contents: string[]) {
-    return this.generateHtmlDoc('', this.generateScript(scriptUtils.generate(...contents)))
+    return this.generateHtmlDoc(
+      "",
+      this.generateScript(scriptUtils.generate(...contents))
+    );
   }
 
   /**
@@ -66,14 +69,22 @@ export class ViewUtils {
    * @param target 메시지 타겟
    * @param addClassScript window.close 스크립트 포함여부
    */
-  generatePostMessageScriptDoc(type: string, data: any, target: 'opener' | 'parent' = 'parent', addCloseScript: boolean = false) {
-    const content = `window.${target}.postMessage({type:"${type}", value:${JSON.stringify(data)}})`
-    const script = scriptUtils.generate(content, addCloseScript ? 'window.close()' : null)
-    const scriptContent = this.generateScript(script)
+  generatePostMessageScriptDoc(
+    type: string,
+    data: any,
+    target: "opener" | "parent" = "parent",
+    addCloseScript: boolean = false
+  ) {
+    const content = `window.${target}.postMessage({type:"${type}", value:${JSON.stringify(data)}})`;
+    const script = scriptUtils.generate(
+      content,
+      addCloseScript ? "window.close()" : null
+    );
+    const scriptContent = this.generateScript(script);
 
-    return this.generateHtmlDoc('', scriptContent)
+    return this.generateHtmlDoc("", scriptContent);
   }
 }
 
-const instance = new ViewUtils()
-export default instance
+const instance = new ViewUtils();
+export default instance;

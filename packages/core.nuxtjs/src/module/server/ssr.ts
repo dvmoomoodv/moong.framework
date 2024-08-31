@@ -1,14 +1,19 @@
-import { join } from 'pathe'
-import { NuxtAppProps } from '#ustra/nuxt/config'
-import { addTemplate, addServerHandler, useNitro, addServerPlugin } from '@nuxt/kit'
-import { NitroApp } from 'nitropack'
-import { Nuxt } from '@nuxt/schema'
-import { fromNodeMiddleware, callNodeListener, defineEventHandler } from 'h3'
-import { pathToFileURL } from 'node:url'
+import { join } from "pathe";
+import { NuxtAppProps } from "#moong/nuxt/config";
+import {
+  addTemplate,
+  addServerHandler,
+  useNitro,
+  addServerPlugin,
+} from "@nuxt/kit";
+import { NitroApp } from "nitropack";
+import { Nuxt } from "@nuxt/schema";
+import { fromNodeMiddleware, callNodeListener, defineEventHandler } from "h3";
+import { pathToFileURL } from "node:url";
 
 export const addSsrMiddleware = (options: NuxtAppProps, nuxt: Nuxt) => {
   if (!nuxt.options.dev && !nuxt.options.ssr) {
-    return
+    return;
   }
 
   // nuxt.hook('ready', () => {
@@ -31,7 +36,7 @@ export const addSsrMiddleware = (options: NuxtAppProps, nuxt: Nuxt) => {
   //   })
 
   addTemplate({
-    filename: 'ustra/ssr-context.ts',
+    filename: "ustra/ssr-context.ts",
     write: true,
     getContents: () => {
       return `
@@ -41,14 +46,14 @@ import { fromNodeMiddleware, callNodeListener, defineEventHandler } from 'h3'
 export default defineEventHandler(async event => {
   await fromNodeMiddleware(contextService.middleware('ustra'))(event)
 })
-`
+`;
     },
-  })
+  });
 
   addServerHandler({
-    handler: join(nuxt.options.buildDir, 'ustra', 'ssr-context.ts'),
+    handler: join(nuxt.options.buildDir, "ustra", "ssr-context.ts"),
     middleware: true,
-  })
+  });
 
   //console.log('url', pathToFileURL(join(nuxt.options.buildDir, 'ustra', 'ssr-context.ts')).toString())
 
@@ -64,7 +69,7 @@ export default defineEventHandler(async event => {
   //     filename: 'ustra/ssr2.ts',
   //     write: true,
   //     getContents: () => `
-  // import { system } from '#ustra/core/utils'
+  // import { system } from '#moong/core/utils'
   // import contextService from 'request-context-ts'
   // import { fromNodeMiddleware, callNodeListener, defineEventHandler } from 'h3'
 
@@ -82,12 +87,12 @@ export default defineEventHandler(async event => {
   // addServerHandler({
   //   handler: join(nuxt.options.buildDir, 'ustra', 'ssr2.ts'),
   // })
-}
+};
 
 function middlewareContent(): string {
   return `
 import contextService from 'request-context-ts'
-import { system } from '#ustra/core/utils'
+import { system } from '#moong/core/utils'
 import { fromNodeMiddleware, callNodeListener, defineEventHandler } from 'h3'
 
 export default fromNodeMiddleware(contextService.middleware('request'))
@@ -104,5 +109,5 @@ export default fromNodeMiddleware(contextService.middleware('request'))
 
 //   // contextService.set('ustra:uuid', system.uuidBase62())
 // })
-`
+`;
 }

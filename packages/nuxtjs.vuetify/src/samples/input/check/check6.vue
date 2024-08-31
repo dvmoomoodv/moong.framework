@@ -2,7 +2,8 @@
   <v-card>
     <template #text>
       <h3>Click Event</h3>
-      Check Box의 경우도 Radio Box와 동일하게 event 객체의 value 값으로 Click 시 현재 입력된 value 값을 확인할 수 있다.
+      Check Box의 경우도 Radio Box와 동일하게 event 객체의 value 값으로 Click 시
+      현재 입력된 value 값을 확인할 수 있다.
       <UCheckGroupBox
         :items-source="[
           { trueValue: 'Y', falseValue: 'N', text: 'Item1' },
@@ -28,15 +29,15 @@
   </v-card>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
+import { ref } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
 
 // @ts-ignore
-import check7 from './md/check7.md'
+import check7 from "./md/check7.md";
 
-const checkValue = ref(['N', 'N', 'N', 'N'])
+const checkValue = ref(["N", "N", "N", "N"]);
 
 function onCheckClick(e) {
-  alert('check value : ' + e.value)
+  alert("check value : " + e.value);
 }
 </script>

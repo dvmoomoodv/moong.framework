@@ -22,25 +22,27 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineOptions, PropType } from '#ustra/nuxt'
-import './styles/layout.scss'
+import { computed, defineOptions, PropType } from "#moong/nuxt";
+import "./styles/layout.scss";
 
 defineOptions({
-  name: 'UCol',
-})
+  name: "UCol",
+});
 
 // v-col
 const props = defineProps({
   style: {
     type: String,
-    default: '',
+    default: "",
   },
   class: {
     type: String,
-    default: '',
+    default: "",
   },
   alignSelf: {
-    type: String as PropType<'auto' | 'center' | 'end' | 'start' | 'stretch' | 'baseline' | undefined>,
+    type: String as PropType<
+      "auto" | "center" | "end" | "start" | "stretch" | "baseline" | undefined
+    >,
     default: undefined,
   },
   cols: {
@@ -123,30 +125,36 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-})
+});
 
 const classes = computed(() => {
-  if (props.disabled) return 'u-layout-state-disabled'
-})
+  if (props.disabled) return "u-layout-state-disabled";
+});
 
 //#region style
-let widthStyle = ''
-let heightStyle = ''
-let heightClass = ''
+let widthStyle = "";
+let heightStyle = "";
+let heightClass = "";
 if (props.width !== 0) {
-  widthStyle = ' width : ' + props.width + 'px; min-width: ' + props.width + 'px; flex-grow: 0;'
+  widthStyle =
+    " width : " +
+    props.width +
+    "px; min-width: " +
+    props.width +
+    "px; flex-grow: 0;";
 }
 if (props.height !== 0) {
-  heightStyle = ' height : ' + props.height + 'px; min-height: ' + props.height + 'px;'
+  heightStyle =
+    " height : " + props.height + "px; min-height: " + props.height + "px;";
 }
 //#endregions
 //#region fillColumn fillRow
-let fillStyle = ''
+let fillStyle = "";
 if (props.fillColumn) {
-  fillStyle = ' display: flex; flex-direction: column; '
+  fillStyle = " display: flex; flex-direction: column; ";
 }
 if (props.fillRow) {
-  fillStyle = ' display: flex; flex-direction: row; '
+  fillStyle = " display: flex; flex-direction: row; ";
 }
 //#endregion
 

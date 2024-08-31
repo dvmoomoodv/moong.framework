@@ -1,17 +1,20 @@
-import { extendViteConfig } from '@nuxt/kit'
+import { extendViteConfig } from "@nuxt/kit";
 // import rollupNodePolyFill from 'rollup-plugin-node-polyfills'
 // import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill'
 // import { NodeModulesPolyfillPlugin } from '@esbuild-plugins/node-modules-polyfill'
 // import { NodeModulesPolyfillPlugin } from './esbuild/node-module-polyfill'
-import { Nuxt } from '@nuxt/schema'
-import { core } from '#ustra/core/utils'
-import { path as pathUtils, module } from '#ustra/core/utils/node'
-import { resolve } from 'pathe'
-import { NuxtAppProps } from '../config/nuxt-app-props'
+import { Nuxt } from "@nuxt/schema";
+import { core } from "#moong/core/utils";
+import { path as pathUtils, module } from "#moong/core/utils/node";
+import { resolve } from "pathe";
+import { NuxtAppProps } from "../config/nuxt-app-props";
 // import removeNodeDepsPlugin from './build/plugins/remove-node-deps'
-import { getSsrNoExternalModule, getFrameworkPackageNames } from '#ustra/core/config/framework/modules'
-import { optimizeBuild } from './build/optimization'
-import watchNodeModulesPlugin from './build/plugins/watch-node-modules'
+import {
+  getSsrNoExternalModule,
+  getFrameworkPackageNames,
+} from "#moong/core/config/framework/modules";
+import { optimizeBuild } from "./build/optimization";
+import watchNodeModulesPlugin from "./build/plugins/watch-node-modules";
 
 /**
  * vue runtime compiler configuration
@@ -62,16 +65,23 @@ import watchNodeModulesPlugin from './build/plugins/watch-node-modules'
  * @param nuxt
  */
 const patchLodashModule = function (nuxt: Nuxt) {
-  nuxt.hook('vite:extendConfig', (config, { isClient, isServer }) => {
+  nuxt.hook("vite:extendConfig", (config, { isClient, isServer }) => {
     if (nuxt.options.dev) {
-      config.resolve.alias['lodash/*'] = 'lodash-es/*'
-      config.resolve.alias['lodash'] = 'lodash-es'
+      config.resolve.alias["lodash/*"] = "lodash-es/*";
+      config.resolve.alias["lodash"] = "lodash-es";
     }
 
-    config.optimizeDeps.exclude.push('lodash', 'lodash/*', 'lodash-es', 'lodash-es/*', 'lodash-es/toString', 'lodash/toString')
-  })
-  nuxt.options.build.transpile.push(...['lodash', 'lodash-es'])
-}
+    config.optimizeDeps.exclude.push(
+      "lodash",
+      "lodash/*",
+      "lodash-es",
+      "lodash-es/*",
+      "lodash-es/toString",
+      "lodash/toString"
+    );
+  });
+  nuxt.options.build.transpile.push(...["lodash", "lodash-es"]);
+};
 
 /**
  * patch socketjs client module
@@ -91,17 +101,25 @@ const patchLodashModule = function (nuxt: Nuxt) {
 // }
 
 export const build = (options: NuxtAppProps, nuxt: Nuxt) => {
-  nuxt.hook('vite:extendConfig', (config, { isClient, isServer }) => {
-    if (isClient && process.env.NODE_ENV === 'production') {
+  nuxt.hook("vite:extendConfig", (config, { isClient, isServer }) => {
+    if (isClient && process.env.NODE_ENV === "production") {
       // FIXME: patch for nuxt 3.1.1 error
       // config.build.rollupOptions.plugins = [...(config.build.rollupOptions.plugins || []), rollupNodePolyFill()]
 
-      config.define['process.platform'] = '"browser"'
-      config.optimizeDeps.exclude = [...config.optimizeDeps.exclude, 'winston', 'winston-daily-rotate-file']
+      config.define["process.platform"] = '"browser"';
+      config.optimizeDeps.exclude = [
+        ...config.optimizeDeps.exclude,
+        "winston",
+        "winston-daily-rotate-file",
+      ];
       // clientConfig.resolve.alias['process'] = resolve(__dirname, '../../../../node_modules/rollup-plugin-node-polyfills/polyfills/process-es6.js')
     }
 
-    config.optimizeDeps.exclude = [...config.optimizeDeps.exclude, 'scule', 'date-fns/locale']
+    config.optimizeDeps.exclude = [
+      ...config.optimizeDeps.exclude,
+      "scule",
+      "date-fns/locale",
+    ];
 
     // if (!process.env.PORT && config.define['process.env.PORT']) {
     //   config.define['process.env.PORT'] = '3000'
@@ -117,17 +135,22 @@ export const build = (options: NuxtAppProps, nuxt: Nuxt) => {
     // )
 
     // watch node modules
-    config.plugins.push(watchNodeModulesPlugin.vite(getFrameworkPackageNames()))
-  })
+    config.plugins.push(
+      watchNodeModulesPlugin.vite(getFrameworkPackageNames())
+    );
+  });
 
-  extendViteConfig(config => {
-    config.optimizeDeps = core.assign({}, config.optimizeDeps)
-    config.optimizeDeps.esbuildOptions = core.assign({}, config.optimizeDeps.esbuildOptions)
+  extendViteConfig((config) => {
+    config.optimizeDeps = core.assign({}, config.optimizeDeps);
+    config.optimizeDeps.esbuildOptions = core.assign(
+      {},
+      config.optimizeDeps.esbuildOptions
+    );
 
     config.optimizeDeps.esbuildOptions.define = {
       ...config.optimizeDeps.esbuildOptions.define,
-      global: 'globalThis',
-    }
+      global: "globalThis",
+    };
 
     // FIXME: patch for nuxt 3.1.1 error
     // config.optimizeDeps.esbuildOptions.plugins = [
@@ -148,55 +171,58 @@ export const build = (options: NuxtAppProps, nuxt: Nuxt) => {
     // add dependency optimization
     config.optimizeDeps.include = [
       ...(config.optimizeDeps.include || []),
-      '@refactorjs/http-proxy',
+      "@refactorjs/http-proxy",
       // 'ant-path-matcher',
-      '@howiefh/ant-path-matcher',
-      'axios',
-      'axios-retry',
-      'base62x',
-      'body-parser',
-      'compression',
-      'event-source-polyfill',
-      'highlight.js/lib/common',
-      'hookable',
+      "@howiefh/ant-path-matcher",
+      "axios",
+      "axios-retry",
+      "base62x",
+      "body-parser",
+      "compression",
+      "event-source-polyfill",
+      "highlight.js/lib/common",
+      "hookable",
       // 'micromatch',
-      'uuid62',
-      'uuid',
+      "uuid62",
+      "uuid",
       // 'picomatch',
       // 'printj',
-      'winston',
-      'request-context',
-      'serve-static',
-      'consola',
-      'markdown-it',
-      'markdown-it-container',
-      'markdown-it-deflist',
-      'markdown-it-sub',
-      'markdown-it-sup',
-      'markdown-it-footnote',
-      'markdown-it-emoji',
-      'markdown-it-deflist',
-      'markdown-it-ins',
-      'markdown-it-highlightjs',
-      'markdown-it-plantuml',
-      'base-x',
-      'qs',
-      'cookie-universal',
-      'crypto-js',
-      'js-file-download',
-      'queue-typescript',
-      'event-source-polyfill',
+      "winston",
+      "request-context",
+      "serve-static",
+      "consola",
+      "markdown-it",
+      "markdown-it-container",
+      "markdown-it-deflist",
+      "markdown-it-sub",
+      "markdown-it-sup",
+      "markdown-it-footnote",
+      "markdown-it-emoji",
+      "markdown-it-deflist",
+      "markdown-it-ins",
+      "markdown-it-highlightjs",
+      "markdown-it-plantuml",
+      "base-x",
+      "qs",
+      "cookie-universal",
+      "crypto-js",
+      "js-file-download",
+      "queue-typescript",
+      "event-source-polyfill",
       // 'monaco-editor',
       // 'monaco-editor-nls',
-      'tippy.js',
+      "tippy.js",
       // 'sockjs-client',
       // 'nuxt-monaco-editor',
-    ]
+    ];
 
-    config.optimizeDeps.exclude = [...(config.optimizeDeps.exclude || []), ...getSsrNoExternalModule()]
-  })
+    config.optimizeDeps.exclude = [
+      ...(config.optimizeDeps.exclude || []),
+      ...getSsrNoExternalModule(),
+    ];
+  });
 
-  nuxt.options.build.transpile.push(...getSsrNoExternalModule())
+  nuxt.options.build.transpile.push(...getSsrNoExternalModule());
   // nuxt.options.build.transpile.push('sockjs-client')
 
   // @ts-ignore
@@ -208,7 +234,7 @@ export const build = (options: NuxtAppProps, nuxt: Nuxt) => {
   // nuxt.options.app.buildAssetsDir = '/_ustra/'
 
   // enableVueRuntimeCompiler(nuxt)
-  patchLodashModule(nuxt)
+  patchLodashModule(nuxt);
   // patchSocketjsClientModule(nuxt)
-  optimizeBuild(options, nuxt)
-}
+  optimizeBuild(options, nuxt);
+};

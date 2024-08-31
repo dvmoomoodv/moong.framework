@@ -29,74 +29,74 @@
   </VCard>
 </template>
 <script lang="ts" setup>
-import { useOnError } from '#ustra/nuxt/composables'
+import { useOnError } from "#moong/nuxt/composables";
 
 // @ts-ignore
-import doc1 from './md/error1-1.md'
+import doc1 from "./md/error1-1.md";
 
 // @ts-ignore
-import doc2 from './md/error1-2.md'
+import doc2 from "./md/error1-2.md";
 
 // @ts-ignore
-import doc3 from './md/error1-3.md'
+import doc3 from "./md/error1-3.md";
 
 // @ts-ignore
-import doc4 from './md/error1-4.md'
+import doc4 from "./md/error1-4.md";
 
 // @ts-ignore
-import doc5 from './md/error1-5.md'
+import doc5 from "./md/error1-5.md";
 
 // @ts-ignore
-import doc6 from './md/error1-6.md'
+import doc6 from "./md/error1-6.md";
 
 function errorCase1() {
   return useOnError((text: string) => {
-    throw new Error('에러 발생')
-  })('text')
+    throw new Error("에러 발생");
+  })("text");
 }
 
 function errorCase2() {
   return useOnError(
     (text: string) => {
-      throw new Error('에러 발생')
+      throw new Error("에러 발생");
     },
     {
-      message: '에러가 발생하였습니다.',
-    },
-  )('text')
+      message: "에러가 발생하였습니다.",
+    }
+  )("text");
 }
 
 function errorCase3() {
   return useOnError(
     (text: string) => {
-      throw new Error('정보를 상세하게 입력해주세요.')
+      throw new Error("정보를 상세하게 입력해주세요.");
     },
     {
-      message: err => `에러 발생 (${err.message})`,
-    },
-  )('text')
+      message: (err) => `에러 발생 (${err.message})`,
+    }
+  )("text");
 }
 
 function errorCase4() {
   return useOnError(
     (text: string) => {
-      throw new Error('정보를 상세하게 입력해주세요.')
+      throw new Error("정보를 상세하게 입력해주세요.");
     },
     {
-      notifyType: 'toast',
-    },
-  )('text')
+      notifyType: "toast",
+    }
+  )("text");
 }
 
 function errorCase5() {
   return useOnError(
     (text: string) => {
-      throw new Error('정보를 상세하게 입력해주세요.')
+      throw new Error("정보를 상세하게 입력해주세요.");
     },
     {
-      notifyType: 'redirect',
-      path: '/',
-    },
-  )('text')
+      notifyType: "redirect",
+      path: "/",
+    }
+  )("text");
 }
 </script>

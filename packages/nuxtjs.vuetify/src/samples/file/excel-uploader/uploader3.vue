@@ -13,7 +13,10 @@
         :headerRowIndex="1"
       />
 
-      <ULink message="Download Sample Excel File" href="/ustra-sample-resources/excel/sample.xlsx" />
+      <ULink
+        message="Download Sample Excel File"
+        href="/ustra-sample-resources/excel/sample.xlsx"
+      />
 
       <WjTabPanel class="mt-4">
         <WjTab>
@@ -35,27 +38,36 @@
   </VCard>
 </template>
 <script lang="ts" setup>
-import { useFetch } from '#app'
-import { ref, shallowRef } from '#ustra/nuxt'
-import { useOnError } from '#ustra/nuxt/composables'
+import { useFetch } from "#app";
+import { ref, shallowRef } from "#moong/nuxt";
+import { useOnError } from "#moong/nuxt/composables";
 
 // @ts-ignore
-import uploader3_1 from './md/uploader3-1.md'
+import uploader3_1 from "./md/uploader3-1.md";
 
 // @ts-ignore
-import uploader3_2 from './md/uploader3-2.md'
+import uploader3_2 from "./md/uploader3-2.md";
 
-const fileId = ref<string>(null)
-const uploader = shallowRef<InstanceType<typeof UExcelFileUploader>>()
+const fileId = ref<string>(null);
+const uploader = shallowRef<InstanceType<typeof UExcelFileUploader>>();
 
 async function uploadExcelFile() {
   useOnError(async () => {
-    const result: any = (await uploader.value.upload()).convertData
-    alert(JSON.stringify(result))
-  })()
+    const result: any = (await uploader.value.upload()).convertData;
+    alert(JSON.stringify(result));
+  })();
 }
 
-const sourceCode1 = '```java\n' + (await $ustra.fetch.readText('/ustra-sample-resources/excel/source-code/UstraExcelSampleUploadModel.java')) + '```'
+const sourceCode1 =
+  "```java\n" +
+  (await $ustra.fetch.readText(
+    "/ustra-sample-resources/excel/source-code/UstraExcelSampleUploadModel.java"
+  )) +
+  "```";
 const sourceCode2 =
-  '```java\n' + (await $ustra.fetch.readText('/ustra-sample-resources/excel/source-code/UstraExcelSamplePostProcessor.java')) + '```'
+  "```java\n" +
+  (await $ustra.fetch.readText(
+    "/ustra-sample-resources/excel/source-code/UstraExcelSamplePostProcessor.java"
+  )) +
+  "```";
 </script>

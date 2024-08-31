@@ -3,7 +3,7 @@
  * @exports {@link UstraManagementInitialDataLoaded}
  * @packageDocumentation
  */
-import { InitialData } from '#ustra/nuxt/management/services/common/initial-data'
+import { InitialData } from "#moong/nuxt/management/services/common/initial-data";
 
 /**
  * 초기 데이터 로드
@@ -14,10 +14,10 @@ export interface UstraManagementInitialDataLoaded {
    *  - realtime : 실시간
    *  - cached : 캐시 데이터
    */
-  sourceType: 'realtime' | 'cached'
+  sourceType: "realtime" | "cached";
 
   /**
    * 초기 데이터
    */
-  data?: InitialData
+  data?: InitialData;
 }

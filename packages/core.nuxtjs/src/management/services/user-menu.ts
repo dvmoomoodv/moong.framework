@@ -1,6 +1,6 @@
-import { apiModels } from '#ustra/core/data'
-import { defineUstraService } from '#ustra/nuxt/composables'
-import { UserMenu, UserMenus, UserMenuCriteria } from '../models/user'
+import { apiModels } from "#moong/core/data";
+import { defineUstraService } from "#moong/nuxt/composables";
+import { UserMenu, UserMenus, UserMenuCriteria } from "../models/user";
 
 /**
  * 사용자 메뉴 서비스
@@ -12,17 +12,20 @@ export const useUstraUserMenuService = defineUstraService(({ api }) => {
    * @param showLoadingBar 로딩바 표시 여부
    * @returns 즐겨찾기 목록
    */
-  async function getUserMenus(creteria?: UserMenuCriteria, showLoadingBar: boolean = true) {
-    creteria.sysCd = creteria.sysCd || $ustra.management.currentSystemCode
+  async function getUserMenus(
+    creteria?: UserMenuCriteria,
+    showLoadingBar: boolean = true
+  ) {
+    creteria.sysCd = creteria.sysCd || $ustra.management.currentSystemCode;
 
     const result = await api.call<apiModels.ApiResponse<UserMenu[]>>({
-      url: '/api/system/usermenu/list',
-      method: 'POST',
+      url: "/api/system/usermenu/list",
+      method: "POST",
       data: creteria,
       showLoadingBar,
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
   /**
@@ -31,16 +34,16 @@ export const useUstraUserMenuService = defineUstraService(({ api }) => {
    * @returns
    */
   async function updateDefMenu(menu: UserMenu) {
-    menu.sysCd = menu.sysCd || $ustra.management.currentSystemCode
+    menu.sysCd = menu.sysCd || $ustra.management.currentSystemCode;
 
     /** 배열로 넘겨야 함 */
     const result = await api.call<apiModels.ApiResponse<UserMenu>>({
-      url: '/api/system/usermenu/def',
-      method: 'POST',
+      url: "/api/system/usermenu/def",
+      method: "POST",
       data: menu,
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
   /**
@@ -50,12 +53,12 @@ export const useUstraUserMenuService = defineUstraService(({ api }) => {
   async function updateMenu(menus: UserMenus) {
     /** 배열로 넘겨야 함 */
     const result = await api.call<apiModels.ApiResponse<UserMenus>>({
-      url: '/api/system/usermenu/edit',
-      method: 'POST',
+      url: "/api/system/usermenu/edit",
+      method: "POST",
       data: menus,
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
   /**
@@ -64,15 +67,15 @@ export const useUstraUserMenuService = defineUstraService(({ api }) => {
    * @returns
    */
   async function addMenu(userMenu: UserMenu) {
-    userMenu.sysCd = userMenu.sysCd || $ustra.management.currentSystemCode
+    userMenu.sysCd = userMenu.sysCd || $ustra.management.currentSystemCode;
 
     const result = await api.call<apiModels.ApiResponse<UserMenu>>({
-      url: '/api/system/usermenu',
-      method: 'POST',
+      url: "/api/system/usermenu",
+      method: "POST",
       data: userMenu,
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
   /**
@@ -81,16 +84,16 @@ export const useUstraUserMenuService = defineUstraService(({ api }) => {
    * @returns
    */
   async function removeMenu(userMenu: UserMenu) {
-    userMenu.sysCd = userMenu.sysCd || $ustra.management.currentSystemCode
+    userMenu.sysCd = userMenu.sysCd || $ustra.management.currentSystemCode;
 
     const result = await api.call<apiModels.ApiResponse<UserMenu>>({
-      url: '/api/system/usermenu/remove',
-      method: 'POST',
+      url: "/api/system/usermenu/remove",
+      method: "POST",
       data: userMenu,
-    })
+    });
 
-    return result.data.body
+    return result.data.body;
   }
 
-  return { getUserMenus, updateDefMenu, updateMenu, addMenu, removeMenu }
-})
+  return { getUserMenus, updateDefMenu, updateMenu, addMenu, removeMenu };
+});

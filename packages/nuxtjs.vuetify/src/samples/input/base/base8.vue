@@ -2,12 +2,19 @@
   <v-card>
     <template #title> 그룹버튼 라디오버튼 & 기본값 설정 </template>
     <!-- <template #subtitle> type은 'radio'로 설정, v-model값으로 값 그리기, id값으로 그룹지정, checkValue값으로 기본 선택값 지정 </template> -->
-    <template #subtitle> https://vuetifyjs.com/en/components/radio-buttons/#model-group </template>
+    <template #subtitle>
+      https://vuetifyjs.com/en/components/radio-buttons/#model-group
+    </template>
     <template #text>
       <UBox>
         <UItem>
           <UButtonGroup v-model="data2" id="radiobox8" type="radio" />
-          <UButtonGroup v-model="data2" id="radiobox81" type="radio" v-model:checkValue="data2Check" />
+          <UButtonGroup
+            v-model="data2"
+            id="radiobox81"
+            type="radio"
+            v-model:checkValue="data2Check"
+          />
         </UItem>
         <UItem>
           <VBtn text="" @click="resetBtn()">초기화</VBtn>
@@ -21,22 +28,22 @@
 </template>
 
 <script setup lang="ts">
-import base8 from './md/base8.md'
-import { reactive, ref } from '#ustra/nuxt'
+import base8 from "./md/base8.md";
+import { reactive, ref } from "#moong/nuxt";
 
 const data2 = reactive([
-  { value: '1', label: 'test1' },
-  { value: '2', label: 'test2' },
-  { value: '3', label: 'test3' },
-  { value: '4', label: 'test4' },
-])
-const data2Check = ref<string>('1')
+  { value: "1", label: "test1" },
+  { value: "2", label: "test2" },
+  { value: "3", label: "test3" },
+  { value: "4", label: "test4" },
+]);
+const data2Check = ref<string>("1");
 
 const resetBtn = () => {
-  data2Check.value = ''
-}
+  data2Check.value = "";
+};
 
 const onClickTestBtn = () => {
-  data2Check.value = '3'
-}
+  data2Check.value = "3";
+};
 </script>

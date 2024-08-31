@@ -1,8 +1,8 @@
 {
   "imports": {
-    "#ustra/core": "@ustra/core/src",
-    "#ustra/core/*": "@ustra/core/src/*",
-    "#ustra/h3": "@ustra/h3/src",
-    "#ustra/h3/*": "@ustra/h3/src/*"
+    "#moong/core": "@moong/core/src",
+    "#moong/core/*": "@moong/core/src/*",
+    "#moong/h3": "@moong/h3/src",
+    "#moong/h3/*": "@moong/h3/src/*"
   }
 }

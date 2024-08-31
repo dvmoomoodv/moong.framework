@@ -3,9 +3,9 @@
  * @exports {@link HttpServerUtils}
  * @packageDocumentation
  */
-import { IncomingMessage, ServerResponse } from 'http'
-import { URL, URLSearchParams } from 'url'
-import { logger } from '#ustra/core'
+import { IncomingMessage, ServerResponse } from "http";
+import { URL, URLSearchParams } from "url";
+import { logger } from "#moong/core";
 
 /**
  * HTTP Server 관련 유틸리티
@@ -18,10 +18,10 @@ export class HttpServerUtils {
    * @param content
    */
   sendText(res: ServerResponse, content: string | string[]): void {
-    this.setContentType(res, 'text/plain; charset=utf-8')
+    this.setContentType(res, "text/plain; charset=utf-8");
 
-    res.write(content)
-    res.end()
+    res.write(content);
+    res.end();
   }
 
   /**
@@ -30,9 +30,9 @@ export class HttpServerUtils {
    * @param content response body text
    */
   sendNotExists(res: ServerResponse, content?: string): void {
-    res.statusCode = 404
-    res.write(content || 'not found...')
-    res.end()
+    res.statusCode = 404;
+    res.write(content || "not found...");
+    res.end();
   }
 
   /**
@@ -42,9 +42,9 @@ export class HttpServerUtils {
    * @param message 메시지
    */
   sendStatus(res: ServerResponse, statusCode: number, message: string): void {
-    res.statusCode = statusCode
-    res.statusMessage = message
-    res.end()
+    res.statusCode = statusCode;
+    res.statusMessage = message;
+    res.end();
   }
 
   /**
@@ -53,13 +53,13 @@ export class HttpServerUtils {
    * @param content 응답 text or object
    */
   sendJson(res: ServerResponse, content?: object | string): void {
-    this.setContentType(res, 'application/json; charset=utf-8')
-    if (typeof content === 'string' || !content) {
-      res.write(content)
-      res.end()
+    this.setContentType(res, "application/json; charset=utf-8");
+    if (typeof content === "string" || !content) {
+      res.write(content);
+      res.end();
     } else {
-      res.write(JSON.stringify(content))
-      res.end()
+      res.write(JSON.stringify(content));
+      res.end();
     }
   }
 
@@ -69,10 +69,10 @@ export class HttpServerUtils {
    * @param content 응답 text
    */
   sendHtml(res: ServerResponse, content: string | string[]): void {
-    this.setContentType(res, 'text/html; charset=utf-8')
+    this.setContentType(res, "text/html; charset=utf-8");
 
-    res.write(content)
-    res.end()
+    res.write(content);
+    res.end();
   }
 
   /**
@@ -81,7 +81,7 @@ export class HttpServerUtils {
    * @param contentType content type string
    */
   setContentType(res: ServerResponse, contentType: string) {
-    res.setHeader('Content-Type', contentType)
+    res.setHeader("Content-Type", contentType);
   }
 
   /**
@@ -92,8 +92,8 @@ export class HttpServerUtils {
   redirect(res: ServerResponse, url: string) {
     res.writeHead(302, {
       Location: url,
-    })
-    res.end()
+    });
+    res.end();
   }
 
   /**
@@ -103,12 +103,12 @@ export class HttpServerUtils {
   query(req: IncomingMessage): URLSearchParams {
     try {
       // @ts-ignore
-      const url = new URL(req.originalUrl || req.url)
-      return url.searchParams
+      const url = new URL(req.originalUrl || req.url);
+      return url.searchParams;
     } catch (e) {
       // @ts-ignore
-      logger.warn(`request url is invalid : ${req.originalUrl || req.url}`)
-      return new URLSearchParams()
+      logger.warn(`request url is invalid : ${req.originalUrl || req.url}`);
+      return new URLSearchParams();
     }
   }
 
@@ -118,19 +118,19 @@ export class HttpServerUtils {
    */
   body<T = any>(req: IncomingMessage): T {
     // @ts-ignore
-    const { body } = req
+    const { body } = req;
 
     if (!body) {
-      return null
+      return null;
     }
 
-    if (typeof body === 'string') {
-      return JSON.parse(body) as T
+    if (typeof body === "string") {
+      return JSON.parse(body) as T;
     } else {
-      return body as T
+      return body as T;
     }
   }
 }
 
-const instance = new HttpServerUtils()
-export default instance
+const instance = new HttpServerUtils();
+export default instance;

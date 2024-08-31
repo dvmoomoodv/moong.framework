@@ -1,7 +1,10 @@
 <template>
   <v-card>
     <template #title> UField label Slot</template>
-    <template #subtitle> UField 컴포넌트 안에 label slot을 활용하여 텍스트 외에 컴포넌트를 작성해 활용할 수 있다. </template>
+    <template #subtitle>
+      UField 컴포넌트 안에 label slot을 활용하여 텍스트 외에 컴포넌트를 작성해
+      활용할 수 있다.
+    </template>
     <template #text>
       <div class="sample-wrap">
         <UFieldSet>
@@ -51,11 +54,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from '#ustra/nuxt'
-import './style/form.scss'
-import form8 from './md/form8.md'
-import UField from '#ustra/nuxt-vuetify/components/form/u-field.vue'
-const checked = ref(true)
+import { ref } from "#moong/nuxt";
+import "./style/form.scss";
+import form8 from "./md/form8.md";
+import UField from "#moong/nuxt-vuetify/components/form/u-field.vue";
+const checked = ref(true);
 </script>
 
 <style scoped></style>

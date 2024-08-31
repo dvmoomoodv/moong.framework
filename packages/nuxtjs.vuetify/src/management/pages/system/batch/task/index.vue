@@ -11,8 +11,16 @@
           </UField>
           <UField blank>
             <UButtonBox>
-              <VBtn text="초기화" class="gray ico_reset" @click="searchAction.clearSearchParam" />
-              <VBtn text="조회" class="primary ico_search" @click="searchAction.loadSearchedData" />
+              <VBtn
+                text="초기화"
+                class="gray ico_reset"
+                @click="searchAction.clearSearchParam"
+              />
+              <VBtn
+                text="조회"
+                class="primary ico_search"
+                @click="searchAction.loadSearchedData"
+              />
               <VBtn text="신규" @click="formAction.newForm" />
             </UButtonBox>
           </UField>
@@ -53,52 +61,106 @@
               </UField>
             </UFieldRow>
             <UFieldRow>
-              <UField label="배치 명"><VTextField :isRequired="false" v-model="formAction.inputData.batNm" /> </UField>
+              <UField label="배치 명"
+                ><VTextField
+                  :isRequired="false"
+                  v-model="formAction.inputData.batNm"
+                />
+              </UField>
             </UFieldRow>
             <UFieldRow>
-              <UField label="배치 설명"><VTextField :isRequired="false" type="textarea" noResize v-model="formAction.inputData.batDesc" /> </UField>
+              <UField label="배치 설명"
+                ><VTextField
+                  :isRequired="false"
+                  type="textarea"
+                  noResize
+                  v-model="formAction.inputData.batDesc"
+                />
+              </UField>
             </UFieldRow>
             <UFieldRow>
               <UField label="사용 여부" required
-                ><UVRadioGroupBox v-model="formAction.inputData.useYn" :itemsSource="searchAction.useYnItems" />
+                ><UVRadioGroupBox
+                  v-model="formAction.inputData.useYn"
+                  :itemsSource="searchAction.useYnItems"
+                />
               </UField>
             </UFieldRow>
             <UFieldRow>
               <UField label="스케줄 구분 코드">
-                <uVCodeComboBox :isRequired="false" grpCd="SCHDL_DV_CD" v-model="formAction.inputData.schdlDvCd" displayNullText="선택" />
+                <uVCodeComboBox
+                  :isRequired="false"
+                  grpCd="SCHDL_DV_CD"
+                  v-model="formAction.inputData.schdlDvCd"
+                  displayNullText="선택"
+                />
               </UField>
             </UFieldRow>
             <UFieldRow>
               <UField label="스케줄 값">
-                <VTextField :isRequired="false" v-model="formAction.inputData.schdlVal" />
+                <VTextField
+                  :isRequired="false"
+                  v-model="formAction.inputData.schdlVal"
+                />
               </UField>
             </UFieldRow>
             <UFieldRow>
               <UField label="중복 실행 여부" required>
-                <UVRadioGroupBox v-model="formAction.inputData.dupExecAvlYn" :itemsSource="searchAction.avlYnItems" />
+                <UVRadioGroupBox
+                  v-model="formAction.inputData.dupExecAvlYn"
+                  :itemsSource="searchAction.avlYnItems"
+                />
               </UField>
             </UFieldRow>
             <UFieldRow>
-              <UField label="지연 시간(S)"><VTextField :isRequired="false" v-model="formAction.inputData.dlyS" /> </UField>
+              <UField label="지연 시간(S)"
+                ><VTextField
+                  :isRequired="false"
+                  v-model="formAction.inputData.dlyS"
+                />
+              </UField>
             </UFieldRow>
             <UFieldRow>
               <UField label="인스턴스 코드">
-                <VCombobox :isRequired="false" v-model="formAction.inputData.batInstCd" :items="searchAction.workerItems.value" multiple />
+                <VCombobox
+                  :isRequired="false"
+                  v-model="formAction.inputData.batInstCd"
+                  :items="searchAction.workerItems.value"
+                  multiple
+                />
               </UField>
             </UFieldRow>
             <UFieldRow>
-              <UField label="입력 정보" v-if="formAction.mode.value === 'update'">
+              <UField
+                label="입력 정보"
+                v-if="formAction.mode.value === 'update'"
+              >
                 <b
-                  >{{ $ustra.utils.formatting.datetime(formAction.inputData.regDttm, 'yyyy-MM-dd hh:mm:ss') }} /
-                  {{ formAction.inputData.regUsrId }} / {{ formAction.inputData.regUsrIp }}
+                  >{{
+                    $ustra.utils.formatting.datetime(
+                      formAction.inputData.regDttm,
+                      "yyyy-MM-dd hh:mm:ss"
+                    )
+                  }}
+                  / {{ formAction.inputData.regUsrId }} /
+                  {{ formAction.inputData.regUsrIp }}
                 </b>
               </UField>
             </UFieldRow>
             <UFieldRow>
-              <UField label="수정 정보" v-if="formAction.mode.value === 'update'">
+              <UField
+                label="수정 정보"
+                v-if="formAction.mode.value === 'update'"
+              >
                 <b
-                  >{{ $ustra.utils.formatting.datetime(formAction.inputData.updDttm, 'yyyy-MM-dd hh:mm:ss') }} /
-                  {{ formAction.inputData.updUsrId }} / {{ formAction.inputData.updUsrIp }}
+                  >{{
+                    $ustra.utils.formatting.datetime(
+                      formAction.inputData.updDttm,
+                      "yyyy-MM-dd hh:mm:ss"
+                    )
+                  }}
+                  / {{ formAction.inputData.updUsrId }} /
+                  {{ formAction.inputData.updUsrIp }}
                 </b>
               </UField>
             </UFieldRow>
@@ -117,7 +179,11 @@
               <UField direction="col">
                 <UButtonBox :right="true">
                   <VBtn text="저장" @click="formAction.saveForm" />
-                  <VBtn text="삭제" :disabled="formAction.mode.value === 'new'" @click="formAction.deleteForm" />
+                  <VBtn
+                    text="삭제"
+                    :disabled="formAction.mode.value === 'new'"
+                    @click="formAction.deleteForm"
+                  />
                 </UButtonBox>
               </UField>
             </UFieldRow>
@@ -141,54 +207,70 @@
   </UBox>
 </template>
 <script lang="ts" setup>
-import { ref, reactive, watch, onMounted, useOnError, provide, inject, shallowRef, computed, nextTick } from '#ustra/nuxt'
-import { baseModels } from '#ustra/core/data'
-import { BatchCriteria, Batch, useUstraBatchService, useUstraBatchWorkerService } from '#ustra/nuxt/management'
-import BatchHist from '../hist/index.vue'
+import {
+  ref,
+  reactive,
+  watch,
+  onMounted,
+  useOnError,
+  provide,
+  inject,
+  shallowRef,
+  computed,
+  nextTick,
+} from "#moong/nuxt";
+import { baseModels } from "#moong/core/data";
+import {
+  BatchCriteria,
+  Batch,
+  useUstraBatchService,
+  useUstraBatchWorkerService,
+} from "#moong/nuxt/management";
+import BatchHist from "../hist/index.vue";
 
-import UVRadioGroupBox from '#ustra/nuxt-vuetify/components/radio/u-v-radio-group-box.vue'
-import uVCodeComboBox from '#ustra/nuxt-vuetify/management/components/combo-box/u-v-code-combo-box.vue'
+import UVRadioGroupBox from "#moong/nuxt-vuetify/components/radio/u-v-radio-group-box.vue";
+import uVCodeComboBox from "#moong/nuxt-vuetify/management/components/combo-box/u-v-code-combo-box.vue";
 
-const service = useUstraBatchService()
-const workerService = useUstraBatchWorkerService()
-const batchHistComp = ref<InstanceType<typeof BatchHist>>()
+const service = useUstraBatchService();
+const workerService = useUstraBatchWorkerService();
+const batchHistComp = ref<InstanceType<typeof BatchHist>>();
 
 onMounted(async () => {
-  formAction.saved()
+  formAction.saved();
 
   // const result = (await workerService.getWorkerList({})).body
-  searchAction.workerItems.value = ['W01', 'W02']
+  searchAction.workerItems.value = ["W01", "W02"];
   // searchAction.workerItems.value = result.map(item => {
   //   return item.workerId
   // })
-})
+});
 
 const searchAction = (function () {
   const searchParam: BatchCriteria = reactive({
     batId: null,
     batNm: null,
-  })
+  });
 
   function clearSearchParam() {
-    searchParam.batId = null
-    searchParam.batNm = null
+    searchParam.batId = null;
+    searchParam.batNm = null;
   }
 
   async function loadSearchedData() {
-    formAction.saved()
+    formAction.saved();
   }
 
   const useYnItems = reactive([
-    { value: 'Y', text: '사용' },
-    { value: 'N', text: '미사용' },
-  ])
+    { value: "Y", text: "사용" },
+    { value: "N", text: "미사용" },
+  ]);
 
   const avlYnItems = reactive([
-    { value: 'Y', text: '가능' },
-    { value: 'N', text: '불가능' },
-  ])
+    { value: "Y", text: "가능" },
+    { value: "N", text: "불가능" },
+  ]);
 
-  const workerItems = ref<string[]>([])
+  const workerItems = ref<string[]>([]);
 
   return {
     searchParam,
@@ -197,134 +279,137 @@ const searchAction = (function () {
     useYnItems,
     avlYnItems,
     workerItems,
-  }
-})()
+  };
+})();
 
-const data = ref([])
+const data = ref([]);
 const gridAction = (function () {
   async function loadData() {
     const result = await service.getBatchList({
       ...searchAction.searchParam,
-    })
-    data.value = result.body
+    });
+    data.value = result.body;
   }
 
   return {
     loadData,
-  }
-})()
+  };
+})();
 
 const formAction = (function () {
-  const mode = ref<baseModels.FormMode>('new')
-  const formDisabled = ref(true)
+  const mode = ref<baseModels.FormMode>("new");
+  const formDisabled = ref(true);
 
   const inputData = reactive({
     batId: null,
     batNm: null,
     batDesc: null,
-    useYn: 'Y',
+    useYn: "Y",
     schdlDvCd: null,
     schdlVal: null,
-    dupExecAvlYn: 'N',
+    dupExecAvlYn: "N",
     dlyS: 0,
     batInstCd: [],
-    immediateStartYn: 'N',
-  })
+    immediateStartYn: "N",
+  });
 
   async function init() {
-    mode.value = 'new'
+    mode.value = "new";
 
     Object.assign(inputData, {
       batId: null,
       batNm: null,
       batDesc: null,
-      useYn: 'Y',
+      useYn: "Y",
       schdlDvCd: null,
       schdlVal: null,
-      dupExecAvlYn: 'N',
+      dupExecAvlYn: "N",
       dlyS: 0,
       batInstCd: [],
-      immediateStartYn: 'N',
-    })
+      immediateStartYn: "N",
+    });
   }
 
   async function updateForm(batch: Batch) {
-    mode.value = 'update'
+    mode.value = "update";
 
     const result = (
       await service.getBatch({
         header: {},
         batId: batch.batId,
       })
-    ).body
-    Object.assign(inputData, result)
-    formDisabled.value = false
+    ).body;
+    Object.assign(inputData, result);
+    formDisabled.value = false;
 
     const valueMap = result.insts.map(function (item) {
-      return item.batInstCd
-    })
-    inputData.batInstCd = valueMap
+      return item.batInstCd;
+    });
+    inputData.batInstCd = valueMap;
   }
 
   function newForm() {
-    formDisabled.value = false
-    init()
+    formDisabled.value = false;
+    init();
   }
 
   const saveForm = useOnError(
     async () => {
-      const realInputData = $ustra.utils.core.deepMerge({}, inputData)
+      const realInputData = $ustra.utils.core.deepMerge({}, inputData);
 
-      if (mode.value === 'new') {
-        await service.addBatch({ header: {}, batch: realInputData })
+      if (mode.value === "new") {
+        await service.addBatch({ header: {}, batch: realInputData });
       } else {
-        await service.modBatch({ header: {}, batch: realInputData })
+        await service.modBatch({ header: {}, batch: realInputData });
       }
 
-      saved()
+      saved();
     },
     {
       // message: Error.message,
-    },
-  )
+    }
+  );
 
   async function deleteForm() {
-    const realInputData = $ustra.utils.core.deepMerge({}, inputData)
+    const realInputData = $ustra.utils.core.deepMerge({}, inputData);
 
-    if (await confirm('삭제하시겠습니까?')) {
-      await service.delBatch({ header: {}, batId: realInputData.batId })
-      saved()
+    if (await confirm("삭제하시겠습니까?")) {
+      await service.delBatch({ header: {}, batId: realInputData.batId });
+      saved();
     }
   }
 
   async function saved() {
-    formDisabled.value = true
-    init()
-    gridAction.loadData()
+    formDisabled.value = true;
+    init();
+    gridAction.loadData();
   }
 
-  const histShow = ref(false)
+  const histShow = ref(false);
   async function batchStart() {
-    histShow.value = true
-    await nextTick()
-    const realInputData = $ustra.utils.core.deepMerge({}, formAction.inputData)
-    batchHistComp.value.searchAction.loadSearchedData(realInputData.batId)
-    const message = await service.startBatch({ header: {}, batId: realInputData.batId })
+    histShow.value = true;
+    await nextTick();
+    const realInputData = $ustra.utils.core.deepMerge({}, formAction.inputData);
+    batchHistComp.value.searchAction.loadSearchedData(realInputData.batId);
+    const message = await service.startBatch({
+      header: {},
+      batId: realInputData.batId,
+    });
   }
 
   async function validateId(batId) {
-    if (!batId) return
-    if (mode.value === 'update') return
+    if (!batId) return;
+    if (mode.value === "update") return;
     try {
       const checkId = await service.getBatch({
         header: {},
         batId,
-      })
+      });
       if (checkId) {
-        return '이미 사용 중인 아이디입니다.'
+        return "이미 사용 중인 아이디입니다.";
       }
     } catch (error) {}
-    return true
+    return true;
   }
   return {
     mode,
@@ -339,12 +424,12 @@ const formAction = (function () {
     saved,
     batchStart,
     histShow,
-  }
-})()
+  };
+})();
 </script>
 <script lang="ts">
 export default {
-  name: 'UstraManagementSystemBatchTask',
-}
+  name: "UstraManagementSystemBatchTask",
+};
 </script>
 <style scoped></style>

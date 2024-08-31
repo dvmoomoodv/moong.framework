@@ -17,14 +17,20 @@
 </template>
 
 <script setup lang="ts">
-import { UPhoneNoBox, UValidationGroup } from '#ustra/nuxt-vuetify/components'
-import { UButton, UPhoneNoBox as UPhoneNoBox2 } from '#ustra/nuxt-wijmo/components'
+  import {
+    UPhoneNoBox,
+    UValidationGroup,
+  } from "#moong/nuxt-vuetify/components";
+  import {
+    UButton,
+    UPhoneNoBox as UPhoneNoBox2,
+  } from "#moong/nuxt-wijmo/components";
 
-const validationGroup = ref<InstanceType<typeof UValidationGroup>>()
+  const validationGroup = ref<InstanceType<typeof UValidationGroup>>();
 
-const value = ref('')
-const value2 = ref('')
-const value3 = ref('')
-const value4 = ref('')
+  const value = ref("");
+  const value2 = ref("");
+  const value3 = ref("");
+  const value4 = ref("");
 </script>
 ```

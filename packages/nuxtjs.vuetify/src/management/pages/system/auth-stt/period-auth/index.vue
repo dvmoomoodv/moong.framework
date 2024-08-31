@@ -1,41 +1,63 @@
 <template>
   <UBox direction="col" height="100%">
-      <UItem ratio="1">
-          <UFieldSet>
-              <UFieldRow :ratio="[1, 1]">
-                  <UField direction="row" label="시스템 코드">
-                      <UVCodeComboBox grpCd="SYS_CD" v-model="searchAction.searchParam.sysCd"></UVCodeComboBox>
-                  </UField>
-                  <UField direction="row" label="기간">
-                    <UVDatePeriodBox v-model="searchPeriod" mode="date" value-format="yyyy-MM-dd" display-format="yyyy-MM-dd"></UVDatePeriodBox>
-                  </UField>
-              </UFieldRow>
-          </UFieldSet>
-          <UButtonBox :center="true">
-              <VBtn text="초기화" class="gray ico_reset" @click="searchAction.clearSearchParam" />
-              <VBtn text="조회" class="primary" @click="searchAction.loadSearchedData" />
-              <VBtn text="엑셀다운로드" class="primary" type="default" @click="gridAction.excelDownload" />
-          </UButtonBox>
-      </UItem>
-      <UItem :ratio="1">
-        {{ gridAction.ready.value }}
-          <URealGrid :columns="gridAction.columns.value"
-                     :fields="gridAction.fields.value"
-                     :ready="gridAction.ready.value"
-                     :dataProvider="gridAction.dataProvider.value"
-                     ref="grid"
+    <UItem ratio="1">
+      <UFieldSet>
+        <UFieldRow :ratio="[1, 1]">
+          <UField direction="row" label="시스템 코드">
+            <UVCodeComboBox
+              grpCd="SYS_CD"
+              v-model="searchAction.searchParam.sysCd"
+            ></UVCodeComboBox>
+          </UField>
+          <UField direction="row" label="기간">
+            <UVDatePeriodBox
+              v-model="searchPeriod"
+              mode="date"
+              value-format="yyyy-MM-dd"
+              display-format="yyyy-MM-dd"
+            ></UVDatePeriodBox>
+          </UField>
+        </UFieldRow>
+      </UFieldSet>
+      <UButtonBox :center="true">
+        <VBtn
+          text="초기화"
+          class="gray ico_reset"
+          @click="searchAction.clearSearchParam"
         />
-      </UItem>
+        <VBtn
+          text="조회"
+          class="primary"
+          @click="searchAction.loadSearchedData"
+        />
+        <VBtn
+          text="엑셀다운로드"
+          class="primary"
+          type="default"
+          @click="gridAction.excelDownload"
+        />
+      </UButtonBox>
+    </UItem>
+    <UItem :ratio="1">
+      {{ gridAction.ready.value }}
+      <URealGrid
+        :columns="gridAction.columns.value"
+        :fields="gridAction.fields.value"
+        :ready="gridAction.ready.value"
+        :dataProvider="gridAction.dataProvider.value"
+        ref="grid"
+      />
+    </UItem>
   </UBox>
 </template>
 <script setup type="ts">
-import { useUstraAuthSttService, useUstraCodeList } from '#ustra/nuxt/management'
-import URealGrid from '#ustra/nuxt-vuetify/components/real-grid/u-real-grid.vue'
-import UVCodeComboBox from '#ustra/nuxt-vuetify/management/components/combo-box/u-v-code-combo-box.vue'
-import UFieldSet from '#ustra/nuxt-vuetify/components/form/u-field-set.vue'
+import { useUstraAuthSttService, useUstraCodeList } from '#moong/nuxt/management'
+import URealGrid from '#moong/nuxt-vuetify/components/real-grid/u-real-grid.vue'
+import UVCodeComboBox from '#moong/nuxt-vuetify/management/components/combo-box/u-v-code-combo-box.vue'
+import UFieldSet from '#moong/nuxt-vuetify/components/form/u-field-set.vue'
 import { LocalDataProvider } from 'realgrid'
-import UVDatePeriodBox from '#ustra/nuxt-vuetify/components/date-period/u-v-date-period-box.vue'
-import { useLogger } from '#ustra/core'
+import UVDatePeriodBox from '#moong/nuxt-vuetify/components/date-period/u-v-date-period-box.vue'
+import { useLogger } from '#moong/core'
 const service = useUstraAuthSttService()
 const sysCodeList = useUstraCodeList('SYS_CD')
 const grid = ref(null)

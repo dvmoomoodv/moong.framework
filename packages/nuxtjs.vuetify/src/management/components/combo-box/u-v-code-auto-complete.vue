@@ -12,62 +12,62 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, withDefaults, watch, defineOptions } from '#ustra/nuxt'
+import { defineProps, withDefaults, watch, defineOptions } from "#moong/nuxt";
 
 defineOptions({
   inheritAttrs: false,
-})
+});
 
 interface CodeComboBoxProps {
   /**
    * 그룹 코드
    */
-  grpCd: string
+  grpCd: string;
 
   /**
    * 사용 중인 코드 값만 조회 여부
    */
-  onlyUse?: boolean
+  onlyUse?: boolean;
 
   /**
    * 코드 디스플레이 여부
    */
-  displayCode?: boolean
+  displayCode?: boolean;
 
   /**
    * 목록 커스토마이징 function
    */
-  customizeItems?: (codes: CodeItem[]) => CodeItem[]
+  customizeItems?: (codes: CodeItem[]) => CodeItem[];
 
   /**
    * 이름 순 정렬 여부
    */
-  sortByName?: boolean
+  sortByName?: boolean;
 
   /**
    * 코드 순 정렬 여부
    */
-  sortByCode?: boolean
+  sortByCode?: boolean;
 
   /**
    * null value text
    */
-  displayNullText?: string
+  displayNullText?: string;
 
   /**
    * object value
    */
-  objectValue?: CodeItem
+  objectValue?: CodeItem;
 
   /**
    * combobox Label
    */
-  itemTitle?: string
+  itemTitle?: string;
 
   /**
    * combobox value
    */
-  itemValue?: string
+  itemValue?: string;
 }
 
 /* @vue-ignore */
@@ -75,7 +75,7 @@ interface UCodeComboBoxProps extends CodeComboBoxProps {
   /**
    * model value
    */
-  modelValue?: object
+  modelValue?: object;
 }
 
 /* @vue-ignore */
@@ -88,39 +88,40 @@ const props = withDefaults(defineProps<UCodeComboBoxProps>(), {
   sortByName: false,
   sortByCode: false,
   displayNullText: null,
-  itemTitle: 'display',
-  itemValue: 'value',
-})
+  itemTitle: "display",
+  itemValue: "value",
+});
 
-const { comboValue, itemsSource, vmodelValue, objectValue } = useComboComponent(props)
+const { comboValue, itemsSource, vmodelValue, objectValue } =
+  useComboComponent(props);
 
-const isAutoSelectFirst = ref(true)
+const isAutoSelectFirst = ref(true);
 onMounted(() => {
-  isAutoSelectFirst.value = true
-})
+  isAutoSelectFirst.value = true;
+});
 
-const itemProps = v => {
+const itemProps = (v) => {
   return {
     display: v.display,
     value: v.value,
-  }
-}
+  };
+};
 
 watch(
   itemsSource,
-  v => {
+  (v) => {
     // select first value
     if (!comboValue.value && v.length > 0) {
-      comboValue.value = v[0]
+      comboValue.value = v[0];
     }
   },
   {
     immediate: true,
-  },
-)
+  }
+);
 </script>
 <script lang="ts">
 export default {
-  name: 'UVCodeAutoComplete',
-}
+  name: "UVCodeAutoComplete",
+};
 </script>

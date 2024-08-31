@@ -13,7 +13,10 @@
       <VTextField v-model="fileId" />
       <VTextField v-model="fileNo" />
 
-      <img :src="$ustra.management.file.getViewUrl(fileId, fileNo, fileGroupId)" style="max-height: 200px" />
+      <img
+        :src="$ustra.management.file.getViewUrl(fileId, fileNo, fileGroupId)"
+        style="max-height: 200px"
+      />
 
       <!-- <UMarkdownViewer :content="doc1" /> -->
 
@@ -22,27 +25,35 @@
       해당 메소드는 fileId, fileNo, fileGroupId를 인자 값으로 받으며 모든 값은 필수이다.
       <br /><br /> -->
       <VBtn @click="getWebImageUrl">Image URL 조회</VBtn>
-      <img :src="webFileImageUrl" v-if="webFileImageUrl" style="max-height: 200px" />
+      <img
+        :src="webFileImageUrl"
+        v-if="webFileImageUrl"
+        style="max-height: 200px"
+      />
 
       <!-- <UMarkdownViewer :content="doc2" /> -->
     </template>
   </VCard>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
+import { ref } from "#moong/nuxt";
 
 // @ts-ignore
-import doc1 from './md/uploader4-1.md'
+import doc1 from "./md/uploader4-1.md";
 
 // @ts-ignore
-import doc2 from './md/uploader4-2.md'
+import doc2 from "./md/uploader4-2.md";
 
-const fileGroupId = ref('ustra-sample-image')
-const fileId = ref('xYjN4kzM3MjN5ATM1IGZmVlVWdWONlGVRZWTsFTUCNnWmRG')
-const fileNo = ref(1)
+const fileGroupId = ref("ustra-sample-image");
+const fileId = ref("xYjN4kzM3MjN5ATM1IGZmVlVWdWONlGVRZWTsFTUCNnWmRG");
+const fileNo = ref(1);
 
-const webFileImageUrl = ref(null)
+const webFileImageUrl = ref(null);
 async function getWebImageUrl() {
-  webFileImageUrl.value = await $ustra.management.file.getWebAccessUrl(fileId.value, fileNo.value, 'ustra-sample-image')
+  webFileImageUrl.value = await $ustra.management.file.getWebAccessUrl(
+    fileId.value,
+    fileNo.value,
+    "ustra-sample-image"
+  );
 }
 </script>

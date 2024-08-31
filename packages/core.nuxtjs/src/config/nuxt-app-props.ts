@@ -1,4 +1,9 @@
-import { AppProps, LogLevel, Profile, DeviceType } from '#ustra/core/config/props'
+import {
+  AppProps,
+  LogLevel,
+  Profile,
+  DeviceType,
+} from "#moong/core/config/props";
 import {
   NuxtOptions,
   WijmoOptions,
@@ -16,7 +21,7 @@ import {
   PiniaOptions,
   UtilityOptions,
   CacheOptions,
-} from './props/nuxt'
+} from "./props/nuxt";
 
 /**
  * Nuxt 설정 정보
@@ -25,10 +30,10 @@ interface NuxtAppProps extends AppProps {
   /**
    * nuxt 설정
    */
-  nuxt?: NuxtOptions
+  nuxt?: NuxtOptions;
 }
 
-export { LogLevel, Profile, DeviceType }
+export { LogLevel, Profile, DeviceType };
 export type {
   NuxtAppProps,
   EnvOptions,
@@ -47,4 +52,4 @@ export type {
   PiniaOptions,
   UtilityOptions,
   CacheOptions,
-}
+};

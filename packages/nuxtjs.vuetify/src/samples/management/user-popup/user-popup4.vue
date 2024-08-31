@@ -11,15 +11,15 @@
   </v-card>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
-import { UMarkdownViewer } from '#ustra/nuxt/components'
-import UVUserInputBox from '#ustra/nuxt-vuetify/management/components/input/u-v-user-input-box.vue'
+import { ref } from "#moong/nuxt";
+import { UMarkdownViewer } from "#moong/nuxt/components";
+import UVUserInputBox from "#moong/nuxt-vuetify/management/components/input/u-v-user-input-box.vue";
 
 // @ts-ignore
-import doc1 from './md/user-popup4-1.md'
+import doc1 from "./md/user-popup4-1.md";
 
 // @ts-ignore
-import doc2 from './md/user-popup4-2.md'
+import doc2 from "./md/user-popup4-2.md";
 
-const user = ref(null)
+const user = ref(null);
 </script>

@@ -1,14 +1,14 @@
-import { defineNuxtConfig } from '#ustra/nuxt/config'
+import { defineNuxtConfig } from "#moong/nuxt/config";
 
 export default defineNuxtConfig({
   ssr: false,
-  modules: ['@ustra/nuxt'],
+  modules: ["@moong/nuxt"],
   ustra: {
     app: {
       processPath: __dirname,
     },
     logging: {
-      name: 'demo',
+      name: "demo",
     },
     nuxt: {
       vuetify: {
@@ -19,4 +19,4 @@ export default defineNuxtConfig({
       },
     },
   },
-})
+});

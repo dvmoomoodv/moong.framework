@@ -2,16 +2,16 @@
   <DatePicker v-bind="attrs" v-model:value="props.modelValue" />
 </template>
 <script lang="ts" setup>
-import DatePicker from 'vue-datepicker-next'
-import 'vue-datepicker-next/index.css'
-import { core } from '#ustra/core/utils'
+import DatePicker from "vue-datepicker-next";
+import "vue-datepicker-next/index.css";
+import { core } from "#moong/core/utils";
 
-const props = defineProps(['modelValue'])
+const props = defineProps(["modelValue"]);
 
 const attrs = computed(() => {
-  const $attrs = useAttrs()
-  return core.deepMerge($attrs)
-})
+  const $attrs = useAttrs();
+  return core.deepMerge($attrs);
+});
 </script>
 
 <!-- <template>
@@ -24,9 +24,9 @@ const attrs = computed(() => {
   <VOverlay v-model="isDatePickerOpen" scroll-strategy="none"></VOverlay>
 </template>
 <script lang="ts" setup>
-import { computed, useAttrs, defineExpose, ref, defineProps, withDefaults } from '#ustra/nuxt'
+import { computed, useAttrs, defineExpose, ref, defineProps, withDefaults } from '#moong/nuxt'
 import Datepicker from '@vuepic/vue-datepicker'
-import { core } from '#ustra/core/utils'
+import { core } from '#moong/core/utils'
 import { ko } from 'date-fns/locale'
 
 const props = withDefaults(

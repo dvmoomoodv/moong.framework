@@ -3,7 +3,8 @@
     <template #text>
       <h3>Validation</h3>
       <br />
-      UValidationGroup 컴포넌트 내에 위치할 경우, 법인 번호의 유효성을 체크할 수 있다.
+      UValidationGroup 컴포넌트 내에 위치할 경우, 법인 번호의 유효성을 체크할 수
+      있다.
 
       <br /><br />
       <UValidationGroup ref="validationGroup">
@@ -22,11 +23,11 @@
   </v-card>
 </template>
 <script lang="ts" setup>
-import { ref } from '#ustra/nuxt'
+import { ref } from "#moong/nuxt";
 
 // @ts-ignore
-import doc1 from './md/biz-no4.md'
+import doc1 from "./md/biz-no4.md";
 
-const value = ref(null)
-const validationGroup = ref<InstanceType<typeof UValidationGroup>>()
+const value = ref(null);
+const validationGroup = ref<InstanceType<typeof UValidationGroup>>();
 </script>

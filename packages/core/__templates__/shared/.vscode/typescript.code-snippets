@@ -3,15 +3,7 @@
     "scope": "typescript",
     "prefix": "@USTRA",
     "description": "TypeScript 모듈 snippet",
-    "body": [
-      "/**",
-      " * TODO: Module Description",
-      " * @exports {@link modules}",
-      " * @packageDocumentation",
-      " */",
-      "",
-      "export { {} as modules  }"
-    ],
+    "body": ["/**", " * TODO: Module Description", " * @exports {@link modules}", " * @packageDocumentation", " */", "", "export { {} as modules  }"],
   },
   "TypeScript Jest Test 모듈": {
     "scope": "typescript",
@@ -23,12 +15,12 @@
       " * @packageDocumentation",
       " */",
       "",
-      "import { logger } from '#ustra/core'",
+      "import { logger } from '#moong/core'",
       "",
       "describe('input here description', () => {",
       "  test('input here test title', () => {",
       "  })",
-      "})"
+      "})",
     ],
   },
   "TypeScript Model": {
@@ -42,10 +34,10 @@
       " * @packageDocumentation",
       " */",
       "",
-      "import { baseModels, apiModels, interfaceModels, paginationModels } from '#ustra/core/data'",
+      "import { baseModels, apiModels, interfaceModels, paginationModels } from '#moong/core/data'",
       "",
       "export interface SampleModel extends baseModels.BaseModel {",
-      "}"
+      "}",
     ],
   },
 }

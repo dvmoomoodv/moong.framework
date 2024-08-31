@@ -29,23 +29,23 @@
   </USampleContentContainer>
 </template>
 <script lang="ts" setup>
-import { ref, reactive } from '#ustra/nuxt'
-import { USampleContentContainer } from '#ustra/nuxt-vuetify/samples'
-import data from './data'
+import { ref, reactive } from "#moong/nuxt";
+import { USampleContentContainer } from "#moong/nuxt-vuetify/samples";
+import data from "./data";
 
 // @ts-ignore
-import doc1 from './md/auto-complete1-1.md'
+import doc1 from "./md/auto-complete1-1.md";
 
 // @ts-ignore
-import doc2 from './md/auto-complete1-2.md'
+import doc2 from "./md/auto-complete1-2.md";
 
-const value = ref(null)
-const itemsSource = reactive(data)
+const value = ref(null);
+const itemsSource = reactive(data);
 const options = reactive({
   caseSensitiveSearch: false,
   beginsWithSearch: false,
   isAnimated: false,
   delay: 500,
   maxItems: 6,
-})
+});
 </script>

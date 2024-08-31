@@ -46,57 +46,74 @@
   </UPopup>
 </template>
 <script lang="ts" setup>
-import { defineProps, withDefaults, computed, ref, defineOptions } from '#ustra/nuxt'
-import { Menu, useUstraCodeList, useUstraUserService } from '#ustra/nuxt/management'
-import uVCodeComboBox from '../combo-box/u-v-code-combo-box.vue'
-// import { UCodeComboBox } from '#ustra/nuxt-wijmo/management/components'
-// import { useWijmoTreeView } from '#ustra/nuxt-wijmo/composables'
-import { useVModel } from '@vueuse/core'
-import treeview from 'vue3-treeview'
-import UTreeView from '../../../components/treeview/u-tree-view.vue'
+import {
+  defineProps,
+  withDefaults,
+  computed,
+  ref,
+  defineOptions,
+} from "#moong/nuxt";
+import {
+  Menu,
+  useUstraCodeList,
+  useUstraUserService,
+} from "#moong/nuxt/management";
+import uVCodeComboBox from "../combo-box/u-v-code-combo-box.vue";
+// import { UCodeComboBox } from '#moong/nuxt-wijmo/management/components'
+// import { useWijmoTreeView } from '#moong/nuxt-wijmo/composables'
+import { useVModel } from "@vueuse/core";
+import treeview from "vue3-treeview";
+import UTreeView from "../../../components/treeview/u-tree-view.vue";
 
-const userService = useUstraUserService()
-const treeviewRef = ref(null)
+const userService = useUstraUserService();
+const treeviewRef = ref(null);
 const props = withDefaults(
   defineProps<{
     /**
      * 팝업 오픈 여부
      */
-    modelValue: boolean
+    modelValue: boolean;
     /**
      * 팝업 제목
      * @default '메뉴 조회'
      */
-    title?: string
+    title?: string;
 
     /**
      * 멀티 선택 여부
      * @default false
      */
-    multiple?: boolean
+    multiple?: boolean;
 
     /**
      * 기본 선택 시스템 코드
      */
-    defaultSysCd?: string
+    defaultSysCd?: string;
 
     /**
      * 시스템 코드 선택 가능 여부
      * @default true
      */
-    canSelectSysCd?: boolean
+    canSelectSysCd?: boolean;
   }>(),
-  { title: '메뉴 조회', multiple: false, defaultSysCd: null, canSelectSysCd: true },
-)
+  {
+    title: "메뉴 조회",
+    multiple: false,
+    defaultSysCd: null,
+    canSelectSysCd: true,
+  }
+);
 
 const emits = defineEmits<{
-  (e: 'selected', item: Menu | Menu[]): void
-  (e: 'update:modelValue', v: boolean): void
-}>()
-const modelValue = useVModel(props, 'modelValue')
+  (e: "selected", item: Menu | Menu[]): void;
+  (e: "update:modelValue", v: boolean): void;
+}>();
+const modelValue = useVModel(props, "modelValue");
 
 // conditions
-const currentSysCd = ref(props.defaultSysCd || useUstraCodeList('SYS_CD')[0].dtlCd)
+const currentSysCd = ref(
+  props.defaultSysCd || useUstraCodeList("SYS_CD")[0].dtlCd
+);
 
 // teee
 // const treeView = useWijmoTreeView<Menu>({
@@ -116,10 +133,10 @@ const currentSysCd = ref(props.defaultSysCd || useUstraCodeList('SYS_CD')[0].dtl
 const treeItemsSource = computed(() => {
   const menus = $ustra.utils.core.deepMerge(
     [],
-    $ustra.management.store.initData.programMenus.filter(menu => {
-      return menu.sysCd === currentSysCd.value && menu.delYn === 'N'
-    }),
-  )
+    $ustra.management.store.initData.programMenus.filter((menu) => {
+      return menu.sysCd === currentSysCd.value && menu.delYn === "N";
+    })
+  );
   // const displayMenus: Menu[] = []
   // for (const menu of menus) {
   //   if (!menu.uprMnuId) {
@@ -134,59 +151,59 @@ const treeItemsSource = computed(() => {
   //     }
   //   }
   // }
-  return menus
-})
+  return menus;
+});
 
-const selectedItem = ref(null)
+const selectedItem = ref(null);
 /**
  * Node Event
  */
 function opened(node) {
-  console.log('page opened event = ', node)
+  console.log("page opened event = ", node);
 }
 function closed(node) {
-  console.log('page closed event = ', node)
+  console.log("page closed event = ", node);
 }
 function focus(node) {
-  selectedItem.value = node
-  console.log('page focus event = ', node)
+  selectedItem.value = node;
+  console.log("page focus event = ", node);
 }
 function toggle(node) {
-  console.log('page toggle event = ', node)
+  console.log("page toggle event = ", node);
 }
 function blur(node) {
-  console.log('page blur event = ', node)
+  console.log("page blur event = ", node);
 }
 function edit(node) {
-  console.log('page edit event = ', node)
+  console.log("page edit event = ", node);
 }
 function checked(node) {
-  console.log('page checked event = ', node)
+  console.log("page checked event = ", node);
 }
 function unchecked(node) {
-  console.log('page unchecked event = ', node)
+  console.log("page unchecked event = ", node);
 }
 
 /**
  * Context Event
  */
 function dragstart(context) {
-  console.log('page dragstart event = ', context)
+  console.log("page dragstart event = ", context);
 }
 function dragenter(context) {
-  console.log('page dragenter event = ', context)
+  console.log("page dragenter event = ", context);
 }
 function dragleave(context) {
-  console.log('page dragleave event = ', context)
+  console.log("page dragleave event = ", context);
 }
 function dragend(context) {
-  console.log('page dragend event = ', context)
+  console.log("page dragend event = ", context);
 }
 function over(context) {
-  console.log('page over event = ', context)
+  console.log("page over event = ", context);
 }
 function drop(context) {
-  console.log('page drop event = ', context)
+  console.log("page drop event = ", context);
 }
 
 // button
@@ -200,20 +217,23 @@ function drop(context) {
 
 function onClickApplyButton() {
   if (!props.multiple) {
-    const selectedValue = $ustra.utils.core.deepMerge({}, selectedItem.value)
-    delete selectedValue.items
-    emits('selected', selectedValue)
+    const selectedValue = $ustra.utils.core.deepMerge({}, selectedItem.value);
+    delete selectedValue.items;
+    emits("selected", selectedValue);
 
-    modelValue.value = false
+    modelValue.value = false;
   } else {
-    console.log(treeviewRef.value)
-    const checkedValues = $ustra.utils.core.deepMerge([], treeviewRef.value.checkedItems)
+    console.log(treeviewRef.value);
+    const checkedValues = $ustra.utils.core.deepMerge(
+      [],
+      treeviewRef.value.checkedItems
+    );
     for (const c of checkedValues) {
-      delete c.items
+      delete c.items;
     }
 
-    emits('selected', checkedValues)
-    modelValue.value = false
+    emits("selected", checkedValues);
+    modelValue.value = false;
   }
 }
 

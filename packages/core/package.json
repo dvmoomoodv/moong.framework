@@ -1,14 +1,14 @@
 {
-  "name": "@ustra/core",
-  "version": "3.2.0-stable",
-  "description": "USTRA Node framework 3 - core",
-  "author": "Roy Lee <keymasroy@gsitm.com>",
+  "name": "@moong/core",
+  "version": "0.0.1",
+  "description": "core",
+  "author": "Moomoo <dvmoomoodv@gmail.com>",
   "main": "./src/index.ts",
   "module": "./src/index.ts",
   "license": "MIT",
   "repository": {
     "type": "github",
-    "url": "https://github.com/ustraframework/ustra-framework3-node",
+    "url": "https://github.com/dvmoomoodv/moong.framework",
     "directory": "framework/core"
   },
   "homepage": "http://guide.ustraframework.kro.kr/",
@@ -17,8 +17,8 @@
     "typescript"
   ],
   "bugs": {
-    "url": "http://guide.ustraframework.kro.kr/forum",
-    "email": "ustraframe@gmail.com"
+    "url": "https://github.com/dvmoomoodv/moong.framework/issues",
+    "email": "dvmoomoodv@gmail.com"
   },
   "sideEffects": false,
   "files": [
@@ -32,8 +32,8 @@
     "tsconfig.json"
   ],
   "imports": {
-    "#ustra/core": "./src/index.ts",
-    "#ustra/core/*": "./src/*"
+    "#moong/core": "./src/index.ts",
+    "#moong/core/*": "./src/*"
   },
   "publishConfig": {
     "access": "public",
@@ -57,7 +57,7 @@
     "@types/inquirer": "^8.0.0",
     "@types/jest": "^28.1.6",
     "@types/shelljs": "^0.8.11",
-    "@ustra/types": "3.2.0-stable",
+    "@moong/types": "0.0.1",
     "ant-path-matcher": "^0.0.5",
     "axios": "^1.5.1",
     "axios-retry": "^3.8.0",

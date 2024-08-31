@@ -1,6 +1,6 @@
-import { apiModels } from '#ustra/core/data'
-import { defineUstraService } from '#ustra/nuxt/composables'
-import { UserApproval } from '../models/user-approval'
+import { apiModels } from "#moong/core/data";
+import { defineUstraService } from "#moong/nuxt/composables";
+import { UserApproval } from "../models/user-approval";
 
 /**
  * 사용자 승인
@@ -15,11 +15,11 @@ export const useUstraUserApprovalService = defineUstraService(({ api }) => {
     return (
       await api.call<apiModels.ApiResponse<UserApproval>>({
         url: `/api/system/user-approval/request`,
-        method: 'POST',
+        method: "POST",
         data: approval,
       })
-    )?.data?.body
+    )?.data?.body;
   }
 
-  return { request }
-})
+  return { request };
+});
