@@ -1,0 +1,67 @@
+{
+  "name": "@ustra/nuxt-vuetify",
+  "version": "3.2.0-stable",
+  "description": "USTRA Node framework 3 - nuxt vuetify",
+  "author": "Roy Lee <keymasroy@gsitm.com>",
+  "main": "src/module/index.ts",
+  "module": "src/module/index.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/ustraframework/ustra-framework3-node",
+    "directory": "framework/nuxt-vuetify"
+  },
+  "imports": {
+    "#ustra/core": "@ustra/core/src",
+    "#ustra/core/*": "@ustra/core/src/*",
+    "#ustra/nuxt": "@ustra/nuxt/src",
+    "#ustra/nuxt/*": "@ustra/nuxt/src/*",
+    "#ustra/nuxt-vuetify": "./src",
+    "#ustra/nuxt-vuetify/*": "./src/*"
+  },
+  "type": "module",
+  "homepage": "http://guide.ustraframework.kro.kr/",
+  "keywords": [
+    "node",
+    "typescript",
+    "nuxt"
+  ],
+  "bugs": {
+    "url": "http://guide.ustraframework.kro.kr/forum",
+    "email": "ustraframe@gmail.com"
+  },
+  "sideEffects": false,
+  "files": [
+    "src",
+    "__templates__",
+    "dist",
+    "dist-cjs",
+    "types.d.ts",
+    "templates",
+    "config.ts",
+    "tsconfig.json"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://repo.gsitm.com/repository/npm-private/"
+  },
+  "private": false,
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@mdi/font": "^7.4.47",
+    "@ustra/nuxt": "3.2.0-stable",
+    "@vuepic/vue-datepicker": "7.2.0",
+    "font-awesome": "4.7.0",
+    "v-calendar": "^3.1.2",
+    "vite-plugin-vuetify": "^1.0.2",
+    "vue3-treeview": "^0.4.2",
+    "vuetify": "^3.4.1",
+    "vuetify-nuxt-module": "^0.9.1"
+  },
+  "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "build:doc": "rimraf docs && typedoc --tsconfig tsconfig.build.json src/ ",
+    "test": "jest --detectOpenHandles --forceExit"
+  },
+  "gitHead": "6304e5f4cb2e2017753669a95550fae8d62b4ce7"
+}

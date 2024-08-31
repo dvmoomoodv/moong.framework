@@ -1,0 +1,12 @@
+node_modules
+*.log*
+*-audit.json
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+logs/
+
+package-lock.json

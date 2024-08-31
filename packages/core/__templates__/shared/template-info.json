@@ -1,0 +1,8 @@
+{
+  "imports": {
+    "#ustra/core": "@ustra/core/src",
+    "#ustra/core/*": "@ustra/core/src/*",
+    "#ustra/h3": "@ustra/h3/src",
+    "#ustra/h3/*": "@ustra/h3/src/*"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "skipLibCheck": true,
+    "strict": false,
+    "allowJs": false,
+    "noEmit": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "declarationMap": true,
+    "declaration": true,
+    "downlevelIteration": true,
+    "types": ["@types/node", "@types/jest", "nuxt"],
+    "baseUrl": "../../../",
+    "paths": {
+      "#ustra/core": ["framework/core/src"],
+      "#ustra/core/*": ["framework/core/src/*"],
+      "#ustra/h3": ["framework/h3/src"],
+      "#ustra/h3/*": ["framework/h3/src/*"],
+      "#ustra/nuxt": ["framework/nuxt/src"],
+      "#ustra/nuxt/*": ["framework/nuxt/src/*"],
+      "#app": ["node_modules/nuxt/dist/app"],
+      "#app/*": ["node_modules/nuxt/dist/app/*"],
+      "vue-demi": ["node_modules/nuxt/dist/app/compat/vue-demi"],
+      "#head": ["node_modules/nuxt/dist/head/runtime"],
+      "#head/*": ["node_modules/nuxt/dist/head/runtime/*"]
+    }
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"],
+    "compilerOptions": {
+      "module": "commonjs",
+      "esModuleInterop": true
+    }
+  },
+  "include": ["@ustra/core/src/**/*.ts", "@ustra/h3/src/**/*.ts"]
+}

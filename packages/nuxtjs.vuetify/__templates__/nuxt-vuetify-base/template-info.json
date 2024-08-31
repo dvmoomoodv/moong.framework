@@ -1,0 +1,17 @@
+{
+  "name": "Nuxt Vuetify 기본 템플릿 (Not SSR)",
+  "message": "run script : yarn run parepare",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "prepare": "nuxt prepare"
+  },
+  "imports": {
+    "#ustra/nuxt": "@ustra/nuxt/src",
+    "#ustra/nuxt/*": "@ustra/nuxt/src/*",
+    "#ustra/nuxt-vuetify": "@ustra/nuxt-vuetify/src",
+    "#ustra/nuxt-vuetify/*": "@ustra/nuxt-vuetify/src/*"
+  }
+}

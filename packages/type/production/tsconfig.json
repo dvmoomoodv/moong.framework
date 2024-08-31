@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "isolatedModules": true,
+    "useDefineForClassFields": true,
+    "noImplicitThis": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "allowJs": false,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "declarationMap": true,
+    "declaration": true,
+    "downlevelIteration": true,
+    "verbatimModuleSyntax": false,
+    "types": ["@types/node", "@types/jest", "@ustra/nuxt/types"],
+    "baseUrl": ".",
+    "paths": {
+      "#ustra/core": ["../core/src"],
+      "#ustra/core/*": ["../core/src/*"],
+      "#ustra/h3": ["../h3/src"],
+      "#ustra/h3/*": ["../h3/src/*"],
+      "#ustra/nuxt": ["../nuxt/src"],
+      "#ustra/nuxt/*": ["../nuxt/src/*"],
+      "#ustra/nuxt-wijmo": ["../nuxt-wijmo/src"],
+      "#ustra/nuxt-wijmo/*": ["../nuxt-wijmo/src/*"],
+      "#ustra/nuxt-vuetify": ["../nuxt-vuetify/src"],
+      "#ustra/nuxt-vuetify/*": ["../nuxt-vuetify/src/*"],
+      "#ustra/nuxt-ckeditor5": ["./nuxt-ckeditor5/src"],
+      "#ustra/nuxt-ckeditor5/*": ["../nuxt-ckeditor5/src/*"],
+
+      "#app": ["../../nuxt/dist/app"],
+      "#app/*": ["../../nuxt/dist/app/*"],
+      "vue-demi": ["../../nuxt/dist/app/compat/vue-demi"],
+      "#head": ["../../nuxt/dist/head/runtime"],
+      "#head/*": ["../../nuxt/dist/head/runtime/*"]
+    }
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"],
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  }
+}

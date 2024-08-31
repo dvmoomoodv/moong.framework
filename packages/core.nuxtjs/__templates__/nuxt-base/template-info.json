@@ -1,0 +1,14 @@
+{
+  "name": "Nuxt 기본 템플릿 (Not SSR)",
+  "message": "run script : yarn run parepare",
+  "imports": {
+    "#ustra/nuxt": "@ustra/nuxt/src",
+    "#ustra/nuxt/*": "@ustra/nuxt/src/*"
+  },
+  "scripts": {
+    "dev": "cross-env CONFIG_ENV=local nuxt dev",
+    "clean": "nuxt clean",
+    "generate": "cross-env NODE_ENV=production CONFIG_ENV=dev nuxt generate",
+    "prepare": "nuxt prepare"
+  }
+}

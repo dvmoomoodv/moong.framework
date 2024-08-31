@@ -1,0 +1,9 @@
+{
+  "extends": "../types/dev/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "types": ["@types/node", "@types/jest", "@ustra/nuxt/types"]
+  },
+  "include": ["./src/**/*.ts"],
+  "exclude": ["./templates/**/*", "./dist/**/*", "./dist-cjs/**/*", "./__templates__/**/*", "./node_modules"]
+}

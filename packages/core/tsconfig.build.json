@@ -1,0 +1,9 @@
+{
+  "extends": "../types/dev/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "allowJs": false,
+    "types": ["@types/node", "@types/jest"]
+  },
+  "include": ["./src/**/*.ts"]
+}

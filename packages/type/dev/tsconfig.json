@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "isolatedModules": true,
+    "useDefineForClassFields": true,
+    "noImplicitThis": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "allowJs": false,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": true,
+    "allowImportingTsExtensions": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "declarationMap": true,
+    "declaration": true,
+    "downlevelIteration": true,
+    "verbatimModuleSyntax": false,
+    "types": ["@types/node", "@types/jest", "@ustra/nuxt/types"],
+    "baseUrl": "../../../",
+    "paths": {
+      "#app": ["./node_modules/nuxt/dist/app"],
+      "#app/*": ["./node_modules/nuxt/dist/app/*"],
+      "vue-demi": ["./node_modules/nuxt/dist/app/compat/vue-demi"],
+      "#head": ["./node_modules/nuxt/dist/head/runtime"],
+      "#head/*": ["./node_modules/nuxt/dist/head/runtime/*"],
+      "#ustra/core": ["./framework/core/src"],
+      "#ustra/core/*": ["./framework/core/src/*"],
+      "#ustra/h3": ["./framework/h3/src"],
+      "#ustra/h3/*": ["./framework/h3/src/*"],
+      "#ustra/nuxt": ["./framework/nuxt/src"],
+      "#ustra/nuxt/*": ["./framework/nuxt/src/*"],
+      "#ustra/nuxt-dx": ["./framework/nuxt-dx/src"],
+      "#ustra/nuxt-dx/*": ["./framework/nuxt-dx/src/*"],
+      "#ustra/nuxt-wijmo": ["./framework/nuxt-wijmo/src"],
+      "#ustra/nuxt-wijmo/*": ["./framework/nuxt-wijmo/src/*"],
+      "#ustra/nuxt-vuetify": ["./framework/nuxt-vuetify/src"],
+      "#ustra/nuxt-vuetify/*": ["./framework/nuxt-vuetify/src/*"],
+      "#ustra/nuxt-ckeditor5": ["./framework/nuxt-ckeditor5/src"],
+      "#ustra/nuxt-ckeditor5/*": ["./framework/nuxt-ckeditor5/src/*"]
+    }
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"],
+    "compilerOptions": {
+      "module": "commonjs",
+      "esModuleInterop": true
+    }
+  }
+}

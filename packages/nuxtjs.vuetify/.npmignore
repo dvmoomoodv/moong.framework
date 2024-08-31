@@ -1,0 +1,7 @@
+__tests__
+scripts
+jest.config.ts
+tsconfig.build.json
+tsconfig.dev.json
+tsconfig.production.json
+

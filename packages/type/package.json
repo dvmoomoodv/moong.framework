@@ -1,0 +1,27 @@
+{
+  "name": "@ustra/types",
+  "version": "3.2.0-stable",
+  "description": "USTRA Node framework 3 - types",
+  "author": "Roy Lee <keymasroy@gsitm.com>",
+  "license": "MIT",
+  "repository": "https://github.com/ustraframework/ustra-framework3-node/tree/master/framework/core",
+  "homepage": "http://guide.ustraframework.kro.kr/",
+  "keywords": [
+    "node",
+    "typescript"
+  ],
+  "bugs": {
+    "url": "http://guide.ustraframework.kro.kr/forum",
+    "email": "ustraframe@gmail.com"
+  },
+  "files": [
+    "dev/**/*.*",
+    "production/**/*.*"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://repo.gsitm.com/repository/npm-private/"
+  },
+  "private": false,
+  "gitHead": "6304e5f4cb2e2017753669a95550fae8d62b4ce7"
+}

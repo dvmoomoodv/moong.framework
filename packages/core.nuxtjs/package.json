@@ -1,0 +1,88 @@
+{
+  "name": "@ustra/nuxt",
+  "version": "3.2.0-stable",
+  "description": "USTRA Node framework 3 - nuxt",
+  "author": "Roy Lee <keymasroy@gsitm.com>",
+  "main": "src/module/index.ts",
+  "module": "src/module/index.ts",
+  "license": "MIT",
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/ustraframework/ustra-framework3-node",
+    "directory": "framework/nuxt"
+  },
+  "imports": {
+    "#ustra/core": "@ustra/core/src",
+    "#ustra/core/*": "@ustra/core/src/*",
+    "#ustra/nuxt": "./src",
+    "#ustra/nuxt/*": "./src/*"
+  },
+  "type": "module",
+  "homepage": "http://guide.ustraframework.kro.kr/",
+  "keywords": [
+    "node",
+    "typescript",
+    "nuxt"
+  ],
+  "bugs": {
+    "url": "http://guide.ustraframework.kro.kr/forum",
+    "email": "ustraframe@gmail.com"
+  },
+  "sideEffects": false,
+  "files": [
+    "src",
+    "__templates__",
+    "dist",
+    "dist-cjs",
+    "types.d.ts",
+    "templates",
+    "config.ts",
+    "tsconfig.json"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://repo.gsitm.com/repository/npm-private/"
+  },
+  "private": false,
+  "scripts": {
+    "build": "tsc --build tsconfig.build.json",
+    "build:doc": "rimraf docs && typedoc --tsconfig tsconfig.build.json src/ ",
+    "test": "jest --detectOpenHandles --forceExit"
+  },
+  "dependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.1.1",
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
+    "@fontsource/fira-code": "^4.5.12",
+    "@nuxt/devtools": "latest",
+    "@nuxt/kit": "3.9.3",
+    "@nuxt/schema": "3.9.3",
+    "@nuxt/vite-builder": "3.9.3",
+    "@nuxt/webpack-builder": "3.9.3",
+    "@nuxtjs/i18n": "=8.0.0-beta.10",
+    "@pinia/nuxt": "0.5.1",
+    "@ustra/core": "3.2.0-stable",
+    "@vueuse/core": "10.7.2",
+    "@vueuse/nuxt": "10.7.2",
+    "front-matter": "^4.0.2",
+    "github-markdown-css": "^5.1.0",
+    "js-file-download": "^0.4.12",
+    "nitropack": "2.8.1",
+    "nuxi": "3.10.0",
+    "nuxt": "3.9.3",
+    "nuxt-cache-ssr": "^1.1.0",
+    "pretendard": "^1.3.6",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "sass": "1.69.5",
+    "socket.io-client": "^4.6.1",
+    "sockjs-client": "^1.6.1",
+    "tippy.js": "^6.3.7",
+    "vite-plugin-compression2": "^0.11.0",
+    "vue": "^3.4.5",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "vue-tsc": "^1.8.19"
+  },
+  "gitHead": "6304e5f4cb2e2017753669a95550fae8d62b4ce7"
+}

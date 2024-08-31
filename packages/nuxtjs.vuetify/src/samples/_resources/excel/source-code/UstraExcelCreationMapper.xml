@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.gsitm.ustra.java.management.samples.excel.UstraExcelCreationMapper">
+
+	<select id="select" resultType="com.gsitm.ustra.java.management.models.UstraMenuModel">
+	SELECT MNU_ID,
+		   SYS_CD,
+		   MNU_NM,
+		   MNU_SRT_NO,
+		   MNU_URL,
+		   MNU_TY_CD,
+		   USE_YN
+	  FROM USTRA_MNU
+	 WHERE 1=1
+	   <if test="arg1.sysCd != null and !arg1.sysCd.equals('')">
+	   AND SYS_CD = #{sysCd}
+	   </if>
+	</select>
+</mapper>

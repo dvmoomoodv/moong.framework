@@ -5,6 +5,10 @@ node_modules
 .pnp
 .pnp.js
 
+# dist
+dist
+dist-cjs
+
 # Local env files
 .env
 .env.local
