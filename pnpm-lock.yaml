@@ -98,7 +98,11 @@ importers:
         specifier: ^5
         version: 5.5.4
 
-  demos/demo-core: {}
+  demos/demo-core:
+    dependencies:
+      '@moong/core':
+        specifier: workspace:*
+        version: link:../../packages/core
 
   demos/demo-core.nextjs: {}
 
