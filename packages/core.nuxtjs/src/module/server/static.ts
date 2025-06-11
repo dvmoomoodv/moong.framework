@@ -41,7 +41,7 @@ export const addStaticMiddleware = async (
     }
   }
   // when generate copy
-  else if (nuxt.options._generate) {
+  else if (nuxt.options.nitro.static || (nuxt.options as any)._generate /* TODO: remove in future */) {
     nuxt.hook("close", (nuxt) => {
       for (const staticOption of staticOptions) {
         if (!staticOption.copyResource) {

@@ -52,7 +52,7 @@ export const monacoModule = async (options: NuxtAppProps, nuxt: Nuxt) => {
     // FIXME: not copied resources (bug in nuxt 3.2.0)
     // @see https://github.com/e-chan1007/nuxt-monaco-editor
     nuxt.hook("close", async (nuxt) => {
-      if (!nuxt.options._generate) {
+      if (!(nuxt.options.nitro.static || (nuxt.options as any)._generate /* TODO: remove in future */)) {
         return;
       }
 
